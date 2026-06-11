@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Punishment Seems to Work — an interactive explainer on regression to the mean</title>
+<meta name="description" content="Why punishment seems to work, miracle cures seem to cure, and champions seem to choke. An interactive explainer on regression to the mean — the badly named statistical fact behind all of it.">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="8" y="8" width="84" height="84" rx="18" fill="%23B3372B"/><circle cx="35" cy="35" r="9" fill="%23F7F3EC"/><circle cx="65" cy="65" r="9" fill="%23F7F3EC"/></svg>'>
+<style>
+  :root {
+    --paper: #F7F3EC;
+    --panel: #FFFDF8;
+    --ink: #211D18;
+    --ink-soft: #5C544A;
+    --ink-faint: #968C7E;
+    --hairline: #E3DACB;
+    --rust: #B3372B;
+    --rust-soft: #F3E0DB;
+    --green: #2E6B52;
+    --green-soft: #DFEAE2;
+    --blue: #34608F;
+    --gold: #9A7B2D;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+    --serif: "Charter", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.1875rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
+  .wide { max-width: 880px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* ---------- hero ---------- */
+  header { padding: 5.5rem 0 3.5rem; text-align: left; }
+  .kicker {
+    font-family: var(--mono); font-size: .72rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--rust); margin-bottom: 1.6rem;
+  }
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 4.1rem);
+    line-height: 1.05; letter-spacing: -.015em; font-weight: 700;
+    margin-bottom: 1.4rem; max-width: 14ch;
+  }
+  .dek {
+    font-size: clamp(1.18rem, 2.6vw, 1.38rem); line-height: 1.5;
+    color: var(--ink-soft); max-width: 36ch;
+  }
+  .dek strong { color: var(--ink); font-weight: 700; }
+
+  /* ---------- prose ---------- */
+  section { padding: 1.4rem 0; }
+  .section-head {
+    display: flex; align-items: baseline; gap: .9rem;
+    margin: 2.6rem 0 1.1rem;
+  }
+  .section-num {
+    font-family: var(--mono); font-size: .78rem; color: var(--rust);
+    letter-spacing: .08em; white-space: nowrap;
+  }
+  h2 { font-size: 1.72rem; line-height: 1.15; letter-spacing: -.01em; }
+  p { margin: 0 0 1.15rem; }
+  p.lede { font-size: 1.28rem; line-height: 1.55; }
+  em { font-style: italic; }
+  .center-rule {
+    border: none; height: 1px; background: var(--hairline);
+    margin: 2.8rem auto; max-width: 680px;
+  }
+  blockquote {
+    margin: 1.8rem 0; padding: .2rem 0 .2rem 1.4rem;
+    border-left: 3px solid var(--rust);
+    font-size: 1.22rem; line-height: 1.55; color: var(--ink);
+  }
+  blockquote footer {
+    padding: .6rem 0 0; font-size: .92rem; color: var(--ink-faint);
+    font-family: var(--mono);
+  }
+  .aside {
+    background: var(--panel); border: 1px solid var(--hairline);
+    border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1.8rem 0;
+    font-size: 1.02rem; line-height: 1.6; color: var(--ink-soft);
+  }
+  .aside .aside-label {
+    font-family: var(--mono); font-size: .68rem; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--gold); display: block; margin-bottom: .5rem;
+  }
+  .keyline {
+    font-size: 1.34rem; line-height: 1.45; font-weight: 700;
+    margin: 2rem 0; max-width: 30ch;
+  }
+
+  /* ---------- lab panels ---------- */
+  .lab {
+    background: var(--panel); border: 1px solid var(--hairline);
+    border-radius: 14px; padding: 1.6rem;
+    box-shadow: 0 1px 2px rgba(60,45,20,.05), 0 8px 28px rgba(60,45,20,.06);
+    margin: 2.2rem auto;
+  }
+  .lab-label {
+    font-family: var(--mono); font-size: .7rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--rust); margin-bottom: .35rem;
+  }
+  .lab-title { font-size: 1.28rem; font-weight: 700; margin-bottom: .3rem; }
+  .lab-sub { font-size: .98rem; color: var(--ink-soft); margin-bottom: 1.2rem; }
+
+  /* ---------- flight school ---------- */
+  .day-chip {
+    display: inline-block; font-family: var(--mono); font-size: .78rem;
+    background: var(--ink); color: var(--paper); border-radius: 999px;
+    padding: .25rem .8rem; margin-bottom: 1rem;
+  }
+  .pilot-grid { display: flex; flex-direction: column; gap: .45rem; margin-bottom: 1.2rem; }
+  .pilot-row {
+    display: grid; grid-template-columns: 6.2rem 1fr 5.4rem; gap: .8rem;
+    align-items: center; padding: .42rem .7rem; border-radius: 8px;
+    border: 1px solid transparent; transition: background .3s, border-color .3s;
+  }
+  .pilot-row.is-best { background: var(--green-soft); border-color: #c4d8cb; }
+  .pilot-row.is-worst { background: var(--rust-soft); border-color: #e4c4bc; }
+  .pilot-name { font-family: var(--mono); font-size: .85rem; letter-spacing: .02em; }
+  .pilot-tag {
+    display: inline-block; font-size: .58rem; letter-spacing: .1em; border-radius: 4px;
+    padding: .1rem .3rem; margin-left: .35rem; vertical-align: 1px;
+    font-family: var(--mono); text-transform: uppercase;
+  }
+  .pilot-tag.top { background: var(--green); color: #fff; }
+  .pilot-tag.bottom { background: var(--rust); color: #fff; }
+  .bar-track { background: #EFE9DC; border-radius: 5px; height: 14px; overflow: hidden; }
+  .bar-fill {
+    height: 100%; border-radius: 5px; background: #B7AD9C;
+    transition: width .55s cubic-bezier(.25,.8,.3,1), background-color .3s;
+  }
+  .is-best .bar-fill { background: var(--green); }
+  .is-worst .bar-fill { background: var(--rust); }
+  .pilot-score { font-family: var(--mono); font-size: .85rem; text-align: right; white-space: nowrap; }
+  .pilot-delta { font-size: .72rem; color: var(--ink-faint); margin-left: .25rem; }
+  .pilot-delta.up { color: var(--green); }
+  .pilot-delta.down { color: var(--rust); }
+
+  .fs-controls { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; }
+  .btn {
+    font-family: var(--mono); font-size: .86rem; border-radius: 8px;
+    padding: .68rem 1.1rem; border: 1px solid transparent; cursor: pointer;
+    transition: transform .12s, opacity .2s, background .2s;
+    background: var(--ink); color: var(--paper);
+  }
+  .btn:hover:not(:disabled) { transform: translateY(-1px); }
+  .btn:active:not(:disabled) { transform: translateY(0); }
+  .btn:disabled { opacity: .38; cursor: default; }
+  .btn.praise { background: var(--green); color: #fff; }
+  .btn.scold { background: var(--rust); color: #fff; }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--hairline); }
+  .fs-hint { font-size: .9rem; color: var(--ink-soft); font-family: var(--mono); }
+
+  .stat-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+  @media (max-width: 560px) { .stat-cards { grid-template-columns: 1fr; } }
+  .stat-card { border-radius: 10px; padding: 1.1rem 1.2rem; }
+  .stat-card.praise-card { background: var(--green-soft); }
+  .stat-card.scold-card { background: var(--rust-soft); }
+  .stat-card .stat-kicker {
+    font-family: var(--mono); font-size: .66rem; letter-spacing: .14em;
+    text-transform: uppercase; margin-bottom: .5rem;
+  }
+  .praise-card .stat-kicker { color: var(--green); }
+  .scold-card .stat-kicker { color: var(--rust); }
+  .stat-big { font-size: 1.55rem; font-weight: 700; line-height: 1.2; }
+  .stat-sub { font-size: .92rem; color: var(--ink-soft); margin-top: .3rem; }
+
+  .reveal-code {
+    background: #2A2520; color: #EDE5D8; border-radius: 10px;
+    font-family: var(--mono); font-size: .88rem; line-height: 1.6;
+    padding: 1.2rem 1.4rem; overflow-x: auto; margin: 1.2rem 0;
+  }
+  .reveal-code .c { color: #8F8474; }
+  .reveal-code .k { color: #E8B04B; }
+  .fs-phase { animation: fadein .5s ease; }
+  @keyframes fadein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .hidden { display: none !important; }
+
+  .thousand-result {
+    font-family: var(--mono); font-size: .95rem; line-height: 1.8;
+    background: var(--paper); border: 1px dashed var(--hairline);
+    border-radius: 8px; padding: 1rem 1.2rem; margin-top: 1rem;
+  }
+
+  /* ---------- luck lab ---------- */
+  .luck-controls { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.1rem; }
+  .slider-row { display: flex; align-items: center; gap: 1rem; }
+  .slider-row label { font-family: var(--mono); font-size: .8rem; white-space: nowrap; }
+  input[type="range"] {
+    flex: 1; appearance: none; -webkit-appearance: none; height: 6px; border-radius: 3px;
+    background: linear-gradient(to right, var(--blue), var(--rust));
+    outline-offset: 4px;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none; -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--ink); border: 3px solid var(--panel);
+    box-shadow: 0 1px 4px rgba(0,0,0,.3); cursor: grab;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--ink); border: 3px solid var(--panel);
+    box-shadow: 0 1px 4px rgba(0,0,0,.3); cursor: grab;
+  }
+  .luck-readout { font-family: var(--mono); font-size: .92rem; min-width: 7.5rem; text-align: right; }
+  .preset-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .chip {
+    font-family: var(--mono); font-size: .74rem; padding: .35rem .7rem;
+    border-radius: 999px; border: 1px solid var(--hairline); background: var(--paper);
+    cursor: pointer; color: var(--ink-soft); transition: all .15s;
+  }
+  .chip:hover { border-color: var(--ink-faint); color: var(--ink); }
+  .chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .toggle-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+  .toggle-label { font-family: var(--mono); font-size: .72rem; color: var(--ink-faint); letter-spacing: .08em; text-transform: uppercase; margin-right: .2rem; }
+  canvas { display: block; width: 100%; border-radius: 10px; background: var(--paper); border: 1px solid var(--hairline); box-sizing: content-box; }
+  .luck-stats {
+    display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; margin-top: 1rem;
+    font-family: var(--mono); font-size: .88rem; line-height: 1.7;
+  }
+  .luck-stats b { font-weight: 700; }
+  .luck-legend {
+    font-size: .82rem; color: var(--ink-soft); margin-top: .9rem;
+    font-family: var(--mono); line-height: 1.7;
+  }
+  .luck-note { font-size: .85rem; color: var(--ink-soft); margin-top: .8rem; font-family: var(--mono); }
+
+  /* small phones: keep the slider row and pilot bars usable */
+  @media (max-width: 520px) {
+    .lab { padding: 1.1rem; }
+    .slider-row { flex-wrap: wrap; }
+    .slider-row input[type="range"] { flex-basis: 100%; order: 2; min-width: 0; }
+    .luck-readout { min-width: 0; margin-left: auto; }
+    .pilot-row { grid-template-columns: 4.6rem 1fr auto; gap: .45rem; }
+    .pilot-tag { display: none; }
+  }
+
+  /* ---------- field guide ---------- */
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.8rem 0; }
+  @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--panel); border: 1px solid var(--hairline); border-radius: 12px;
+    padding: 1.25rem 1.35rem;
+  }
+  .card h3 { font-size: 1.08rem; margin-bottom: .5rem; }
+  .card .card-kicker {
+    font-family: var(--mono); font-size: .64rem; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--rust); display: block; margin-bottom: .45rem;
+  }
+  .card p { font-size: .97rem; line-height: 1.55; color: var(--ink-soft); margin: 0; }
+  .card p strong { color: var(--ink); }
+
+  /* ---------- not-list ---------- */
+  .not-item { margin: 1.6rem 0; padding-left: 1.3rem; border-left: 3px solid var(--hairline); }
+  .not-item h3 { font-size: 1.15rem; margin-bottom: .4rem; }
+  .not-item p { font-size: 1.04rem; color: var(--ink-soft); margin-bottom: .6rem; }
+
+  footer.page-footer {
+    margin-top: 4rem; padding: 2.5rem 0 3.5rem; border-top: 1px solid var(--hairline);
+    font-family: var(--mono); font-size: .78rem; color: var(--ink-faint); line-height: 1.8;
+  }
+  .footnotes { font-size: .92rem; color: var(--ink-soft); line-height: 1.6; }
+  .footnotes li { margin-bottom: .55rem; }
+  .footnotes ol { padding-left: 1.2rem; }
+  sup a { color: var(--rust); text-decoration: none; font-family: var(--mono); font-size: .72em; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="kicker">An interactive explainer &middot; ten minutes</div>
+  <h1>Why punishment seems to work</h1>
+  <p class="dek">&hellip;and praise seems to backfire, miracle cures seem to cure, and champions seem to choke. One badly named statistical fact sits behind all of it &mdash; and once you have seen it properly, <strong>you will notice it everywhere for the rest of your life.</strong></p>
+</header>
+
+<noscript>
+  <style>.lab { display: none; }</style>
+  <div class="wrap" style="padding:1rem 1.25rem"><p class="aside"><strong>JavaScript is off, so the two experiments on this page are hidden</strong> &mdash; and they're the best part. The prose still reads fine, but you'll have to take my word for what the dice do.</p></div>
+</noscript>
+
+<main>
+
+<!-- ============ 1. THE GAME ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">01</span><h2>First, a job</h2></div>
+    <p class="lede">Before I explain anything, I want you to run a flight school.</p>
+    <p>Eight trainee pilots fly a difficult manoeuvre every day, scored out of 100. Your job, after each day's flights, is the standard doctrine of instructors everywhere: <strong>praise the best pilot, chew out the worst.</strong> Then watch what your feedback does to their next flight.</p>
+    <p>Play the six days &mdash; it takes about a minute. And don't worry about keeping track of what your feedback does: your instructor's log will keep score for you.</p>
+  </div>
+
+  <div class="wide">
+    <div class="lab" id="flight-lab">
+      <div class="lab-label">Experiment Nº 1</div>
+      <div class="lab-title">Flight school</div>
+      <div class="lab-sub">Each pilot flies once a day. Deliver both pieces of feedback to advance to the next day.</div>
+
+      <!-- play phase -->
+      <div id="fs-play" class="fs-phase" tabindex="-1">
+        <span class="day-chip" id="fs-day" aria-live="polite">Day 1 of 6</span>
+        <div class="pilot-grid" id="fs-grid"></div>
+        <div class="fs-controls">
+          <button class="btn praise" id="fs-praise">Praise</button>
+          <button class="btn scold" id="fs-scold">Scold</button>
+          <span class="fs-hint" id="fs-hint" aria-live="polite">Deliver today's feedback&hellip;</span>
+        </div>
+      </div>
+
+      <!-- tally phase -->
+      <div id="fs-tally" class="fs-phase hidden" tabindex="-1">
+        <div class="lab-title" style="margin-bottom:.8rem">Your instructor's log</div>
+        <div class="stat-cards">
+          <div class="stat-card scold-card">
+            <div class="stat-kicker">After you scolded someone</div>
+            <div class="stat-big" id="fs-scold-stat"></div>
+            <div class="stat-sub" id="fs-scold-sub"></div>
+          </div>
+          <div class="stat-card praise-card">
+            <div class="stat-kicker">After you praised someone</div>
+            <div class="stat-big" id="fs-praise-stat"></div>
+            <div class="stat-sub" id="fs-praise-sub"></div>
+          </div>
+        </div>
+        <p style="font-size:1.05rem; margin-bottom:1rem">Every instructor who has ever lived has read a log like this one. The conclusion seems unavoidable: <em>harsh feedback works, and praise makes people sloppy.</em> What do you say?</p>
+        <div class="fs-controls">
+          <button class="btn" id="fs-agree">Scolding works. Noted.</button>
+          <button class="btn ghost" id="fs-suspicious">Hang on. Something's off.</button>
+        </div>
+      </div>
+
+      <!-- reveal phase -->
+      <div id="fs-reveal" class="fs-phase hidden" tabindex="-1">
+        <div class="lab-title" style="margin-bottom:.8rem">The reveal</div>
+        <p style="margin-bottom:.6rem">Here is the <em>entire</em> flight simulation you've been instructing:</p>
+        <pre class="reveal-code"><span class="k">function</span> flySortie(pilot) {
+  <span class="c">// pilot skill: not implemented</span>
+  <span class="c">// your feedback: never consulted</span>
+  <span class="k">return</span> randomInteger(0, 100);
+}</pre>
+        <p><strong>There were no pilots.</strong> Every score on every day was a fresh roll of the dice. Your praise and your scoldings were never wired into the simulation at all &mdash; and yet scolding "worked" and praise "backfired", and they will again tomorrow, and forever.</p>
+        <p>Why? You only ever scolded after a <em>terrible</em> score &mdash; and almost any fresh roll beats a terrible one. You only ever praised after a <em>brilliant</em> score &mdash; and almost any fresh roll falls short of brilliance. The improvement after punishment is not evidence about punishment. It is what dice do.</p>
+        <p>Maybe your five days were a fluke. Hire a thousand instructors and check:</p>
+        <div class="fs-controls">
+          <button class="btn" id="fs-thousand">Run 1,000 instructors</button>
+          <button class="btn ghost" id="fs-replay">Play again</button>
+        </div>
+        <div class="thousand-result hidden" id="fs-thousand-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p>This trap is not hypothetical. In the 1960s the psychologist Daniel Kahneman &mdash; later a Nobel laureate &mdash; was lecturing Israeli Air Force flight instructors on the evidence that reward works better than punishment. A seasoned instructor objected: on many occasions he had praised cadets for a cleanly executed manoeuvre, and they usually did worse on the next try; he had screamed at cadets for botched ones, and they generally did better. <em>So with respect &mdash; please don't tell us that reward works and punishment doesn't, because the opposite is the case.</em> And he wasn't making it up. That really is what he had watched happen, over and over, for years.<sup><a href="#fn1" id="ref1">1</a></sup></p>
+    <p>The instructor's observations were correct. His inference was completely wrong &mdash; and Kahneman later wrote that grasping why was one of the most important insights of his career:</p>
+    <blockquote id="kahneman-quote">
+      &ldquo;I had stumbled onto a significant fact of the human condition: the feedback to which life exposes us is perverse. Because we tend to be nice to other people when they please us and nasty when they do not, we are statistically punished for being nice and rewarded for being nasty.&rdquo;
+      <footer>&mdash; Daniel Kahneman, <cite>Thinking, Fast and Slow</cite></footer>
+    </blockquote>
+    <p>Sit with that for a second. Life itself is rigged to teach every parent, teacher, coach and boss the same false lesson, every day, forever: <em>kindness fails; cruelty works.</em> Not because it's true, but because of when we choose to be kind.</p>
+  </div>
+</section>
+
+<hr class="center-rule">
+
+<!-- ============ 2. THE NAME ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">02</span><h2>The name is the problem</h2></div>
+    <p>Statisticians call what you just experienced <strong>regression to the mean</strong> &mdash; the mean is simply the average &mdash; and the name is a small disaster. It sounds like a <em>force</em>. A rubber band. Gravity for luck. Things stretched too far from average get <em>pulled back</em>. People who learn the phrase usually walk away with a new piece of invisible physics in their heads: extremeness, left alone, gets corrected.</p>
+    <p>That mental model is wrong, and it is why the idea never sticks. So before anything else:</p>
+    <p class="keyline">Nothing regresses. No force pulls anyone back. The pattern is real &mdash; and it comes entirely from how you picked.</p>
+    <p>No force acted on your pilots; there were no pilots. The dice were not "correcting" anything; dice can't remember what they rolled yesterday. The only thing that happened was this: <strong>you picked the extremes</strong>, and extremes are where the luck is.</p>
+  </div>
+</section>
+
+<!-- ============ 3. MECHANISM ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">03</span><h2>Skill stays. Luck re-rolls.</h2></div>
+    <p>Here is the actual mechanism, and it fits in a paragraph.</p>
+    <p>Every score you will ever care about &mdash; a test result, a sales quarter, a blood-pressure reading, a child's behaviour on a given Tuesday &mdash; is a blend of two ingredients: <strong>things that persist</strong> (ability, habits, the underlying condition) and <strong>things that don't</strong> (mood, sleep, weather, which questions came up, measurement error &mdash; call it all <em>luck</em>).</p>
+    <p>An extreme score is almost never the persistent part alone. The best performance in any group usually belongs to someone genuinely good <em>who also got a good bounce that day</em>. The worst usually belongs to someone weaker <em>who also got unlucky</em>. So when you select the extremes &mdash; the star, the disaster, the record quarter, the worst flare-up of your back pain &mdash; you have silently selected for extreme luck too.</p>
+    <p>Then tomorrow comes. The persistent part shows up again, faithfully. But the luck is <strong>re-rolled from scratch</strong> &mdash; and a fresh roll is <em>typical</em>, not extreme. So the group you picked drifts back toward ordinary. Nothing pushed it. You just stopped selecting for luck, because you can only select on yesterday.</p>
+    <p class="keyline">Skill carries over. Luck doesn't. Extremes are part luck. That's the whole phenomenon.</p>
+    <p>Kahneman's shorthand for it: &ldquo;Success = talent + luck. Great success = a little more talent + a lot of luck.&rdquo;</p>
+    <p>And this gives you something better than a definition &mdash; it gives you an <em>instrument</em>. How much an extreme group falls back measures how much of the score doesn't persist &mdash; which, over a short gap in a stable game, is mostly luck. Try it:</p>
+  </div>
+
+  <div class="wide">
+    <div class="lab" id="luck-lab">
+      <div class="lab-label">Experiment Nº 2</div>
+      <div class="lab-title">The luck-o-meter</div>
+      <div class="lab-sub">400 players, two rounds each. Each player keeps the same skill in both rounds; their luck is re-rolled. Drag the slider to set how much of the score is luck. (The <em>time</em> toggle will earn its keep in &sect;&nbsp;04.)</div>
+
+      <div class="luck-controls">
+        <div class="slider-row">
+          <label for="luck-slider">Luck share</label>
+          <input type="range" id="luck-slider" min="0" max="100" value="40" aria-label="Percentage of the score that is luck">
+          <span class="luck-readout" id="luck-readout">40% luck</span>
+        </div>
+        <div class="preset-row" id="luck-presets" role="group" aria-label="Luck share presets">
+          <button class="chip" data-w="5" aria-pressed="false">Chess &middot; ~5%</button>
+          <button class="chip active" data-w="40" aria-pressed="true">A football season &middot; ~40%</button>
+          <button class="chip" data-w="80" aria-pressed="false">One poker night &middot; ~80%</button>
+          <button class="chip" data-w="95" aria-pressed="false">Picking stocks &middot; ~95%</button>
+          <button class="chip" data-w="100" aria-pressed="false">Coin flips &middot; 100%</button>
+        </div>
+        <div class="toggle-row">
+          <span class="toggle-label">Select</span>
+          <button class="chip sel-chip active" data-sel="top" aria-pressed="true">Top 10%</button>
+          <button class="chip sel-chip" data-sel="bottom" aria-pressed="false">Bottom 10%</button>
+          <span class="toggle-label" style="margin-left:.8rem">Time</span>
+          <button class="chip time-chip active" data-dir="fwd" aria-pressed="true">Pick in Round 1 &rarr; watch Round 2</button>
+          <button class="chip time-chip" data-dir="back" aria-pressed="false">&#8646; Pick in Round 2 &rarr; look back at Round 1</button>
+          <button class="chip" id="luck-reroll" style="margin-left:auto">&#8635; New season</button>
+        </div>
+      </div>
+
+      <canvas id="luck-canvas" height="460" role="img" aria-label="Scatter plot of Round 1 versus Round 2 scores with the selected extreme group highlighted">Scatter plot of Round 1 versus Round 2 scores; the numeric summary below updates with the chart.</canvas>
+
+      <div class="luck-legend">Dashed diagonal: where a score would land if it simply repeated. Hollow dot: the selected group&rsquo;s average in the round you picked them. Filled dot: the same group&rsquo;s average in the other round. <strong>The arrow between the dots is the regression.</strong></div>
+
+      <div class="luck-stats" id="luck-stats" aria-live="polite"></div>
+      <div class="luck-note">Luck percentages on the presets are illustrative &mdash; but the ordering is real.</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p>Notice three things as you play:</p>
+    <p><strong>At 0% luck, nothing regresses.</strong> Drag the slider all the way down &mdash; a game even purer than chess &mdash; and the top players in Round 1 are the top players in Round 2. Regression to the mean is not a law of nature that applies to everything &mdash; it applies exactly as far as luck does.</p>
+    <p><strong>At 100% luck, everything regresses completely.</strong> The "top" coin-flippers fall all the way back to average, because their selection was <em>nothing but</em> luck. This is your flight school again.</p>
+    <p><strong>In between is where life happens.</strong> The selected group keeps the skill part of its edge and loses the luck part. The fall-back you observe is a readout of how much of the game fails to carry over &mdash; which is why statisticians can look at how hard fund managers regress and put a ceiling on how much of stock-picking can possibly be skill. (Spoiler, from decades of persistence data: very little survives the re-roll.<sup><a href="#fn2" id="ref2">2</a></sup>)</p>
+  </div>
+</section>
+
+<hr class="center-rule">
+
+<!-- ============ 4. TIME REVERSAL ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">04</span><h2>Run time backwards</h2></div>
+    <p>Here is the most elegant test in this whole subject, and almost nobody teaches it.</p>
+    <p>Athletes who appear on the cover of <em>Sports Illustrated</em> tend to decline afterwards &mdash; the famous "SI jinx". The magazine once audited its own first 2,456 covers and found that misfortune had followed 37% of the time. The causal stories write themselves: pressure, complacency, overexposure. But ask one strange question: <em>what were these stars doing in the season <strong>before</strong> the one that earned the cover?</em></p>
+    <p>The economist Gary Smith ran that test with baseball's batting leaders. The five best averages of 2014: all five hit worse in 2015, just as the jinx predicts &mdash; and all five had hit worse in 2013, too.<sup><a href="#fn3" id="ref3">3</a></sup> The career year was the aberration; the seasons on either side of it were just the player. No jinx, no pressure, no complacency can reach <em>backwards in time</em>. Selection can: you get the cover for a career year, a career year is part luck, so the seasons on <em>both sides</em> of it sit closer to your true level.</p>
+    <p>That's the test. <strong>A causal story can only explain the after. Selection explains the before and the after.</strong> So when the decline shows up running time backwards too, the curse isn't so much disproved as made redundant &mdash; selection alone produces the whole pattern. Better still, the comparison tells you how much room is left for a real effect: only the part of the after-decline that <em>exceeds</em> the before-rise can belong to causation. For Smith's batting leaders, the backward decline sat right there alongside the forward one, leaving the jinx nothing to explain. At the speed-camera sites you'll meet below, by contrast, the fall after installation exceeds what selection and trend can account for &mdash; and that excess, about a fifth of the observed drop, is the cameras. (Flip the <em>time</em> toggle in the lab above and watch the arrow swing sideways: the same fall-back, run the other way in time.)</p>
+    <p>This test has a distinguished history of embarrassing smart people. Francis Galton, who discovered the phenomenon in the 1880s, measured parents and children and found that exceptionally tall parents had children less tall than themselves &mdash; closer to average. It would be easy to conclude that heredity dilutes, that humanity is converging on uniformity. But Galton noticed the mirror image: exceptionally tall <em>children</em> had parents less tall than themselves, too.<sup><a href="#fn4" id="ref4">4</a></sup> Height can't dilute in both directions at once. The spread of heights wasn't shrinking at all &mdash; the extremes just don't line up across generations, because each generation's extremes get there partly on the luck of the draw.</p>
+    <p>Fifty years later a statistics professor named Horace Secrist did not notice. He and his assistants spent a decade tracking the fortunes of American businesses, found that the most exceptional firms kept drifting toward averageness, and in 1933 published a 468-page book about it &mdash; <em>The Triumph of Mediocrity in Business</em> &mdash; concluding that competition itself grinds excellence down. The statistician Harold Hotelling pointed out the fatal flaw: sort the very same firms by how they <em>finished</em> rather than how they started, and now the middling firms appear to climb toward excellence. The pattern ran backwards just as well &mdash; &ldquo;from the same data one may demonstrate stability or instability according to taste.&rdquo; When Secrist protested, Hotelling compared the decade of labour to &ldquo;proving the multiplication table by arranging elephants in rows and columns, and then doing the same for numerous other kinds of animals&rdquo;.<sup><a href="#fn5" id="ref5">5</a></sup></p>
+    <div class="aside">
+      <span class="aside-label">Why your spreadsheet says "regression"</span>
+      Galton's first name for the pattern was <em>reversion</em> &mdash; a pull back toward the ancestral type. He dropped it for "regression" once the symmetry convinced him there was no pull &mdash; though the replacement hardly sounds less like a force. The name then stuck, not just to the phenomenon but to the standard technique for fitting a line through data &mdash; the one behind every "trendline" button &mdash; which he and his successors built while studying it. The most-used tool in statistics is named after its most-misread pattern.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. FIELD GUIDE ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">05</span><h2>Once you see it, it's everywhere</h2></div>
+    <p>The trap has one signature: <strong>something was selected <em>because</em> it was extreme, and then it was measured again.</strong> Any time you see that shape, regression to the mean is already in the room. A field guide:</p>
+  </div>
+  <div class="wide">
+    <div class="cards">
+      <div class="card">
+        <span class="card-kicker">Medicine</span>
+        <h3>You took the remedy at your worst</h3>
+        <p>You see the doctor &mdash; or finally try the supplement, the copper bracelet, the detox &mdash; when symptoms <em>peak</em>. From a peak, the most likely direction is down, treatment or no treatment. <strong>Whatever you happened to try gets the credit for the bounce.</strong> This is the engine of every quack cure's five-star reviews, and a real chunk of what gets casually called "the placebo effect" is just this.<sup><a href="#fn6" id="ref6">6</a></sup></p>
+      </div>
+      <div class="card">
+        <span class="card-kicker">Management</span>
+        <h3>The turnaround artist</h3>
+        <p>The consultant is hired, the manager replaced, the minister appointed <em>at rock bottom</em> &mdash; that's when organisations act. Then comes the bounce that was largely coming anyway, and the new broom gets a reputation for miracles. <strong>Interventions launched at extremes collect credit they didn't earn.</strong></p>
+      </div>
+      <div class="card">
+        <span class="card-kicker">Policy</span>
+        <h3>The accident black spot</h3>
+        <p>Speed cameras get installed at junctions <em>right after</em> a spike in crashes. Crash counts at a freak-spike site tend to fall back whether or not anyone does anything. In the UK's national evaluation, at the sites where this could be measured, regression to the mean accounted for about <strong>three-fifths</strong> of the observed fall in fatal-and-serious collisions; the cameras themselves, about a fifth.<sup><a href="#fn7" id="ref7">7</a></sup> (Cameras can still help &mdash; you just can't tell how much from before/after at sites chosen for being extreme.)</p>
+      </div>
+      <div class="card">
+        <span class="card-kicker">Hiring &amp; investing</span>
+        <h3>Paying full price for a career year</h3>
+        <p>The striker is bought after his best season; the fund is bought after its hottest run; the executive is poached off a record quarter. Each was selected <em>for</em> an extreme &mdash; so each is, on average, good-plus-lucky, and you are paying for the luck as if it were skill. <strong>Expect the talent to stay and the magic to leave.</strong></p>
+      </div>
+      <div class="card">
+        <span class="card-kicker">Culture</span>
+        <h3>The sophomore slump</h3>
+        <p>The second album disappoints, the sequel underwhelms, the restaurant isn't as good on the second visit. Of all the seasons in which a big-league batter has hit .300 or better &mdash; a genuinely excellent year &mdash; roughly four in five were followed by a worse one.<sup><a href="#fn8" id="ref8">8</a></sup> The first data point wasn't just quality; it was quality <em>selected for</em> a peak. <strong>The talent shows up both times. The luck only showed up once.</strong></p>
+      </div>
+      <div class="card">
+        <span class="card-kicker">Home</span>
+        <h3>The scolded child</h3>
+        <p>The tantrum-filled day is followed by a calmer one, and whatever you did in despair &mdash; the shouting, the new rule, the early bedtime &mdash; looks like it worked. The angelic day is followed by an ordinary one, and the reward you gave looks like it spoiled them. <strong>You are the flight instructor.</strong> The dice do this on their own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="center-rule">
+
+<!-- ============ 6. WHAT IT DOES NOT SAY ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">06</span><h2>Three things it does <em>not</em> say</h2></div>
+    <p>Half of understanding this idea is refusing its evil twins. Regression to the mean does <em>not</em> mean any of the following:</p>
+
+    <div class="not-item">
+      <h3>It is not the gambler's fallacy.</h3>
+      <p>The gambler's fallacy says luck <em>remembers</em>: after five reds, black is "due". Regression to the mean follows from the exact opposite: <strong>luck forgets.</strong> After an extreme, the next draw isn't the <em>opposite</em> of extreme &mdash; it's just typical. If luck really did self-correct, your bottom pilots wouldn't have bounced back merely to the middle; they'd have bounced <em>past</em> it &mdash; the stronger the correction, the closer to the top. They landed dead on the average. Nothing is ever "due".</p>
+    </div>
+
+    <div class="not-item">
+      <h3>It does not mean everyone ends up mediocre.</h3>
+      <p>This was Secrist's blunder. Individuals selected at the extremes drift back, yes &mdash; but fresh extremes are minted every round from new luck. The <em>spread</em> needn't narrow at all: in Galton's heights, in Secrist's firms, and in the lab above, it stays exactly as wide; it's the <em>cast</em> at the extremes that keeps changing. (Whether a spread is genuinely narrowing is a separate question &mdash; regression can't answer it either way.) Someone is always exceptional. It's just rarely the same someone twice running &mdash; and the luckier the game, the faster the cast changes.</p>
+    </div>
+
+    <div class="not-item">
+      <h3>It does not mean skill is fake.</h3>
+      <p>In a skill-heavy game, the champion is genuinely good &mdash; being good is most of how you get to the top there. (The luckier the game, the less that's true; the luck-o-meter tells you which world you're in.) The correction is smaller and more precise: she is probably not <em>as</em> good as her best year looked, and your best guess for her next year sits between her peak and the average, positioned by how much luck the game contains. Real skill, minus the borrowed luck.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. DEFENSE ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">07</span><h2>The defence</h2></div>
+    <p>You cannot see this illusion coming &mdash; it looks exactly like causation from the inside, which is why the flight instructor was so sure. But one question dissolves it:</p>
+    <p class="keyline">&ldquo;Compared to what? What would have happened anyway?&rdquo;</p>
+    <p>Any before/after story that <em>starts at an extreme</em> is unreliable by construction &mdash; the bounce was already loaded into the selection before the intervention ever arrived. This is not a small academic worry; it is <strong>the</strong> reason controlled trials exist. Give a treatment to people selected for being at their worst and most will improve. Give a sugar pill to identical people selected the same way and <em>most of them improve too</em>. Both groups bounce; only the <em>difference</em> between the groups is the treatment. A control group is civilisation's instrument for subtracting regression to the mean. (Donald Campbell, the great methodologist of policy evaluation, rated regression artifacts &ldquo;probably the most recurrent form of self-deception in the experimental social reform literature&rdquo;.<sup><a href="#fn9" id="ref9">9</a></sup>)</p>
+    <p>For daily life, four rules cover most of it:</p>
+    <p><strong>1. Distrust any intervention launched at rock bottom.</strong> The consultant hired in the crisis, the remedy taken at the symptom's peak, the policy passed after the freak disaster &mdash; all will "work". Wait for the second data point, or ask what happened to comparable cases that did nothing.</p>
+    <p><strong>2. Never pay full price for a career year.</strong> You met this one in the field guide: select the extreme and you have bought the luck at skill prices. Budget for it to leave.</p>
+    <p><strong>3. Judge people on averages, not on their most vivid moment.</strong> One brilliant interview, one disastrous shift, one terrible Tuesday — the extreme moments are the least repeatable ones. More observations, less regression. The vivid moment is precisely the least representative one.</p>
+    <p><strong>4. When kindness seems to fail and harshness seems to work, remember the flight school.</strong> The dice manufacture that exact pattern out of nothing, every time. You now know something the instructor didn't &mdash; the evidence of your own eyes has a systematic bias in favour of cruelty, and it is lying.</p>
+  </div>
+</section>
+
+<!-- ============ 8. CODA ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">08</span><h2>A small consolation</h2></div>
+    <p>There is one more thing this idea gives you, and it is oddly gentle.</p>
+    <p>Your most humiliating day &mdash; the botched talk, the failed exam, the shift where everything went wrong &mdash; overstated your flaws by exactly the same mechanism that your finest hour overstated your gifts. Both were real performances by the real you; both were also extreme draws, selected by memory precisely <em>because</em> they were extreme. The extremes are where the luck lives. The average is where you live.</p>
+    <p>So: be a little suspicious of your triumphs, a little gentle with your disasters, and extend both courtesies to everyone else. The world will keep handing you vivid before-and-after stories that begin at an extreme &mdash; the miracle cure, the turnaround CEO, the scolding that worked. You now know what's inside them: a re-rolled die, dressed up as a moral.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTNOTES ============ -->
+<section>
+  <div class="wrap footnotes">
+    <hr class="center-rule" style="margin:1.5rem auto 2.5rem">
+    <ol>
+      <li id="fn1">Daniel Kahneman, <cite>Thinking, Fast and Slow</cite> (2011), ch. 17, &ldquo;Regression to the Mean&rdquo; &mdash; the source of both the flight-school story and the quote. <a href="#ref1">&#8617;</a></li>
+      <li id="fn2">S&amp;P Dow Jones Indices, <cite>SPIVA US Persistence Scorecard</cite>, year-end 2024: of the 512 US domestic equity funds in the top quartile of performance as of December 2020, not a single one remained in the top quartile over the next four years. S&amp;P's own gloss: &ldquo;Skill is likely to persist, but luck is ephemeral.&rdquo; <a href="#ref2">&#8617;</a></li>
+      <li id="fn3">Gary Smith, &ldquo;The Sports Illustrated Cover Jinx&rdquo;, <cite>Psychology Today</cite> (October 2016). The cover audit: Alexander Wolff, &ldquo;That Old Black Magic&rdquo;, <cite>Sports Illustrated</cite> (21 January 2002) &mdash; two researchers reviewed all 2,456 covers to that date and counted misfortune following 913 of them, or 37.2%. <a href="#ref3">&#8617;</a></li>
+      <li id="fn4">Francis Galton, &ldquo;Regression towards Mediocrity in Hereditary Stature&rdquo;, <cite>Journal of the Anthropological Institute</cite> 15 (1886). Children of exceptional parents kept about two-thirds of the <em>mid-parent</em> deviation from the mean (the mid-parent being the two parents averaged) &mdash; and reading his table the other way, the parents of exceptional children deviated less than their children did. That symmetry is what told Galton no force was involved. <a href="#ref4">&#8617;</a></li>
+      <li id="fn5">Horace Secrist, <cite>The Triumph of Mediocrity in Business</cite> (1933); Harold Hotelling, review in <cite>Journal of the American Statistical Association</cite> 28 (1933), p.&nbsp;464. The elephants line is from Hotelling's rejoinder after Secrist protested the review: <cite>JASA</cite> 29 (1934), pp.&nbsp;196&ndash;200. <a href="#ref5">&#8617;</a></li>
+      <li id="fn6">McDonald, Mazzuca &amp; McCabe, &ldquo;How much of the placebo &lsquo;effect&rsquo; is really statistical regression?&rdquo;, <cite>Statistics in Medicine</cite> 2 (1983); Hr&oacute;bjartsson &amp; G&oslash;tzsche, &ldquo;Is the placebo powerless?&rdquo;, <cite>NEJM</cite> 344 (2001) &mdash; across 114 trials that compared placebo arms with <em>no-treatment</em> arms, placebo effects were absent for objective outcomes and modest for subjective ones such as pain. Much of what uncontrolled settings call a placebo effect is the natural course of illness plus regression to the mean. <a href="#ref6">&#8617;</a></li>
+      <li id="fn7">UK Department for Transport, <cite>The National Safety Camera Programme: Four-year Evaluation Report</cite> (2005), Appendix H (Mountain &amp; Maher): at the 216 urban sites analysed, fatal-and-serious collisions fell by 55%, of which regression to the mean accounted for 35 percentage points, background trend 9, and the cameras about 10. <a href="#ref7">&#8617;</a></li>
+      <li id="fn8">Schall &amp; Smith, &ldquo;Do Baseball Players Regress Toward the Mean?&rdquo;, <cite>The American Statistician</cite> 54 (2000): of 4,026 player-seasons batting .300 or better since 1901, 79.7% were followed by a worse season. <a href="#ref8">&#8617;</a></li>
+      <li id="fn9">Donald T. Campbell, &ldquo;Reforms as Experiments&rdquo;, <cite>American Psychologist</cite> 24 (1969), p.&nbsp;414 &mdash; written after his dissection (with H.&nbsp;L. Ross) of the 1955 Connecticut speeding crackdown, where a record death toll was followed by a much-celebrated drop that was substantially the record year regressing. <a href="#ref9">&#8617;</a></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer class="page-footer">
+  <div class="wrap">
+    Made by Claude (Fable 5) in June 2026, as an answer to the question &ldquo;explain something you think people ought to understand better.&rdquo;<br>
+    One file. No trackers, no dependencies. The dice in Experiment Nº 1 really are dice &mdash; view source.
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+/* ================= utilities ================= */
+const $ = (id) => document.getElementById(id);
+const randInt = (lo, hi) => lo + Math.floor(Math.random() * (hi - lo + 1));
+
+let _gaussSpare = null;
+function gauss() {
+  if (_gaussSpare !== null) { const v = _gaussSpare; _gaussSpare = null; return v; }
+  let u = 0, v = 0;
+  while (u === 0) u = Math.random();
+  while (v === 0) v = Math.random();
+  const mag = Math.sqrt(-2.0 * Math.log(u));
+  _gaussSpare = mag * Math.sin(2.0 * Math.PI * v);
+  return mag * Math.cos(2.0 * Math.PI * v);
+}
+
+/* ================= experiment 1: flight school ================= */
+(function flightSchool() {
+  const CALLSIGNS = ["Falcon", "Comet", "Viper", "Sparrow", "Atlas", "Echo", "Juno", "Dart"];
+  const FEEDBACK_DAYS = 5;          // feedback on days 1..5; day 6 is the last observation
+  const N = CALLSIGNS.length;
+
+  let day, scores, prevScores, praisedIdx, scoldedIdx, praiseDone, scoldDone;
+  let praiseEvents, scoldEvents;
+
+  const grid = $("fs-grid"), dayChip = $("fs-day"), hint = $("fs-hint");
+  const praiseBtn = $("fs-praise"), scoldBtn = $("fs-scold");
+
+  function rollAll() { return Array.from({ length: N }, () => randInt(0, 100)); }
+  function best(arr) { return arr.indexOf(Math.max(...arr)); }
+  function worst(arr) { return arr.indexOf(Math.min(...arr)); }
+
+  function reset() {
+    day = 1;
+    scores = rollAll();
+    prevScores = null;
+    praiseEvents = []; scoldEvents = [];
+    startDay();
+    show("fs-play");
+  }
+
+  function startDay() {
+    praisedIdx = null; scoldedIdx = null; praiseDone = false; scoldDone = false;
+    const b = best(scores), w = worst(scores);
+    praiseBtn.textContent = "Praise " + CALLSIGNS[b] + " (top score)";
+    scoldBtn.textContent = "Scold " + CALLSIGNS[w] + " (bottom score)";
+    praiseBtn.disabled = false; scoldBtn.disabled = false;
+    dayChip.textContent = "Day " + day + " of " + (FEEDBACK_DAYS + 1);
+    hint.textContent = "Deliver today's feedback…";
+    render();
+  }
+
+  function render() {
+    const b = best(scores), w = worst(scores);
+    grid.innerHTML = "";
+    for (let i = 0; i < N; i++) {
+      const row = document.createElement("div");
+      row.className = "pilot-row" + (i === b ? " is-best" : i === w ? " is-worst" : "");
+      let tag = "";
+      if (i === b) tag = '<span class="pilot-tag top">top</span>';
+      if (i === w) tag = '<span class="pilot-tag bottom">bottom</span>';
+      if (praiseDone && i === praisedIdx) tag += ' <span class="pilot-tag top">praised</span>';
+      if (scoldDone && i === scoldedIdx) tag += ' <span class="pilot-tag bottom">scolded</span>';
+
+      let delta = "";
+      if (prevScores) {
+        const d = scores[i] - prevScores[i];
+        const cls = d > 0 ? "up" : d < 0 ? "down" : "";
+        const sym = d > 0 ? "▲" : d < 0 ? "▼" : "–";
+        delta = '<span class="pilot-delta ' + cls + '">' + sym + " " + Math.abs(d) + "</span>";
+      }
+      row.innerHTML =
+        '<span class="pilot-name">' + CALLSIGNS[i] + tag + "</span>" +
+        '<div class="bar-track"><div class="bar-fill" style="width:0%"></div></div>' +
+        '<span class="pilot-score">' + scores[i] + delta + "</span>";
+      grid.appendChild(row);
+      const fill = row.querySelector(".bar-fill");
+      requestAnimationFrame(() => requestAnimationFrame(() => { fill.style.width = scores[i] + "%"; }));
+    }
+  }
+
+  function maybeAdvance() {
+    if (!(praiseDone && scoldDone)) {
+      hint.textContent = praiseDone ? "Now deal with the bottom of the board…" : "Now the top of the board…";
+      return;
+    }
+    hint.textContent = "Feedback delivered. Next day’s sorties…";
+    setTimeout(nextDay, 850);
+  }
+
+  praiseBtn.addEventListener("click", () => {
+    praisedIdx = best(scores); praiseDone = true; praiseBtn.disabled = true;
+    if (!scoldDone) scoldBtn.focus();
+    render(); maybeAdvance();
+  });
+  scoldBtn.addEventListener("click", () => {
+    scoldedIdx = worst(scores); scoldDone = true; scoldBtn.disabled = true;
+    if (!praiseDone) praiseBtn.focus();
+    render(); maybeAdvance();
+  });
+
+  function nextDay() {
+    const before = scores.slice();
+    prevScores = before;
+    scores = rollAll();
+    praiseEvents.push({ before: before[praisedIdx], after: scores[praisedIdx] });
+    scoldEvents.push({ before: before[scoldedIdx], after: scores[scoldedIdx] });
+    day++;
+    if (day > FEEDBACK_DAYS) { finalRender(); return; }
+    startDay();
+  }
+
+  function finalRender() {
+    // show day 6 scores briefly, then the tally
+    praisedIdx = null; scoldedIdx = null; praiseDone = false; scoldDone = false;
+    dayChip.textContent = "Day " + (FEEDBACK_DAYS + 1) + " of " + (FEEDBACK_DAYS + 1) + " — final flights";
+    praiseBtn.disabled = true; scoldBtn.disabled = true;
+    hint.textContent = "Compiling your instructor’s log…";
+    render();
+    setTimeout(showTally, 1700);
+  }
+
+  function pct(n, total) { return Math.round((100 * n) / total) + "%"; }
+  function avg(arr) { return arr.reduce((a, b) => a + b, 0) / arr.length; }
+
+  function showTally() {
+    const sImproved = scoldEvents.filter(e => e.after > e.before).length;
+    const pDeclined = praiseEvents.filter(e => e.after < e.before).length;
+    const sAvg = avg(scoldEvents.map(e => e.after - e.before));
+    const pAvg = avg(praiseEvents.map(e => e.after - e.before));
+    $("fs-scold-stat").textContent = "Improved " + sImproved + " out of " + scoldEvents.length + " times";
+    $("fs-scold-sub").textContent = "Average change next day: " + (sAvg >= 0 ? "+" : "") + sAvg.toFixed(0) + " points";
+    $("fs-praise-stat").textContent = "Got worse " + pDeclined + " out of " + praiseEvents.length + " times";
+    $("fs-praise-sub").textContent = "Average change next day: " + (pAvg >= 0 ? "+" : "") + pAvg.toFixed(0) + " points";
+    show("fs-tally");
+  }
+
+  function show(idOn) {
+    ["fs-play", "fs-tally", "fs-reveal"].forEach(id => $(id).classList.toggle("hidden", id !== idOn));
+    if (idOn !== "fs-play") {
+      $("flight-lab").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      $(idOn).focus({ preventScroll: true });
+    }
+  }
+
+  $("fs-agree").addEventListener("click", () => show("fs-reveal"));
+  $("fs-suspicious").addEventListener("click", () => show("fs-reveal"));
+  $("fs-replay").addEventListener("click", () => {
+    $("fs-thousand-result").classList.add("hidden");
+    reset();
+    praiseBtn.focus();
+  });
+
+  $("fs-thousand").addEventListener("click", () => {
+    const RUNS = 1000;
+    let sImp = 0, sTot = 0, pDec = 0, pTot = 0, sDelta = 0, pDelta = 0;
+    for (let r = 0; r < RUNS; r++) {
+      let s = rollAll();
+      for (let d = 0; d < FEEDBACK_DAYS; d++) {
+        const b = best(s), w = worst(s);
+        const next = rollAll();
+        sTot++; pTot++;
+        if (next[w] > s[w]) sImp++;
+        if (next[b] < s[b]) pDec++;
+        sDelta += next[w] - s[w];
+        pDelta += next[b] - s[b];
+        s = next;
+      }
+    }
+    const el = $("fs-thousand-result");
+    el.innerHTML =
+      "1,000 instructors &middot; " + (RUNS * FEEDBACK_DAYS).toLocaleString() + " scoldings and " + (RUNS * FEEDBACK_DAYS).toLocaleString() + " praisings, all delivered to random numbers:<br>" +
+      "&mdash; scolding “worked” <b>" + pct(sImp, sTot) + "</b> of the time (avg " + (sDelta / sTot >= 0 ? "+" : "") + (sDelta / sTot).toFixed(1) + " points)<br>" +
+      "&mdash; praise “backfired” <b>" + pct(pDec, pTot) + "</b> of the time (avg " + (pDelta / pTot).toFixed(1) + " points)";
+    el.classList.remove("hidden");
+  });
+
+  reset();
+})();
+
+/* ================= experiment 2: luck-o-meter ================= */
+(function luckLab() {
+  const N = 400;
+  const canvas = $("luck-canvas"), stats = $("luck-stats"), readout = $("luck-readout");
+  const slider = $("luck-slider");
+  const ctx = canvas.getContext("2d");
+
+  let skill = [], luck1 = [], luck2 = [];
+  let w = slider.value / 100;
+  let selMode = "top";       // 'top' | 'bottom'
+  let timeDir = "fwd";       // 'fwd' (select on R1, observe R2) | 'back'
+
+  function newSeason() {
+    skill = Array.from({ length: N }, gauss);
+    luck1 = Array.from({ length: N }, gauss);
+    luck2 = Array.from({ length: N }, gauss);
+  }
+
+  // raw mix -> display score on 0..100
+  function disp(m) { return Math.max(0, Math.min(100, 50 + 16 * m)); }
+
+  function compute() {
+    // variance-weighted mix: with sqrt weights, the slider's "luck share" IS the
+    // share of score variance due to luck, round-to-round r = 1 - w exactly,
+    // and total spread stays constant as the slider moves.
+    const sw = Math.sqrt(1 - w), lw = Math.sqrt(w);
+    const r1 = [], r2 = [];
+    for (let i = 0; i < N; i++) {
+      r1.push(disp(sw * skill[i] + lw * luck1[i]));
+      r2.push(disp(sw * skill[i] + lw * luck2[i]));
+    }
+    return { r1, r2 };
+  }
+
+  function pearson(a, b) {
+    const n = a.length;
+    const ma = a.reduce((x, y) => x + y, 0) / n, mb = b.reduce((x, y) => x + y, 0) / n;
+    let num = 0, da = 0, db = 0;
+    for (let i = 0; i < n; i++) {
+      num += (a[i] - ma) * (b[i] - mb);
+      da += (a[i] - ma) ** 2; db += (b[i] - mb) ** 2;
+    }
+    const den = Math.sqrt(da * db);
+    return den === 0 ? 1 : num / den;
+  }
+
+  function mean(arr) { return arr.reduce((a, b) => a + b, 0) / arr.length; }
+
+  function draw() {
+    const { r1, r2 } = compute();
+    // selection round / observation round
+    const selRound = timeDir === "fwd" ? r1 : r2;
+    const obsRound = timeDir === "fwd" ? r2 : r1;
+
+    const idx = Array.from({ length: N }, (_, i) => i);
+    idx.sort((a, b) => selMode === "top" ? selRound[b] - selRound[a] : selRound[a] - selRound[b]);
+    const selected = new Set(idx.slice(0, Math.round(N / 10)));
+
+    const selVals = [...selected].map(i => selRound[i]);
+    const obsVals = [...selected].map(i => obsRound[i]);
+    const selMean = mean(selVals), obsMean = mean(obsVals);
+    const allMean = mean(r1.concat(r2));
+    const r = pearson(r1, r2);
+
+    /* --- canvas sizing --- */
+    const cssW = canvas.clientWidth || canvas.parentElement.clientWidth;
+    const cssH = Math.max(320, Math.min(470, Math.round(cssW * 0.62)));
+    const dpr = window.devicePixelRatio || 1;
+    if (canvas.width !== Math.round(cssW * dpr) || canvas.height !== Math.round(cssH * dpr)) {
+      canvas.width = Math.round(cssW * dpr);
+      canvas.height = Math.round(cssH * dpr);
+      canvas.style.height = cssH + "px";
+    }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, cssW, cssH);
+
+    const PAD = { l: 46, r: 18, t: 16, b: 40 };
+    const px = (v) => PAD.l + (v / 100) * (cssW - PAD.l - PAD.r);
+    const py = (v) => cssH - PAD.b - (v / 100) * (cssH - PAD.t - PAD.b);
+
+    /* gridlines + mean lines */
+    ctx.strokeStyle = "#EBE4D6"; ctx.lineWidth = 1;
+    for (const g of [0, 25, 50, 75, 100]) {
+      ctx.beginPath(); ctx.moveTo(px(g), py(0)); ctx.lineTo(px(g), py(100)); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(px(0), py(g)); ctx.lineTo(px(100), py(g)); ctx.stroke();
+    }
+    /* identity diagonal: where a repeat of the same score would land */
+    ctx.strokeStyle = "#D8CFBE"; ctx.setLineDash([5, 5]);
+    ctx.beginPath(); ctx.moveTo(px(0), py(0)); ctx.lineTo(px(100), py(100)); ctx.stroke();
+    ctx.setLineDash([]);
+
+    /* axis labels */
+    ctx.fillStyle = "#968C7E";
+    ctx.font = "11px ui-monospace, Menlo, monospace";
+    ctx.textAlign = "center";
+    ctx.fillText("Round 1 score →", (PAD.l + cssW - PAD.r) / 2, cssH - 12);
+    ctx.save();
+    ctx.translate(14, (PAD.t + cssH - PAD.b) / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText("Round 2 score →", 0, 0);
+    ctx.restore();
+    ctx.textAlign = "right";
+    for (const g of [0, 50, 100]) {
+      ctx.fillText(String(g), PAD.l - 7, py(g) + 4);
+      ctx.textAlign = "center"; ctx.fillText(String(g), px(g), cssH - PAD.b + 16); ctx.textAlign = "right";
+    }
+
+    /* dots */
+    for (let i = 0; i < N; i++) {
+      if (selected.has(i)) continue;
+      ctx.fillStyle = "rgba(150,140,126,.38)";
+      ctx.beginPath(); ctx.arc(px(r1[i]), py(r2[i]), 3, 0, Math.PI * 2); ctx.fill();
+    }
+    for (const i of selected) {
+      ctx.fillStyle = selMode === "top" ? "rgba(52,96,143,.85)" : "rgba(179,55,43,.85)";
+      ctx.beginPath(); ctx.arc(px(r1[i]), py(r2[i]), 3.6, 0, Math.PI * 2); ctx.fill();
+    }
+
+    /* selection mean -> observation mean arrow, drawn in the geometry of the plot:
+       fwd:  vertical line at x=selMean; hollow point at (selMean, selMean) on the diagonal,
+             filled point at (selMean, obsMean); arrow between = the regression.
+       back: horizontal line at y=selMean; hollow at (selMean, selMean), filled at (obsMean, selMean). */
+    const accent = selMode === "top" ? "#34608F" : "#B3372B";
+    ctx.strokeStyle = accent; ctx.fillStyle = accent; ctx.lineWidth = 1.5;
+
+    function arrow(x1, y1, x2, y2) {
+      ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+      const ang = Math.atan2(y2 - y1, x2 - x1);
+      ctx.beginPath();
+      ctx.moveTo(x2, y2);
+      ctx.lineTo(x2 - 8 * Math.cos(ang - 0.45), y2 - 8 * Math.sin(ang - 0.45));
+      ctx.lineTo(x2 - 8 * Math.cos(ang + 0.45), y2 - 8 * Math.sin(ang + 0.45));
+      ctx.closePath(); ctx.fill();
+    }
+
+    const sm = selMean, om = obsMean;
+    if (Math.abs(om - sm) > 1.5) {
+      if (timeDir === "fwd") arrow(px(sm), py(sm), px(sm), py(om));
+      else arrow(px(sm), py(sm), px(om), py(sm));
+    }
+    /* hollow marker: where the group started (their selection-round average, on the diagonal) */
+    ctx.beginPath(); ctx.arc(px(sm), py(sm), 5.5, 0, Math.PI * 2);
+    ctx.fillStyle = "#FFFDF8"; ctx.fill(); ctx.stroke();
+    /* filled marker: where they ended up */
+    ctx.beginPath();
+    if (timeDir === "fwd") ctx.arc(px(sm), py(om), 5.5, 0, Math.PI * 2);
+    else ctx.arc(px(om), py(sm), 5.5, 0, Math.PI * 2);
+    ctx.fillStyle = accent; ctx.fill();
+
+    /* --- stats readout --- */
+    const selLabel = (selMode === "top" ? "Top" : "Bottom") + " 10%";
+    const roundSel = timeDir === "fwd" ? "Round 1" : "Round 2";
+    const roundObs = timeDir === "fwd" ? "Round 2" : "Round 1";
+    const edgeSel = sm - allMean, edgeObs = om - allMean;
+    const kept = Math.abs(edgeSel) < 0.5 ? null : Math.max(0, Math.min(1, edgeObs / edgeSel));
+    let keptLine = "";
+    if (kept !== null) {
+      const kp = Math.round(kept * 100);
+      if (kp >= 100) keptLine = "<span>They kept <b>all</b> of their distance from the average &mdash; no luck in this game, nothing to give back.</span>";
+      else if (kp <= 0) keptLine = "<span>They kept <b>none</b> of their distance from the average &mdash; it was never anything but luck.</span>";
+      else keptLine = "<span>They kept <b>" + kp + "%</b> of their distance from the average. The rest was luck.</span>";
+    }
+    const rDisp = (Math.abs(r) < 0.005 ? 0 : r).toFixed(2);
+    stats.innerHTML =
+      "<span>Round-to-round consistency: <b>r ≈ " + rDisp + "</b> (1 = scores repeat exactly, 0 = unrelated)</span>" +
+      "<span>" + selLabel + " by " + roundSel + ": avg <b>" + sm.toFixed(0) + "</b> &rarr; their " + roundObs + " avg: <b>" + om.toFixed(0) + "</b> (everyone&rsquo;s average: " + allMean.toFixed(0) + ")</span>" +
+      keptLine;
+  }
+
+  /* --- wiring --- */
+  function setActive(selector, chosen) {
+    document.querySelectorAll(selector).forEach(c => {
+      const on = c === chosen;
+      c.classList.toggle("active", on);
+      c.setAttribute("aria-pressed", String(on));
+    });
+  }
+  slider.addEventListener("input", () => {
+    w = slider.value / 100;
+    readout.textContent = slider.value + "% luck";
+    setActive("#luck-presets .chip", null);
+    draw();
+  });
+  document.querySelectorAll("#luck-presets .chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      slider.value = chip.dataset.w;
+      w = chip.dataset.w / 100;
+      readout.textContent = chip.dataset.w + "% luck";
+      setActive("#luck-presets .chip", chip);
+      draw();
+    });
+  });
+  document.querySelectorAll(".sel-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      selMode = chip.dataset.sel;
+      setActive(".sel-chip", chip);
+      draw();
+    });
+  });
+  document.querySelectorAll(".time-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      timeDir = chip.dataset.dir;
+      setActive(".time-chip", chip);
+      draw();
+    });
+  });
+  $("luck-reroll").addEventListener("click", () => { newSeason(); draw(); });
+  window.addEventListener("resize", draw);
+
+  newSeason();
+  draw();
+})();
+</script>
+</body>
+</html>
