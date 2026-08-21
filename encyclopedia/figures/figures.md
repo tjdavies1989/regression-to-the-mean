@@ -2,10 +2,10 @@
 node: figures
 title: Figures
 layer: 0
-state: sketch
+state: survey
 class: anchor
 parent: root
-bridges: []
+bridges: [traditions]
 pass: 2026-08-21.1
 ---
 
@@ -15,7 +15,9 @@ Philosophy is unusual among disciplines in that its history is not superseded bu
 
 Every figures article follows the fixed template of METHOD §7: *Why they matter → Life → Works → Thought (by doctrine, with bridges) → Influence and reception → Reading path → optional Assessment*.
 
-The roster below is the opening map, not a canon ranking; it will grow on demand, per METHOD §6 — a figure earns a stub when the problem tree keeps needing to cite them. Classes are depth ceilings assigned in advance: an `anchor` may eventually receive monograph-depth treatment; a `satellite` deliberately never exceeds a survey.
+The roster below is the opening map, not a canon ranking; it will grow on demand, per METHOD §6 — a figure earns a stub when the problem tree keeps needing to cite them. Classes are depth ceilings assigned in advance: an `anchor` may eventually receive monograph-depth treatment; a `satellite` deliberately never exceeds a survey. The register skews canonical-Western at birth; this is recorded as a standing correction in the queue, and the promotion order below deliberately pulls Indian, Chinese, and Islamic figures forward rather than appending them later.
+
+The register opened where the problem tree first grew deep: with the first pulse running through logic, its first promotions are `aristotle`, `frege`, and `godel` — the discipline's founding discontinuity, its second founding, and the man who turned the new instrument on itself. This is the register's growth law in miniature: figures are promoted where the tree is thickest, so that every deepened region acquires its people and every written figure has live nodes to bridge into.
 
 ## Children
 
