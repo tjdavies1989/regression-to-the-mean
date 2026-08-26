@@ -21,7 +21,7 @@ Naive realism, revived as relationalism by Campbell, insists on the encounter: a
 
 A second front concerns what perception can present. Everyone grants the thin contents: color, shape, location, motion. Siegel argues the contents are rich — that experience itself, not judgment downstream, can present something *as a pine tree*, as causing, as meaningful speech — and the dispute matters because whatever perception presents, it can directly justify. Nearby lies cognitive penetration: if beliefs or fears can alter perceptual content itself, experience threatens to become a circular check on the beliefs that shaped it — though Firestone and Scholl argue the empirical evidence for penetration largely dissolves under scrutiny.
 
-That is the epistemology-facing frontier. Pryor's dogmatism holds that an experience as of a hand gives immediate, defeasible justification for believing there is a hand — no background credentials required. Its skeptics (Wright, White) reply that such easy justification proves too much, licensing bootstrapping; experience justifies only against entitled background assumptions. The theory of what perception *is* and the theory of what it *yields* meet here, which is why this node is homed in mind and bridges epistemology.
+That is the epistemology-facing frontier. Pryor's dogmatism holds that an experience as of a hand gives immediate, defeasible justification for believing there is a hand — no background credentials required. Its skeptics (Wright, White) reply that such easy justification licenses bootstrapping; experience justifies only against entitled background assumptions. What perception *is* and what it *yields* meet here, which is why this node is homed in mind and bridges epistemology.
 
 ## Children
 
