@@ -15,7 +15,7 @@ A problems-first encyclopedia runs a known risk: it quietly universalizes the wa
 
 "Tradition" here covers three kinds of thing, deliberately mixed: **periods** of a lineage (Hellenistic philosophy, early modern Europe), **regional traditions** with their own canons and institutions (Indian, Chinese, Islamic philosophy), and **movements** that cut across time and place (phenomenology, pragmatism, feminist philosophy). The coarse articles come first; each will descend into its own internal articulation by the ordinary pulse rules — `indian-philosophy` alone contains a dozen schools that will eventually demand their own layer.
 
-The register's first two sketches are, deliberately, its two poles: `analytic`, the tradition that supplied the problem tree's own vocabulary and must therefore be seen *as* a tradition rather than as the neutral frame; and `indian-philosophy`, the largest standing demonstration that the terrain can be carved otherwise.
+The register's first sketches were, deliberately, its two poles: `analytic`, the tradition that supplied the problem tree's own vocabulary and must therefore be seen *as* a tradition rather than as the neutral frame; and `indian-philosophy`, the largest standing demonstration that the terrain can be carved otherwise. The second session added `buddhist-philosophy` and `chinese-philosophy`, each arriving with the figures who anchor it (`dharmakirti`, `zhuangzi`) — the register's rule of growth being that traditions and their people land together, so neither is ever cited into a void.
 
 ## Children
 
