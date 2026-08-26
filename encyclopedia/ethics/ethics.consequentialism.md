@@ -5,7 +5,7 @@ layer: 1
 state: sketch
 class: anchor
 parent: ethics
-bridges: [ethics.value, ethics.deontology, ethics.future-people]
+bridges: [ethics.value, ethics.deontology, ethics.future-people, politics]
 pass: 2026-08-26.10
 ---
 
