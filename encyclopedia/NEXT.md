@@ -1,19 +1,21 @@
 Hand-maintained queue, read at the start of every session (METHOD §9). Debts before desires.
 
-**Session log:** Pass 1–2 (2026-08-21): founding, logic descended twice (mathematics, paradox), six figures, three traditions, all consolidations paid. Pass 3+ (2026-08-26): metaphysics descent + Plato/Descartes/Lewis + Buddhist and Chinese traditions in flight; language, mathematics.ontology (first Layer-3), and epistemology descents planned this session, each with same-session consolidation.
+**Session log:**
+- Pass 1–2 (2026-08-21, 45 min): founding — constitution, tooling, Layer-0 map; logic descended twice (mathematics to Layer 2, paradox to Layer 2); six figures; three traditions; all consolidations paid.
+- Pass 3–14 (2026-08-26): the first layer finished — every division descended to Layer 1 and consolidated to survey (metaphysics .3, language .4, epistemology .6, mind .8, science .9, ethics .10, politics .11, aesthetics .12, religion .13) plus the meta register (.14); modality to Layer 2 (.7) and mathematical ontology to Layer 3 (.5), both consolidated; figures doubled to twelve (Plato, Descartes, Lewis; Dharmakīrti, Zhuangzi, Ibn Sīnā); traditions to five sketches (Buddhist, Chinese added).
 
-**Consolidation debts** (pay first): none carried — every descent so far has been consolidated in its own session. Keep it that way.
+**Consolidation debts** (pay first): none carried — verify with `tools/encyc.py` that ethics/politics/aesthetics/religion/meta roots are at survey; if any descent outran its consolidation at session close, it is listed here and is the next session's first act.
 
 **Deepening queue** (desires, in order):
-1. `metaphysics.modality` descent to Layer 2 — completes the modal triangle with `logic.modal` and the Lewis figure article.
-2. `mind` descent to Layer 1.
-3. Figures: `dharmakirti`, `zhuangzi`, `ibn-sina` — the register's promised global correction, now unblocked by the Buddhist/Chinese/Indian tradition sketches.
-4. `science` descent, then `ethics` descent.
-5. `logic.consequence` and `logic.philosophy-of-logic` to survey with their Layer-2 children opened.
-6. Deployment: static-site generator over the repo (extend `tools/encyc.py`), audit as CI build gate, GitHub Pages. Design agreed in conversation 2026-08-26.
+1. Layer-2 pulses where the anchors are begging: `mind.consciousness`, `epistemology.skepticism`, `ethics.metaethics`, `logic.consequence`, `epistemology.justification`.
+2. Traditions: `hellenistic`, `medieval-latin`, `early-modern`, `phenomenology` — the periods the figures register keeps citing into a void.
+3. Figures: `nagarjuna`, `aquinas`, `russell`, `quine`, `rawls`, `augustine`.
+4. `logic.paradox.liar` and `logic.paradox.vagueness` to survey with children opened — the second Layer-3 regions, both anchors.
+5. First `article`-state promotions: candidates `metaphysics.modality.worlds`, `logic.paradox.curry`, `epistemology.knowledge` — the ladder's next rung has never been climbed.
+6. Deployment: static-site generator over the repo (extend `tools/encyc.py`), audit as CI build gate, GitHub Pages. Design agreed in conversation 2026-08-26; needs the user to enable Pages on the repo.
 
 **Standing observations:**
-- Align parent stub-line titles with child file titles where they drifted; a `tools/encyc.py` warning for title drift would automate this.
-- The `figures` roster still skews canonical-Western; queue item 3 is the correction's next step.
-- Watch the `logic.mathematical` / `logic.mathematics` seam and the new `metaphysics.ontology` / `logic.mathematics.ontology` name-shape collision — the articles bridge each other; keep the home split clean.
-- Pass convention: date.pulse with a global pulse counter (2026-08-26.3 is the third pulse overall).
+- Title drift between parent stub lines and child files: add a warning to `tools/encyc.py`.
+- The `figures` roster correction is moving but far from done: no Africana, Latin American, or women philosophers written yet — `beauvoir`, `anscombe`, `arendt` are stubbed and queued; add `confucius` and `shankara` for the traditions now open.
+- Aesthetics proposed 12 children (the most of any division); watch whether its art-form nodes (music, depiction, literature, film) stay genuinely articulated or should merge.
+- Pass convention: date.pulse with a global pulse counter; next pulse is .15.
