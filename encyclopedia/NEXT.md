@@ -12,10 +12,11 @@ Hand-maintained queue, read at the start of every session (METHOD §9). Debts be
 3. Figures: `nagarjuna`, `aquinas`, `russell`, `quine`, `rawls`, `augustine`.
 4. `logic.paradox.liar` and `logic.paradox.vagueness` to survey with children opened — the second Layer-3 regions, both anchors.
 5. First `article`-state promotions: candidates `metaphysics.modality.worlds`, `logic.paradox.curry`, `epistemology.knowledge` — the ladder's next rung has never been climbed.
-6. Deployment: static-site generator over the repo (extend `tools/encyc.py`), audit as CI build gate, GitHub Pages. Design agreed in conversation 2026-08-26; needs the user to enable Pages on the repo.
+6. Deployment: DONE in substance — `tools/build_site.py` generates `docs/` (multi-page, relative links, Pages-ready) and the single-file reader; the reader is live at the artifact address. Remaining: the user picks the public home (GitHub Pages: Settings → Pages → deploy from branch → this branch, `/docs` folder — or merge to main first). Future refinement: audit as CI gate; per-entry citation/reading lists; search (Pagefind).
 
 **Standing observations:**
 - Title drift between parent stub lines and child files: add a warning to `tools/encyc.py`.
 - The `figures` roster correction is moving but far from done: no Africana, Latin American, or women philosophers written yet — `beauvoir`, `anscombe`, `arendt` are stubbed and queued; add `confucius` and `shankara` for the traditions now open.
 - Aesthetics proposed 12 children (the most of any division); watch whether its art-form nodes (music, depiction, literature, film) stay genuinely articulated or should merge.
 - Pass convention: date.pulse with a global pulse counter; next pulse is .15.
+- Session protocol addition: before the final commit of any session, run `python3 encyclopedia/tools/build_site.py --onefile <scratch>/strata-reader.html`, commit the regenerated `docs/`, and republish the reader to the artifact address — the site must never lag the corpus.
