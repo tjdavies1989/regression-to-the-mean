@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laws of Nature — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../science/">Philosophy of Science</a></div><h1>Laws of Nature</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.9</div><article><p>Every massive body attracts every other; no signal outruns light. Also: every coin in my pocket today is silver. All three are true universal generalizations, but only the first two seem to be <em>laws</em> — and the difference does real work. Laws support counterfactuals (had this body been more massive, it would have attracted more strongly; had this coin been in my pocket, nothing follows about its metal), they underwrite explanation and prediction, and they are what scientists take themselves to be discovering. The problem is to say what the difference consists in. What makes a regularity lawlike rather than accidental?</p>
+<p>The austere answer is Humean. On the best-system analysis, descending from Mill through Ramsey to David Lewis, laws are nothing over and above the pattern of events: they are the theorems of whichever true systematization of everything that happens best combines simplicity and strength. The coin generalization is true but earns no place in the best system; gravitation does. The view's strength is its ontological economy and its fidelity to practice — the best system looks very much like what completed science would write down — and Lewis's requirement that the system be stated in terms of natural properties answers Goodman-style gerrymandering. Its standing embarrassment is that laws seem to <em>explain</em> their instances, whereas a summary cannot explain what it summarizes.</p>
+<p>Governing conceptions take that intuition as bedrock. For Armstrong, Dretske, and Tooley, a law is a relation of contingent necessitation between universals — F-ness necessitating G-ness — which produces the regularity rather than merely reporting it. This vindicates the felt difference between laws and accidents and gives explanation something to be. The classic rejoinder, pressed by Lewis and van Fraassen, is the inference problem: calling the relation "necessitation" does not show how N(F,G) entails that all Fs are G, any more than calling someone "Armstrong" gives him mighty biceps.</p>
+<p>Dispositional essentialism, developed most fully by Alexander Bird, relocates the modal force into properties themselves. Charge just <em>is</em> the disposition to attract and repel thus-and-so; laws flow from the essences of the properties they relate, and are therefore metaphysically necessary rather than contingent. The view explains why laws support counterfactuals without adding a governing relation, at the cost of making it impossible that the actual properties obey different laws — a consequence its defenders embrace and its critics find incredible. Counterfactual support is the shared datum here: every party must explain why laws sustain would-have-beens and accidents do not, and each explanation prices the modality differently.</p>
+<p>Two complications press from scientific practice. First, outside fundamental physics, nearly all laws are ceteris paribus: Mendelian ratios and supply curves hold "other things equal," and no one can state the proviso non-trivially. Whether special-science laws are respectable laws, elliptical claims about mechanisms, or not laws at all shapes the autonomy of the special sciences. Second, the no-laws heresy: Nancy Cartwright argues that fundamental laws, read literally, are false — they describe how things behave in the physicists' models, not in the dappled world, where capacities and nomological machines do the work; Ronald Giere similarly dissolves laws into models plus restricted claims of fit. If they are right, the whole debate above concerns an idealization.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Best-System Analysis</span><span class="gloss"> — the Mill–Ramsey–Lewis account of laws as optimal summaries, and contemporary Humeanism's refinements and discontents.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Governing Laws and Necessitation</span><span class="gloss"> — the Armstrong–Dretske–Tooley relation among universals, primitivism about laws, and the inference problem.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Dispositional Essentialism</span><span class="gloss"> — laws as flowing from the essences of powers, and the necessity of laws.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Ceteris Paribus Laws</span><span class="gloss"> — provisos, the special sciences, and whether hedged laws can be laws.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Eliminativism about Laws</span><span class="gloss"> — Cartwright's capacities and dappled world, Giere's models-without-laws.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../metaphysics/properties/" title="Properties and Universals">metaphysics.properties</a>: Lewis's best system needs natural properties to block gerrymandered systematizations, and dispositional essentialism is a thesis about what properties are.</li>
+<li>To <a class="node" href="../../metaphysics/causation/" title="Causation">metaphysics.causation</a>: whether causation reduces to laws or laws to causal capacities is contested ground; Humeans and anti-Humeans divide both debates the same way.</li>
+<li>To <a class="node" href="../../science/explanation/" title="Scientific Explanation">science.explanation</a>: the covering-law model made laws the engine of explanation; whether summaries can explain is the Humean's hardest question.</li>
+<li>To <a class="node" href="../../science/physics/" title="Philosophy of Physics">science.physics</a>: symmetries, conservation principles, and the question of which physical principles are laws sharpen every account against real cases.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/descartes/">descartes</a>, <a class="node" href="../../figures/hume/">hume</a>, <a class="node" href="../../religion/miracles/">religion.miracles</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

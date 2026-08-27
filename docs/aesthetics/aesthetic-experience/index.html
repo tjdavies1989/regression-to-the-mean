@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aesthetic Experience and Judgment — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../aesthetics/">Aesthetics</a></div><h1>Aesthetic Experience and Judgment</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.12</div><article><p>Say the adagio is beautiful and you have not merely reported your pleasure — you have claimed something from everyone else. Yet you can point to nothing that obliges them. There is no measurement to cite, no rule from which "beautiful" follows; a person unmoved by the passage has not miscalculated. The problem of this node is that aesthetic judgment behaves like neither of its neighbors: it is not a preference (we argue about it, and disagreement stings) and not an ordinary factual claim (nothing settles it). What kind of judgment is this, and what kind of experience underwrites it?</p>
+<p>Kant's <em>Critique of the Power of Judgment</em> is the core text because it refuses to dissolve the strangeness. The judgment of taste, he holds, is grounded in felt pleasure — mine, now, before this object — yet claims <em>subjective universality</em>: I speak "with a universal voice," demanding everyone's agreement while wielding no concept that could compel it. The pleasure must be <em>disinterested</em>, indifferent to the object's existence, use, or moral worth; and it arises from the <em>free play</em> of imagination and understanding — the faculties of cognition engaged, harmonized, but issuing in no determinate cognition. The position's strength is precision of fit: it explains at once why we argue about beauty (the claim is normative) and why argument never terminates in proof (there is no rule). Its cost is a transcendental machinery — the shared faculties that license the demand — that few now accept at face value.</p>
+<p>Hume's "Of the Standard of Taste" offers the empiricist alternative: beauty is sentiment, but sentiments can be ranked, and the joint verdict of <em>true judges</em> — practiced, delicate, unprejudiced, comparative — is the standard. Its strength is realism about critical practice; its notorious weakness is circularity: the true judges are identified by judging well, and judging well by tracking what true judges say. Whether the circle is vicious or virtuously self-correcting remains a live question.</p>
+<p>Twentieth-century <em>aesthetic attitude</em> theories (Bullough's psychical distance, Stolnitz's disinterested attention) relocated the aesthetic from judgment to a special mode of regard, available before any object whatever. Dickie's "The Myth of the Aesthetic Attitude" (1964) argued there is no such mental act — only ordinary attention, variously motivated — a demolition widely credited with killing the theory, though experience-based accounts persist in chastened forms. Sibley's "Aesthetic Concepts" (1959) redrew the map: terms like <em>graceful</em>, <em>garish</em>, <em>balanced</em> are not condition-governed — no set of nonaesthetic features entails their application, which requires taste — yet aesthetic character <em>supervenes</em> on nonaesthetic features: no two objects alike in every nonaesthetic respect can differ aesthetically. How both can hold is the node's sharpest technical puzzle. The <em>testimony</em> puzzle generalizes it epistemically: I can learn from you that the film is Hungarian but seemingly not that it is beautiful — judging on another's say-so looks defective in a way ordinary deference does not, though optimists deny the asymmetry is deep. Behind all of this sits a deflationary threat: perhaps "aesthetic experience" names no single kind — Beardsley's unified accounts against Dickie's skepticism again — and the node's unity is an artifact of a word.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Kant&#x27;s Judgment of Taste</span><span class="gloss"> — the Analytic of the Beautiful and its interpretive battles: subjective universality, disinterest, free play, the antinomy.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Hume and the Standard of Taste</span><span class="gloss"> — the true judges, the circularity objection, and sentimentalist successors.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Aesthetic Attitude</span><span class="gloss"> — distance and disinterested attention theories, Dickie's critique, and what survives it.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Aesthetic Concepts and Supervenience</span><span class="gloss"> — Sibley's condition-ungoverned concepts, taste as perception, and aesthetic realism versus response-dependence.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Aesthetic Testimony</span><span class="gloss"> — pessimism and optimism about deferring on aesthetic matters, and the acquaintance principle.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a>: the testimony puzzle is a test case for theories of testimonial knowledge, and the acquaintance principle presses on perceptual justification.</li>
+<li>To <a class="node" href="../../mind/" title="Philosophy of Mind">mind</a>: free play and taste-as-perception run on theories of perception, attention, and pleasure.</li>
+<li>To <a class="node" href="../../aesthetics/beauty/" title="Beauty">aesthetics.beauty</a>: whether beauty is response-dependent is continuous with the judgment question homed here.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../aesthetics/beauty/">aesthetics.beauty</a>, <a class="node" href="../../figures/kant/">kant</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

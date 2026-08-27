@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Paradox and Truth — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../logic/">Logic</a></div><h1>Paradox and Truth</h1><div class="plaque"><span class="glyph">◑</span> survey &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-21.2</div><article><p>"This sentence is false." If true, it is false; if false, true. The liar is not a party trick. It is a proof that three things we cannot easily surrender — classical logic, a language's ability to talk about its own sentences, and the principle that "<em>A</em>" is true if and only if <em>A</em> — are jointly inconsistent. Every theory of truth is, at bottom, a decision about which to give up and how to disguise the cost. This node maps the paradoxes as a family and the theories built to survive them; since its descent it divides the work among six studies, and the survey below is their map.</p>
+<p><strong>The liar itself</strong> is subtler than its slogan. The comfortable reply — the sentence is neither true nor false — dies against the <em>strengthened</em> liar, "this sentence is not true," which quantifies over every way of failing to be true, gaps included. The liar's undervalued twin, the truth-teller ("this sentence is true"), is consistent either way and therefore answerable to nothing — showing that ungroundedness, not contradiction alone, is the underlying pathology. And Kripke's Nixon–Dean cases show paradox cannot be quarantined among syntactically funny sentences: whether an ordinary truth attribution is paradoxical can depend on contingent facts its speaker cannot survey, so everyday semantic talk is intrinsically risky. What now organizes the literature is <em>revenge</em>: every solution classifies the liar somehow (ungrounded, unstable, indeterminate, both true and false), each classification is new vocabulary, and each vocabulary funds a new liar one level up. Whether revenge is an engineering problem — Field's paracomplete theory is the flagship claim that a theory can consistently express its own defectiveness predicate — or the phenomenon itself, every consistent theory buying safety with silence, is the deepest open question here; both readings, and the contingent liars, are treated in <span class="node unwritten" title="promised entry">liar</span>.</p>
+<p><strong>The cures, stated precisely enough to be billed</strong>, are collected in <span class="node unwritten" title="promised entry">formal-truth</span>. Tarski's hierarchy is not just the moral "ascend to the metalanguage" but the only theory that <em>defines</em> truth, with the indefinability theorem showing its restriction is forced. Kripke's fixed-point construction keeps one self-applied predicate by letting truth be partial: grounded sentences acquire values in stages, the liar never does — and the theory's own key notion, groundedness, lives confessedly in a classical metalanguage; the ghost of the hierarchy walks. The axiomatic turn takes truth as primitive and measures theories by proof-theoretic strength, where deflationism is scored: if truth is a thin device for generalization, adding it should prove nothing new — the disquotational theory TB obliges, the compositional theory CT proves the consistency of arithmetic, and whether that strength refutes deflationism or merely reflects extended induction is a live dispute. The revision theory (Gupta–Belnap) reads truth as a respectable <em>circular</em> concept whose signature is the liar's eternal oscillation.</p>
+<p><strong>Curry's paradox</strong> is the referee. "If this sentence is true, everything is true" derives triviality using only the conditional and the structural rule of contraction — no negation anywhere — so every gap and glut theory that tames the liar stands helpless before it, and its validity form (v-Curry) chases the paradox into the metatheory. Substructural logics that restrict contraction earn their philosophical keep here or nowhere; the disquieting parallel with Löb's theorem, where the same reasoning is a celebrated result, is the node's standing puzzle. See <span class="node unwritten" title="promised entry">curry</span>.</p>
+<p><strong>The sorites</strong> runs on vagueness rather than self-reference: one grain is not a heap, one grain never makes the difference, so there are no heaps. The theories divide by where they lodge the blame. Epistemicism (Williamson) keeps classical logic and posits sharp cutoffs unknowable for margin-of-error reasons — maximal conservatism, maximal incredulity. Supervaluationism identifies truth with truth on every admissible sharpening, preserving penumbral connections while higher-order vagueness leaks through "admissible." Degree theories let truth come in degrees and buy a sharp 0.5 for their trouble; contextualist views have the cutoff flee wherever attention lands; nihilism concludes there are no heaps and pays retail. Whether vagueness is semantic, epistemic, or — most radically — in the world itself is adjudicated partly in metaphysics. See <span class="node unwritten" title="promised entry">vagueness</span>.</p>
+<p><strong>The set-theoretic paradoxes</strong> — Russell's class of non-self-membered classes, Burali-Forti's greatest ordinal, Cantor's largest cardinal — killed naive comprehension and begot the two great diagnoses: limitation of size, and the iterative conception of set, defended by Boolos as principled rather than ad hoc. Dummett's <em>indefinite extensibility</em> — some concepts, like <em>set</em> and <em>ordinal</em>, cannot be totalized, since any candidate totality immediately generates a new instance — feeds the absolute-generality debate: whether quantification over absolutely everything is so much as coherent. See <span class="node unwritten" title="promised entry">set-paradoxes</span>.</p>
+<p><strong>Yablo's paradox</strong> — an infinite sequence of sentences, each saying that all later ones are untrue — appears to achieve paradox without self-reference, and the dispute over whether circularity hides in its satisfaction conditions (Priest) or is genuinely absent (Sorensen, Yablo) is a controlled experiment on what actually powers the semantic paradoxes. See <span class="node unwritten" title="promised entry">yablo</span>.</p>
+<p>Behind the whole family stands the unity question. Priest's inclosure schema exhibits liar, Russell, Burali-Forti, and their kin as instances of one form — a totality, an operation that diagonalizes out of it, contradiction at the limit — and argues that structurally identical paradoxes deserve a uniform solution, which only dialetheism provides. Critics reply that the schema fits loosely, omits Curry (the case that least resembles the others and most resists everyone), and that "same form" underdetermines "same cure." Depth or numerology remains the right question, and it is not rhetorical.</p>
+<p>By editorial decision, the <em>nature</em> of truth — correspondence, coherence, deflationism, pluralism — is homed at <a class="node" href="../../language/truth/" title="Truth">language.truth</a>; this node and its children own the paradoxes and the formal theories. The border is busy in both directions: deflationism's viability may turn on which formal theory works, and which formal theory one accepts constrains what truth can be.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/paradox/liar/">The Liar and Revenge</a><span class="gloss"> — The strengthened liar, the truth-teller, contingent liars, and revenge as the structural problem every theory of truth must face.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/paradox/formal-truth/">Formal Theories of Truth</a><span class="gloss"> — Tarski's definition, Kripke's fixed points, the axiomatic theories and their proof-theoretic scorecard, and the revision theory.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/paradox/curry/">Curry&#x27;s Paradox</a><span class="gloss"> — Paradox from the conditional alone: v-Curry, the case against contraction, and the Löb parallel.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/paradox/vagueness/">The Sorites and Vagueness</a><span class="gloss"> — Epistemicism, supervaluationism, degree theories, contextualism, and nihilism as rival lodgings for the blame.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/paradox/set-paradoxes/">The Set-Theoretic Paradoxes</a><span class="gloss"> — Russell, Burali-Forti, and Cantor; the iterative conception; indefinite extensibility and absolute generality.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/paradox/yablo/">Yablo&#x27;s Paradox</a><span class="gloss"> — Paradox apparently without self-reference, and what the circularity dispute reveals about the family.</span><span class="tag">sketch · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>language.truth</strong>: the home split — nature of truth there, paradoxes and formal theories here — with deflationism as the doctrine that cannot be assessed without both.</li>
+<li><strong>logic.nonclassical</strong>: the paradoxes are the strongest working argument for revising logic; paracomplete, paraconsistent, and substructural systems earn their keep against the liar and Curry.</li>
+<li><strong>logic.mathematical</strong>: the truth theories are exercises in mathematical logic — fixed-point constructions, proof-theoretic strength — and Russell's paradox shaped axiomatic set theory.</li>
+<li><strong>metaphysics</strong>: ontic vagueness, absolute generality, and the limits of quantification carry the family's weight beyond language.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/frege/">frege</a>, <a class="node" href="../../language/truth/">language.truth</a>, <a class="node" href="../../logic/nonclassical/">logic.nonclassical</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

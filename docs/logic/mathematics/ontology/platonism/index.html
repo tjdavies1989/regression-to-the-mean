@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Platonism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../../">Strata</a></div></header><div class="crumbs"><a href="../../../../logic/">Logic</a> › <a href="../../../../logic/mathematics/">Philosophy of Mathematics</a> › <a href="../../../../logic/mathematics/ontology/">The Ontology of Mathematics</a></div><h1>Platonism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 3 &nbsp;·&nbsp; pass 2026-08-26.5</div><article><p>Platonism is not one thesis but a family, united in holding that mathematical objects exist — abstract, mind-independent, causally inert — and divided over the question the parent entry leaves standing: how reference to such objects is fixed, and what epistemology each fixing can afford. The varieties are best sorted by their answer.</p>
+<p>Frege's route runs through the context principle: never ask for a word's meaning in isolation, only in the context of a sentence. On this view reference is not a metaphysical grappling-hook thrown across a causal gap; it is what falls out once truth is settled. Establish that "the number of planets is eight" is true and that "the number of planets" functions as a singular term in it, and the question whether the term <em>really</em> reaches its object has already been answered — there is no further test to fail. The access problem, so understood, is an artifact of picturing reference as a quasi-causal relation the platonist then cannot supply. The neo-Fregeans made this the engine of a revived logicism; the residual worry is whether truth can be settled first without covertly presupposing the objects.</p>
+<p>Gödel's route is the one Frege's is built to avoid: a faculty of mathematical intuition. Stated fairly, it is not clairvoyance. The claim is that the axioms of set theory "force themselves upon us as being true," and that this givenness is data — analogous to perception not in mechanism but in evidential role, since sense experience also underdetermines physical theory and is trusted because theory built on it succeeds. Gödel accordingly held intuition to be fallible and supplemented it with extrinsic justification: an axiom can earn acceptance through its fruitful consequences, as a physical hypothesis does. The position's weakness is that the analogy's mechanism is exactly what it declines to supply; its strength is phenomenological honesty about how axioms are actually adopted.</p>
+<p>Quinean platonism drops intuition altogether: mathematical objects are earned the way electrons are, by indispensable service in best science, and confirmed holistically along with the rest of the web. The price is paid in coverage — Quine consigned set theory beyond the applied to "mathematical recreation" — leaving the working mathematician's confidence in inaccessible cardinals unexplained, and mathematics hostage to the fortunes of physics.</p>
+<p>Plenitudinous platonism — Balaguer's full-blooded platonism, and differently the Linsky–Zalta object theory — dissolves the access problem by inflation: every consistent mathematical theory truly describes some part of the mathematical realm. Reliability then needs no mechanism, since we cannot miss — consistency suffices for truth about <em>something</em>. The costs are symmetrical: arbitrariness about which objects we mean (our "natural numbers" are one ω-sequence among endlessly many, and nothing about us selects it), and the nagging point that knowledge of consistency is itself mathematical knowledge, seemingly presupposed rather than explained.</p>
+<p>Against Field's reliability challenge, three responses now organize the defense. First, reliability without causal contact: correlations are explained by mechanisms only when both relata can vary; since mathematical facts are necessary, there is no counterfactual dependence to underwrite and the correlation is no accident needing one — to which Field replies that necessity alone does not make a correlation intelligible. Second, apriority defenses: if mathematical knowledge flows from implicit definition, conceptual competence, or stipulation plus logic, the reliability of belief is secured internally, with no world-to-mind mechanism required. Third, the deflationary line of Burgess and Rosen: the demand for an explanation of reliability, pressed from outside our best theories, invokes a standard of justification that naturalism itself never certifies; there is nothing to explain that mathematics has not already explained. Whether these are three answers or three refusals is the live question of the debate.</p>
+<h2>Children</h2>
+<p>Thin node — no natural children yet. Plenitudinous platonism and the Benacerraf–Field problem each have literatures, but the first is a position within this entry and the second is this entry's spine; neither articulates a subfield of its own.</p>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Metaphysics</strong>: <a class="node" href="../../../../metaphysics/ontology/" title="Existence and Ontology">metaphysics.ontology</a> houses the general theory of abstract objects; every variety here is a local instance of a stance there, and Linsky–Zalta's object theory lives natively in both.</li>
+<li><strong>Epistemology</strong>: <a class="node" href="../../../../epistemology/a-priori/" title="A Priori Knowledge">epistemology.a-priori</a> is where the apriority defenses draw their capital — implicit definition, rational insight, and their standing.</li>
+<li><strong>Within the division</strong>: <a class="node" href="../../../../logic/mathematics/logicism/" title="Logicism and Neo-Logicism">logic.mathematics.logicism</a> develops the context-principle route in full; <a class="node" href="../../../../logic/mathematics/structuralism/" title="Structuralism">logic.mathematics.structuralism</a> is the rival that keeps the realism while trading objects for positions.</li>
+<li><strong>Figures</strong>: <a class="node" href="../../../../figures/frege/" title="Gottlob Frege">frege</a> and <a class="node" href="../../../../figures/godel/" title="Kurt Gödel">godel</a> in the figures register are the two epistemologies of this entry personified.</li>
+</ul></article><nav class="footnav"><a href="../../../../">Home</a><a href="../../../../map/">Map</a><a href="../../../../method/">Constitution</a><a href="../../../../queue/">Queue</a></nav></div></body></html>

@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Philosophical Methods — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../meta/">Metaphilosophy</a></div><h1>Philosophical Methods</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.14</div><article><p>Philosophy claims knowledge — about knowledge, justice, consciousness, necessity — without laboratories, telescopes, or archives of its own. So what are its instruments, and why should anyone trust them? Unusually, the question is internal: philosophy's methods are themselves standing objects of philosophical dispute, and every position below is simultaneously a tool and a thesis.</p>
+<p>The workhorse is the <strong>method of cases</strong>: describe a hypothetical scenario, elicit a verdict, and treat that verdict as evidence for or against a theory. Gettier's two cases overturned a millennia-old definition of knowledge — the method's proof of concept, since the verdict commands near-universal assent. The pressing question is what these "intuitions" are and why they carry evidential weight. The <strong>expertise defense</strong> answers by analogy: philosophers' case-judgments are trained, like a physicist's judgments about experimental setups — though studies finding order and framing effects among professional philosophers have put the analogy under empirical strain.</p>
+<p>Cases are usually delivered by <strong>thought experiments</strong>, which raise their own puzzle: how can merely imagining something teach us about the world? Williamson's deflationary answer is that nothing exotic is involved — thought experiments exercise the ordinary capacity for counterfactual reasoning we use to judge whether the glass would have broken. Gendler's account preserves what is distinctive: a good thought experiment (Galileo's falling bodies) is not an argument in disguise but a device for running our cognitive machinery on new inputs, extracting knowledge from ourselves that no reformulation as premises could deliver.</p>
+<p><strong>Conceptual analysis</strong> — home: <a class="node" href="../../meta/meta.what-is-philosophy/" title="What Is Philosophy?">meta.what-is-philosophy</a> — supplies the classical warrant: cases probe the contours of our concepts, and necessary-and-sufficient-condition analyses report them. It has carried the <strong>paradox of analysis</strong> since Moore: if an analysis is correct it seems trivial, and if informative, incorrect. <strong>Experimental philosophy's</strong> restrictionist wing (Weinberg, Nichols, Stich) attacks the practice from outside: if case-verdicts vary with culture, order, and affect, they are unfit for evidential service and should be restricted or retired. Its strength is that it tests, rather than presupposes, the reliability of the instrument; its difficulties are replication failures among the variation findings and Cappelen's argument that philosophers never relied on "intuitions" in the first place.</p>
+<p><strong>Formal methods</strong> promise what informal argument lacks: enforced explicitness and the discovery of unnoticed consequences — Bayesian epistemology, social choice theory, and formal semantics are the showcases. The limit is the bridge problem: a theorem is only as illuminating as the informal interpretation of its primitives, and formalism can launder contentious assumptions as definitions. The <strong>phenomenological method</strong> — suspension of the natural attitude, disciplined description of experience as lived — claims a data source every third-person method presupposes but cannot describe; its persistent embarrassment is that trained describers diverge, with no agreed procedure for adjudication. <strong>Genealogy</strong> asks where a concept or practice came from and what the answer does to its authority: subversively in Nietzsche's history of morality, but vindicatorily in Williams's state-of-nature genealogy of truthfulness and in the contemporary function-first program (Craig on knowledge, Queloz), where an imagined origin reveals what a concept is <em>for</em> — and thereby whether debunking or vindication follows.</p>
+<p>Above all of these sits <strong>reflective equilibrium</strong> (Goodman, Rawls): adjust judgments about cases and general principles against each other until they cohere. It is the meta-method nearly everyone claims, and its best defense is that every rival, pressed on why <em>its</em> starting points deserve trust, collapses into it. The standing objection is garbage in, garbage out: coherence among corrupted inputs yields corrupted equilibrium, and the method itself cannot say which inputs those are.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Method of Cases</span><span class="gloss"> — intuitions about hypothetical cases as evidence; calibration worries and the expertise defense.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Thought Experiments</span><span class="gloss"> — how imagination teaches: Williamson's counterfactual account, Gendler, and the Norton–Brown debate in science.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Experimental Philosophy</span><span class="gloss"> — the survey program; restrictionist, positive, and corpus-based strands.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Formal Methods in Philosophy</span><span class="gloss"> — what formalization buys, and the bridge problem of interpreting it.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Phenomenological Method</span><span class="gloss"> — epoché, description, eidetic variation, and the adjudication problem.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Genealogy</span><span class="gloss"> — Nietzsche through Williams to vindicatory and debunking genealogies.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Reflective Equilibrium</span><span class="gloss"> — the claimed meta-method, its defenses, and the garbage-in objection.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<p>The status of case-intuitions bridges to <a class="node" href="../../epistemology/a-priori/" title="A Priori Knowledge">epistemology.a-priori</a> (intuition and rational insight as evidence). Formal methods bridge to <a class="node" href="../../epistemology/formal/" title="Formal Epistemology">epistemology.formal</a>, their principal proving ground. Reflective equilibrium and debunking genealogies bridge to <a class="node" href="../../ethics/metaethics/" title="Metaethics">ethics.metaethics</a>, where both were forged and are most fiercely contested. The phenomenological method and genealogy bridge to the <a class="node" href="../../traditions/" title="Traditions">traditions</a> register (phenomenology; Nietzsche's lineage), whose practice is their evidence.</p></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../epistemology/a-priori/">epistemology.a-priori</a>, <a class="node" href="../../meta/meta.disagreement/">meta.disagreement</a>, <a class="node" href="../../figures/wittgenstein/">wittgenstein</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

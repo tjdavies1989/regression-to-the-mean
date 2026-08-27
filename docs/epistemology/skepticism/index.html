@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Skepticism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../epistemology/">Epistemology</a></div><h1>Skepticism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.6</div><article><p>Nothing in your experience distinguishes it from the experience of a brain in a vat, fed exactly the sensory stream you are having now. The observation becomes an argument with one further, almost invisible premise. (1) You do not know you are not such a brain — the scenario is built so that no evidence could tell against it. (2) If you know you have hands, then you know you are not a handless brain in a vat — having hands entails not being one. (3) So you do not know you have hands. The second premise is an instance of <em>closure</em>: know something, competently deduce a consequence, and you know the consequence. Deny it and deduction stops transmitting knowledge; accept it and the vat swallows everything resting on perception. The conclusion is unbelievable; the premises are individually hard to refuse. Modern epistemology of skepticism is the study of which to refuse anyway.</p>
+<p>The response space maps the field. Mooreans run the argument backwards: I know I have hands; by closure, I know I am not envatted; so premise (1) is false — one philosopher's modus ponens being another's modus tollens: we are more certain of our hands than of any philosophical premise used against them. Pryor's dogmatism supplies the machinery: perceptual experience gives immediate justification, not hostage to first ruling out defeaters. Dretske and Nozick instead deny closure: knowledge requires <em>tracking</em> — you would not believe it if it were false — and your hand-belief tracks while your anti-vat belief cannot. The cost is what DeRose called abominable conjunctions: "I know I have hands, but I do not know I am not a handless brain in a vat." Contextualists (DeRose; Lewis's "Elusive Knowledge") keep closure and both intuitions by making "know" standard-shifting: in ordinary contexts you truly count as knowing; the skeptic's scenario raises the standards until nobody does. Skepticism becomes true only in the seminar that voices it — knowledge elusive precisely when examined. Putnam's semantic externalism attacks premise (1) from the theory of reference: a lifelong envatted brain's word "vat" would refer to vat-images, not vats, so its sentence "I am a brain in a vat" would be false — the hypothesis cannot be truly thought by its own victim, though the argument strains against recent envatment.</p>
+<p>A different tradition denies that "I have hands" is an ordinary knowledge claim at all. Wittgenstein's <em>On Certainty</em>, provoked by Moore, treats such certainties as <em>hinges</em>: not well-grounded empirical beliefs but the fixed points on which doubting and checking themselves turn. Doubt is a practice that requires a background exempt from doubt; the skeptic's doubt is not heroic but idle, having dismantled its own conditions. Hinge epistemology (Wright's entitlements, Pritchard) is the live attempt to say what standing such commitments have if not knowledge.</p>
+<p>Behind the Cartesian debate stands an older and arguably deeper one. The Agrippan trilemma — every justification ends in regress, circle, or brute assumption — targets not perception but reasoning itself, and no closure-denying or context-shifting maneuver touches it. Pyrrhonism, as Sextus Empiricus reports it, was not a thesis (asserting "nothing is known" would be one more dogmatism) but a practice: oppose equally strong arguments until judgment suspends itself, and find that tranquility follows. Whether such suspension can be lived — the ancient <em>apraxia</em> objection — remains the sharpest question about it.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Closure and Its Deniers</span><span class="gloss"> — whether knowledge transmits across known entailment; relevant alternatives, Nozick's tracking, and the abominable conjunctions.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Moorean Responses and Dogmatism</span><span class="gloss"> — Moore's proof of an external world, Pryor's dogmatism, and what entitles reversing the skeptic's argument.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Semantic Responses</span><span class="gloss"> — Putnam's argument that "I am a brain in a vat" is self-refuting, and its limits.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Hinge Epistemology</span><span class="gloss"> — <em>On Certainty</em> and its descendants: commitments that are neither known nor doubted, and the entitlement theories built on them.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Pyrrhonian Skepticism</span><span class="gloss"> — the Agrippan modes, suspension of judgment as a way of life, and the apraxia objection.</span><span class="tag">promised · anchor</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../epistemology/knowledge/" title="The Analysis of Knowledge">epistemology.knowledge</a>: sensitivity, safety, and contextualism are shared machinery; the contextualist response is homed there.</li>
+<li>To <a class="node" href="../../epistemology/justification/" title="Justification">epistemology.justification</a>: the Agrippan trilemma is the regress problem under its ancient name; that node houses the structural answers.</li>
+<li>To <a class="node" href="../../language/reference/" title="Reference">language.reference</a>: Putnam's anti-skeptical argument stands or falls with the causal theory of reference.</li>
+<li>To the registers: <span class="node unwritten" title="promised entry">figures.wittgenstein</span> for <em>On Certainty</em>; <span class="node unwritten" title="promised entry">figures.sextus-empiricus</span> and <span class="node unwritten" title="promised entry">traditions.hellenistic</span> for Pyrrhonism and its transmission to modernity.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/descartes/">descartes</a>, <a class="node" href="../../epistemology/justification/">epistemology.justification</a>, <a class="node" href="../../figures/hume/">hume</a>, <a class="node" href="../../figures/kant/">kant</a>, <a class="node" href="../../science/confirmation/">science.confirmation</a>, <a class="node" href="../../figures/wittgenstein/">wittgenstein</a>, <a class="node" href="../../figures/zhuangzi/">zhuangzi</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

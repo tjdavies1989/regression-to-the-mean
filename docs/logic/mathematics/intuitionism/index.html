@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Intuitionism and Constructivism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../logic/">Logic</a> › <a href="../../../logic/mathematics/">Philosophy of Mathematics</a></div><h1>Intuitionism and Constructivism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-21.1</div><article><p>A classical mathematician can prove that a number with a certain property exists by showing that its nonexistence leads to contradiction — and finish the proof unable to name any such number, or say where to look. The constructivist finds this not merely inelegant but empty: an existence claim is redeemed only by a construction, an actual instance with a method for producing it. The culprit, on this diagnosis, is the law of excluded middle. For a finite collection, "either some element is F or none is" is backed by a procedure — check each. Applied to an infinite totality, the same disjunction asserts the outcome of a search that cannot be completed; classical logic, Brouwer charged, is the logic of finite situations illegitimately extrapolated to the infinite, treating the never-finished as finished.</p>
+<p>Brouwer's intuitionism derives this critique from a philosophy of mind. Mathematics is not a body of truths about independent objects, nor a play of symbols, but a <em>mental construction</em>: the languageless activity of a creating subject, generated from the primordial intuition of two-ity — the falling apart of a moment of life into what was and what is. Objects exist exactly insofar as they have been constructed; a statement is true when a construction warrants it, and until one of a pair of constructions exists, neither the statement nor its negation holds. The consequences are not only subtractive. Choice sequences — infinite sequences generated freely over time, never complete — yield theorems classically false, most famously that every total function on the reals is continuous. Intuitionistic mathematics is not classical mathematics minus; it is a different subject.</p>
+<p>Brouwer distrusted formalization, but his student Heyting supplied it: intuitionistic logic as a codified system, interpreted by the Brouwer–Heyting–Kolmogorov reading on which each connective is explained by what counts as a proof of it — a proof of "A or B" is a proof of one of them, identified; a proof of "if A then B" is a method transforming any proof of A into a proof of B. Decades later Dummett reached the same logic by an independent, semantic route. Meaning, he argued, must be exhaustively manifestable in use; a grasp of verification-transcendent truth-conditions could be neither acquired nor displayed; so the meaning of a mathematical statement can only be its proof-conditions — and a proof-conditional semantics validates intuitionistic, not classical, logic. If the argument works, revisionism follows from the theory of meaning alone, with no debt to Brouwer's solitary constructing mind.</p>
+<p>Bishop's <em>Foundations of Constructive Analysis</em> (1967) detached the practice from every such ideology. Bishop rebuilt analysis constructively without choice sequences or antirealist polemic, so that each theorem is classically true but carries its numerical content on its face; the Russian school of Markov added a recursive reading. The price of constructivism is real — trichotomy for the reals, unrestricted intermediate value theorems, and much of set-theoretic mathematics are lost or hold only in weakened forms. But the products have proved permanent. A constructive proof is an algorithm; the Curry–Howard correspondence makes this literal, identifying proofs with programs and propositions with types, so that intuitionistic logic now thrives as the working logic of computer science, type theory, and the internal language of topoi — vindicated, ironically, on grounds Brouwer would have disowned.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Brouwer&#x27;s Program</span><span class="gloss"> — The creating subject, choice sequences, bar induction, and the continuity theorems: intuitionistic mathematics as a positive alternative, not a restriction.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Meaning-Theoretic Argument</span><span class="gloss"> — Dummett's manifestation and acquisition challenges, proof-theoretic semantics after Prawitz, and whether the case for revising logic succeeds.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Constructivism after Bishop</span><span class="gloss"> — Bishop-style analysis, the Markov school, Martin-Löf type theory, and constructive reverse mathematics as a comparative science of systems.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong><span class="node unwritten" title="promised entry">logic.nonclassical.intuitionistic</span></strong>: the logic itself — semantics, metatheory, relations to classical logic — lives there; this node houses the mathematical and philosophical motivations that produced it.</li>
+<li><strong><a class="node" href="../../../logic/mathematical/" title="Mathematical Logic">logic.mathematical</a></strong>: the Curry–Howard correspondence and realizability belong to proof theory's technical repertoire; this node interprets their philosophical weight.</li>
+<li><strong>Language</strong>: Dummett's route runs through the theory of meaning — manifestation, verificationism, antirealism — and stands or falls with debates housed there.</li>
+<li><strong>Epistemology</strong>: constructivism is an epistemic constraint on mathematical truth; its quarrel with platonism is a local form of the realism–antirealism dispute about truth and evidence.</li>
+</ul></article><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

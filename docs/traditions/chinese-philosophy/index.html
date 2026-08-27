@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chinese Philosophy — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../traditions/">Traditions</a></div><h1>Chinese Philosophy</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.3</div><article><p>The classical period — the "hundred schools" of the Warring States centuries, roughly contemporaneous with classical Greece and the Buddha's India — is one of philosophy's great independent flowerings. Its organizing question was not "what is there?" but "what is the Way (<em>dao</em>)?": how should human life and political order be arranged, and what kind of person can arrange it? That the center of gravity is practical is not a deficit of theory. It determined which theoretical questions got asked — about human nature, language, action, and the sources of normativity — and they were asked with full rigor.</p>
+<p><strong>Kongzi</strong> (Confucius) set the agenda: the cultivation of humaneness (<em>ren</em>) through ritual propriety (<em>li</em>) — not empty formalism but the learned medium in which virtue is expressed, as grammar is the medium of speech — and the doctrine of <strong>rectifying names</strong> (<em>zhengming</em>): social titles carry normative content, and a ruler who does not rule as a ruler should is misnamed. The kinship with Greek virtue ethics is real, but the school of virtue here is the family and the rite, not the polis or the rational soul. <strong>Mozi</strong> built the first systematic counter-position: doctrines are to be tested by their benefit to the state and people, and by that test partiality fails — we owe <strong>impartial care</strong> (<em>jian'ai</em>) to all, and elaborate ritual, music, and funerals are waste. The resemblance to consequentialism is genuine, though the standard is public order and welfare, not aggregate utility.</p>
+<p>Within Confucianism, <strong>Mengzi</strong> and <strong>Xunzi</strong> conducted a genuinely naturalistic debate about moral development. Mengzi argued that human nature is good: anyone glimpsing a child about to fall into a well feels alarm, and such "sprouts" of virtue need only cultivation, as a seedling needs tending. Xunzi answered that our nature is crude and disorderly; goodness is <em>artifice</em> — the achievement of ritual and deliberate reformation, as straight wood comes from the steaming-frame. The dispute turns on observation, thought experiment, and rival models of cultivation, not scripture.</p>
+<p>The Daoist texts attack the whole project of ordering by names. The <em>Daodejing</em> attributed to <strong>Laozi</strong> opens by denying that the constant <em>dao</em> can be spoken, and commends <em>wu-wei</em> — non-coercive, uncontrived action — and the power of the low and yielding. <strong>Zhuangzi</strong> radicalizes this into a perspectivism about distinction-drawing itself: every judgment of "this/not-this" (<em>shi/fei</em>) issues from a standpoint with no neutral arbiter above it, and his skill stories (the ox-carving cook) suggest a knowing-how that outruns anything sayable. This is a sustained interrogation of the limits of language and disputation, with no Western original it copies.</p>
+<p>Disputation nonetheless had its specialists. The <strong>School of Names</strong> (Hui Shi's paradoxes; Gongsun Long's "a white horse is not a horse") and the later <strong>Mohist Canons</strong> developed real logic and semantics — criteria for assertion, the behavior of names for kinds and stuffs, analyses of inference and paradox — a line cut short when <strong>Han Feizi's</strong> Legalism, the theory that order rests not on virtue but on impartial law, administrative technique, and positional power, armed the Qin unification.</p>
+<p>The Han made Confucianism state orthodoxy inside a syncretic correlative cosmology; Buddhism's arrival then transformed the terrain for a millennium. The Song–Ming <strong>Neo-Confucian</strong> revival was metaphysics and moral psychology in its own right, not commentary: <strong>Zhu Xi's</strong> architecture of <em>li</em> (pattern, principle) and <em>qi</em> (vital stuff), with moral failure as qi obscuring pattern, and <strong>Wang Yangming's</strong> unity of knowledge and action — to know the good and not act is not yet to know it — grounded in innate moral knowing.</p>
+<p>Twentieth-century <strong>New Confucianism</strong> (Xiong Shili, Mou Zongsan reading Kant) rebuilt the tradition in dialogue with European philosophy — under the shadow of Hegel's dismissal and the recurring question "is Chinese philosophy philosophy?" The instructive move is to turn the question around: what conception of philosophy — argument only in the treatise genre, problems only as one lineage carved them — makes it seem sensible? The aphorism, dialogue, and commentary carry argument differently, not less. Who counts as a philosopher, and by whose criteria, is the same live question the Indian reception faces.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Classical Confucianism</span><span class="gloss"> — Kongzi, Mengzi, and Xunzi: ritual, humaneness, and the contest over human nature.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Mohism</span><span class="gloss"> — impartial care, the test of benefit, and the later Canons' logic and semantics.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Daoism</span><span class="gloss"> — Laozi and Zhuangzi on dao, wu-wei, and the limits of language and distinction.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The School of Names</span><span class="gloss"> — Hui Shi and Gongsun Long: disputation about names, kinds, and paradox, surviving in fragments.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Legalism</span><span class="gloss"> — Han Feizi's statecraft of law, technique, and positional power.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Han Syncretism</span><span class="gloss"> — correlative cosmology, yin-yang and the five phases, and the making of Confucian orthodoxy.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Xuanxue</span><span class="gloss"> — the "Profound Learning" of Wang Bi and Guo Xiang: Daoist metaphysics reborn as commentary.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Chinese Buddhism</span><span class="gloss"> — pointer: Tiantai, Huayan, and Chan seen whole at <a class="node" href="../../traditions/buddhist-philosophy/" title="Buddhist Philosophy">traditions/buddhist-philosophy</a>.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Neo-Confucianism</span><span class="gloss"> — the Song–Ming metaphysics of pattern, stuff, and mind, from Zhu Xi to Wang Yangming.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">New Confucianism</span><span class="gloss"> — the twentieth-century reconstruction, from Xiong Shili to Mou Zongsan's engagement with Kant.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<p>The densest bridges run into <a class="node" href="../../ethics/" title="Ethics">ethics</a> — classical Confucian cultivation as an independent development of virtue ethics, Mohism as an independent consequentialism — and into <a class="node" href="../../politics/" title="Political and Social Philosophy">politics</a>, where the Confucian–Legalist dispute over virtue versus law as the basis of order is a foundational debate conducted with living stakes. The School of Names and the Mohist Canons bridge <a class="node" href="../../logic/history/" title="History of Logic">logic.history</a>; Zhuangzi's perspectivism and the <em>Daodejing</em>'s opening bridge <a class="node" href="../../language/" title="Philosophy of Language">language</a>. Neo-Confucian moral psychology — pattern, mind, and Wang Yangming's knowledge-action unity — bridges <a class="node" href="../../mind/" title="Philosophy of Mind">mind</a>. Within the register, <a class="node" href="../../traditions/buddhist-philosophy/" title="Buddhist Philosophy">buddhist-philosophy</a> is the standing interlocutor for everything after the Han.</p></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../ethics/virtue-ethics/">ethics.virtue-ethics</a>, <a class="node" href="../../religion/non-theistic/">religion.non-theistic</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

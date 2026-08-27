@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Truth — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../language/">Philosophy of Language</a></div><h1>Truth</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.4</div><article><p>Everyone can use the word: "snow is white" is true just in case snow is white, and any theory denying such biconditionals is dead on arrival. The problem begins when we ask what, if anything, they are <em>about</em>. Truth appears to be a property some sentences, beliefs, or propositions have and others lack — uniquely important, since it is what assertion aims at, what belief answers to, what inquiry is for. The organizing question is whether that appearance is right: is truth a substantive property with a nature to be uncovered, or a thin logical device whose entire behavior the trivial biconditionals exhaust?</p>
+<p>The oldest answer is correspondence: a truth-bearer is true when it corresponds to how things stand — Aristotle's "to say of what is that it is," made structural by Russell and the <em>Tractatus</em>, where a proposition pictures a fact. Its strength is taking seriously what deflationism must explain away: the sense that the world makes our sayings true and not conversely. Its notorious costs are the relata — what are facts, over and above true propositions? what corresponds to negative and general truths? The modern descendant drops mirroring for asymmetric dependence: truthmaker theory (Armstrong) demands that every truth have an entity whose existence necessitates it. That converts the theory of truth into ontology — the hunt for truthmakers is a hunt for what exists — and hands its deepest questions to the metaphysics of grounding.</p>
+<p>The classical rivals bind truth to inquiry. Coherence theories (Joachim, Blanshard) make a belief true through membership in a maximally coherent system; their enduring insight is epistemic — we can never step outside our beliefs to compare them with naked fact, so coherence is all the test of truth we get. Pragmatists (Peirce, James, later Putnam's ideal acceptability) identify truth with what inquiry would converge on, or what works in the long run; their strength is to explain why truth matters — why it is the norm of belief rather than an idle gloss. Both face one counterexample schema: a system could be ideally coherent, an inquiry ideally conducted, and the world still otherwise.</p>
+<p>Deflationism, the modern default, replies that all such theorizing chases a shadow. For the redundancy theory (Ramsey, with roots in Frege), "it is true that p" just says that p. Disquotationalism (Quine, Field) treats the truth predicate as a device of generalization: it lets us say "everything the oracle said is true" without repeating the oracle. Horwich's minimalism takes the theory of truth to be simply the instances of the equivalence schema — nothing unifies them, and nothing needs to. The position's strength is its austerity; its pressure points are whether a thin predicate can underwrite truth's normative role, and the Shapiro–Ketland conservativeness challenge — formal truth theories strong enough to do real work prove more than the theories they extend, as a merely thin property should not (adjudicated at <a class="node" href="../../logic/paradox/formal-truth/" title="Formal Theories of Truth">logic.paradox.formal-truth</a>, not here). Two escapes reject the assumption that one account must fit all discourse. Alethic pluralism (Wright, Lynch) lets truth be correspondence-like for talk of trees, coherence-like for law or comedy — one role, many realizers. Primitivism (Frege, Davidson) holds that truth is indefinable not because it is thin but because it is bedrock: the concept every definition already presupposes.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Correspondence Theories</span><span class="gloss"> — Truth as agreement with fact, from Aristotle through Russell and the <em>Tractatus</em>, and the problem of what facts are.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Truthmaker Theory</span><span class="gloss"> — The demand that truths be made true by what exists: maximalism, necessitation, and the negative-existential problem.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Coherence and Pragmatist Theories</span><span class="gloss"> — Truth bound to inquiry: coherence with a system, Peircean convergence, Jamesian workability, ideal acceptability.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Deflationism</span><span class="gloss"> — Redundancy, disquotationalism, the prosentential theory, and Horwich's minimalism; whether a thin truth predicate can do truth's work.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Alethic Pluralism</span><span class="gloss"> — Wright's discourse-relative truth and Lynch's functionalism: one truth role, differently realized across domains.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Primitivism</span><span class="gloss"> — Frege's indefinability argument and Davidson's folly-of-defining-truth: truth as conceptual bedrock.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Home split, now complete</strong>: <a class="node" href="../../logic/paradox/" title="Paradox and Truth">logic.paradox</a> and <a class="node" href="../../logic/paradox/formal-truth/" title="Formal Theories of Truth">logic.paradox.formal-truth</a> own the liar, revenge, and the formal theories (Tarski, Kripke, axiomatic, revision); this node owns the <em>nature</em> of truth. The conservativeness debate is the seam where the two sides meet.</li>
+<li>To <a class="node" href="../../metaphysics/grounding/" title="Grounding and Fundamentality">metaphysics.grounding</a>: truthmaking is asymmetric dependence of truth on being — whether it is a species of grounding, or grounding's original home, is live on both sides.</li>
+<li>To <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a>: coherence and pragmatist theories make truth partly epistemic, and truth as the aim of belief and component of knowledge keeps the border open.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../logic/paradox/">logic.paradox</a>, <a class="node" href="../../logic/paradox/formal-truth/">logic.paradox.formal-truth</a>, <a class="node" href="../../logic/paradox/liar/">logic.paradox.liar</a>, <a class="node" href="../../figures/plato/">plato</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

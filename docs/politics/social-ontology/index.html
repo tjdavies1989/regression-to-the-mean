@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Social Ontology — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../politics/">Political and Social Philosophy</a></div><h1>Social Ontology</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.11</div><article><p>A twenty-dollar bill is paper and ink; a border is an imaginary line; a corporation cannot be touched. Yet the bill settles debts, the border can be crossed illegally, and the corporation can sue you. Social ontology asks how there can be facts like these — facts that exist only because we collectively take them to exist, and that are nonetheless objective: no act of private wishing makes your mortgage vanish. The puzzle is that the social world seems both made by us and stubbornly independent of any one of us.</p>
+<p>The best-known constructive answer is Searle's. Institutional facts arise when we collectively impose <strong>status functions</strong> through rules of the form "X counts as Y in context C": these pieces of paper count as money in the United States; this utterance counts as a marriage. What makes status functions distinctive is that they carry <em>deontic powers</em> — rights, duties, permissions — which mere physics never confers; and they persist only as long as collective acceptance persists, which is why currencies and regimes can collapse overnight. Critics press two points. Electronic money and other "free-standing Y terms" seem to have no X at all, forcing Searle to amend the theory; and Guala and others argue that institutions are better modeled as <em>rules in equilibrium</em> — self-enforcing patterns of incentive — making collective acceptance an effect rather than the foundation. Money is the shared test case: is it a status collectively declared, or a convention nobody could profitably defect from?</p>
+<p>Beneath institutions lies <strong>collective intentionality</strong>: what is it for us to intend, believe, or act together? Gilbert argues that joint commitment is primitive and normatively loaded — even two people walking together acquire obligations neither could unilaterally dissolve. Bratman offers a reductive rival: shared agency is nothing over and above interlocking individual intentions and mutual knowledge, a view whose strength is parsimony. Tuomela distinguishes acting in the "we-mode" from mere I-mode cooperation. The debate extends to group agents proper — List and Pettit show that a group's judgments cannot in general be any simple function of its members', which is an argument that corporations and committees are agents in their own right, aptly held responsible.</p>
+<p>Social <em>kinds</em> raise a different question: how do classifications behave when the classified can read them? Hacking's <strong>looping effects</strong> mark the contrast with nature — quarks are indifferent to being labeled, but people sorted as "refugees" or "geniuses" change under the description, which then forces the category itself to shift. The stakes are highest for race and gender. Constructionists hold that these are social kinds masquerading as biological ones; Haslanger's <strong>ameliorative project</strong> goes further, asking not what our concepts <em>do</em> mean but what they <em>should</em> mean if the point of having them is to expose hierarchy — defining "woman," controversially, in terms of subordination. Here metaphysics and politics visibly meet: an account of what gender <em>is</em> doubles as an intervention in what it ought to become.</p>
+<p>Finally, the field increasingly frames its oldest dispute — do social facts reduce to facts about individuals? — in the idiom of <strong>grounding</strong>. Epstein argues the individualism debate conflates two relations: what grounds a social fact (this paper's being money) and what <em>anchors</em> the frame that makes such grounding possible. Whether that machinery clarifies or multiplies the questions is itself contested.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Institutions and Institutional Facts</span><span class="gloss"> — status functions, constitutive rules, and the rules-in-equilibrium alternative, with money as the crucial case.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Collective Intentionality</span><span class="gloss"> — joint commitment, shared agency, and the we-mode: Gilbert, Bratman, and Tuomela on what "we intend" means.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Group Agents</span><span class="gloss"> — whether corporations, states, and committees are agents, and what collective responsibility they can bear.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Social Kinds and Looping Effects</span><span class="gloss"> — how human classifications differ from natural kinds when the classified respond to being classified.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Race, Gender, and Social Construction</span><span class="gloss"> — constructionist accounts of race and gender and Haslanger's ameliorative project.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../metaphysics/grounding/" title="Grounding and Fundamentality">metaphysics.grounding</a>: the individualism–holism dispute is now standardly posed as a question about what grounds, and what anchors, social facts.</li>
+<li>To <a class="node" href="../../mind/" title="Philosophy of Mind">mind</a>: collective intentionality is shared territory — whether "we-intentions" reduce to individual intentions is a problem in the philosophy of action.</li>
+<li>To <a class="node" href="../../language/" title="Philosophy of Language">language</a>: Searle's status functions are built from his speech-act theory; declarations are the engine that creates institutional facts.</li>
+<li>To <a class="node" href="../../politics/critical-approaches/" title="Ideology, Power, and Critical Approaches">politics.critical-approaches</a>: constructionist accounts of race and gender supply the metaphysics that ideology critique presupposes.</li>
+</ul></article><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rights — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../politics/">Political and Social Philosophy</a></div><h1>Rights</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.11</div><article><p>Rights are the hard currency of modern political argument. To say you have a right to speak is not to say it would be good if you were heard; it is to say that silencing you wrongs <em>you</em>, whatever the general benefit. That distinctive force — a claim held by an individual against the world, resistant to aggregation — is what a theory of rights must explain, and each part of the explanation is contested: what a right is, who can hold one, what grounds it, and how much it can withstand.</p>
+<p>On the first question there is something close to a shared grammar. Hohfeld distinguished four incidents that "a right" can name: a <strong>claim</strong>, correlated with someone else's duty; a <strong>privilege</strong> (or liberty), the absence of a duty not to act; a <strong>power</strong> to alter rights and duties, as in promising or selling; and an <strong>immunity</strong> against having one's position altered. Most rights worth fighting over are molecular bundles of these — property is a classic cluster of claims, liberties, powers, and immunities — and much apparent disagreement dissolves once the incidents are sorted.</p>
+<p>What unifies a bundle into <em>someone's</em> right? The <strong>will theory</strong> (Hart, Steiner) answers: control. A right makes its holder sovereign over another's duty — free to waive, enforce, or forgive it — so rights protect choice, and their point is autonomy. The <strong>interest theory</strong> (Bentham, Raz, MacCormick) answers: benefit. One has a right when one's interest is weighty enough to ground duties in others. The stock cases divide them cleanly. Infants and the severely cognitively impaired cannot exercise control, yet seem paradigm right-holders — trouble for the will theory, which must also explain inalienable rights no one may waive. The interest theory covers infants easily but threatens to overgenerate: a third-party beneficiary of a contract stands to gain from its performance, yet intuitively the right belongs to the promisee alone.</p>
+<p>A further axis is stringency. For Dworkin, rights are <strong>trumps</strong> over ordinary appeals to the general welfare — that is their job description. Nozick radicalizes this into near-absolute side-constraints; <strong>threshold</strong> views hold instead that rights resist routine trade-offs but yield when enough is at stake, raising the question of where thresholds lie and whether a right infringed for good reason leaves a residue of compensation owed.</p>
+<p>Human rights sharpen everything. <strong>Orthodox</strong> or natural conceptions (Griffin, and the natural-rights tradition behind him) treat them as rights held simply in virtue of humanity — grounded in normative agency or dignity, prior to any institution, which is what gives them critical bite against every regime. <strong>Political</strong> or practice conceptions (Rawls, Beitz) define them instead by their role in international practice: norms whose violation defeats a state's claim to be left alone. Their strength is fidelity to how human rights actually function and abstinence from contested metaphysics; the orthodox rejoinder is that a practice cannot be criticized by norms that are mere descriptions of it.</p>
+<p>Two live pressures round out the field. <strong>Group rights</strong> — of peoples to self-determination, of minorities to language and culture — force the question whether collectives can hold rights at all, and whether rights meant to protect a group against outsiders end up licensing it against its own members (Kymlicka's distinction between external protections and internal restrictions). And <strong>rights inflation</strong>: as manifestos multiply — rest, leisure, periodic holidays with pay — critics (O'Neill among them) warn that rights lacking identifiable duty-bearers debase the currency, blunting the trump that made rights worth claiming.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Will and Interest Theories</span><span class="gloss"> — what makes a Hohfeldian bundle someone's right: protected choice or protected benefit, and the cases of infants, third parties, and inalienability.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Human Rights</span><span class="gloss"> — orthodox versus political conceptions, grounds in dignity or agency, and the list question.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Group Rights</span><span class="gloss"> — whether collectives hold rights, minority cultural rights, and external protections versus internal restrictions.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Conflicts and Stringency</span><span class="gloss"> — trumps, thresholds, specificationism, and whether infringed rights leave moral residue.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../ethics/" title="Ethics">ethics</a>: moral rights and deontic constraints are ethics' territory; the will/interest debate and the trumps debate run through both divisions.</li>
+<li>To <a class="node" href="../../politics/law/" title="Philosophy of Law">politics.law</a>: Hohfeld's incidents were forged in legal analysis, and the relation of legal to moral rights is a standing question for both nodes.</li>
+<li>To <a class="node" href="../../politics/global-justice/" title="Global Justice and Migration">politics.global-justice</a>: practice conceptions tie human rights to sovereignty, intervention, and the international order.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/kant/">kant</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

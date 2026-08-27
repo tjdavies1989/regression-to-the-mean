@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Material Objects and Composition — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../metaphysics/">Metaphysics</a></div><h1>Material Objects and Composition</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.3</div><article><p>There is a table in front of you. There are also particles arranged tablewise. Are there two things here — the particles and, in addition, the table they make up? Or does "table" merely abbreviate a claim about the particles? Van Inwagen framed the issue as the <strong>special composition question</strong>: under what conditions do some things compose a further thing? Every generalized answer outrages common sense somewhere; the field is a study in choosing which outrage to live with.</p>
+<p><strong>Universalism</strong> answers: always. Any things whatsoever — your nose, the Eiffel Tower, a distant comet — compose an object, however scattered and gerrymandered. Its strength is principle: composition never turns on our parochial interests, and every fusion we need is guaranteed to exist. <strong>Nihilism</strong> answers: never. There are only simples arranged tablewise, and ordinary object-talk is a paraphrase that was never ontologically serious. Its strength is economy: it keeps the simples' arrangement, which did all the explanatory work anyway, and drops the alleged extra thing. <strong>Moderate</strong> answers — composition occurs when things are in contact, or fastened, or when their activity constitutes a life (van Inwagen's own view, which admits organisms but no tables) — hew closest to common sense in spirit, but each faces embarrassments: contact makes a new object of a handshake, and any restriction seems to draw a line that nature does not draw.</p>
+<p>The sharpest weapon here is the <strong>vagueness argument</strong> of Lewis and Sider. If composition were restricted, there would be borderline cases of it — assemble particles gradually and at some point it must be vague whether they compose something. But then it would be vague <em>how many</em> things exist, and a numerical sentence built from quantifiers, identity, and negation contains no vague vocabulary to blame. So composition is unrestricted (or, nihilists add, never occurs). The argument's force depends on one's theory of vagueness — epistemicists and friends of ontic vagueness resist different premises — which is why the composition debate runs through <a class="node" href="../../logic/paradox/vagueness/" title="The Sorites and Vagueness">logic.paradox.vagueness</a>.</p>
+<p><strong>Constitution</strong> poses the other classic puzzle. A sculptor molds a lump of clay into a statue. Statue and lump occupy the same place and share every atom — yet differ: the lump survives squashing and predates the statue. By Leibniz's Law they are two. Defenders of <strong>coincidence</strong> accept exactly that: two objects, one place, related by constitution rather than identity. One-thingers reply with a <strong>grounding problem</strong>: if statue and lump share all their parts, microstructure, and surroundings, what could <em>make it the case</em> that they differ modally? Rivals answer by identifying the two under a dominant sortal, by relativizing modal properties to descriptions (counterpart theory), or by invoking form or kind as a genuine further ingredient — each move trading the puzzle for a commitment elsewhere.</p>
+<p>Against all revisionary answers stands the <strong>defense of ordinary objects</strong> (Korman, Thomasson): a theory entailing that there are no tables, or that there are trout-turkey fusions, has for that very reason a strike against it, and the debunking and arbitrariness arguments meant to neutralize common sense can be met case by case. Behind everything sits <strong>mereology</strong>, the formal theory of part and whole. Classical extensional mereology is elegant, but each axiom is a metaphysical commitment in disguise: unrestricted fusion just is universalism, and extensionality — no two objects from the same parts — just is the denial of coincidence. Whether parthood is one fundamental relation, many, or none is itself contested ground.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Special Composition Question</span><span class="gloss"> — van Inwagen's question and its answers: universalism, nihilism, organicism, and brute or restricted composition.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Material Constitution</span><span class="gloss"> — the statue and the clay, coincident objects, and the grounding problem for their modal differences.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Mereology</span><span class="gloss"> — the formal theory of parts and wholes, from Leśniewski to composition-as-identity, read as metaphysics.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Ordinary Objects</span><span class="gloss"> — conservatism versus revision: debunking arguments, arbitrariness challenges, and easy ontology.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../logic/paradox/vagueness/" title="The Sorites and Vagueness">logic.paradox.vagueness</a>: the Lewis–Sider argument stands or falls with one's theory of vagueness; whether existence itself can be vague is the shared frontier.</li>
+<li>To <a class="node" href="../../metaphysics/grounding/" title="Grounding and Fundamentality">metaphysics.grounding</a>: the grounding problem for coincidents, and the question whether composites are an "ontological free lunch" grounded in their parts, are grounding disputes in miniature.</li>
+<li>To <a class="node" href="../../metaphysics/identity/" title="Identity and Persistence">metaphysics.identity</a>: constitution is a rival to identity, and extensionality of parthood decides how many things can be in one place — the ship of Theseus is joint property.</li>
+<li>To <a class="node" href="../../metaphysics/ontology/" title="Existence and Ontology">metaphysics.ontology</a>: deflationists (Hirsch, Thomasson) read the whole composition debate as a verbal dispute between equivalent quantifier languages; whether they are right is a test case for metaontology.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../logic/paradox/vagueness/">logic.paradox.vagueness</a>, <a class="node" href="../../metaphysics/identity/">metaphysics.identity</a>, <a class="node" href="../../metaphysics/modality/counterparts/">metaphysics.modality.counterparts</a>, <a class="node" href="../../metaphysics/modality/essence/">metaphysics.modality.essence</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

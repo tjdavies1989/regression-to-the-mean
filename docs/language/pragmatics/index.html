@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pragmatics and Speech Acts — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../language/">Philosophy of Language</a></div><h1>Pragmatics and Speech Acts</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.4</div><article><p>"I now pronounce you married." The sentence describes nothing and reports nothing; uttered by the right person in the right circumstances, it <em>marries people</em>. Austin began with such performatives as a special class opposed to fact-stating constatives, then watched the distinction collapse under his own analysis: stating is as much a doing as promising is. What survived is an anatomy of every utterance. There is the locutionary act (producing a sentence with a certain meaning), the illocutionary act (what one does <em>in</em> uttering it — asserting, warning, christening, promising), and the perlocutionary act (what one does <em>by</em> uttering it — persuading, frightening, amusing). Illocutionary force became the field's central object: conventional, governed by felicity conditions, capable of misfiring rather than being false. Searle systematized the picture — speech acts as moves constituted by rules, as chess moves are, with a taxonomy (assertives, directives, commissives, expressives, declarations) and an analysis of how "Can you pass the salt?" performs one act indirectly by way of another.</p>
+<p>Grice supplied the second engine. Say "Some students passed" and you convey that not all did — yet that is no part of what the sentence means, since it can be cancelled without contradiction ("indeed, all did"). Grice's diagnosis: conversation is a cooperative enterprise governed by maxims — be truthful, be adequately informative, be relevant, be perspicuous — and hearers interpret speakers as conforming to them, deriving <em>conversational implicatures</em> by working out what the speaker must believe for her utterance to be cooperative. The machinery is powerful because it is cheap: a lean semantics plus general rationality explains a vast range of conveyed meaning, and the derivations are calculable rather than stipulated. Its strength is precisely this economy — Occam's razor applied to senses, ambiguities dissolved into pragmatic effects.</p>
+<p>But the machinery raised a boundary dispute that now organizes the field: where does semantics stop and pragmatics begin? Literalists and minimalists (Borg, Cappelen and Lepore) hold that sentences express complete, truth-evaluable propositions with only minimal contextual intrusion, pragmatics operating on top; their strength is preserving a systematic, compositional semantics. Contextualists (Travis, Recanati) argue that pragmatic processes penetrate what is said itself — "The leaves are green" shifts truth conditions with the interests in play — so that a context-free proposition is a theorist's fiction; their strength is fidelity to the shifting judgments of actual speakers. Relevance theory (Sperber and Wilson) replaces the maxims with a single cognitive principle — utterances raise expectations of relevance proportionate to processing effort — and treats interpretation as inference all the way down. The live question underneath: how much of intuitive "meaning" is pragmatic residue, and whether semantics shrinks to a skeleton that no utterance ever wears bare.</p>
+<p>A further stratum concerns what conversations presuppose. "The king of France is bald" does not assert that France has a king; it takes it for granted, and the presupposition survives negation. Stalnaker modeled conversation as operating on a common ground of shared assumptions; Lewis generalized this into a conversational scoreboard tracking presuppositions, salience, and standards of precision — with the striking rule of <em>accommodation</em>: say something requiring a presupposition not yet on the board, and the board quietly updates to make your move count. Speech act theory has also turned political: Langton and others analyze silencing and subordination as illocutionary phenomena, asking what social conditions give words their force — and what deprives speakers of it.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Speech Act Theory</span><span class="gloss"> — Austin's performatives and the illocutionary anatomy; Searle's constitutive rules, taxonomy, and indirect speech acts.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Conversational Implicature</span><span class="gloss"> — The cooperative principle and maxims, calculability and cancellability, and neo-Gricean refinements.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Semantics–Pragmatics Boundary</span><span class="gloss"> — Minimalism, contextualism, and relevance theory on where literal meaning ends.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Presupposition and Accommodation</span><span class="gloss"> — Triggers and the projection problem; common ground, the scoreboard, and accommodation.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Assertion</span><span class="gloss"> — The norms of assertion (knowledge, truth, belief) and its commitment structure.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Speech Acts and Social Power</span><span class="gloss"> — Slurs, silencing, and subordinating speech as illocutionary phenomena.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>language.meaning</strong>: Grice's intention-based semantics is homed there; implicature is the same machinery run above the semantic floor, and the boundary wars decide how much that floor carries.</li>
+<li><strong>language.context</strong>: contextualism's claim that pragmatics penetrates truth conditions is fought on indexicality's home ground — Kaplan's machinery is the minimalist's chief exhibit.</li>
+<li><strong>mind</strong>: illocutionary acts are actions individuated by intention and uptake; pragmatic interpretation is mindreading, linking the field to intention and action theory.</li>
+<li><strong>politics</strong>: silencing, propaganda, and subordinating speech import illocutionary analysis into social philosophy and the free-speech debates.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../language/context/">language.context</a>, <a class="node" href="../../language/figurative/">language.figurative</a>, <a class="node" href="../../figures/lewis/">lewis</a>, <a class="node" href="../../figures/wittgenstein/">wittgenstein</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

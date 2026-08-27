@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Foundations of Mathematics — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../logic/">Logic</a> › <a href="../../../logic/mathematics/">Philosophy of Mathematics</a></div><h1>Foundations of Mathematics</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-21.1</div><article><p>Ask what a foundation of mathematics is <em>for</em> and you get at least three different answers, and the candidates fare differently on each. One: epistemic security — a bedrock of certainty from which everything else inherits its warrant. This is the ambition Gödel's theorems humbled; no serious program still claims it. Two: a court of final appeal — a single framework in which "does this object exist?" and "is this really a proof?" get definite answers, so that disputes bottom out somewhere. Three: a shared workspace — a lingua franca in which any branch of mathematics can be interpreted and compared. Much of the contemporary debate is a disagreement, often tacit, about which of these jobs is the real one.</p>
+<p>By the second and third measures, Zermelo–Fraenkel set theory with choice has reigned for a century: virtually all of mathematics can be coded into sets, and "provable in ZFC" is the working standard of proof. The reign is troubled from within. Gödel and Cohen showed that the continuum hypothesis — Cantor's question, first on Hilbert's list — can be neither refuted nor proved from ZFC; Cohen's method of forcing turned out to generate independence wholesale. The court of final appeal is silent on the very question it was convened to answer, and on a family of others.</p>
+<p>Gödel's own diagnosis was that independence signals not indeterminacy but poverty of axioms, and the search for new ones is now a mature program. Large cardinal axioms, which posit ever-stronger infinities, arrange themselves into a strikingly linear hierarchy that calibrates the strength of almost every natural theory, and they settle deep questions about definable sets of reals — yet provably cannot settle CH. Beyond them the candidates conflict: forcing axioms such as Martin's Maximum imply that CH is false, while Woodin's Ultimate-L program sketches a canonical inner model in which CH is true. Since intrinsic self-evidence gives out here, justification has turned extrinsic — fruitfulness, unifying power, the tendency of independently motivated axioms to agree — and whether such evidence can rationally settle an axiom is itself a live epistemological question.</p>
+<p>Or perhaps there is nothing to settle. Hamkins's multiverse view takes the plurality of models that forcing produces at face value: each is a fully real universe of sets, CH holds in some and fails in others, and the question "but is it <em>true</em>?" presupposes a single intended universe that does not exist. Universists reply that the multiverse's own models are described from a background theory that quietly plays the role of the one universe. Set-theoretic pluralism is now a position with its own literature, not a counsel of despair.</p>
+<p>Meanwhile the throne itself is contested. Lawvere's Elementary Theory of the Category of Sets recasts foundations in terms of functions rather than membership, on the structuralist ground that mathematics never cares which sets its objects "really are." More radically, univalent foundations — Voevodsky's program, built on homotopy type theory — takes types rather than sets as basic, treats identity as a structured notion (paths, not bare facts), and via the univalence axiom makes isomorphic structures literally identical, vindicating mathematical practice's habit of treating them so. That it is native to proof assistants gives it a practical constituency no rival ever had. Whether these are rival <em>foundations</em> or alternative organizations of the same mathematics depends, again, on which of the three jobs a foundation is supposed to do.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">New Axioms and the Continuum Problem</span><span class="gloss"> — Gödel's program after independence: large cardinals, forcing axioms, Ultimate L, and the extrinsic justification of axioms.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Set-Theoretic Multiverse</span><span class="gloss"> — Hamkins's multiverse against universism; whether CH has a determinate truth-value.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Category-Theoretic Foundations</span><span class="gloss"> — ETCS and structural set theory; the Mac Lane–Mathias debate over what foundations owe to practice.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Univalent Foundations</span><span class="gloss"> — Homotopy type theory as foundation: identity as path, the univalence axiom, and formalization in proof assistants.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Within logic</strong>: <a class="node" href="../../../logic/mathematical/" title="Mathematical Logic">logic.mathematical</a> supplies the machinery this node interprets — forcing, inner models, and the independence proofs themselves.</li>
+<li><strong>Epistemology</strong>: extrinsic justification of axioms is a test case for non-deductive evidence in an a priori discipline.</li>
+<li><strong>Metaphysics</strong>: universism versus the multiverse is a local form of the realism debate — whether there is a fact of the matter beyond what our theories determine.</li>
+<li><strong>Sibling nodes</strong>: <span class="node unwritten" title="promised entry">structuralism</span> motivates the categorical and univalent alternatives; <span class="node unwritten" title="promised entry">formalism</span> is where the original Hilbertian demand for security was made and broken.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../figures/godel/">godel</a>, <a class="node" href="../../../logic/paradox/set-paradoxes/">logic.paradox.set-paradoxes</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

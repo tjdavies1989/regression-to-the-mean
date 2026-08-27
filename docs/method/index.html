@@ -1,0 +1,134 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Method — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../">Strata</a></div></header><h1>The Constitution</h1><article><h2>Method</h2>
+<p>This document is the constitution. Every article in the encyclopedia is written under it, and no article — however deep the tree eventually grows — may violate it. When the corpus and this document disagree, this document wins and the corpus gets fixed.</p>
+<h3>1. Purpose</h3>
+<p>Strata is an encyclopedia of philosophy written by a single author (an AI) over many sessions, with an effectively unlimited word budget and therefore exactly one scarce resource: <strong>judgment about depth</strong>. The design problem is not "what to say" but "how to stop." Everything below exists to make stopping decisions explicit, auditable, and made in cold blood — at the map level, not mid-article when enthusiasm is high.</p>
+<p>The encyclopedia is organized by <strong>problems</strong>, not by chronology. Thinkers and traditions are real subjects too, but they live in cross-cutting registers and link into the problem tree, rather than serving as its spine.</p>
+<h3>2. The shape</h3>
+<p><strong>Divisions (Layer 0)</strong> — the ten primitive problem-families. These are fixed; changing them is a constitutional amendment:</p>
+<p>1. <a class="node" href="../logic/" title="Logic">logic</a> — Logic (including philosophy of mathematics) 2. <a class="node" href="../metaphysics/" title="Metaphysics">metaphysics</a> — Metaphysics 3. <a class="node" href="../epistemology/" title="Epistemology">epistemology</a> — Epistemology 4. <a class="node" href="../mind/" title="Philosophy of Mind">mind</a> — Philosophy of Mind (including action) 5. <a class="node" href="../language/" title="Philosophy of Language">language</a> — Philosophy of Language 6. <a class="node" href="../science/" title="Philosophy of Science">science</a> — Philosophy of Science 7. <a class="node" href="../ethics/" title="Ethics">ethics</a> — Ethics 8. <a class="node" href="../politics/" title="Political and Social Philosophy">politics</a> — Political and Social Philosophy 9. <a class="node" href="../aesthetics/" title="Aesthetics">aesthetics</a> — Aesthetics 10. <a class="node" href="../religion/" title="Philosophy of Religion">religion</a> — Philosophy of Religion</p>
+<p><strong>Registers (cross-cutting)</strong> — three parallel structures that link into the tree rather than sitting inside it:</p>
+<ul>
+<li><span class="node unwritten" title="promised entry">figures/</span> — persons as subjects in themselves, written to a fixed template (§7).</li>
+<li><span class="node unwritten" title="promised entry">traditions/</span> — periods, schools, regional traditions, and movements (Hellenistic philosophy, Nyāya, the Kyoto School, phenomenology, critical theory) treated as living wholes.</li>
+<li><span class="node unwritten" title="promised entry">meta/</span> — metaphilosophy: what philosophy is, its methods, whether it makes progress.</li>
+</ul>
+<p>A topic that seems to belong to two divisions is assigned one <strong>home</strong> and declared as a <strong>bridge</strong> everywhere else (frontmatter <span class="node unwritten" title="promised entry">bridges:</span>). Free will lives in metaphysics and bridges to mind and ethics; philosophy of mathematics lives in logic and bridges to metaphysics and epistemology. Home assignment is an editorial decision recorded once, in the parent's article, not renegotiated per session.</p>
+<h3>3. States: the depth ladder</h3>
+<p>Every node is in exactly one state. States only move up, one rung per pass.</p>
+<div class="tablewrap"><table><thead><tr><th>State</th><th>Meaning</th><th>Typical size</th></tr></thead><tbody>
+<tr><td><span class="node unwritten" title="promised entry">stub</span></td><td>Named and glossed in its parent's Children list. <strong>No file exists.</strong> A stub is a claim that the child exists, not a promise of depth.</td><td>1 line</td></tr>
+<tr><td><span class="node unwritten" title="promised entry">sketch</span></td><td>A file. The problem stated so a newcomer feels its pull; main positions named; its own Children proposed as stubs.</td><td>300–700 words</td></tr>
+<tr><td><span class="node unwritten" title="promised entry">survey</span></td><td>Positions with their best arguments; the live debate; the node rewritten as a map of its children.</td><td>1,500–3,000 words</td></tr>
+<tr><td><span class="node unwritten" title="promised entry">article</span></td><td>A full entry: state of the debate, history, literature, bridges made explicit in prose.</td><td>4,000–8,000 words</td></tr>
+<tr><td><span class="node unwritten" title="promised entry">deep</span></td><td>Monograph-adjacent treatment. Anchor-class nodes only, and only once the node's whole division is at survey or better.</td><td>open</td></tr>
+</tbody></table></div>
+<h3>4. Classes: depth ceilings assigned in cold blood</h3>
+<p>Every node gets a class <strong>at creation time</strong> — that is, when it first appears as a stub in its parent's Children list, before anyone is excited about it:</p>
+<ul>
+<li><span class="node unwritten" title="promised entry">anchor</span> — may eventually reach <span class="node unwritten" title="promised entry">deep</span>. The load-bearing problems and figures.</li>
+<li><span class="node unwritten" title="promised entry">standard</span> — ceiling at <span class="node unwritten" title="promised entry">article</span>.</li>
+<li><span class="node unwritten" title="promised entry">satellite</span> — ceiling at <span class="node unwritten" title="promised entry">survey</span>. Real, but thin.</li>
+</ul>
+<p>Promotions and demotions happen only <strong>between</strong> passes, recorded in the INDEX changelog, and the usual evidence for promotion is structural: the bridge graph shows the node carrying more load than its class allows.</p>
+<h3>5. The pulse: descend, then consolidate upward</h3>
+<p>Growth proceeds in <strong>pulses</strong>, not sweeps. A pulse:</p>
+<p>1. <strong>Choose one node</strong> (editorial decision, recorded in INDEX under NEXT). 2. <strong>Descend</strong>: promote its stub children to sketches. Each new sketch must in turn propose <em>its</em> children as stubs — the tree discovers its own next layer at every step. 3. <strong>Consolidate upward</strong>: rewrite the chosen node one state higher, now as a genuine map of its children. Then touch every ancestor up to the division root, revising each so it correctly summarizes what now lies beneath it.</p>
+<p>Rule: <strong>descent creates a debt, and the debt is upward.</strong> A node whose children have grown since its last revision is <em>in debt</em>, and audit flags it. No new pulse may begin in a region that carries unpaid consolidation debt.</p>
+<p>Invariant: a child's state never exceeds its parent's state. Depth is earned top-down.</p>
+<p>Asymmetry is not merely permitted but expected: the tree should <strong>branch monstrously wherever the field genuinely articulates</strong>, and nowhere else. A division at layer 5 next to a division at layer 1 is a finding, not a failure.</p>
+<h3>6. Stub honesty</h3>
+<p>The single most important rule: <strong>the next layer down must be discovered, not invented.</strong> A node may be expanded only when its children can be named from the actual articulation of the field — real subfields, real debates with their own literatures. If you cannot name a node's children without straining, it has none; write "thin node — no natural children" in its Children section and let it rest. A satellite that stays a sketch forever is a correct outcome. Padding a thin node to match its siblings' depth is the cardinal sin of this project.</p>
+<p>The converse rule: a stub may be created only on <strong>demand</strong> — because its parent's articulation requires it or because two or more existing articles want to bridge to it. No entries for pet topics.</p>
+<h3>7. Voice</h3>
+<p>Strata is written in <strong>encyclopedia voice</strong>: an entry reports the state of a debate, names the positions, and gives each its best argument — steelmanned, in original prose. An entry is <em>done</em> (for its state) when a reader can (a) state the problem, (b) name the main positions and what is strongest in each, and (c) see where to go next.</p>
+<p>The author has views. They are quarantined: a marked <strong>Assessment</strong> section, clearly editorial, at most one per article, never load-bearing for the exposition above it. Original argumentation is the most unbounded source of depth; the quarantine is a depth-limiter as much as an honesty device.</p>
+<p>Figures articles follow a fixed template: <em>Why they matter</em> (one paragraph) → <em>Life</em> (brief) → <em>Works</em> (the load-bearing texts) → <em>Thought</em> (subsections per doctrine, each ending in bridge links into the problem tree) → <em>Influence and reception</em> (including who pushed back) → <em>Reading path</em> → optional <em>Assessment</em>. A figures article is an <strong>edge</strong>: its job is to connect a person to the problems, in both directions.</p>
+<h3>8. Files and frontmatter</h3>
+<ul>
+<li>Each division is a directory: <span class="node unwritten" title="promised entry">encyclopedia/logic/</span>. The division's own article is <span class="node unwritten" title="promised entry">logic.md</span> inside it. Descendants are single files with <strong>dotted node paths</strong>: <span class="node unwritten" title="promised entry">logic.mathematics.md</span>, <span class="node unwritten" title="promised entry">logic.mathematics.structuralism.md</span>. Files never move when the tree grows.</li>
+<li>Registers: <span class="node unwritten" title="promised entry">figures/frege.md</span>, <span class="node unwritten" title="promised entry">traditions/phenomenology.md</span>, <span class="node unwritten" title="promised entry">meta/metaphilosophy.md</span>.</li>
+<li>Stubs are lines in their parent's Children section, not files.</li>
+</ul>
+<p>Every file opens with YAML frontmatter:</p>
+<pre class="fence"><code>
+---
+node: logic.mathematics        # dotted path; must match filename
+title: Philosophy of Mathematics
+layer: 1                       # 0 for divisions; registers use 0
+state: sketch                  # stub|sketch|survey|article|deep (stubs have no file)
+class: anchor                  # anchor|standard|satellite
+parent: logic                  # or register name: figures, traditions, meta
+bridges: [metaphysics, epistemology]
+pass: 2026-08-21.1             # date.pulse of last revision
+---
+</code></pre>
+<p><span class="node unwritten" title="promised entry">tools/encyc.py</span> regenerates <span class="node unwritten" title="promised entry">INDEX.md</span> from frontmatter and audits the invariants (states valid, parent exists, child ≤ parent, node matches filename). Run it before every commit.</p>
+<h3>9. Session protocol</h3>
+<p>Work is time-boxed. Each session: (1) read INDEX's NEXT queue; (2) pay any consolidation debt first; (3) run one or more pulses; (4) regenerate INDEX, run audit, record the next session's NEXT; (5) commit and push. Anything not finished when time runs out becomes debt in NEXT — visible, not silent. The encyclopedia must always be leavable: coherent read top-down at every moment, whatever its unevenness of depth.</p></article><nav class="footnav"><a href="../">Home</a><a href="../map/">Map</a><a href="../method/">Constitution</a><a href="../queue/">Queue</a></nav></div></body></html>

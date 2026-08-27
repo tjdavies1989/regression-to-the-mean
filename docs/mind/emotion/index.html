@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Emotion — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../mind/">Philosophy of Mind</a></div><h1>Emotion</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.8</div><article><p>Grief has a double life. It is something <em>felt</em> — the tight chest, the heaviness, the tears — and something <em>about</em> the world: it presents a death as a loss, and grief this intense over a misplaced pencil would have gotten something wrong. A theory of emotion must hold both halves together: emotions are bodily episodes that can nonetheless be accurate or unfitting, warranted or absurd. The rival theories each seize one half and labor to recover the other.</p>
+<p>Feeling theories start from the body. William James's answer to his own question "What is an emotion?" — Lange arrived at it independently — was that emotion is the feeling of bodily changes: we do not tremble because we are afraid; the felt trembling <em>is</em> the fear. Subtract every bodily sensation from rage, James argued, and nothing recognizably emotional remains. The view honors phenomenology and physiology but seems to lose aboutness: mere inner churning is not <em>of</em> the bear and cannot be mistaken about it. Prinz's neo-Jamesian revival answers with embodied appraisals: emotions are perceptions of bodily states that <em>represent</em> relational properties like danger or loss, because they are reliably caused by them — content by tracking, feeling by the body, both halves at once.</p>
+<p>Judgment theories start from aboutness. For Solomon, emotions are evaluative judgments; for Nussbaum, judgments about what matters to one's flourishing — grief is the judgment that something of great worth is gone. This explains at a stroke why emotions have objects, can be criticized, and vary with belief and culture. The standing charge is over-intellectualization: infants and animals fear without deploying concepts, and the theory stumbles on everyone's test case, recalcitrant emotion. You fear the flight you know is safe. On the judgment theory you both judge and deny the danger — flat self-contradiction — yet recalcitrant fear feels nothing like believing a contradiction.</p>
+<p>Perceptual theories offer recalcitrance as their credential. For Tappolet, emotions are perceptual experiences of evaluative properties: fear presents the dog as dangerous the way vision presents the tomato as red. Recalcitrant fear parallels the Müller-Lyer illusion — the lines still look unequal after measurement, without contradiction, because impressions are not beliefs. The cost is the analogy's strain: perception is encapsulated and blameless, while emotions answer to reasons — we criticize unfitting anger as we never criticize an illusion, and there is no dedicated organ of value.</p>
+<p>That normative dimension is a topic in itself. Emotions have particular objects (this dog) and formal objects (the dangerous), and an emotion is <em>fitting</em> when its object really has the evaluative property — a standard independent of usefulness or morality, since amusement at a cruel joke can be fitting yet wrong to feel. Fitting-attitude accounts of value run the explanation the other way: for something to be dangerous just is for fear at it to be merited. Which direction explains which, and how to screen off the "wrong kind" of reasons (fearing the demon who punishes non-fearers), is shared territory with value theory.</p>
+<p>Philosophy also inherits a dispute from affective science. Ekman's basic-emotions program treats a short list — fear, anger, disgust, joy, sadness, surprise — as evolved programs with universal facial signatures; Barrett's constructionism replies that no such signatures survive scrutiny, emotions being constructed on the fly from core affect and concepts. The moral, pressed by Griffiths, is caution: "emotion" may name no single natural kind, and a theory legislating for all of it at once may be theorizing a heap.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Theories of Emotion</span><span class="gloss"> — feeling, judgment, perceptual, and embodied-appraisal accounts as rival answers to what emotions are.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Emotional Rationality and Fittingness</span><span class="gloss"> — recalcitrance, fittingness, and the reasons emotions answer to.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Philosophy of Affective Science</span><span class="gloss"> — basic emotions versus constructionism, and whether emotion is a natural kind.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Moods and Affect</span><span class="gloss"> — apparently objectless states like anxiety and elation, and whether they have intentionality after all.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../ethics/value/" title="Value Theory">ethics.value</a>: fitting-attitude analyses make merited emotion the ground of value; the fittingness of emotion is the same coin from this division's side.</li>
+<li>To <a class="node" href="../../ethics/moral-psychology/" title="Moral Psychology">ethics.moral-psychology</a>: whether moral judgment is itself emotional — sentimentalism and its empirical revival — is argued on both sides of that border.</li>
+<li>To <a class="node" href="../../mind/intentionality/" title="Intentionality and Mental Content">mind.intentionality</a>: Prinz's tracking account of emotional content is the general theory of mental content applied to the body's signals.</li>
+<li>To <a class="node" href="../../science/" title="Philosophy of Science">science</a>: the basic-emotions/constructionism dispute is a live case of experimental results bearing on a philosophical taxonomy.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../aesthetics/art-and-emotion/">aesthetics.art-and-emotion</a>, <a class="node" href="../../figures/descartes/">descartes</a>, <a class="node" href="../../ethics/moral-psychology/">ethics.moral-psychology</a>, <a class="node" href="../../figures/hume/">hume</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

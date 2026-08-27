@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Structuralism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../logic/">Logic</a> › <a href="../../../logic/mathematics/">Philosophy of Mathematics</a></div><h1>Structuralism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-21.1</div><article><p>The founding text is Benacerraf's "What Numbers Could Not Be" (1965). Two children are taught arithmetic through set theory: one learns von Neumann's ordinals, on which 2 is {∅, {∅}} and each number contains all its predecessors; the other Zermelo's, on which 2 is {{∅}} and each contains only its predecessor. Both count, add, and prove flawlessly. Asked whether 1 is a member of 3, one says yes, the other no — and arithmetic cannot arbitrate, because it never needed an answer. Any identification of numbers with particular sets is arbitrary; and since the argument generalizes to any candidate objects, Benacerraf concluded that numbers are not objects at all. All arithmetic demands of its subject is that it form a progression — a first element, a unique successor for each, no circling back. The number 2 is not a thing but a position: second place in any such progression. Mathematics is the science of structure. The thought fits mathematical practice — no number theorist cares <em>what</em> the numbers are — but turning the slogan into theory forces a choice about what structures themselves are.</p>
+<p>Ante rem structuralism (Shapiro, Resnik) takes structures to be genuine abstract entities, universals existing "before the things" that instantiate them, with positions that are bona fide objects. Its strength is semantic conservatism: "2 is prime" is an ordinary true predication about an object, and mathematical discourse needs no paraphrase. The cost is that Benacerraf's other problem — how creatures like us know about the abstract — returns at one remove, now aimed at structures; Shapiro answers with pattern recognition and implicit definition: a coherent axiom system characterizes a structure and thereby yields knowledge of it.</p>
+<p>Eliminative and modal structuralism (Hellman, developing Putnam) refuses the new ontology. Talk of numbers is disguised generalization: an arithmetic sentence says that, <em>necessarily, anything whatever forming a progression</em> satisfies the corresponding condition. No structures, no positions — only possible systems under a primitive modal operator. The strength is a clean answer to the access problem: there is nothing abstract to access. The costs are the primitive modality itself and the non-vacuity problem: if no infinite system is even possible, every arithmetic sentence comes out vacuously true, so the view must posit the possibility of infinite systems — which critics find no easier to know than the platonism it replaced.</p>
+<p>The sharpest internal objection is the identity problem (Keränen, Burgess). If a position has only the properties conferred by its structure, then structurally indiscernible positions should be identical. But complex conjugation is an automorphism of the complex field swapping i and −i: the two square roots of −1 are perfectly indiscernible by structural properties, yet they are two. Replies divide: the roots are <em>weakly</em> discernible (an irreflexive relation holds between them); identity facts are primitive, needing no grounding in properties; or, with Leitgeb and Ladyman, mathematics simply tolerates bare distinctness, as unlabeled graphs already show.</p>
+<p>Category theory is often called structuralism's natural language: it characterizes objects only up to isomorphism, through their morphisms, never their membership — the "arrows only" perspective on which asking what an object <em>is made of</em> is ungrammatical. Awodey argues that this gives structuralism a working mathematical form with no background ontology; Hellman presses the autonomy question — what, then, are categories? — and univalent foundations, by making "identity is isomorphism" an axiom, has reopened the debate in a new idiom. Whether the framework vindicates structuralism or merely restates its promise is the live edge of the field.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Ante Rem Structuralism</span><span class="gloss"> — Shapiro's and Resnik's realism about structures and positions, and the epistemology of pattern recognition and implicit definition.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Modal and Eliminative Structuralism</span><span class="gloss"> — Hellman's structuralism without structures: modal generalization over possible systems, and the non-vacuity problem.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Identity Problem</span><span class="gloss"> — Whether purely structural positions can be distinct yet indiscernible: the two roots of −1, weak discernibility, and primitive identity.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Categorical Structuralism</span><span class="gloss"> — Category theory as the mathematics of structure: the arrows-only perspective, the autonomy debate, and univalent foundations as structuralism formalized.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Metaphysics</strong>: ante rem structures are universals under another name, and the identity problem is the identity of indiscernibles applied inside mathematics.</li>
+<li><strong>Epistemology</strong>: the position is scored on whether structures evade or merely relocate the parent's access problem.</li>
+<li><strong>Science</strong>: ontic structural realism in physics borrows these moves wholesale — indiscernible quantum particles play the role of i and −i.</li>
+<li><strong>Within logic</strong>: <a class="node" href="../../../logic/mathematics/foundations/" title="Foundations of Mathematics">logic.mathematics.foundations</a> houses category theory and univalent foundations as rival frameworks; this node treats only their philosophical use as structuralism's formalism.</li>
+</ul></article><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

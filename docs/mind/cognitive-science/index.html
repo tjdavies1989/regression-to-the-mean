@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Foundations of Cognitive Science — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../mind/">Philosophy of Mind</a></div><h1>Foundations of Cognitive Science</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.8</div><article><p>Cognitive science was founded on a bet: that thinking is a kind of computation, and that a mind can therefore be studied the way software is studied — by asking what it computes, not what it is made of. The bet paid for the cognitive revolution against behaviorism, and Marr's three levels became its grammar: specify the <em>computational</em> problem a system solves and why, then the <em>algorithm</em> and representations that solve it, then the <em>implementation</em> in wetware. The scheme licensed a psychology autonomous from neuroscience — the same computation could run on neurons or silicon — and every foundational quarrel since can be stated as a dispute about what happens at which level, or whether the levels carve anything at all.</p>
+<p>The first quarrel is over the shape of the software. The classical view (Fodor's language of thought) holds that cognition is rule-governed manipulation of symbols with syntactic structure, and its best argument is systematicity: anyone who can think <em>John loves Mary</em> can think <em>Mary loves John</em>, which is inevitable if thoughts are built from recombinable constituents and a mystery otherwise. Connectionism replaces symbols with networks of simple units and learned, distributed representations; its strengths — learning from examples, graceful degradation, something like neural plausibility — are exactly where classicism is weakest. Fodor and Pylyshyn's dilemma (1988) charged that networks either fail to explain systematicity or succeed only by implementing a classical architecture in disguise; Smolensky answered that distributed vectors can encode constituent structure without any discrete symbols being tokened. Whether that is a refutation or a concession is still contested, and the argument has been rerun wholesale over deep learning.</p>
+<p>A second quarrel concerns architecture. Fodor's modularity thesis holds that input systems — vision, parsing — are fast, domain-specific, and informationally encapsulated (the Müller-Lyer illusion survives your knowing better), while central cognition is a holistic free-for-all he thought science might never crack. Evolutionary psychology's massive modularity turns the exception into the rule: central cognition, too, is a bundle of task-specific devices, since a general-purpose learner is computationally intractable. Critics reply that the flexibility of human thought — its ability to combine anything with anything — is precisely what modules cannot deliver.</p>
+<p>The 4E movement rejects the shared premise that cognition happens inside. Cognition is <em>embodied</em> (shaped by the body's morphology), <em>embedded</em> (offloaded onto scaffolding), <em>enactive</em> (constituted by sensorimotor engagement), and <em>extended</em>: Clark and Chalmers argue that Otto's notebook, playing the functional role of Inga's memory, is part of his mind — parity of role, parity of status. The coupling-constitution objection (Adams and Aizawa, Rupert) answers that a resource's being causally coupled to cognition does not make it a constituent of cognition, any more than the pencil is part of the mathematician.</p>
+<p>Predictive processing is the current candidate for grand unification: the brain as a hierarchical prediction machine that minimizes error between expected and incoming signal, with perception, action, and learning as three faces of one imperative. Enthusiasts read it as the field's Newtonian moment; deflationists note that a framework compatible with any evidence explains none, and that its "predictions" may be redescription. Beneath everything runs the representation war: radical enactivists (Hutto and Myin's hard problem of content), dynamicists, and ecological psychologists deny that brains traffic in representations at all, while defenders reply that error signals are contentful or they are nothing.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Classical and Connectionist Architectures</span><span class="gloss"> — the language of thought, neural networks, and the systematicity debate over whether thought requires constituent structure.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Levels of Explanation</span><span class="gloss"> — Marr's hierarchy and the autonomy of psychology from neuroscience.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Modularity of Mind</span><span class="gloss"> — Fodor's encapsulated input systems, massive modularity, and the tractability of central cognition.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Embodied and Extended Cognition</span><span class="gloss"> — the 4E program, the extended-mind thesis, and the coupling-constitution objection.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Predictive Processing</span><span class="gloss"> — the brain as prediction-error minimizer, and whether the framework unifies or merely redescribes.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Representation Wars</span><span class="gloss"> — radical enactivism, dynamicism, and ecological psychology against cognitive science's central posit.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../science/" title="Philosophy of Science">science</a>: the empirical study of cognition is homed there; this node keeps what the science must presuppose about the mind — computation, representation, levels.</li>
+<li>To <a class="node" href="../../mind/mind-body/" title="The Mind–Body Problem">mind.mind-body</a>: the computational theory of mind is functionalism made concrete, and inherits its promise and its critics.</li>
+<li>To <a class="node" href="../../mind/intentionality/" title="Intentionality and Mental Content">mind.intentionality</a>: the representation wars turn on whether content can be naturalized — Hutto and Myin's hard problem of content is the disjunction problem redeployed as a weapon.</li>
+<li>To <a class="node" href="../../mind/artificial-minds/" title="Artificial Minds">mind.artificial-minds</a>: whether machines can think and whether thinking is computation are one bet run in two directions.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/hume/">hume</a>, <a class="node" href="../../science/biology/">science.biology</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

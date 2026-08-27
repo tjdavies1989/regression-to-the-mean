@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Models and Idealization — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../science/">Philosophy of Science</a></div><h1>Models and Idealization</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.9</div><article><p>Open any successful science and you find deliberate falsehood: frictionless planes, point masses, infinitely large populations, perfectly rational agents, fluids with no viscosity. These are not errors awaiting correction — the scientists who use them know precisely how and why they are false, and the models built from them are the working face of science, often more so than the grand theories they nominally serve. The problem of this node is how the strictly false can teach truly: what models are, how they represent their targets despite misdescribing them, and why distortion so often improves rather than degrades scientific knowledge.</p>
+<p>The field's modern starting point is the models-as-mediators view (Morgan and Morrison): models are not deduced from theory nor read off from data but are partially autonomous instruments, built from theory, data, mathematical technique, and sheer craft, and it is by manipulating them — not theories — that scientists learn. This reframed the question from "how do theories relate to the world?" to "how do models mediate between the two?"</p>
+<p>Idealization itself comes in kinds, and the taxonomy matters. Galilean idealization (McMullin) distorts for tractability, with a promissory note: add friction back when the mathematics allows, and the model converges on truth. Minimalist idealization instead strips a system to its difference-makers, on the view that the falsehoods eliminate only what never mattered — here Strevens argues idealizations positively signal which factors are causally irrelevant, while Batterman presses the harder case of idealizations (like the thermodynamic limit) that are ineliminable, doing explanatory work no de-idealized model could. Multiple-models idealization (Weisberg, from Levins's ecology) abandons the single best model altogether: a family of incompatible models, each false differently, is the appropriate form for complex systems. Each kind answers the falsehood puzzle differently — falsehood as scaffolding, as filter, or as distributed strategy.</p>
+<p>If models are not true descriptions, what are they? The fictions view (Godfrey-Smith, Frigg) takes the model-building idiom at face value: model systems are imagined concrete things, akin to fictional characters, explored via games of make-believe in Walton's sense — which explains how scientists can discover truths "about" the model itself. Its cost is ontological discomfort; deflationary rivals identify models with mathematical structures or with descriptions, avoiding fictional entities at the price of explaining less of scientific practice.</p>
+<p>However models are constituted, they must represent. Similarity accounts (Giere) say a model represents its target by resembling it in specified respects and degrees; structuralist accounts demand a morphism between model and target structure; both struggle with misrepresentation and with the asymmetry of representation (the target does not represent the model). Inferentialist accounts (Suárez) go deflationary: a model represents its target when it licenses surrogative inference about it, and no deeper substantive relation need be found — strongest on practice, weakest on saying why some surrogates work.</p>
+<p>Two live frontiers extend the puzzle. Computer simulation raises whether an epistemology of downward-flowing, motley, and autonomous inference (Winsberg) constitutes something genuinely new between theory and experiment, and how verification and validation can certify results no one can check by hand. And robustness analysis — Levins's "truth as the intersection of independent lies" — proposes that agreement across independently false models confirms their common implication; whether such agreement is evidence or merely shared artifact (Orzack and Sober's challenge) remains contested.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Kinds of Idealization</span><span class="gloss"> — Galilean, minimalist, and multiple-models idealization, and whether idealizations must in principle be dispensable.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Scientific Representation</span><span class="gloss"> — similarity, structuralist, and inferentialist accounts of how models stand for their targets.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Models as Fictions</span><span class="gloss"> — whether model systems are imagined entities explored through make-believe, and the deflationary alternatives.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Computer Simulation</span><span class="gloss"> — whether simulation is a novel epistemic category, and how its results are sanctioned.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Robustness Analysis</span><span class="gloss"> — when agreement among independently false models counts as evidence.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../language/" title="Philosophy of Language">language</a>: theories of scientific representation run parallel to — and borrow from — accounts of reference, depiction, and denotation.</li>
+<li>To <a class="node" href="../../aesthetics/" title="Aesthetics">aesthetics</a>: the fictions view imports Walton's make-believe account of fiction wholesale; the ontology of model systems is the ontology of fictional characters.</li>
+<li>To <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a>: understanding through falsehood pressures the factivity of understanding and knowledge from idealized sources.</li>
+<li>Within <a class="node" href="../../science/" title="Philosophy of Science">science</a>: the realism debate (<a class="node" href="../../science/realism/" title="Scientific Realism and Antirealism">science.realism</a>) turns partly on whether idealized models can be approximately true.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../science/explanation/">science.explanation</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

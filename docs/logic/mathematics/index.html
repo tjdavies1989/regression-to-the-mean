@@ -1,0 +1,94 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Philosophy of Mathematics — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../logic/">Logic</a></div><h1>Philosophy of Mathematics</h1><div class="plaque"><span class="glyph">◑</span> survey &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-21.1</div><article><p>Mathematics is the best knowledge we have: proved rather than conjectured, holding everywhere and always, indispensable to every science. Yet what is it knowledge <em>of</em>? Numbers, sets, and functions — if they exist at all — are abstract: not located in space, not participants in causes, not the kind of thing a brain could bump into. The field's modern shape was set by two short papers of Paul Benacerraf. "Mathematical Truth" (1973) posed the dilemma that still organizes everything: a uniform semantics says "there are infinitely many primes" is true only if there really are primes — objects the sentence is about; a credible epistemology says knowledge requires some connection to what is known; for mathematics we can have the semantics or the epistemology, but apparently not both. "What Numbers Could Not Be" (1965) added a subtler wound: the numbers can be modeled by sets in endlessly many equally good ways, and since no fact could decide which sets they <em>are</em>, perhaps they are not objects at all. Every position below is a way of paying one of these bills.</p>
+<p><strong>The ontological battleground.</strong> The platonist accepts the objects and owes the epistemology. The strongest case descends from Frege — semantic uniformity, and the forced, un-voted objectivity of theorems — and the sharpest modern debt is reliability: never mind causal contact, what explains the correlation between what mathematicians accept and what holds in a realm they cannot touch? Gödel's appeal to mathematical intuition names the problem rather than solving it; contemporary platonists argue that mathematics' role in science does the explaining. That role is itself the nominalist's chief obstacle: the Quine–Putnam indispensability argument holds that believing our best physics commits us to the mathematics it ineliminably quantifies over, and the current "enhanced" version rests the commitment on mathematical <em>explanation</em> of physical facts — the cicada's prime-numbered life cycle is the standard exhibit — against Maddy's and Sober's influential dissents. Field's hard-road nominalism answers by reconstruction: show mathematics conservative over nominalistic science and therefore good without being true — achieved for Newtonian gravitation, still unachieved for quantum mechanics. The easy road (Melia, Yablo, Azzouni) concedes indispensability and denies that quantification commits; fictionalism generalizes the maneuver: mathematics as the most useful of stories. The full standoff — two unpaid explanatory debts, access for the platonist, applicability for the nominalist — is surveyed in <span class="node unwritten" title="promised entry">ontology</span>.</p>
+<p><strong>Structuralism</strong> takes the 1965 paper at its word: since any progression will do as "the numbers," mathematics was never about particular objects but about structure — the pattern all progressions share. The view splits over what patterns are. Shapiro's ante rem structuralism grants them independent existence and inherits a refined access problem plus a troublesome identity puzzle (nothing in the structure of the complex numbers distinguishes i from −i); Hellman's modal structuralism eliminates them in favor of claims about possible systems, at the price of a primitive modality; category theory offers itself as the mathematics of structure natively. The options are mapped in <span class="node unwritten" title="promised entry">structuralism</span>.</p>
+<p><strong>The three classical programs</strong> each proposed to secure mathematics by revealing its nature, and each shattered instructively. Logicism (Frege) derived arithmetic from logic plus definitions; Russell's paradox destroyed the system but not the insight, and the neo-Fregean revival (Wright, Hale) re-derives arithmetic from Hume's Principle — the technical core, Frege's Theorem, is secure; whether abstraction principles are analytic, and which ones are legitimate (the bad-company problem), is not. Formalism in Hilbert's sophisticated version divided mathematics into contentful finitary statements and ideal instruments, to be licensed wholesale by a finitary consistency proof; Gödel's second incompleteness theorem showed no adequate system can certify itself, and the program survives only in fragments — Gentzen's consistency proof for arithmetic, reverse mathematics' calibration of exactly how much ideal apparatus each theorem needs. Intuitionism (Brouwer) relocated mathematics into the constructing mind, rejecting excluded middle for infinite totalities; Dummett later derived the same logic from a theory of meaning rather than a philosophy of mind, and Bishop-style constructive mathematics now flourishes non-ideologically, its proofs prized because they compute. The three are treated in <span class="node unwritten" title="promised entry">logicism</span>, <span class="node unwritten" title="promised entry">formalism</span>, and <span class="node unwritten" title="promised entry">intuitionism</span>; intuitionistic logic as a system is housed at <a class="node" href="../../logic/nonclassical/" title="Nonclassical Logics">logic.nonclassical</a>.</p>
+<p><strong>Foundations, reopened.</strong> Set theory won the twentieth century by default: ZFC is where mathematics is officially interpreted, and its cumulative hierarchy is the closest thing to a standard ontology. But the independence phenomenon — above all the continuum hypothesis, provably unsettleable from ZFC — forces the philosophical question of whether such statements have truth-values awaiting new axioms (the Gödelian program: large cardinals, forcing axioms, Woodin's work) or whether set theory describes a multiverse of equally legitimate universes, as Hamkins urges. Category theory presses a different complaint — that set-theoretic foundations misrepresent mathematical practice, which cares about objects only up to isomorphism — and univalent foundations turns that complaint into a formal system in which isomorphic structures are identical and proofs are natively checkable by machine. What "foundation" should even mean — epistemic bedrock, court of final ontological appeal, or shared working framework — is the live question of <span class="node unwritten" title="promised entry">foundations</span>.</p>
+<p><strong>The incompleteness theorems</strong> deserve, and in this corpus receive, a dedicated treatment (<span class="node unwritten" title="promised entry">incompleteness</span>): precise statement of what Gödel proved, the genuine import — the death of Hilbert's original program, truth outrunning provability in any fixed system — and the patient correction of the abuse the theorems attract, from "mathematics is uncertain" to the Lucas–Penrose argument that minds outrun machines, with Gödel's own cautious disjunction as the honest residue.</p>
+<p><strong>The practice turn.</strong> A generation of philosophers has shifted attention from foundations to the texture of mathematical work: why some proofs explain while others merely verify, what makes a theorem deep or a method pure, how diagrams reason, and what computer-assisted and now machine-generated proof do to mathematical knowledge — the four-color theorem and the Flyspeck verification of Kepler being the canonical cases. Lakatos's <em>Proofs and Refutations</em>, with its dialectic of proof and counterexample, is the tradition's founding document; the field is surveyed in <span class="node unwritten" title="promised entry">practice</span>.</p>
+<p>Behind all of it stands the oldest datum: Wigner's "unreasonable effectiveness" of mathematics in physics. Whether it is the deepest fact about the world or an artifact of selective attention — we keep the mathematics that works — is a question on which the ontology, the foundations, and the practice literatures quietly converge from three directions.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child written"><span class="glyph">◑</span><a href="../../logic/mathematics/ontology/">The Ontology of Mathematics</a><span class="gloss"> — Platonism, nominalism, fictionalism, and the indispensability argument: whether mathematical objects exist and why it is so hard to say either way.</span><span class="tag">survey · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/mathematics/structuralism/">Structuralism</a><span class="gloss"> — Mathematics as the science of structure: ante rem and modal variants, the identity problem, and category theory as structuralism's language.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/mathematics/logicism/">Logicism and Neo-Logicism</a><span class="gloss"> — Frege's derivation of arithmetic from logic, its collapse, and the revival from Hume's Principle with its bad-company problem.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/mathematics/formalism/">Formalism and Hilbert&#x27;s Program</a><span class="gloss"> — Mathematics as symbol and instrument, the finitist consistency project, and what survives Gödel: Gentzen, partial realizations, reverse mathematics.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/mathematics/intuitionism/">Intuitionism and Constructivism</a><span class="gloss"> — Brouwer's mathematics of mental construction, Dummett's semantic route to the same logic, and constructive mathematics after Bishop.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/mathematics/foundations/">Foundations of Mathematics</a><span class="gloss"> — ZFC and the independence phenomenon, the search for new axioms, the multiverse debate, and the category-theoretic and univalent challengers.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/mathematics/incompleteness/">The Incompleteness Theorems: Import and Abuse</a><span class="gloss"> — What Gödel proved, what genuinely follows, and the catalogue of what does not.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../logic/mathematics/practice/">Philosophy of Mathematical Practice</a><span class="gloss"> — Explanation, depth, purity, diagrams, and computer proof: philosophy attending to what mathematicians actually do.</span><span class="tag">sketch · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Metaphysics</strong>: abstract objects are the paradigm case of ontology beyond the concrete; every position here doubles as a position there.</li>
+<li><strong>Epistemology</strong>: Benacerraf's challenge is at bottom epistemological — a priori knowledge, intuition, and reliability without contact.</li>
+<li><strong>Science</strong>: the indispensability argument makes this field hostage to confirmation theory and scientific explanation; Wigner's puzzle is joint property.</li>
+<li><strong>Mind</strong>: Brouwer's creating subject, the Lucas–Penrose arguments, and machine proof tie mathematical knowledge to theories of mind and mechanism.</li>
+<li><strong>Within logic</strong>: <a class="node" href="../../logic/mathematical/" title="Mathematical Logic">logic.mathematical</a> supplies the technical results this field interprets; <a class="node" href="../../logic/nonclassical/" title="Nonclassical Logics">logic.nonclassical</a> houses intuitionistic logic; <a class="node" href="../../logic/paradox/" title="Paradox and Truth">logic.paradox</a> shares Russell's paradox and indefinite extensibility.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/kant/">kant</a>, <a class="node" href="../../logic/mathematical/">logic.mathematical</a>, <a class="node" href="../../logic/nonclassical/">logic.nonclassical</a>, <a class="node" href="../../figures/wittgenstein/">wittgenstein</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

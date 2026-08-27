@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Justice — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../politics/">Political and Social Philosophy</a></div><h1>Justice</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.11</div><article><p>Society produces its benefits and burdens together — no one grows rich, or safe, or educated alone — yet distributes them very unevenly, and largely according to facts no one chose: the family, talents, and country one is born into. Justice is the problem of what distributions, and what distributing institutions, can be defended to the people living under them. The question presses because every answer must be given <em>to</em> someone who could have fared better under another arrangement.</p>
+<p>The modern field is largely Rawls's creation. His device, the original position, asks what principles parties would choose behind a veil of ignorance that hides their class, talents, and conception of the good; his answer is two principles — equal basic liberties for all, and social and economic inequalities permitted only when attached to fair equality of opportunity and arranged to the greatest benefit of the least advantaged. Just as influential is his method: reflective equilibrium, the mutual adjustment of principles and considered judgments until they cohere, which gave political philosophy a working alternative to both intuition-mongering and foundationalist proof. Nozick's entitlement theory is the great rival: justice is historical, not patterned — a holding is just if it arose by just acquisition and just transfer, whatever distribution results. His Wilt Chamberlain argument gives the view its bite: if a just distribution is upset by millions of fans freely paying to watch one man play, then preserving any pattern requires continuous interference with free exchange; liberty upsets patterns.</p>
+<p>Within the egalitarian camp, luck egalitarianism (Dworkin's equality of resources, Cohen's stricter socialist reading) refines Rawls's insight that the natural lottery is morally arbitrary: distinguish chosen option luck from unchosen brute luck, and compensate the latter while holding people responsible for the former. Its relational critics — above all Anderson, whose position is homed at <span class="node unwritten" title="promised entry">equality</span> — object that this makes justice a demeaning inspection of who is pitiably unlucky, when its real point is a society of equals free from domination and marginalization. The capabilities approach of Sen and Nussbaum shifts the currency question itself: what matters is neither resources nor welfare but capabilities — what people are actually able to do and be — a metric that sees what income measures miss, disability and gendered division of labor included. Desert, the pre-theoretical answer ("give people what they deserve"), was marginalized by Rawls's argument that the bases of desert are themselves undeserved; its defenders reply that a theory in which effort and contribution do no justificatory work has lost contact with the concept it set out to analyze.</p>
+<p>A newer dispute concerns method rather than content. Rawls theorized ideal theory: principles for a well-ordered society under full compliance, with nonideal remedies to follow. Mills argued the sequence is not innocent — a discipline that idealizes away centuries of racial domination produces tools unfit for diagnosing it, and a theory of justice should start from actual injustice. Defenders of ideal theory answer that one cannot identify injustice, or know which corrections count as improvements, without some account of the target. The dispute connects justice to the critical approaches homed elsewhere in this division, and it is live.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Libertarianism and Entitlement</span><span class="gloss"> — self-ownership, Nozick's historical theory of acquisition and transfer, and left-libertarian variants.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Capabilities Approach</span><span class="gloss"> — Sen and Nussbaum on capabilities as the metric of justice, and its uses in development ethics.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Desert and Justice</span><span class="gloss"> — whether desert should shape distribution, and the case for and against its Rawlsian marginalization.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Ideal and Nonideal Theory</span><span class="gloss"> — full-compliance theorizing versus starting from actual injustice; Mills's critique and the replies.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Intergenerational Justice</span><span class="gloss"> — what the present owes the future: just savings, discounting, and the non-identity problem.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../ethics/" title="Ethics">ethics</a>: justice applies moral standards to the basic structure; contractualist method and the currency-of-value debates are shared inheritance.</li>
+<li>To <a class="node" href="../../politics/equality/" title="Equality and Egalitarianism">politics.equality</a>: the luck/relational dispute and "equality of what" are homed there; this article uses their results.</li>
+<li>To <a class="node" href="../../politics/critical-approaches/" title="Ideology, Power, and Critical Approaches">politics.critical-approaches</a>: Mills's challenge to ideal theory is one front of the wider ideology critique homed there.</li>
+<li>To <a class="node" href="../../politics/global-justice/" title="Global Justice and Migration">politics.global-justice</a>: whether these principles extend beyond the state is that node's founding question.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/aristotle/">aristotle</a>, <a class="node" href="../../figures/plato/">plato</a>, <a class="node" href="../../politics/critical-approaches/">politics.critical-approaches</a>, <a class="node" href="../../politics/equality/">politics.equality</a>, <a class="node" href="../../politics/legitimacy/">politics.legitimacy</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

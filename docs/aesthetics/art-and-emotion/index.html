@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Art and Emotion — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../aesthetics/">Aesthetics</a></div><h1>Art and Emotion</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.12</div><article><p>Charles grips his seat as the green slime oozes toward the camera. His pulse races; he may shriek. Yet he never phones the police, never flees the cinema, and would calmly deny that any slime exists. Radford made the trouble explicit: we seem committed to three claims that cannot all be true. We are genuinely moved by fictions; genuine emotion requires believing that its object exists; and we do not believe the slime, or Emma Bovary, exists. Radford's own verdict — that our tears for fictions are real but irrational, a soft spot in human rationality — has served mostly as the position everyone else defines themselves against.</p>
+<p>Walton denies the first claim. Charles feels <em>quasi-fear</em>: real sensations and arousal, but generated inside a game of make-believe in which it is fictionally true, not actually true, that he fears the slime. The view's strength is its systematicity — it belongs to a full theory of representation as prop-governed make-believe, and it explains why Charles stays in his seat: quasi-fear motivates nothing outside the game. Thought theories deny the second claim instead: vividly entertaining a content — merely holding before the mind the thought of a child dying — can arouse emotion without belief, as anyone who has shuddered at an imagined fall from a cliff edge already knows. Their strength is economy: no new mental kind, just the observation that belief was never necessary for feeling. Illusion theories deny the third claim — absorbed spectators half-believe, their disbelief "willingly suspended" — and though crude versions founder on Charles's undisturbed calm about the actual world, the position has been rehabilitated through Gendler's <em>alief</em>: an automatic, belief-discordant response that also explains why we hesitate to step onto a glass skywalk we know is safe.</p>
+<p>A second paradox: we pay to weep. Tragedy, melodrama, and horror deliberately arouse feelings we spend ordinary life avoiding, and audiences return for more. Hume's answer is conversion — the eloquence and formal beauty of the telling dominate the painful passion and convert its very energy into the pleasure of the whole. Carroll's answer for horror is compensation: the monster is a categorical violation, and the fascination of the unclassifiable pays for the disgust it necessarily arouses. Rich-experience views reject the hedonic bookkeeping in both: we do not seek painful art because pain is secretly converted or outweighed, but because we value experiences for depth, self-knowledge, and felt contact with what matters, not for pleasure alone — sad music is wanted <em>as</em> sad.</p>
+<p>Emotion enters art from the maker's side too. For Tolstoy, art just is the transmission of feeling — the artist infects the audience with an emotion once lived, and sincerity is the measure of success. For Collingwood, expression is not transmission but articulation: the artist begins with an inchoate perturbation and, in expressing it, discovers what it is; art proper is this exploration, and arousing feelings to order is mere craft, the technique of the advertiser. Collingwood's heirs have detached expressiveness from any actual episode in the artist — a work can be expressive of a sadness nobody felt — turning expression into a property of the work's appearance and handing philosophy of music its central puzzle.</p>
+<p>Narrative art adds engagement with persons. Whether we <em>empathize</em> with Anna — simulating her situation from the inside — or <em>sympathize</em> from outside, feeling for rather than with, shapes accounts of suspense, identification, and how fiction educates feeling. All of these debates run on an underlying theory of what emotion is: judgment theories make the paradox of fiction sharp, while perceptual and appraisal theories largely dissolve it. That theory is homed in mind.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Paradox of Fiction</span><span class="gloss"> — being moved by what we know is unreal: quasi-emotion, thought, and illusion solutions.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Tragedy and Horror</span><span class="gloss"> — why audiences seek painful art: conversion, compensation, and rich-experience answers.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Expression in Art</span><span class="gloss"> — transmission and articulation theories and the puzzle of expressiveness without anyone's emotion.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Empathy and Narrative Engagement</span><span class="gloss"> — empathy, sympathy, and identification with fictional characters.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../mind/emotion/" title="Emotion">mind.emotion</a>: every solution to the fiction paradox is hostage to a theory of emotion — whether emotions require belief is decided there, not here.</li>
+<li>To <a class="node" href="../../mind/other-minds/" title="Other Minds">mind.other-minds</a>: empathy with characters borrows the simulation machinery developed for knowing other minds.</li>
+<li>To <a class="node" href="../../aesthetics/music/" title="Philosophy of Music">aesthetics.music</a>: expressiveness without a felt episode is this node's export and that node's central problem.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../aesthetics/music/">aesthetics.music</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

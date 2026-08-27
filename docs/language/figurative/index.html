@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Figurative Language — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../language/">Philosophy of Language</a></div><h1>Figurative Language</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; satellite &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.4</div><article><p>"Juliet is the sun." Taken literally the sentence is astronomical nonsense, yet Romeo has said something — something that resists every attempted paraphrase. Figurative language is where the standard semantic machinery visibly creaks: words carrying more than their conventional meanings, names referring to men who never existed, speakers saying the opposite of what they mean and being understood perfectly. The question is whether the machinery needs new parts or whether the load was never semantic at all.</p>
+<p>Metaphor is the sharpest case. The comparison theory, descending from Aristotle, treats metaphor as compressed simile — Juliet is <em>like</em> the sun — and its strength is its economy: no new species of meaning required. Black's interaction theory objects that good metaphors are not decoded but generative: the "system of commonplaces" attached to <em>sun</em> reorganizes how we see Juliet, creating a similarity rather than reporting one, which is why paraphrase loses something. Davidson radicalized the dissatisfaction from the other side: there is no metaphorical meaning at all. A metaphor means exactly what its words literally mean — usually something false or trivial — and works by <em>effects</em>, nudging us into noticing likenesses the way a picture might; that is why paraphrase fails (there is no proposition to paraphrase) and why metaphors die into ordinary polysemy once their effect hardens into convention. From linguistics, Lakoff and Johnson's conceptual-metaphor program inverts the whole framing: metaphor is primarily a structure of thought, not language — systematic mappings like ARGUMENT IS WAR or MORE IS UP that generate whole families of everyday expressions ("he attacked my position," "prices rose"). Its strength is the systematicity that sentence-by-sentence theories leave unexplained; its cost is blurring the literal–figurative line the other theories presuppose.</p>
+<p>Fiction poses the problem of empty names. "Sherlock Holmes lived in Baker Street" seems right and "Holmes lived in Wigan" wrong, though no one answers to the name. Realists (van Inwagen, the later Kripke) hold that Holmes exists as an abstract artifact created by Doyle — which smoothly handles "Holmes is more famous than any real detective," a claim made outside any story. Walton's pretense theory goes the other way: fictional discourse is not assertion but a move in a game of make-believe in which the text serves as a prop; apparent truths about Holmes are prescriptions about what to imagine, and no exotic ontology is needed. Lewis's "Truth in Fiction" supplies the logic either side needs: what is true in a fiction is what would be true at the worlds where the story is told as known fact — an analysis that delivers the unstated truths (Holmes has two lungs) no text makes explicit, at the price of Lewisian counterfactual machinery.</p>
+<p>Irony and loose talk round out the territory and pull it toward pragmatics. Grice treats irony as flouted truthfulness generating an opposite implicature; the echoic account (Sperber and Wilson) replies that irony <em>mentions</em> a thought while dissociating from it — which better explains the mocking tone and why one cannot be ironic about just anything. Loose talk ("France is hexagonal," "it's three o'clock") is literally false but conversationally impeccable, handled by Lewisian standards of precision or relevance-theoretic ad hoc concepts. The unifying question for the whole node: is there one pragmatic engine for all non-literal talk, or does each figure need its own theory — and does the literal–figurative distinction survive the pressure applied from above by Davidson and from below by Lakoff?</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Metaphor</span><span class="gloss"> — Comparison, interaction, Davidsonian, and conceptual-metaphor accounts of what metaphors do and whether they mean.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Fictional Discourse</span><span class="gloss"> — Empty names, truth in fiction, pretense versus abstract-artifact realism.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<p>Irony and loose talk are treated here and in pragmatics; they carry no separate literature warranting nodes.</p>
+<h2>Bridges</h2>
+<ul>
+<li><strong>language.reference</strong>: "Sherlock Holmes" is the empty-name problem at full strength — descriptivist, Millian, and pretense treatments are tested against fiction first.</li>
+<li><strong>language.pragmatics</strong>: Gricean and relevance-theoretic machinery claims irony and loose talk outright, and Davidson would hand it metaphor as well.</li>
+<li><strong>aesthetics</strong>: Walton's make-believe program and the nature of fiction are homed in aesthetics; this node borrows the semantics and leaves the imagination to its owner.</li>
+<li><strong>metaphysics.ontology</strong>: whether fictional characters are abstract artifacts, nonexistent objects, or nothing at all is an ontological dispute conducted in semantic dress.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../aesthetics/literature/">aesthetics.literature</a>, <a class="node" href="../../aesthetics/ontology-of-art/">aesthetics.ontology-of-art</a>, <a class="node" href="../../logic/mathematics/ontology/fictionalism/">logic.mathematics.ontology.fictionalism</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

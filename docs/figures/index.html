@@ -1,0 +1,146 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Figures — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../">Strata</a></div></header><h1>Figures</h1><div class="plaque"><span class="glyph">◑</span> survey &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 0 &nbsp;·&nbsp; pass 2026-08-21.1</div><article><p>Philosophy is unusual among disciplines in that its history is not superseded but permanently load-bearing: one can do physics without reading Newton, but not ethics without reckoning with Aristotle and Kant. This register treats persons as subjects in themselves. Its articles are <strong>edges</strong>: each connects a life and a body of work to the nodes of the problem tree it bears on, in both directions. A figures article succeeds when a reader understands why this person is unavoidable — which problems they transformed, and how.</p>
+<p>Every figures article follows the fixed template of METHOD §7: <em>Why they matter → Life → Works → Thought (by doctrine, with bridges) → Influence and reception → Reading path → optional Assessment</em>.</p>
+<p>The roster below is the opening map, not a canon ranking; it will grow on demand, per METHOD §6 — a figure earns a stub when the problem tree keeps needing to cite them. Classes are depth ceilings assigned in advance: an <span class="node unwritten" title="promised entry">anchor</span> may eventually receive monograph-depth treatment; a <span class="node unwritten" title="promised entry">satellite</span> deliberately never exceeds a survey. The register skews canonical-Western at birth; this is recorded as a standing correction in the queue, and the promotion order below deliberately pulls Indian, Chinese, and Islamic figures forward rather than appending them later.</p>
+<p>The register opened where the problem tree first grew deep: with the first pulse running through logic, its first promotions were <a class="node" href="../figures/aristotle/" title="Aristotle">aristotle</a>, <a class="node" href="../figures/frege/" title="Gottlob Frege">frege</a>, and <a class="node" href="../figures/godel/" title="Kurt Gödel">godel</a> — the discipline's founding discontinuity, its second founding, and the man who turned the new instrument on itself — followed by <a class="node" href="../figures/kant/" title="Immanuel Kant">kant</a>, <a class="node" href="../figures/hume/" title="David Hume">hume</a>, and <a class="node" href="../figures/wittgenstein/" title="Ludwig Wittgenstein">wittgenstein</a> to seed the metaphysics and epistemology descents. This is the register's growth law in miniature: figures are promoted where the tree is thickest, so that every deepened region acquires its people and every written figure has live nodes to bridge into. The second session's wave ran the law in both directions: <a class="node" href="../figures/plato/" title="Plato">plato</a>, <a class="node" href="../figures/descartes/" title="René Descartes">descartes</a>, and <a class="node" href="../figures/lewis/" title="David Lewis">lewis</a> landed alongside the metaphysics and modality descents they anchor, and the register's standing Western skew received its first correction — <a class="node" href="../figures/dharmakirti/" title="Dharmakīrti">dharmakirti</a>, <a class="node" href="../figures/zhuangzi/" title="Zhuangzi">zhuangzi</a>, and <a class="node" href="../figures/ibn-sina/" title="Ibn Sīnā (Avicenna)">ibn-sina</a>, each written within their own tradition's terms first, arriving together with the Buddhist, Chinese, and Indian tradition articles they bridge into.</p>
+<h2>Children</h2>
+<h3>Ancient Mediterranean</h3>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Socrates</span><span class="gloss"> — the examined life, elenchus, and the founding image of the philosopher.</span><span class="tag">promised · anchor</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/plato/">Plato</a><span class="gloss"> — Forms, knowledge, the soul, and the ideal city; philosophy's first system.</span><span class="tag">survey · anchor</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/aristotle/">Aristotle</a><span class="gloss"> — logic, substance, nature, and flourishing; the most cited philosopher in this encyclopedia's tree.</span><span class="tag">survey · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Epicurus</span><span class="gloss"> — atomism, pleasure as tranquility, death as nothing to us.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Chrysippus</span><span class="gloss"> — Stoic logic and the unified Stoic system.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Sextus Empiricus</span><span class="gloss"> — Pyrrhonian skepticism as a way of life.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Plotinus</span><span class="gloss"> — the One, emanation, and Neoplatonism.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h3>Ancient and classical Asia</h3>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Confucius</span><span class="gloss"> — ritual, virtue, and the ethical cultivation of the person.</span><span class="tag">promised · standard</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/zhuangzi/">Zhuangzi</a><span class="gloss"> — perspectivism, skill, and the uselessness of fixed distinctions.</span><span class="tag">survey · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Nāgārjuna</span><span class="gloss"> — emptiness, the tetralemma, and Madhyamaka dialectic.</span><span class="tag">promised · standard</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/dharmakirti/">Dharmakīrti</a><span class="gloss"> — Buddhist epistemology and logic at their most systematic.</span><span class="tag">survey · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Śaṅkara</span><span class="gloss"> — Advaita Vedānta: non-dual self and world.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h3>Medieval worlds</h3>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Augustine</span><span class="gloss"> — will, time, evil, and the interior turn.</span><span class="tag">promised · anchor</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/ibn-sina/">Ibn Sīnā (Avicenna)</a><span class="gloss"> — essence and existence, the flying man, the necessary being.</span><span class="tag">survey · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Al-Ghazālī</span><span class="gloss"> — occasionalism and the critique of the philosophers.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Ibn Rushd (Averroes)</span><span class="gloss"> — the great commentator; reason's autonomy defended.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Maimonides</span><span class="gloss"> — negative theology and the guide for the perplexed.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Thomas Aquinas</span><span class="gloss"> — the Aristotelian synthesis of reason and faith.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">John Duns Scotus</span><span class="gloss"> — univocity, haecceity, and the subtle doctor's metaphysics.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">William of Ockham</span><span class="gloss"> — nominalism and the razor.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h3>Early modern</h3>
+<ul class="children">
+<li class="child written"><span class="glyph">◑</span><a href="../figures/descartes/">René Descartes</a><span class="gloss"> — methodical doubt, the cogito, and the mind-body problem in modern form.</span><span class="tag">survey · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Thomas Hobbes</span><span class="gloss"> — materialism and the social contract from the state of nature.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Baruch Spinoza</span><span class="gloss"> — one substance, necessity, and the intellectual love of God.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">John Locke</span><span class="gloss"> — ideas, personal identity, and government by consent.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">G. W. Leibniz</span><span class="gloss"> — monads, sufficient reason, the best of all possible worlds.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">George Berkeley</span><span class="gloss"> — to be is to be perceived.</span><span class="tag">promised · standard</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/hume/">David Hume</a><span class="gloss"> — custom against reason: causation, induction, the self, and moral sentiment.</span><span class="tag">survey · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Jean-Jacques Rousseau</span><span class="gloss"> — the general will and the critique of civilization.</span><span class="tag">promised · standard</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/kant/">Immanuel Kant</a><span class="gloss"> — the Copernican turn: conditions of experience, autonomy, and the limits of reason.</span><span class="tag">survey · anchor</span></li>
+</ul>
+<h3>Nineteenth century</h3>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">G. W. F. Hegel</span><span class="gloss"> — dialectic, recognition, and spirit's self-comprehension in history.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Karl Marx</span><span class="gloss"> — historical materialism and the critique of political economy.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">John Stuart Mill</span><span class="gloss"> — utilitarianism refined, liberty defended.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Søren Kierkegaard</span><span class="gloss"> — subjectivity, anxiety, and the leap.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Friedrich Nietzsche</span><span class="gloss"> — genealogy of morals, will to power, revaluation of values.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">C. S. Peirce</span><span class="gloss"> — pragmatism's founder; inquiry, signs, and abduction.</span><span class="tag">promised · standard</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/frege/">Gottlob Frege</a><span class="gloss"> — modern logic invented; sense and reference; the linguistic turn's origin.</span><span class="tag">survey · anchor</span></li>
+</ul>
+<h3>Twentieth century and after</h3>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Edmund Husserl</span><span class="gloss"> — phenomenology: back to the things themselves.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Bertrand Russell</span><span class="gloss"> — logical atomism, descriptions, and philosophy as analysis.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">G. E. Moore</span><span class="gloss"> — common sense and the naturalistic fallacy.</span><span class="tag">promised · standard</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/wittgenstein/">Ludwig Wittgenstein</a><span class="gloss"> — from the logic of language to language as use; philosophy as therapy.</span><span class="tag">survey · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Martin Heidegger</span><span class="gloss"> — being, time, and the question the tradition forgot.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Rudolf Carnap</span><span class="gloss"> — logical empiricism, frameworks, and tolerance.</span><span class="tag">promised · standard</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/godel/">Kurt Gödel</a><span class="gloss"> — incompleteness and mathematical platonism from inside mathematics.</span><span class="tag">survey · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Jean-Paul Sartre</span><span class="gloss"> — existence precedes essence; freedom and bad faith.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Simone de Beauvoir</span><span class="gloss"> — situated freedom and the making of woman as Other.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Maurice Merleau-Ponty</span><span class="gloss"> — the body as our opening onto the world.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Hannah Arendt</span><span class="gloss"> — action, plurality, and the banality of evil.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">W. V. O. Quine</span><span class="gloss"> — the web of belief; analyticity rejected; ontology naturalized.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">G. E. M. Anscombe</span><span class="gloss"> — intention and modern moral philosophy's revival of the virtues.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">John Rawls</span><span class="gloss"> — justice as fairness behind the veil of ignorance.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Michel Foucault</span><span class="gloss"> — power, knowledge, and the history of the present.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Saul Kripke</span><span class="gloss"> — rigid designation, necessity a posteriori, rule-following.</span><span class="tag">promised · anchor</span></li>
+<li class="child written"><span class="glyph">◑</span><a href="../figures/lewis/">David Lewis</a><span class="gloss"> — possible worlds realism and systematic metaphysics reborn.</span><span class="tag">survey · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Derek Parfit</span><span class="gloss"> — personal identity deflated, ethics made impersonal.</span><span class="tag">promised · anchor</span></li>
+</ul>
+<h2>Bridges</h2>
+<p>Every figures article bridges by design; the register's densest edges run to <span class="node unwritten" title="promised entry">traditions/</span> (each figure is read within and against a tradition) and to whichever division holds the figure's principal problems — <a class="node" href="../logic/" title="Logic">logic</a> for Frege and Gödel, <a class="node" href="../politics/" title="Political and Social Philosophy">politics</a> for Rawls and Marx, <a class="node" href="../metaphysics/" title="Metaphysics">metaphysics</a> and <a class="node" href="../mind/" title="Philosophy of Mind">mind</a> for Descartes, nearly everywhere for Aristotle and Kant.</p></article><nav class="footnav"><a href="../">Home</a><a href="../map/">Map</a><a href="../method/">Constitution</a><a href="../queue/">Queue</a></nav></div></body></html>

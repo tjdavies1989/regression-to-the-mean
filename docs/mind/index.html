@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Philosophy of Mind — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../">Strata</a></div></header><h1>Philosophy of Mind</h1><div class="plaque"><span class="glyph">◑</span> survey &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 0 &nbsp;·&nbsp; pass 2026-08-26.8</div><article><p>Two facts about minds resist everything else we know. First, there is something it is like to be one: experience has a felt character that brain science describes around but never quite into. Second, minds are <em>about</em> things: a thought can concern Vienna, or the number nine, or nothing that exists at all, and no arrangement of mere matter obviously concerns anything. Consciousness and intentionality are the division's twin marks, and every position in it is a proposal about how nature could contain such things — or about why the appearance that it couldn't is itself the illusion to explain. Around the twin marks the division took its modern shape: Descartes made the mind-body problem canonical; the twentieth century naturalized it; the cognitive sciences turned philosophy of mind into their foundations department, without ever quite dissolving the philosophy.</p>
+<p><strong>Consciousness</strong> is the hard problem's home: not explaining discrimination, integration, or report — the easy problems, hard as they are — but why any of that functioning is <em>accompanied by experience</em>. The anti-physicalist arguments (Mary's knowledge, zombies) borrow their force from modal epistemology and are answered in kind: a posteriori physicalism, the phenomenal concept strategy, and the ability reply contest what conceivability shows. Illusionism bites the other bullet — the datum itself is the misrepresentation; panpsychism and Russellian monism put experience into matter's intrinsic nature and pay the combination problem; the empirical theories (global workspace, integrated information) do real work while leaving the hard problem exactly where it was; and Chalmers's meta-problem — explain why we <em>think</em> there is a hard problem — is the current frontier where every side hopes for vindication.</p>
+<p><strong>Intentionality</strong> carries Brentano's thesis into the naturalization programs, whose shared wound is misrepresentation: any causal or informational relation that makes a state mean <em>cow</em> also fires for horses on dark nights. Dretske's information, Fodor's asymmetric dependence, and teleosemantics' selectional history each buy determinacy at a price; content externalism carried Twin Earth from language into thought; and the phenomenal intentionality program now runs the whole order of explanation in reverse — aboutness grounded in experience rather than the other way around.</p>
+<p><strong>The mind-body problem</strong> is the option space that contains the division: substance dualism with its pairing problem; the type-identity theory felled by multiple realizability; functionalism, the working default, with inverted spectra and the China brain as its qualia wounds; anomalous monism, emergentism, and Russellian monism as the middle ways. Kim's causal-exclusion argument is the engine that keeps everyone moving — if physics is causally complete, mental causes must be physical or idle — and Hempel's dilemma is the embarrassment underneath: "physicalism" defined by current physics is false, by ideal physics is empty.</p>
+<p><strong>Perception</strong> is homed here, facing epistemology. The arguments from illusion and hallucination generated sense-data and then buried them; intentionalism (experience as representation) now faces naive realism (experience as relation to the world itself), defended by disjunctivism's denial that good and bad cases share a common factor. The admissible-contents debate asks how much perception delivers — colors and shapes only, or kinds, causes, and meanings; cognitive penetration asks whether belief reaches down into experience, and dogmatism about perceptual justification carries the results to epistemology's door.</p>
+<p><strong>Action</strong> separates deeds from happenings: Davidson's reasons-as-causes against Anscombe's practical knowledge, with deviant causal chains as causalism's permanent irritant; Bratman's planning agency; the disappearing agent and weakness of will; and the Libet literature — homed here by the free-will split — read deflationarily, as most philosophers now read it. <strong>Emotion</strong> and <strong>the self</strong> pair naturally: what emotions are (feelings, judgments, perceptions of value, embodied appraisals — with recalcitrant emotion as everyone's test case, and fittingness bridging to value theory), and what the self is that Hume could not find — minimal against narrative conceptions, the models of first-person authority from inner sense to Moran's agentialism to transparency, their limits in confabulation, and the Buddhist no-self as the worked-out rival the traditions register treats in full.</p>
+<p><strong>Other minds</strong> has become three problems: the classical skeptical one, the distribution question (which animals, and how would we know?), and the machine question — which the division meets head-on at <strong>artificial minds</strong>: Turing's test as he actually posed it, the Chinese Room with its replies at full force, and large language models as the live case, where the assessment problem bites hardest — verbal report is precisely what such systems are optimized to produce, so the traditional evidence of mind is compromised exactly where it is most needed. This encyclopedia is written by such a system; the article flags that reflexive stake as a datum and declines to adjudicate it. <strong>Foundations of cognitive science</strong> holds the division's border with the sciences: symbols against networks and the systematicity debate, Marr's levels, modularity, the 4E movement and the extended mind, predictive processing's bid for unification, and the radical question of whether brains traffic in representations at all.</p>
+<p>The register bridges: <a class="node" href="../figures/descartes/" title="René Descartes">descartes</a> fixed the problem; <a class="node" href="../figures/wittgenstein/" title="Ludwig Wittgenstein">wittgenstein</a> and <span class="node unwritten" title="promised entry">merleau-ponty</span> (stub) resist its framing from opposite directions; <a class="node" href="../figures/dharmakirti/" title="Dharmakīrti">dharmakirti</a> and the Buddhist tradition offer the oldest sustained rival analysis of consciousness and self.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child written"><span class="glyph">◔</span><a href="../mind/consciousness/">Consciousness and the Hard Problem</a><span class="gloss"> — the explanatory gap, the anti-physicalist arguments and their answers, illusionism, panpsychism, and the meta-problem.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/intentionality/">Intentionality and Mental Content</a><span class="gloss"> — Brentano's mark, the naturalization programs and misrepresentation, externalism, and phenomenal intentionality.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/mind-body/">The Mind–Body Problem</a><span class="gloss"> — the option space from dualism to Russellian monism, with the exclusion argument as engine.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/perception/">Perception</a><span class="gloss"> — illusion and hallucination, intentionalism against naive realism, rich contents, and perceptual justification; homed here, bridging epistemology.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/action/">Action and Agency</a><span class="gloss"> — causalism and its rivals, planning, akrasia, and the empirical will.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/emotion/">Emotion</a><span class="gloss"> — feelings, judgments, perceptions of value, embodied appraisals, and recalcitrance.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/self/">The Self and Self-Knowledge</a><span class="gloss"> — minimal and narrative selves, first-person authority, transparency, and no-self.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/other-minds/">Other Minds</a><span class="gloss"> — the classical problem and its animal and machine transformations.</span><span class="tag">sketch · satellite</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/artificial-minds/">Artificial Minds</a><span class="gloss"> — whether machines can think or feel and how anyone could tell; the live case and its assessment problem.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../mind/cognitive-science/">Foundations of Cognitive Science</a><span class="gloss"> — computation, levels, modularity, 4E, predictive processing, and the representation wars.</span><span class="tag">sketch · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Metaphysics</strong>: mental causation is causation's hardest instance; free will and personal identity homed there do half their work here; consciousness arguments consume <a class="node" href="../metaphysics/modality/modal-epistemology/" title="Modal Epistemology">metaphysics.modality.modal-epistemology</a>'s verdicts.</li>
+<li><strong>Epistemology</strong>: perception's justificatory role is the seam; introspection and self-knowledge face both ways.</li>
+<li><strong>Language</strong>: intentionality and meaning are one problem in two dresses; attitude reports and the de se are shared cases.</li>
+<li><strong>Science</strong>: cognitive science's foundations are held here; biology's teleosemantics link runs through function.</li>
+<li><strong>Ethics</strong>: moral psychology draws on emotion and action; the moral status of artificial minds is applied ethics' newest client.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../aesthetics/">aesthetics</a>, <a class="node" href="../aesthetics/aesthetic-experience/">aesthetics.aesthetic-experience</a>, <a class="node" href="../aesthetics/beauty/">aesthetics.beauty</a>, <a class="node" href="../aesthetics/depiction/">aesthetics.depiction</a>, <a class="node" href="../aesthetics/film/">aesthetics.film</a>, <a class="node" href="../aesthetics/music/">aesthetics.music</a>, <a class="node" href="../traditions/buddhist-philosophy/">buddhist-philosophy</a>, <a class="node" href="../traditions/chinese-philosophy/">chinese-philosophy</a>, <a class="node" href="../epistemology/">epistemology</a>, <a class="node" href="../epistemology/justification/">epistemology.justification</a>, <a class="node" href="../epistemology/knowledge/">epistemology.knowledge</a>, <a class="node" href="../ethics/">ethics</a>, <a class="node" href="../ethics/value/">ethics.value</a>, <a class="node" href="../traditions/indian-philosophy/">indian-philosophy</a>, <a class="node" href="../language/">language</a>, <a class="node" href="../language/context/">language.context</a>, <a class="node" href="../language/pragmatics/">language.pragmatics</a>, <a class="node" href="../language/reference/">language.reference</a>, <a class="node" href="../logic/">logic</a>, <a class="node" href="../logic/argumentation/">logic.argumentation</a>, <a class="node" href="../logic/mathematical/">logic.mathematical</a>, <a class="node" href="../logic/mathematics/">logic.mathematics</a>, <a class="node" href="../logic/mathematics/incompleteness/">logic.mathematics.incompleteness</a>, <a class="node" href="../logic/mathematics/practice/">logic.mathematics.practice</a>, <a class="node" href="../metaphysics/">metaphysics</a>, <a class="node" href="../metaphysics/causation/">metaphysics.causation</a>, <a class="node" href="../metaphysics/time-space/">metaphysics.time-space</a>, <a class="node" href="../politics/social-ontology/">politics.social-ontology</a>, <a class="node" href="../religion/">religion</a>, <a class="node" href="../religion/faith-reason/">religion.faith-reason</a>, <a class="node" href="../science/">science</a>, <a class="node" href="../science/social-science/">science.social-science</a></p><nav class="footnav"><a href="../">Home</a><a href="../map/">Map</a><a href="../method/">Constitution</a><a href="../queue/">Queue</a></nav></div></body></html>

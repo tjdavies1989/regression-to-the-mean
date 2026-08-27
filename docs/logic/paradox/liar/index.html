@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Liar and Revenge — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../logic/">Logic</a> › <a href="../../../logic/paradox/">Paradox and Truth</a></div><h1>The Liar and Revenge</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-21.2</div><article><p>"This sentence is false" invites a comfortable reply: perhaps it is neither true nor false — gappy, defective, excused from the exam it cannot pass. The <em>strengthened</em> liar removes the comfort. Consider "this sentence is not true." Declare it gappy and you have declared it, in particular, not true; but that is exactly what it says, so it is true after all. Falsity is one way of failing at truth; the strengthened liar quantifies over all of them. The simple liar refutes the naive theory of truth; the strengthened liar refutes the first generation of repairs, and it is the form every serious theory must face.</p>
+<p>The liar has an undervalued twin. "This sentence is true" — the truth-teller — generates no contradiction: call it true and all is well, call it false and all is equally well. That is precisely the trouble: both assignments are consistent, and nothing favors either — the sentence's truth value answers to nothing outside itself. Inconsistency, then, is not the only pathology in the neighborhood; ungroundedness is a condition the two sentences share, and a diagnosis that speaks only of contradiction has treated a symptom. Kripke's fixed-point construction earns much of its reputation here: it classifies both as ungrounded while still distinguishing the liar (no fixed point evaluates it) from the truth-teller (evaluable either way, in different fixed points — consistent but arbitrary).</p>
+<p>Kripke's deeper lesson is that paradox cannot be quarantined among funny sentences. Dean says, "Everything Nixon says about Watergate is false"; Nixon says the same of Dean. Neither utterance is syntactically exotic, yet if the <em>other</em> things each man said about Watergate all happen to be false, the pair is paradoxical — while under luckier distributions of fact, one comes out straightforwardly true and the other false. Whether an ordinary truth attribution is paradoxical can depend on contingencies its speaker cannot survey. Everyday semantic talk is risky, and a theory that merely bans sentences flagged in advance by their form has banned nothing that matters.</p>
+<p>The structural problem that now organizes the field is <em>revenge</em>. Every solution earns its keep by classifying the liar somehow: ungrounded (Kripke), unstable under revision (Gupta and Belnap), indeterminate (Field), both true and false (Priest), context-shifted (Parsons, Glanzberg). Each classification is a piece of vocabulary, and each vocabulary funds a new liar. "This sentence is false or ungrounded": if ungrounded, then true — contradiction restored, one level up. Kripke conceded as much: his own notion of groundedness lives in a richer metalanguage. Even dialetheism, built to welcome contradiction, meets a strengthened guest: "this sentence is false <em>only</em>."</p>
+<p>Two readings of revenge divide the literature. On the first, it is a technical artifact — hard but tractable engineering. Field's paracomplete theory is the flagship claim: a theory can consistently express its own defectiveness predicate, and the liars that remain deploy notions (a single exhaustive "determinately," a classical exclusion negation) that the theory argues no consistent language could express — so their inexpressibility is a discovery, not an evasion. On the second reading, revenge <em>is</em> the phenomenon: the liar is not one sentence but an engine converting any semantic classification into a new paradox, so every consistent theory buys safety with silence and differs only in where it hides what it cannot say. The choice among solutions is then a choice of which inexpressibility one can live with — and the dialetheist adds that exactly one theory hides nothing, if you can stomach its price.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Contextualist Solutions</span><span class="gloss"> — Parsons, Burge, and Glanzberg defuse the liar by letting the extension of "true" shift with context, so each liar is truly assessed only from a later standpoint — a Tarskian hierarchy reborn in pragmatic dress.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Groundedness and the Truth-Teller</span><span class="gloss"> — What it is for a sentence's truth to depend on the world: Kripke's fixed points as one precise account among rivals (Yablo, Leitgeb), tested against the truth-teller and its kin.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>language.truth</strong>: deflationism stakes everything on the unrestricted truth schema, so its fate hangs on the liar; conversely, any account of the <em>nature</em> of truth owes a story about what "not true" means when the strengthened liar wields it.</li>
+<li><strong>logic.nonclassical</strong>: paracomplete and paraconsistent logics are the machinery of the radical solutions; revenge is the test each must survive, and the substructural turn is largely a response to failing it.</li>
+<li><strong>logic.paradox.formal-truth</strong>: the constructions this article treats diagnostically — fixed points, revision sequences, Field's models — are homed there as mathematics; here they appear only as bearers of revenge-prone vocabulary.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../figures/godel/">godel</a>, <a class="node" href="../../../logic/paradox/curry/">logic.paradox.curry</a>, <a class="node" href="../../../logic/paradox/set-paradoxes/">logic.paradox.set-paradoxes</a>, <a class="node" href="../../../logic/paradox/yablo/">logic.paradox.yablo</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

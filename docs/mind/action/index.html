@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Action and Agency — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../mind/">Philosophy of Mind</a></div><h1>Action and Agency</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.8</div><article><p>Wittgenstein asked what is left over if I subtract the fact that my arm goes up from the fact that I raise my arm. The two can be physically identical, yet one is something I <em>do</em> and the other something that merely <em>happens</em> — a spasm, a push. Action theory begins with that remainder. The classical answer, dominant since Davidson's "Actions, Reasons, and Causes" (1963), is causalism: a movement is an action when it is caused, in the right way, by the agent's reasons — a desire for an end paired with a belief about means. His master argument remains formidable: an agent can have several reasons that would each justify an act yet act for only one of them, and nothing but causation seems able to say <em>which</em> reason she acted for.</p>
+<p>Anscombe's <em>Intention</em> (1957) refuses the causal picture. Intentional actions are those to which a special sense of the question "Why?" has application, and the reason relates to the act not as cause to effect but as earlier to later stages of a single unfolding practical reasoning — I am breaking eggs <em>because</em> I am making an omelette. Her deepest claim is that agents have practical knowledge of what they are doing: knowledge without observation, "the cause of what it understands" rather than derived from it. The doctrine now anchors a revival — Velleman, Moran, Setiya, Thompson — asking how doing something and knowing what one is doing are internally connected.</p>
+<p>Causalism, meanwhile, carries a standing wound: deviant causal chains. Davidson's own example — a climber whose desire to be rid of his partner so unnerves him that his grip loosens — shows reasons causing exactly the movement they rationalize without the movement being an action. Every causalist analysis owes an account of "in the right way," and none commands agreement. Two further amendments have reshaped the view from within. Bratman argued that intention is no mere belief–desire compound but a distinctive planning state, governed by its own norms of consistency and means–end coherence, whose job is to settle practical questions in advance so that temporally extended agents need not deliberate anew each moment. And volitional theorists (O'Shaughnessy, Hornsby) contend that every action contains a trying — present even when paralysis leaves the body still — so that action's core lies nearer the agent than the movement.</p>
+<p>A deeper complaint says the whole event-causal apparatus loses its subject: if states and events do all the causing, the <em>agent</em> disappears from the story of her own act. Agent-causationists answer by making the agent herself, irreducibly, a cause — a posit weighed in the free-will debate (<a class="node" href="../../metaphysics/free-will/" title="Free Will">metaphysics.free-will</a>); Velleman answers within causalism by finding a psychological state fit to play the agent's functional role. Weakness of will tests any theory: Davidson rendered akrasia coherent as acting against one's all-things-considered judgment without contradiction, while Holton relocates it entirely — weakness is the over-ready abandonment of resolutions, a failure of intention, not of judgment. Finally, the empirical will is homed here: Libet's finding that a readiness potential precedes conscious awareness of deciding, and Wegner's argument that conscious will is confabulated, are widely advertised as debunking agency. The standard deflationary readings deserve their due — introspective timing is unreliable, Schurger reanalyzes the readiness potential as stochastic neural drift rather than decision, and Mele notes that arbitrary finger-flexions are the wrong model for deliberated, distal intentions — but the questions they leave are genuine ones about what conscious intentions actually cause.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Reasons and Causes</span><span class="gloss"> — causalism versus its rivals, and the unsolved problem of deviant causal chains.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Intention</span><span class="gloss"> — Bratman's planning theory, intention in action versus for the future, and cognitivism about intention.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Practical Knowledge</span><span class="gloss"> — Anscombe's knowledge without observation and the neo-Anscombean revival.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Trying and Volition</span><span class="gloss"> — whether every action contains a trying, and where action begins.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Weakness of Will</span><span class="gloss"> — akrasia from Davidson's reconciliation to Holton's resolution-based account.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Empirical Will</span><span class="gloss"> — Libet, Wegner, and successors; what neuroscience does and does not show about conscious control.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../metaphysics/free-will/" title="Free Will">metaphysics.free-will</a>: per the home split recorded there, the metaphysics of freedom lives in metaphysics while the empirical will is homed here; agent-causation is argued in both places on shared evidence.</li>
+<li>To <a class="node" href="../../ethics/moral-psychology/" title="Moral Psychology">ethics.moral-psychology</a>: practical reason, motivation, and akrasia are one subject matter viewed from two divisions — what moves an agent, and what should.</li>
+<li>To <a class="node" href="../../ethics/moral-responsibility/" title="Moral Responsibility">ethics.moral-responsibility</a>: what counts as an action fixes what can be imputed; intention and negligence mark the joints blame runs along.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/descartes/">descartes</a>, <a class="node" href="../../ethics/moral-psychology/">ethics.moral-psychology</a>, <a class="node" href="../../ethics/moral-responsibility/">ethics.moral-responsibility</a>, <a class="node" href="../../metaphysics/free-will/">metaphysics.free-will</a>, <a class="node" href="../../mind/mind-body/">mind.mind-body</a>, <a class="node" href="../../figures/zhuangzi/">zhuangzi</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

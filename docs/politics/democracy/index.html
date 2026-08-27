@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Democracy — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../politics/">Political and Social Philosophy</a></div><h1>Democracy</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.11</div><article><p>Nobody defends counting heads to settle a mathematical dispute or to pick a pilot. Yet for the largest questions a society faces — war, taxation, who may punish whom — the modern conviction is that counting heads is precisely what legitimacy requires. The philosophy of democracy asks whether that conviction can be vindicated: what is good about the rule of the many, when the many are often demonstrably ignorant, and every actual majority leaves a minority coerced by a decision it opposed?</p>
+<p>Answers divide into two families. <strong>Procedural or intrinsic defenses</strong> hold that democratic procedure is valuable in itself, whatever it produces. Its strongest form appeals to equality: where citizens disagree about justice itself, giving each an equal say is the only way a society can treat its members publicly as equals — Christiano's argument — and any franchise restricted to the allegedly wise publicly announces that the rest count for less. <strong>Instrumental and epistemic defenses</strong> claim instead that democracies tend to decide <em>well</em>. Condorcet's jury theorem shows that if voters are even slightly better than random on a yes/no question and vote independently, large majorities are almost certainly right — a striking result resting on fragile assumptions, since real voters share sources, follow parties, and face questions with no independent competence guarantee. Estlund's epistemic proceduralism splits the difference: democracy's authority requires that it perform better than chance, but rule by experts fails a legitimacy test no invocation of expertise can pass, because no candidate elite could be justified to all qualified points of view. Landemore presses further: under plausible conditions cognitive diversity matters more to collective performance than individual ability, so an inclusive assembly can outperform a homogeneous elite.</p>
+<p>The <strong>deliberative turn</strong> relocated democracy's value from the moment of voting to the exchange of reasons preceding it. For Habermas, and in Cohen's ideal-procedure formulation, outcomes are legitimate when they could emerge from reasoned deliberation among free and equal citizens; voting merely closes a discussion whose quality does the justifying. At the opposite pole stands <strong>Schumpeterian minimalism</strong>: democracy is nothing loftier than a competitive struggle among elites for the people's vote, valuable because it makes rulers removable without bloodshed — a deflation whose enduring strength is its realism about actual electorates.</p>
+<p>That realism fuels the sharpest contemporary challenge. Decades of survey evidence show voters massively uninformed and prone to motivated reasoning; individually, a vote almost never matters, so ignorance is rational. Brennan concludes that if political power wielded incompetently wrongs those subject to it, an <strong>epistocracy</strong> — weighting or restricting the franchise by competence — deserves a hearing. Critics answer that any competence test would be administered by fallible, interested institutions and would predictably track existing privilege (the demographic objection), and that the evidence of individual ignorance does not aggregate into evidence of collective incompetence. A different response changes the institution rather than the electorate: <strong>lottocracy</strong> and citizens' assemblies select decision-makers by random sampling and give them time, information, and structured deliberation — no longer a thought experiment after Ireland's assemblies, though whether sortition supplements or could replace elections is sharply contested.</p>
+<p>The field thus articulates around the value question (intrinsic versus instrumental), the deliberative program, the competence challenge, and institutional design — with the prior question of who belongs to the demos in the first place still unsettled beneath them all.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Epistemic Democracy</span><span class="gloss"> — whether and why many minds decide well: Condorcet's theorem, diversity arguments, and epistemic proceduralism.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Deliberative Democracy</span><span class="gloss"> — legitimacy through public reasoning among free equals: ideals, critiques, and empirical turns.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Voter Ignorance and Epistocracy</span><span class="gloss"> — the evidence of public ignorance, rational irrationality, and competence-based alternatives to universal suffrage.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Representation</span><span class="gloss"> — what it is for one to act for many: Pitkin's concepts, mandate versus trustee, descriptive representation.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Sortition and Citizens&#x27; Assemblies</span><span class="gloss"> — lottery-based selection and minipublics as supplement or rival to elections.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Boundary Problem</span><span class="gloss"> — who belongs to the demos, and whether democratic theory can answer without circularity.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../politics/legitimacy/" title="Legitimacy and Political Authority">politics.legitimacy</a>: whether democratic procedure is itself the source of the state's right to coerce is argued there; this node supplies the candidate procedure.</li>
+<li>To <a class="node" href="../../politics/equality/" title="Equality and Egalitarianism">politics.equality</a>: the intrinsic defense rests on equal say as public equal treatment — relational egalitarianism applied to political power.</li>
+<li>To <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a>: judgment aggregation, disagreement among peers, and the epistemology of testimony underwrite every epistemic argument for or against majority rule.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/aristotle/">aristotle</a>, <a class="node" href="../../politics/equality/">politics.equality</a>, <a class="node" href="../../politics/legitimacy/">politics.legitimacy</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

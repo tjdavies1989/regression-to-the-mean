@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Buddhist Philosophy — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../traditions/">Traditions</a></div><h1>Buddhist Philosophy</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.3</div><article><p>Buddhist philosophy is not one school but a two-millennium argument — conducted in Pāli, Sanskrit, Tibetan, Chinese, and Japanese — about what follows from a small set of shared starting points. The most consequential is <strong>no-self</strong> (anātman): there is no enduring substance underlying a person, only a causally connected stream of physical and mental events, conventionally sorted into five aggregates (form, feeling, perception, dispositions, consciousness). The canonical statement is the chariot dialogue of the <em>Questions of King Milinda</em>: as "chariot" names no entity over and above pole, axle, and wheels rightly arranged, so "Nāgasena" names nothing over and above the aggregates. The second shared commitment, <strong>dependent origination</strong>, generalizes the point: everything arises in dependence on conditions, and nothing possesses the independent, self-standing existence that common sense and rival metaphysics assign to things.</p>
+<p>What divides the schools is how far the analysis cuts. <strong>Abhidharma</strong>, the tradition's first systematic metaphysics, halted it at the <em>dharmas</em>: momentary, unanalyzable event-particulars — flashes of color, instants of contact, pulses of feeling — that exist ultimately, while persons, chariots, and all composites exist only conventionally, as useful fictions projected onto dharma-streams. The doctrine of momentariness radicalized this into an ontology of pure process: nothing persists; apparent endurance is the rapid succession of resembling momentary events. <strong>Madhyamaka</strong>, founded by Nāgārjuna (c. 150 CE), turned the analysis on the dharmas themselves: whatever arises dependently is empty (śūnya) of intrinsic nature, so <em>nothing</em> — not even the Abhidharma's ultimates — exists from its own side. Nāgārjuna's signature instrument is the tetralemma, which canvasses all four positions on a question (is, is not, both, neither) and rejects each; his doctrine of <strong>two truths</strong> distinguishes conventional truth, where ordinary assertion functions perfectly well, from ultimate truth, at which no theory of intrinsic natures survives. The charge the school has answered for eighteen centuries is nihilism; its perpetual reply is that emptiness is not nonexistence but the very condition of dependent, conventional existence — indeed that only empty things can arise, change, and act. <strong>Yogācāra</strong> took a different exit from Abhidharma realism, arguing that the experienced world cannot be shown to be more than mind: what appear as external objects are transformations of consciousness, structured by the deep dispositions of a "storehouse" awareness — a position whose exact idealism is still contested by interpreters.</p>
+<p>From Dignāga and Dharmakīrti (fifth–seventh centuries) the tradition's lingua franca became <strong>pramāṇa theory</strong> — the epistemology of perception and inference already met from <a class="node" href="../../logic/history/" title="History of Logic">logic.history</a>. Restricting knowledge to non-conceptual perception and rule-governed inference, and analyzing general terms by apoha (exclusion), the Buddhist epistemologists fought Nyāya's realists for centuries on shared ground and by agreed rules; each side's texts are among the best sources for the other's arguments. Ethics, meanwhile, was argued <em>from</em> the metaphysics: Śāntideva's case for impartial compassion turns on no-self — if there is no owner of suffering, suffering is simply bad, and the boundary between "my" pain and "yours" carries no moral weight.</p>
+<p>Transmission transformed the argument. Tibet built a scholastic culture of curriculum and formal public debate that preserved and extended the Indian controversies — its Madhyamaka disputes remain the sharpest available commentary on Nāgārjuna. Chan/Zen in East Asia moved the opposite way, cultivating a deliberate anti-scholasticism whose gestures against doctrine are themselves philosophically pointed, not artless. Modern reception runs both risks the register names: "Buddhist modernism" repackages the tradition as an empirical mind-science stripped of metaphysics, while the genuine and productive engagement with cognitive science (on attention, introspection, and the self-model) tempts a subtler flattening — reading the tetralemma as anticipatory paraconsistency, or no-self as Parfit avant la lettre. The comparisons are worth making; this article's descendants make them carefully or not at all.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Abhidharma</span><span class="gloss"> — the dharma theory and momentariness: the tradition's first systematic metaphysics, from the canonical lists to Vasubandhu's <em>Kośa</em>.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Madhyamaka</span><span class="gloss"> — Nāgārjuna and successors: emptiness of all dharmas, the two truths, and the long answer to the nihilism charge.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Yogācāra</span><span class="gloss"> — mind-only: the storehouse consciousness, the three natures, and the contested idealism.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Pramāṇa School</span><span class="gloss"> — Dignāga and Dharmakīrti: perception, inference, and apoha nominalism in debate with Nyāya.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Buddhist Ethics</span><span class="gloss"> — compassion argued from no-self, the bodhisattva ideal, and the modern dispute over which Western category (if any) the ethics fits.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Tibetan Scholasticism</span><span class="gloss"> — the debate tradition: Indian controversies preserved, systematized, and extended from Tsongkhapa onward.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Chan/Zen</span><span class="gloss"> — anti-scholasticism as method: kōan, sudden awakening, and the philosophy of the refusal of philosophy.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Huayan and Tiantai</span><span class="gloss"> — East Asian systematics: interpenetration and the reworking of the two truths into three.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Buddhist Modernism and Cognitive Science</span><span class="gloss"> — the modern repackaging, the meditation laboratories, and the methodological disputes both provoke.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<p>The oldest and densest bridge runs to <a class="node" href="../../metaphysics/personal-identity/" title="Personal Identity">metaphysics.personal-identity</a> (landing this pass): the aggregate analysis and the chariot are reductionism about persons argued a millennium before its Western statements, and the Nyāya–Buddhist exchange is the debate's other great archive. Yogācāra and the meditation-and-attention literature bridge <a class="node" href="../../mind/" title="Philosophy of Mind">mind</a>; pramāṇa theory bridges <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a> and, for the inference schema and apoha, <a class="node" href="../../logic/history/" title="History of Logic">logic.history</a>. Within this register, <a class="node" href="../../traditions/indian-philosophy/" title="Indian Philosophy">indian-philosophy</a> is the standing interlocutor — the same debates seen from the āstika side — and <span class="node unwritten" title="promised entry">kyoto-school</span> carries the Zen inheritance into twentieth-century philosophy.</p></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../religion/non-theistic/">religion.non-theistic</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Queue — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../">Strata</a></div></header><h1>The Queue</h1><article><p>Hand-maintained queue, read at the start of every session (METHOD §9). Debts before desires.</p>
+<p><strong>Session log:</strong></p>
+<ul>
+<li>Pass 1–2 (2026-08-21, 45 min): founding — constitution, tooling, Layer-0 map; logic descended twice (mathematics to Layer 2, paradox to Layer 2); six figures; three traditions; all consolidations paid.</li>
+<li>Pass 3–14 (2026-08-26): the first layer finished — every division descended to Layer 1 and consolidated to survey (metaphysics .3, language .4, epistemology .6, mind .8, science .9, ethics .10, politics .11, aesthetics .12, religion .13) plus the meta register (.14); modality to Layer 2 (.7) and mathematical ontology to Layer 3 (.5), both consolidated; figures doubled to twelve (Plato, Descartes, Lewis; Dharmakīrti, Zhuangzi, Ibn Sīnā); traditions to five sketches (Buddhist, Chinese added).</li>
+</ul>
+<p><strong>Consolidation debts</strong> (pay first): none carried. The usage-window interruption at pass 10–14 was recorded here mid-session and paid the same day: all 24 failed agents rerun via workflow resume, all roots consolidated to survey, audit clean at 152 articles / 759 stubs / 140,044 words. The interruption machinery (debts to NEXT, resume from cached workflows) worked exactly as METHOD §9 intends — worth remembering it did.</p>
+<p><strong>Deepening queue</strong> (desires, in order): 1. Layer-2 pulses where the anchors are begging: <a class="node" href="../mind/consciousness/" title="Consciousness and the Hard Problem">mind.consciousness</a>, <a class="node" href="../epistemology/skepticism/" title="Skepticism">epistemology.skepticism</a>, <a class="node" href="../ethics/metaethics/" title="Metaethics">ethics.metaethics</a>, <a class="node" href="../logic/consequence/" title="Logical Consequence">logic.consequence</a>, <a class="node" href="../epistemology/justification/" title="Justification">epistemology.justification</a>. 2. Traditions: <span class="node unwritten" title="promised entry">hellenistic</span>, <span class="node unwritten" title="promised entry">medieval-latin</span>, <span class="node unwritten" title="promised entry">early-modern</span>, <span class="node unwritten" title="promised entry">phenomenology</span> — the periods the figures register keeps citing into a void. 3. Figures: <span class="node unwritten" title="promised entry">nagarjuna</span>, <span class="node unwritten" title="promised entry">aquinas</span>, <span class="node unwritten" title="promised entry">russell</span>, <span class="node unwritten" title="promised entry">quine</span>, <span class="node unwritten" title="promised entry">rawls</span>, <span class="node unwritten" title="promised entry">augustine</span>. 4. <a class="node" href="../logic/paradox/liar/" title="The Liar and Revenge">logic.paradox.liar</a> and <a class="node" href="../logic/paradox/vagueness/" title="The Sorites and Vagueness">logic.paradox.vagueness</a> to survey with children opened — the second Layer-3 regions, both anchors. 5. First <span class="node unwritten" title="promised entry">article</span>-state promotions: candidates <a class="node" href="../metaphysics/modality/worlds/" title="Possible Worlds">metaphysics.modality.worlds</a>, <a class="node" href="../logic/paradox/curry/" title="Curry&#x27;s Paradox">logic.paradox.curry</a>, <a class="node" href="../epistemology/knowledge/" title="The Analysis of Knowledge">epistemology.knowledge</a> — the ladder's next rung has never been climbed. 6. Deployment: static-site generator over the repo (extend <span class="node unwritten" title="promised entry">tools/encyc.py</span>), audit as CI build gate, GitHub Pages. Design agreed in conversation 2026-08-26; needs the user to enable Pages on the repo.</p>
+<p><strong>Standing observations:</strong></p>
+<ul>
+<li>Title drift between parent stub lines and child files: add a warning to <span class="node unwritten" title="promised entry">tools/encyc.py</span>.</li>
+<li>The <a class="node" href="../figures/" title="Figures">figures</a> roster correction is moving but far from done: no Africana, Latin American, or women philosophers written yet — <span class="node unwritten" title="promised entry">beauvoir</span>, <span class="node unwritten" title="promised entry">anscombe</span>, <span class="node unwritten" title="promised entry">arendt</span> are stubbed and queued; add <span class="node unwritten" title="promised entry">confucius</span> and <span class="node unwritten" title="promised entry">shankara</span> for the traditions now open.</li>
+<li>Aesthetics proposed 12 children (the most of any division); watch whether its art-form nodes (music, depiction, literature, film) stay genuinely articulated or should merge.</li>
+<li>Pass convention: date.pulse with a global pulse counter; next pulse is .15.</li>
+</ul></article><nav class="footnav"><a href="../">Home</a><a href="../map/">Map</a><a href="../method/">Constitution</a><a href="../queue/">Queue</a></nav></div></body></html>

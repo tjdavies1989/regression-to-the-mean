@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Formal Theories of Truth — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../logic/">Logic</a> › <a href="../../../logic/paradox/">Paradox and Truth</a></div><h1>Formal Theories of Truth</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-21.2</div><article><p>The parent article diagnosed the liar; this node collects the cures, stated with enough precision to be billed. The task: a theory of a predicate T for which T("A") and A are equivalent, in a language rich enough to build the liar — saying exactly what the theory proves, what it cannot say, and what it costs. Costs are measured, in expressive power and, increasingly, in proof-theoretic strength.</p>
+<p>Tarski's hierarchy is remembered as a moral — "ascend to the metalanguage" — but it is first a theory, and the only one here that <em>defines</em> truth outright. Convention T fixes adequacy: a definition must entail every biconditional "<em>A</em>" is true iff <em>A</em>. Tarski then delivers one, by recursion through satisfaction, for any object language not containing the predicate being defined; his indefinability theorem shows the restriction is forced — a classical language defining its own truth proves the liar. The strength of the view is that within each level nothing is revised: classical logic, full compositionality, truth eliminable by definition. The hierarchy's descendants (Burge, Glanzberg) make the levels contextual and shifting rather than fixed, to soften the parent article's complaint about natural language.</p>
+<p>Kripke kept one self-applied predicate by letting truth be partial and <em>grounded</em>. Start with T empty; the jump operator declares true whatever sentences already come out true under the current partial interpretation (evaluated in Strong Kleene logic), false whatever come out false. The operator is monotone, so transfinite iteration closes off at fixed points; in the minimal fixed point a sentence has a value just when asking "is it true?" bottoms out in the world — the grounded sentences. The liar is simply never reached. The confession comes at the end: "the liar is ungrounded" is true, and inexpressible in the object language; groundedness and the fixed point are described in a classical metalanguage. Kripke said it himself: the ghost of the hierarchy is still with us.</p>
+<p>The axiomatic turn (Feferman, Friedman–Sheard, Cantini, Halbach) stops defining truth and takes it as primitive: add axioms for T to arithmetic and measure the result. Typed theories: TB, the Tarski biconditionals for truth-free sentences, is conservative over PA — it proves nothing new about numbers; CT, compositional axioms with truth allowed into induction, proves Con(PA). Type-free: FS keeps full classical symmetry between A and T("A") at the price of ω-inconsistency; KF axiomatizes Kripke's fixed points inside classical logic, is far stronger than CT, and proves the liar sentence while proving it is not true — the external theory outrunning its internal notion; VF does the same for supervaluational fixed points, stronger again. Conservativeness is where deflationism is scored: if truth is thin, a device for generalization, adding it should prove nothing new — TB obliges, CT does not, and Shapiro and Ketland press the point as an argument that truth is substantial. Deflationists reply that the strength comes from extending induction, not from truth.</p>
+<p>The revision theory (Gupta–Belnap) holds that truth is a <em>circular</em> concept and that circular concepts are respectable: governed not by fixed points but by revision. Hypothesize any extension for T; revise it by the biconditionals used as a rule; iterate. Grounded sentences stabilize; the liar oscillates forever — instability is its signature, explained rather than silenced, with classical logic untouched. The costs are contested limit rules and staggering computational complexity.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Tarski&#x27;s Definition and Hierarchy</span><span class="gloss"> — Convention T, truth via satisfaction, the indefinability theorem, and the contextualist hierarchies of Burge and Glanzberg.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Kripke&#x27;s Theory of Truth</span><span class="gloss"> — Grounding, the jump operator, the lattice of fixed points, choice of evaluation scheme, and the metalanguage problem.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Axiomatic Theories of Truth</span><span class="gloss"> — TB, CT, KF, FS, and VF as formal systems; proof-theoretic strength as the measure of a truth theory.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Conservativeness and Deflationism</span><span class="gloss"> — The Shapiro–Ketland argument that non-conservative truth is substantial, and the deflationist replies.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Revision Theory of Truth</span><span class="gloss"> — Gupta and Belnap on circular concepts: revision sequences, stability, and the limit-rule disputes.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>language.truth</strong>: the nature-of-truth debate is homed there, but its deflationist wing is refereed here — conservativeness results are the formal battlefield for whether truth is "thin."</li>
+<li><strong>logic.mathematics.incompleteness</strong>: Tarski's indefinability theorem is Gödel's diagonalization turned on semantics, and the axiomatic theories are calibrated against arithmetic.</li>
+<li><strong>logic.mathematical</strong>: fixed-point constructions, ordinal analysis, and ω-models — the machinery of this node is working mathematical logic.</li>
+<li><strong>Within logic</strong>: the sibling <span class="node unwritten" title="promised entry">liar</span> node owns revenge, the test all these theories face; the nonclassical escapes (Field, Priest) are homed at <a class="node" href="../../../logic/nonclassical/" title="Nonclassical Logics">logic.nonclassical</a>.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../language/truth/">language.truth</a>, <a class="node" href="../../../logic/paradox/liar/">logic.paradox.liar</a>, <a class="node" href="../../../logic/paradox/yablo/">logic.paradox.yablo</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

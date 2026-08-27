@@ -1,0 +1,93 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Epistemology — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../">Strata</a></div></header><h1>Epistemology</h1><div class="plaque"><span class="glyph">◑</span> survey &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 0 &nbsp;·&nbsp; pass 2026-08-26.6</div><article><p>Everyone can tell the difference between knowing something and merely being right about it, between believing on evidence and believing on a hunch. Epistemology asks what those differences consist in, whether anything meets the standards they set, and what to do about the fact that intelligent people meet them and still disagree. The division's modern shape is an arc: a century organized around analyzing knowledge into more basic parts, broken by a three-page paper; a repair industry that converged on no repair; and a field that responded by changing the question — toward knowledge as unanalyzable bedrock, toward the knower's character, toward the social fabric that carries almost everything any of us believes.</p>
+<p><strong>The analysis of knowledge</strong> is the arc's first movement. Justified true belief stood by default until Gettier's 1963 cases — justified belief, true by accident, known by nobody — and the sequence of repairs (defeasibility, causal theories, Nozick's closure-breaking sensitivity, safety) is now taught as a study in philosophical method. Zagzebski's diagnosis explains the convergence on failure: any analysis of the form <em>true belief plus independent condition</em> breeds Gettier cases by recipe. The field's live responses divide there: virtue epistemology makes the condition non-independent — knowledge as belief true <em>because of</em> competence, an achievement — while Williamson's knowledge-first program declares the analysis backwards: knowledge is a mental state as basic as belief, and it explains evidence, assertion, and action rather than being compounded from them. Contextualism and pragmatic encroachment add that "knows" may shift with conversation and stakes; behind everything stands the <em>Meno</em>'s value problem — what knowledge adds to true belief that makes it worth the name.</p>
+<p><strong>Justification</strong> carries the structural questions. The regress argument — every reason needs a reason — generates the classical options: foundationalism's basic beliefs, coherentism's mutually supporting web, and infinitism's bullet-biting endless chains. Cross-cutting them runs the internalism–externalism divide, the division's deepest fault line: whether justification must be accessible from the inside (evidentialism, access internalism) or may consist in reliable production the believer knows nothing about — with the new evil demon and Norman the clairvoyant as reliabilism's standing wounds, and the suspicion, increasingly voiced, that "justified" names several properties whose partisans talk past each other.</p>
+<p><strong>Skepticism</strong> is the pressure that keeps the machinery honest. The Cartesian argument runs through closure — you don't know you're not a brain in a vat; if you knew you had hands you would; so you don't — and the response space maps the field: Moorean dogmatism tollensing the ponens, closure denial with its abominable conjunctions, contextualism explaining why the argument compels in the seminar and evaporates at the airport, Putnam's semantic externalism, and hinge epistemology reading Wittgenstein's <em>On Certainty</em> as a third way — some certainties are the riverbed of inquiry, not its findings. Beneath the modern debate lies the older and arguably deeper one: the Agrippan trilemma, and Pyrrhonism as a practice of suspension rather than a thesis, treated in its own right via the <a class="node" href="../traditions/" title="Traditions">traditions</a> register.</p>
+<p><strong>The a priori</strong> holds the division's border with logic and mathematics: whether anything is known independently of experience, and how. The positivists' analytic a priori fell to Quine; Kripke uncoupled the necessary from the a priori in both directions; BonJour defends rational insight, Williamson argues the distinction itself is shallow, and experimental philosophy presses on the intuitions that armchair method treats as evidence — a challenge adjudicated jointly with <a class="node" href="../meta/meta.methods/" title="Philosophical Methods">meta.methods</a>.</p>
+<p><strong>The social turn</strong> may be the arc's most consequential movement: most of what anyone knows arrives on someone's word. Testimony (Humean reductionism against Reidian default trust), expertise and the novice's predicament, group belief and whether committees know, epistemic injustice as the field's ethical turn, and the epistemology of institutions and the internet — peer review, prediction markets, misinformation — make this the division's fastest-growing region. <strong>Formal epistemology</strong> runs the same questions with numbers: Bayesian credences, conditionalization, Dutch-book and accuracy vindications, the unsolved problem of priors, and the belief/credence interface where the lottery and preface paradoxes live. <strong>Virtue epistemology</strong> — Sosa's apt performances, Zagzebski's responsibilist characters — supplies both a Gettier response and a value-problem dividend, against the situationist challenge imported from ethics. <strong>Disagreement and higher-order evidence</strong> close the arc reflexively: what finding an equally competent dissenter does to rational belief, whether conciliationism survives its own medicine, and what philosophy — a discipline of permanent expert disagreement — should conclude about itself, a question this encyclopedia's <a class="node" href="../meta/" title="Metaphilosophy">meta</a> register inherits.</p>
+<p>The register bridges are dense: <a class="node" href="../figures/descartes/" title="René Descartes">descartes</a>, <a class="node" href="../figures/hume/" title="David Hume">hume</a>, and <a class="node" href="../figures/kant/" title="Immanuel Kant">kant</a> built the division's classical frame; <a class="node" href="../figures/wittgenstein/" title="Ludwig Wittgenstein">wittgenstein</a> its hinge alternative; <span class="node unwritten" title="promised entry">sextus-empiricus</span> its oldest living challenge; and the pramāṇa tradition treated at <a class="node" href="../traditions/indian-philosophy/" title="Indian Philosophy">traditions/indian-philosophy</a> and in <a class="node" href="../figures/dharmakirti/" title="Dharmakīrti">dharmakirti</a> stands as an independent, fully systematic epistemology whose difference from the Gettier lineage is itself instructive.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child written"><span class="glyph">◔</span><a href="../epistemology/knowledge/">The Analysis of Knowledge</a><span class="gloss"> — Gettier, the repair industry, Zagzebski's recipe, knowledge-first, contextualism, and the value problem.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../epistemology/justification/">Justification</a><span class="gloss"> — the regress, foundationalism/coherentism/infinitism, and the internalism–externalism divide.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../epistemology/skepticism/">Skepticism</a><span class="gloss"> — the closure argument and its response map, the Agrippan trilemma, and Pyrrhonism as practice.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../epistemology/a-priori/">A Priori Knowledge</a><span class="gloss"> — rational insight, Quine's attack, Kripke's uncouplings, and the experimental challenge to intuition.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../epistemology/social/">Testimony and Social Epistemology</a><span class="gloss"> — knowledge from others: testimony, expertise, groups, epistemic injustice, and institutions.</span><span class="tag">sketch · anchor</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../epistemology/formal/">Formal Epistemology</a><span class="gloss"> — Bayesian rationality, its vindications and priors problem, and the belief–credence interface.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../epistemology/virtue/">Virtue Epistemology</a><span class="gloss"> — apt performance and intellectual character: knowledge as achievement, and the situationist challenge.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../epistemology/disagreement/">Disagreement and Higher-Order Evidence</a><span class="gloss"> — peer disagreement, evidence about one's own reliability, and epistemology turned on itself.</span><span class="tag">sketch · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Logic</strong>: the apriority of logic and mathematics; epistemic logic at <a class="node" href="../logic/modal/" title="Modal and Intensional Logic">logic.modal</a>; formal epistemology shares its machinery with confirmation theory.</li>
+<li><strong>Mind</strong>: perception is homed at <a class="node" href="../mind/perception/" title="Perception">mind.perception</a> — perceptual justification is the seam; self-knowledge at <a class="node" href="../mind/self/" title="The Self and Self-Knowledge">mind.self</a>; introspection's reliability is contested ground.</li>
+<li><strong>Language</strong>: epistemic contextualism runs on <a class="node" href="../language/context/" title="Context-Sensitivity and Indexicality">language.context</a>'s machinery; testimony transmits meaning and belief together.</li>
+<li><strong>Science</strong>: confirmation and induction are homed at <a class="node" href="../science/" title="Philosophy of Science">science</a>; naturalized epistemology asks whether this division should dissolve into psychology.</li>
+<li><strong>Meta</strong>: philosophy's own permanent disagreement, and the evidential standing of intuitions, are this division's questions asked about itself.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../aesthetics/aesthetic-experience/">aesthetics.aesthetic-experience</a>, <a class="node" href="../aesthetics/film/">aesthetics.film</a>, <a class="node" href="../aesthetics/literature/">aesthetics.literature</a>, <a class="node" href="../traditions/buddhist-philosophy/">buddhist-philosophy</a>, <a class="node" href="../figures/dharmakirti/">dharmakirti</a>, <a class="node" href="../ethics/">ethics</a>, <a class="node" href="../traditions/indian-philosophy/">indian-philosophy</a>, <a class="node" href="../language/">language</a>, <a class="node" href="../language/reference/">language.reference</a>, <a class="node" href="../logic/">logic</a>, <a class="node" href="../logic/argumentation/">logic.argumentation</a>, <a class="node" href="../logic/classical/">logic.classical</a>, <a class="node" href="../logic/consequence/">logic.consequence</a>, <a class="node" href="../logic/mathematics/">logic.mathematics</a>, <a class="node" href="../logic/mathematics/formalism/">logic.mathematics.formalism</a>, <a class="node" href="../logic/mathematics/foundations/">logic.mathematics.foundations</a>, <a class="node" href="../logic/mathematics/incompleteness/">logic.mathematics.incompleteness</a>, <a class="node" href="../logic/mathematics/intuitionism/">logic.mathematics.intuitionism</a>, <a class="node" href="../logic/mathematics/logicism/">logic.mathematics.logicism</a>, <a class="node" href="../logic/mathematics/ontology/">logic.mathematics.ontology</a>, <a class="node" href="../logic/mathematics/practice/">logic.mathematics.practice</a>, <a class="node" href="../logic/mathematics/structuralism/">logic.mathematics.structuralism</a>, <a class="node" href="../logic/modal/">logic.modal</a>, <a class="node" href="../logic/philosophy-of-logic/">logic.philosophy-of-logic</a>, <a class="node" href="../meta/">meta</a>, <a class="node" href="../meta/meta.progress/">meta.progress</a>, <a class="node" href="../meta/meta.what-is-philosophy/">meta.what-is-philosophy</a>, <a class="node" href="../metaphysics/modality/">metaphysics.modality</a>, <a class="node" href="../mind/">mind</a>, <a class="node" href="../mind/other-minds/">mind.other-minds</a>, <a class="node" href="../politics/">politics</a>, <a class="node" href="../politics/critical-approaches/">politics.critical-approaches</a>, <a class="node" href="../politics/democracy/">politics.democracy</a>, <a class="node" href="../religion/">religion</a>, <a class="node" href="../religion/evil/">religion.evil</a>, <a class="node" href="../religion/faith-reason/">religion.faith-reason</a>, <a class="node" href="../science/">science</a>, <a class="node" href="../science/models/">science.models</a>, <a class="node" href="../science/realism/">science.realism</a>, <a class="node" href="../science/social-science/">science.social-science</a>, <a class="node" href="../science/theory-change/">science.theory-change</a></p><nav class="footnav"><a href="../">Home</a><a href="../map/">Map</a><a href="../method/">Constitution</a><a href="../queue/">Queue</a></nav></div></body></html>

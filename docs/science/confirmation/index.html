@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Confirmation and Induction — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../science/">Philosophy of Science</a></div><h1>Confirmation and Induction</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.9</div><article><p>A thousand emeralds have been examined, and every one is green. Conclude that all emeralds are green — including the ones no one will ever dig up — and you have performed the basic move of science. Nothing in the premises guarantees the conclusion, yet the evidence surely <em>supports</em> it. Confirmation theory is the attempt to say what that support is: when evidence counts for a hypothesis, how much, and with what right.</p>
+<p>The ground floor is Hume. Any justification of induction must be either demonstrative or itself inductive. Demonstrative it cannot be: there is no contradiction in nature changing course tomorrow. Inductive it cannot be without circularity: "induction has worked so far" supports "induction will work" only by induction. The escape routes — Strawson's dissolution (inductive standards partly <em>constitute</em> rationality, so demanding a further warrant is confused), Reichenbach's pragmatic vindication (if any method can find the regularities, induction can), externalist accounts on which induction is justified if in fact reliable, whether or not we can certify it — each purchases relief at a price, and none commands the field.</p>
+<p>Hempel changed the question: describe the logic of confirmation rather than justify it. His instance criterion — universal hypotheses are confirmed by their instances — promptly generated the ravens paradox: "all ravens are black" is logically equivalent to "all non-black things are non-ravens," so a white shoe confirms it. Goodman then showed that instances alone cannot even fix <em>which</em> hypothesis they confirm: the same green emeralds equally instantiate "all emeralds are grue" (green if examined before some future time, otherwise blue). The new riddle asks what privileges projectible predicates over gerrymandered ones — Goodman's own answer, entrenchment in past practice, strikes many as naming the problem rather than solving it. Hypothetico-deductivism — a theory is confirmed when its predictions pan out — fares no better: if a theory entails the evidence, so does the theory conjoined with any irrelevance, and statistical hypotheses strictly entail nothing at all.</p>
+<p>Bayesian confirmation theory is now the leading framework: evidence confirms a hypothesis when it raises its probability. It dissolves the ravens paradox gracefully (the shoe confirms, but minutely), blocks the irrelevant-conjunction problem, and delivers degrees of support where its rivals delivered only a yes or no. The probabilistic machinery — probabilism, conditionalization, and their Dutch book and accuracy vindications — is homed at <a class="node" href="../../epistemology/formal/" title="Formal Epistemology">epistemology.formal</a>; what bites here is its two standing wounds in scientific dress: old evidence (Mercury's perihelion confirmed general relativity though Einstein already knew it) and the priors, on which rational agents may apparently diverge without limit.</p>
+<p>Two rivals refuse the confirmational picture altogether. Popper denied that evidence ever supports theories: science conjectures boldly and refutes; surviving tests yields "corroboration," not confirmation. The standard objection is that this is no solution: either corroboration gives reason to rely on a theory tomorrow — induction under a new name — or it gives none, and the choice of a bridge design becomes rationally arbitrary. Mayo's error statistics is the serious frequentist heir: a hypothesis is warranted when it passes a <em>severe</em> test, one that would very probably have exposed it were it false. Its strength is fidelity to actual statistical practice and its refusal of priors; its critics ask whether severity can be assessed without the very background probabilities it disclaims.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Problem of Induction</span><span class="gloss"> — Hume's dilemma and the main escape routes: dissolution, pragmatic vindication, and externalist reliabilism.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Qualitative Confirmation</span><span class="gloss"> — Hempel's instance criterion, the ravens paradox, and the troubles of hypothetico-deductivism.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The New Riddle of Induction</span><span class="gloss"> — Goodman's grue, projectibility, and entrenchment against appeals to natural properties.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Bayesian Confirmation Theory</span><span class="gloss"> — probability-raising as confirmation, the rival measures of support, and old evidence and the priors in scientific practice.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Error Statistics and Severe Testing</span><span class="gloss"> — Mayo's frequentist program and the philosophy of statistical inference.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Inference to the Best Explanation</span><span class="gloss"> — explanatory virtues as a guide to truth, and whether IBE rivals or reduces to Bayesian updating.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../epistemology/formal/" title="Formal Epistemology">epistemology.formal</a>: the Bayesian apparatus and its vindications are homed there; the priors and old-evidence problems are jointly owned wounds.</li>
+<li>To <a class="node" href="../../epistemology/skepticism/" title="Skepticism">epistemology.skepticism</a>: Hume's problem is inductive skepticism, and the responses to it track that node's map of skeptical strategies.</li>
+<li>To <a class="node" href="../../metaphysics/properties/" title="Properties and Universals">metaphysics.properties</a>: the new riddle demands a distinction between natural and gerrymandered properties — projectibility is naturalness put to inductive work.</li>
+<li>To the registers: Hume and Popper among <a class="node" href="../../figures/" title="Figures">figures</a>; Carnap's inductive logic places the Vienna Circle in <a class="node" href="../../traditions/" title="Traditions">traditions</a> at this node's modern origin.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../epistemology/formal/">epistemology.formal</a>, <a class="node" href="../../figures/hume/">hume</a>, <a class="node" href="../../logic/mathematics/ontology/">logic.mathematics.ontology</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Philosophy of Literature — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../aesthetics/">Aesthetics</a></div><h1>Philosophy of Literature</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.12</div><article><p>Readers close <em>Middlemarch</em> convinced they understand marriage, vanity, and thwarted vocation better than before. Yet the novel offers no arguments, cites no evidence, and reports the doings of people who never existed. A friend who claimed to have learned about marriage from a documented case study could be checked; George Eliot gives us nothing to check. The central problem here is whether that sense of learning is genuine — and if so, what knowledge a fiction could convey, and how.</p>
+<p><strong>Literary cognitivism</strong> says the learning is real. Its skeptics have two sharp objections: whatever general truths a novel states are banal ("pride blinds"), and whatever is not banal the novel merely asserts without warrant — a treatise could say it better and defend it. Cognitivists answer by relocating the goods. What fiction supplies is rarely new propositions but <em>understanding</em>: knowledge of what an experience is like from inside, refinement of concepts we already possess, practice in perceiving morally relevant detail. One influential line treats fictions as extended thought experiments, earning conclusions as Galileo's falling bodies did — by controlled imagining, not observation. The strongest skeptical rejoinder is Lamarque and Olsen's: even granting that novels occasion learning, truth is no part of <em>literary</em> value — we do not rank <em>Middlemarch</em> above a sociology textbook for accuracy. The debate's live center is whether that severance can hold.</p>
+<p>Nussbaum's moral-imagination case makes literary and moral value collide rather than separate: some moral knowledge — the fine-grained perception of particular persons in particular predicaments — can <em>only</em> be articulated in literary form, so certain novels are works of moral philosophy, not illustrations of it. Its strength is the diagnosis of what treatises leave out; critics press that it grades novels by their ethics and ethics by its novels at once. (Whether moral defects are aesthetic defects is homed at <span class="node unwritten" title="promised entry">art-and-morality</span>; this node owns the positive claim that literature is a vehicle of moral thought.)</p>
+<p><strong>Narrative</strong> raises a distinct cluster: what makes a mere sequence of reported events a story? Causal connection is too weak (chronicles have it); proposals range from Velleman's emotional cadence — a sequence that resolves feeling — to narrative as a sui generis form of explanation, making events intelligible as no covering law could. The stakes extend past literature: if selves are constituted by the stories told about them, narrativity is a metaphysical load-bearer — and Strawson's protest that many good lives are episodic, not narrative, is felt in personal identity.</p>
+<p><strong>Style</strong> is where cognitivism meets its hardest internal constraint: the heresy of paraphrase. Brooks argued that a poem's meaning is inseparable from its form — a paraphrase is not a summary but a different, worse text. If that is right, whatever literature teaches cannot be extracted as propositions, which either deflates cognitivism or explains precisely why literature is irreplaceable: the knowledge exists only in the reading. Style also invites its own account — as the expression of an implied author's mind — linking it to interpretation's debates.</p>
+<p>The semantics of fiction — empty names, truth in a story, pretense versus abstract artifacts — is homed at <a class="node" href="../../language/figurative/" title="Figurative Language">language.figurative</a>. This node keeps what fiction is <em>for</em>: the fictive utterance and make-believe accounts of what makes a text fiction at all, and the value and knowledge questions above.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Nature of Fiction</span><span class="gloss"> — what distinguishes fiction from nonfiction: make-believe, fictive utterance, and the imagination fiction prescribes.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Literary Cognitivism</span><span class="gloss"> — whether literature yields knowledge or understanding, against the banality and no-evidence objections.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Narrative and Narrativity</span><span class="gloss"> — what makes a story, whether narrative explains, and the narrativist view of lives.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Literary Value</span><span class="gloss"> — what makes literature good as literature, and whether truth and moral vision belong to that value.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Style and Paraphrase</span><span class="gloss"> — style as expression of mind and the thesis that literary meaning survives no paraphrase.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Philosophy of Poetry</span><span class="gloss"> — whether poetry's compression, form, and resistance to paraphrase demand a separate account.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../language/figurative/" title="Figurative Language">language.figurative</a>: the home split — fictional discourse's semantics (empty names, truth in fiction, pretense) lives there; the nature, value, and epistemology of fiction live here.</li>
+<li>To <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a>: cognitivism claims a species of understanding acquired without evidence or testimony in the usual sense; fiction-as-thought-experiment borrows that literature's machinery.</li>
+<li>To <a class="node" href="../../ethics/" title="Ethics">ethics</a>: Nussbaum's program makes certain novels moral philosophy; within aesthetics, <span class="node unwritten" title="promised entry">art-and-morality</span> owns the question whether moral flaws are aesthetic ones.</li>
+<li>To <a class="node" href="../../metaphysics/personal-identity/" title="Personal Identity">metaphysics.personal-identity</a>: the narrativity of lives — selves as stories versus Strawson's episodic lives — is contested ground shared with the narrative self.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../aesthetics/interpretation/">aesthetics.interpretation</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

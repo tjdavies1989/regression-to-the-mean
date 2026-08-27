@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Philosophy of Logic — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../logic/">Logic</a></div><h1>Philosophy of Logic</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-21.1</div><article><p>Logic delivers verdicts — this argument is valid, that one is not — with an authority no other discipline pretends to. Philosophy of logic asks what stands behind the authority. What is logic <em>about</em>, what is it <em>answerable to</em>, and what happens when logicians themselves disagree?</p>
+<p>The first question is demarcation. Validity holds in virtue of form, and form is fixed by the logical vocabulary — but which expressions are logical? "And," "not," "all," presumably; but why those, and why not "necessarily," "true," or "taller than"? The most developed answer, descending from Tarski and sharpened by Sher, is invariance: an expression is logical if its meaning is indifferent to which particular objects exist — invariant under all permutations (or, stronger, all bijections) of the domain. The proposal's strength is that it derives logic's topic-neutrality from a precise mathematical property. Critics object that invariance overgenerates — admitting bizarre "constants" with no inferential role — and that it presupposes, rather than explains, why generality should mark the logical. Rival demarcations appeal to inferential role or to epistemic features; some conclude the boundary is fruitful convention, not discovery.</p>
+<p>The second question is posed by the sheer plurality of logics. Classical, intuitionistic, relevance, and paraconsistent systems give conflicting verdicts on the same arguments. Monists hold that exactly one logic is correct and the rest are at best useful instruments. Pluralists, most influentially Beall and Restall, argue that "valid" itself is unsettled: consequence is truth-preservation across all <em>cases</em>, and since "case" can be legitimately precisified in more than one way (worlds, constructions, situations), more than one logic is correct — which would explain why the rivalry never resolves. Monists reply that pluralism collapses: when the logics disagree about what a reasoner should infer, one verdict must govern, and that one is <em>the</em> logic. At the far end, logical nihilism denies that any relation of formally valid consequence covers all cases — every candidate law meets a counterexample somewhere.</p>
+<p>Third, normativity. Frege took logic to prescribe laws of thought: not how we do think but how we ought to. Harman's challenge is that this is a non sequitur — logic states what follows from what, and no norm of belief revision falls out directly, since one may rationally decline to believe a consequence and abandon a premise instead. The ensuing literature tries to state "bridge principles" linking validity to obligations or permissions of belief, and the difficulty of doing so cleanly is itself a finding. The debate connects directly to the fourth question: anti-exceptionalism. Quine argued, and Williamson and Priest in different ways now press, that logic is not special — not analytic, not known a priori in any distinctive way, but a theory chosen and revised by the same abductive standards as science: strength, simplicity, fit with the evidence. What counts as <em>logical evidence</em> — intuitions about cases, the needs of semantics, the paradoxes — becomes the live question. Exceptionalists reply that any abductive revision of logic must use logic, so something is presupposed after all.</p>
+<p>Finally, logic's relation to actual reasoning. Formal consequence and good human inference diverge systematically — psychology of reasoning has documented how far — and whether logic idealizes, corrects, or simply concerns something other than natural-language argument remains open, feeding back into every debate above.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Logical Constants</span><span class="gloss"> — The demarcation problem: Tarskian permutation invariance, Sher's defense, inferentialist and epistemic alternatives, and the charge of overgeneration.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Monism, Pluralism, and Nihilism</span><span class="gloss"> — Whether there is one correct logic, many, or none: Beall–Restall case-pluralism, the collapse objection, and nihilist counterexamples to every law.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Normativity of Logic</span><span class="gloss"> — Frege's prescriptive conception, Harman's challenge, and the search for bridge principles from validity to norms of belief.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Anti-Exceptionalism and Logical Epistemology</span><span class="gloss"> — Whether logic is revisable by abductive standards like any science, and what counts as evidence for or against a logic.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Logic and Reasoning</span><span class="gloss"> — The gap between formal consequence and actual human inference, and whether logic describes, idealizes, or corrects natural-language argument.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Epistemology</strong>: the a priori, rational revisability, and the norms governing belief make anti-exceptionalism and normativity as much epistemology as logic.</li>
+<li><strong>Language</strong>: logical constants live in natural languages before formal ones; demarcation and logical form are shared property with semantics.</li>
+<li><strong>Metaphysics</strong>: pluralism about consequence presses on the nature of truth and cases; whether logic describes reality's structure is a metaphysical question.</li>
+<li><strong>Within logic</strong>: <span class="node unwritten" title="promised entry">consequence</span> supplies the analyses these debates presuppose; <span class="node unwritten" title="promised entry">nonclassical</span> supplies the rival systems that make monism versus pluralism urgent.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/frege/">frege</a>, <a class="node" href="../../logic/nonclassical/">logic.nonclassical</a>, <a class="node" href="../../figures/wittgenstein/">wittgenstein</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

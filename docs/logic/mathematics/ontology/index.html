@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Ontology of Mathematics — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../logic/">Logic</a> › <a href="../../../logic/mathematics/">Philosophy of Mathematics</a></div><h1>The Ontology of Mathematics</h1><div class="plaque"><span class="glyph">◑</span> survey &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-26.5</div><article><p>"There are infinitely many primes" has the grammar of an existence claim, the certainty of proof, and — if it is about anything — a subject matter no one has ever seen, touched, or caused to do anything. The ontology of mathematics asks whether to take the claim at face value: do mathematical objects exist, and if not, why is mathematics not simply false? Since its descent this node divides the question among four studies — the realist family, the reconstructive refusal, the fictionalist refusal, and the argument over which everything turns — and the debate they jointly map is best seen as a standoff between two unpaid explanatory debts: <em>access</em> for the platonist, <em>applicability</em> for the nominalist.</p>
+<p><strong>Platonism</strong> (<span class="node unwritten" title="promised entry">platonism</span>) is not one thesis but a family, sorted by how each version fixes reference to abstracta and what epistemology the fixing affords. Frege's route runs through the context principle — settle truth and singular-termhood, and reference has already been secured, the access problem exposed as an artifact of picturing reference as a causal grappling-hook. Gödel's route accepts the faculty the Fregean declines: mathematical intuition, stated fairly as a fallible evidential given supplemented by extrinsic, fruit-bearing justification. Quinean platonism earns objects the way physics earns electrons, holistically — and pays in coverage, leaving the higher set theory as "recreation." Plenitudinous platonism dissolves access by inflation: every consistent theory describes some region of the realm, so reliability needs no mechanism — at the price of arbitrariness about which objects we ever mean. Against Field's sharpened reliability challenge, the family's defenses divide into reliability-without-mechanism (no counterfactual variation, no accident to explain), apriority, and the Burgess–Rosen refusal of the demand itself; whether these are answers or refusals is the live question.</p>
+<p><strong>Nominalist reconstruction</strong> (<span class="node unwritten" title="promised entry">nominalism</span>) is the hard road: show mathematics dispensable and its usefulness innocent. Field's program — nominalistic Newtonian gravitation via spacetime regions, representation theorems certifying the abstract detour, conservativeness as the licence for using what one disbelieves — remains the most disciplined piece of anti-realist labor in the field, and its wounds are correspondingly precise: the logical strength conservativeness itself requires, and the Hilbert-space formalism of quantum mechanics, which no one has nominalized. The modal strategies (Hellman, Chihara) trade abstract objects for primitive possibility — the same coin, intensional side up — and over the whole program hangs the bookkeeping question: whether a paraphrase nobody adopts can defeat an indispensability anyone can see.</p>
+<p><strong>Fictionalism</strong> (<span class="node unwritten" title="promised entry">fictionalism</span>) refuses the reconstruction and keeps the refusal: mathematics is a useful story, good without being true. Its internal geography — revolutionary versus hermeneutic readings with Stanley's challenge to the latter, Yablo's figuralism assimilating numbers to "the average family," Melia's weaseling — converges on a single nerve: the norms question (does mathematical practice demand belief or mere acceptance?) and the oracle test (if an oracle certified the objects' existence, would anything in mathematics change? — and if not, was existence ever the issue?).</p>
+<p><strong>The indispensability argument</strong> (<span class="node unwritten" title="promised entry">indispensability</span>) is the load-bearing wall on which the whole standoff rests: naturalism plus confirmational holism plus the ineliminability of mathematics from best science yields commitment. Maddy's attack severs the first joint (scientific practice itself does not believe its idealizations), Sober's the second (mathematics is never at contrastive empirical risk); the explanatory turn narrows the load to mathematical <em>explanation</em> of physical facts — cicadas, honeycombs, the bridges of Königsberg — where Baker and Saatsi dispute whether the mathematics explains or merely represents. Field's dispensability program stands as the permanent rejoinder-in-waiting.</p>
+<p>All four children, asked to propose a further layer, correctly declared thin nodes: at this depth the positions are the articulation, and the tree ends where the field does. The node's outward faces: <a class="node" href="../../../metaphysics/ontology/" title="Existence and Ontology">metaphysics.ontology</a> supplies the general machinery (commitment, paraphrase, categories) this debate deploys at full intensity; <a class="node" href="../../../epistemology/" title="Epistemology">epistemology</a> owns the access problem's home genus; <a class="node" href="../../../science/confirmation/" title="Confirmation and Induction">science.confirmation</a> holds the holism on which indispensability leans.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child written"><span class="glyph">◔</span><a href="../../../logic/mathematics/ontology/platonism/">Platonism</a><span class="gloss"> — the realist family sorted by reference-fixing: Fregean, Gödelian, Quinean, plenitudinous, and the three responses to the reliability challenge.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../../logic/mathematics/ontology/nominalism/">Nominalist Reconstructions</a><span class="gloss"> — Field's conservativeness program and its precise wounds; the modal strategies and their intensional coin.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../../logic/mathematics/ontology/fictionalism/">Fictionalism</a><span class="gloss"> — mathematics as useful untruth: the revolutionary/hermeneutic split, figuralism, weaseling, and the oracle test.</span><span class="tag">sketch · standard</span></li>
+<li class="child written"><span class="glyph">◔</span><a href="../../../logic/mathematics/ontology/indispensability/">The Indispensability Argument</a><span class="gloss"> — the argument with premises exposed, the Maddy–Sober attacks, and the explanatory turn.</span><span class="tag">sketch · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>metaphysics.ontology</strong>: the general theory of existence and commitment, deployed here at maximum intensity; quantifier variance and easy ontology would deflate this whole debate, and both sides know it.</li>
+<li><strong>epistemology</strong>: Benacerraf's dilemma is an epistemological challenge wearing mathematical dress; reliability, apriority, and intuition are its vocabulary.</li>
+<li><strong>science.confirmation</strong>: confirmational holism is indispensability's second premise; contrastive theories of testing are Sober's weapon against it.</li>
+<li><strong>Within the tree</strong>: <a class="node" href="../../../logic/mathematics/" title="Philosophy of Mathematics">logic.mathematics</a> holds the wider field; <a class="node" href="../../../logic/mathematics/structuralism/" title="Structuralism">logic.mathematics.structuralism</a> and <a class="node" href="../../../logic/mathematics/logicism/" title="Logicism and Neo-Logicism">logic.mathematics.logicism</a> are the escape routes that shrink the access debt without incurring applicability's.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../figures/frege/">frege</a>, <a class="node" href="../../../figures/godel/">godel</a>, <a class="node" href="../../../metaphysics/grounding/">metaphysics.grounding</a>, <a class="node" href="../../../metaphysics/ontology/">metaphysics.ontology</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

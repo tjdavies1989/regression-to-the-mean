@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Environmental and Everyday Aesthetics — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../aesthetics/">Aesthetics</a></div><h1>Environmental and Everyday Aesthetics</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; satellite &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.12</div><article><p>Most of anyone's aesthetic life happens nowhere near a gallery: a ridgeline at dusk, the first cold day of autumn, a well-laid table, the smell of rain. Yet aesthetic theory was built almost entirely around artworks — framed, authored, intentionally meaningful objects — and its central tools (interpretation, artistic intention, the artworld) simply do not apply to a thunderstorm. Ronald Hepburn's 1966 complaint about the "neglect of natural beauty" opened the field's question: what does appropriate appreciation look like when there is no artist, no frame, and no fact about what the object means?</p>
+<p>The organizing debate concerns nature. Allen Carlson's scientific cognitivism holds that nature must be appreciated <em>as nature</em> and <em>as what it is</em>: just as art history tells us that a work is a cubist painting and not a failed portrait, natural science tells us that the whale is a mammal and not a lumbering fish, and appreciation uninformed by such categories misperceives its object. The position's strength is that it makes appreciation answerable to truth — it explains how a response to nature can be sentimental, kitschy, or simply wrong, rather than merely pleasant. Against it, Arnold Berleant's engagement model argues that the spectator stance is precisely the artworld habit the field was supposed to shed: an environment is not an object viewed but a surround inhabited, and its appreciation is immersive, multisensory, and unframed — you are in the weather, not in front of it. Pluralists split the difference: Noël Carroll defends simple emotional arousal as one legitimate mode among others, and Emily Brady gives imagination and disinterestedness the work Carlson assigns to science. A further thesis sharpens the stakes: <em>positive aesthetics</em>, the claim that pristine wild nature is always aesthetically good — there are no eyesores in the untouched wilderness, only in what we have damaged. Its appeal to conservation is obvious; the puzzle is that a domain where negative verdicts are impossible looks like a domain where grading has quietly stopped.</p>
+<p>The everyday wing extends the same expansion past nature into ordinary life. Yuriko Saito's everyday aesthetics attends to chores, weather-talk, clutter and tidiness, arguing that such small verdicts steer enormous consequences — what we buy, demolish, and preserve. Food and drink press an old hierarchy of the senses: Kant demoted taste and smell as incapable of disinterested judgment, and Carolyn Korsmeyer's rehabilitation of taste asks whether a meal can sustain the kind of attention and discrimination art does. Gardens are the instructive hybrid — authored like artworks, alive and unfinished like nature — which is why David Cooper treats them as a philosophical category of their own rather than a minor art.</p>
+<p>Japanese aesthetics is the standing rebuke to the whole framing. Its central categories — <em>wabi</em> (austere, imperfect simplicity), <em>sabi</em> (the patina and loneliness of age), <em>mono no aware</em> (the pathos of transience), <em>yūgen</em> (dark, suggestive depth) — were articulated within practices of tea, poetry, and daily comportment, never quarantining art from ordinary life in the first place. The Western "expansion" of aesthetics beyond the artworld is, from this vantage, a return; and the categories resist translation into beauty-talk, since several locate aesthetic value exactly where beauty-theory sees defect: in the worn, the asymmetrical, the perishing.</p>
+<p>The field's internal worry is trivialization. If dishwashing, weather, and clutter are all aesthetic, the predicate threatens to lose its contrast class — if everything is aesthetic, is anything? Defenders reply that ubiquity is not emptiness: judgments still discriminate, still go wrong, still carry consequences; what has been abandoned is only the assumption that aesthetic attention must be rare, framed, and reverent.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Aesthetics of Nature</span><span class="gloss"> — how natural environments are rightly appreciated: scientific cognitivism, engagement, pluralism, and the positive aesthetics thesis.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Aesthetics of Food and Drink</span><span class="gloss"> — whether the "lower" senses support genuine aesthetic judgment, and whether cuisine is an art.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Gardens</span><span class="gloss"> — the art–nature hybrid: authorship, growth, and why gardens fit neither category cleanly.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../aesthetics/beauty/" title="Beauty">aesthetics.beauty</a>: natural beauty's claim to be beauty's paradigm, felt there, is adjudicated here — and positive aesthetics is its most radical form.</li>
+<li>To <a class="node" href="../../science/" title="Philosophy of Science">science</a>: scientific cognitivism makes correct appreciation depend on natural-scientific categories, importing questions about what science tells us things are.</li>
+<li>To <a class="node" href="../../ethics/" title="Ethics">ethics</a>: aesthetic value carries much of the argumentative weight in environmental preservation — places are defended as magnificent, not merely useful.</li>
+<li>To <a class="node" href="../../traditions/" title="Traditions">traditions</a>: Japanese aesthetics is a tradition in its own right; this node borrows its categories and owes it non-flattening treatment there.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../aesthetics/beauty/">aesthetics.beauty</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Possible Worlds — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../metaphysics/">Metaphysics</a> › <a href="../../../metaphysics/modality/">Modality</a></div><h1>Possible Worlds</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-26.7</div><article><p>Lewis's <em>On the Plurality of Worlds</em> (1986) makes the offer at full price. There exist countless concrete universes, each as real as ours, none spatiotemporally or causally connected to any other; a world just <em>is</em> a maximal sum of spatiotemporally related things. "Actual" names no privileged status but works like "here": each world is actual to its inhabitants. Plenitude comes from the principle of recombination — anything can coexist with anything, and duplicates of any parts of any worlds can be patched together, "size and shape permitting," into a further world; talking donkeys cost nothing.</p>
+<p>What the price buys is a genuinely reductive analysis, argued case by case. Counterfactuals get truth conditions — the consequent holds at the closest antecedent-worlds — where closeness is real similarity between concrete things, not a modal primitive in disguise. Properties become sets of possibilia, distinguishing necessarily coextensive properties that sets of actual instances conflate. Propositions become sets of worlds, giving belief and desire their objects and semantics its workspace. And modality itself disappears into quantification: necessity is truth at all worlds, with no unreduced "possibly" left in the analysans. Lewis's argument is openly Quinean — the theory earns its ontology by its fruits, as set theory earned its sets.</p>
+<p>The objections that bite are structural. If a world is by definition a maximal spatiotemporally connected sum, then island universes — disconnected spacetimes forming one possibility — are ruled impossible by fiat, though they seem clearly conceivable; the isolation criterion does double duty as ontology and as modal legislator, and strains. Recombination threatens paradox: Forrest and Armstrong argued that applying it to the totality of worlds generates a set larger than itself, forcing Lewis into unlovely restrictions on "size and shape." Adams pressed the ethical objection: if every possible evil is concretely actualized somewhere, preventing an evil here merely relocates suffering in logical space, and moral motivation seems to need an egocentrism Lewis frankly embraced. And there is the incredulous stare — not an argument, Lewis agreed, but a datum: the theory's cost is paid in common sense, and each philosopher prices that currency for herself.</p>
+<p>The ersatz program keeps the worlds but makes them actual abstracta, and Lewis's own taxonomy still organizes it. Linguistic ersatzism builds worlds as maximal consistent sets of sentences — but "consistent" smuggles modality back in, and a worldmaking language drawn from actuality has no names for alien properties, so distinct alien possibilities collapse into one description. Pictorial ersatzism represents by isomorphism, and inherits the realist's costs the more faithfully its pictures picture. Magical ersatzism — Lewis's label for Plantinga-style views on which simple abstract states of affairs just do represent, via an unexplained relation of "selection" — purchases actualism at the cost of a primitive nobody can say anything about. Stalnaker's moderate realism concedes the point cheerfully: worlds are ways things might have been, properties of the totality, and the reduction of modality was never a reasonable demand. Rosen's modal fictionalism goes further — worlds-talk is true only under the prefix "according to the hypothesis of the plurality of worlds" — but the Brock–Rosen objection notes that according to that fiction, every world contains many worlds; so "necessarily, there are many worlds" comes out flatly true, and the fictionalist asserts what she meant to avoid.</p>
+<p>The current state is a standing joke with a serious moral: almost nobody believes Lewis, and almost everybody uses him. Worlds-semantics is the lingua franca of metaphysics, semantics, and decision theory, run daily by philosophers who, asked what worlds are, gesture at ersatzism and change the subject. Whether that is theft over honest toil, or proof that the machinery never needed the metaphysics, is the live question.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Ersatz Worlds</span><span class="gloss"> — the actualist constructions in detail: linguistic, pictorial, and magical ersatzism, alien possibilities, and primitive modality.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Modal Fictionalism</span><span class="gloss"> — Rosen's program, the Brock–Rosen and Hale objections, and timid versus strong fictionalism.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Logic (<a class="node" href="../../../logic/modal/" title="Modal and Intensional Logic">logic.modal</a>)</strong>: the semantics consumed here is defined there; counterfactual closeness and the Barcan disputes are the joint frontier.</li>
+<li><strong>Properties (<a class="node" href="../../../metaphysics/properties/" title="Properties and Universals">metaphysics.properties</a>)</strong>: properties as classes of possibilia is Lewis's bid in that debate; its fate is tied to his worlds.</li>
+<li><strong>Meaning (<a class="node" href="../../../language/meaning/" title="Theories of Meaning">language.meaning</a>)</strong>: propositions as sets of worlds power intensional semantics — and its hyperintensional discontents.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../figures/lewis/">lewis</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

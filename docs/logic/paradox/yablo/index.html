@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yablo&#x27;s Paradox — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../logic/">Logic</a> › <a href="../../../logic/paradox/">Paradox and Truth</a></div><h1>Yablo&#x27;s Paradox</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; satellite &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-21.2</div><article><p>Consider an infinite list of sentences, one for each natural number, where each sentence says only this: <em>every sentence later in this list is untrue</em>. No sentence mentions itself. No sentence mentions a predecessor. Each looks strictly forward, at sentences that in turn look only further forward; the reference relation contains no loop of any length. Now suppose some sentence S<em>n</em> is true. Then everything after it is untrue — in particular S<em>n</em>+1. But everything after S<em>n</em>+1 is <em>also</em> untrue, since those sentences lie among S<em>n</em>'s successors; and that is exactly what S<em>n</em>+1 says, so S<em>n</em>+1 is true after all. Contradiction. So no sentence in the list is true. But then, for any <em>n</em>, all sentences after S<em>n</em> are untrue — which is precisely what S<em>n</em> says, so S<em>n</em> is true. Contradiction again. Since Yablo published the sequence in 1985 and drew the moral in 1993 — "paradox without self-reference" — it has served as the family's controlled experiment: every diagnosis that blames the liar on self-reference or circular reference must here confront a paradox that apparently runs without either.</p>
+<p>The live dispute is whether the appearance survives scrutiny. Priest argues it does not. The contradiction is not derived sentence by sentence but by a general argument about an arbitrary S<em>n</em>, and that argument needs the sentences given uniformly, by a schema — S<em>x</em> says that for all <em>k</em> &gt; <em>x</em>, S<em>k</em> is not true — whose satisfaction conditions involve the very predicate being characterized. The circularity is real but relocated: not in any sentence, but in the fixed-point predicate that generates the list, exactly the kind of fixed point the diagonal lemma delivers for the liar. (Beall presses the companion point: try to pick out the infinite list without such a schema, and you cannot.) The position's strength is that the <em>paradoxical reasoning</em>, as opposed to the paradoxical feeling, demonstrably routes through the self-applicable schema. Sorensen and Yablo reply that the sentences alone carry the paradox: the list exists whether or not we describe it uniformly, a being with infinite patience could assert each sentence separately, and circularity in our finite means of access is a fact about us, not about the sequence. Their strength is the bare structure: no cycles anywhere, yet contradiction — so what powers the semantic paradoxes is plausibly not circularity but <em>ungroundedness</em>, reference chains that never bottom out, a diagnosis (developed by Leitgeb and Cook) under which liar and Yablo are the looped and unlooped cases of one disease. Cook's generalization sharpens the challenge: standard paradoxes can be systematically "unwound" into Yablo-style infinite sequences, and if unwinding preserves paradox while deleting circularity, circularity was never the operative feature.</p>
+<p>A third angle cuts underneath the dispute. Formalize the sequence in arithmetic with a truth predicate and local disquotation for each Yablo sentence, and the resulting theory is not inconsistent at all — it is ω-inconsistent (Ketland; Barrio). Every finite initial segment is satisfiable; indeed the whole first-order theory has models, just no standard one: nothing explodes until the infinite totality is taken at standard face value, via an ω-rule or a uniform satisfaction principle (with genuinely uniform disquotation, inconsistency does return). On this view Yablo's discovery is not quite a paradox but a new species of semantic pathology — consistency purchased at the price of the natural numbers — which links it to the ω-inconsistency that McGee exposed in seemingly innocent truth theories, and reopens the question of what, exactly, a solution to it would even owe us.</p>
+<h2>Children</h2>
+<p>Thin node — no natural children yet.</p>
+<h2>Bridges</h2>
+<ul>
+<li><strong>logic.paradox.liar</strong>: the control case — if Yablo is genuinely non-circular, diagnoses of the liar that blame self-reference are treating a symptom, and ungroundedness is the better name for the disease.</li>
+<li><strong>logic.paradox.formal-truth</strong>: in Kripke's construction every Yablo sentence is ungrounded despite referring to nothing circularly; the ω-inconsistency results live in the axiomatic theories' scorecard.</li>
+<li><strong>logic.mathematics.incompleteness</strong>: the diagonal lemma supplies the fixed-point schema on which Priest's circularity charge turns, and ω-inconsistency and nonstandard models are that node's stock in trade.</li>
+</ul></article><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

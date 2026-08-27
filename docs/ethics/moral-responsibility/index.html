@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Moral Responsibility — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../ethics/">Ethics</a></div><h1>Moral Responsibility</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.10</div><article><p>A friend betrays a confidence, and you resent it; a stranger returns your dropped wallet, and you are grateful. These responses do not merely register that something bad or good happened — they address the <em>person</em>, as author of what she did, and they claim to be fitting: she deserves the resentment, he deserves the thanks. Moral responsibility studies that claim. By editorial decision the question is split: whether anyone could ever have done otherwise — determinism and the metaphysical apparatus — is homed at <a class="node" href="../../metaphysics/free-will/" title="Free Will">metaphysics.free-will</a>. This node owns what remains once that is bracketed, which turns out to be most of the subject: what blame and praise <em>are</em>, what makes an agent an eligible target of them, and when they are deserved. Responsibility here is a normative status, not a causal fact.</p>
+<p>The modern field is founded on Strawson's "Freedom and Resentment" (1962). Strawson inverted the traditional order: instead of settling the metaphysics and then licensing our practices, he began with the practices — the "reactive attitudes" of resentment, indignation, gratitude, guilt — and argued that they constitute participation in interpersonal life itself. Excuses are telling: we withdraw resentment not upon learning that an act was determined, but upon learning that it did not mean what it seemed ("she didn't know," "he was pushed") or that the agent is not a full participant (childhood, psychosis). The practice answers to the <em>quality of will</em> an act expresses, and needs no external metaphysical warrant. Nearly every position since develops or resists this program.</p>
+<p>Quality-of-will theorists take the hint literally: blameworthiness is the ill will or objectionable indifference an action manifests. Arpaly's version cuts against intellectualism — Huckleberry Finn, who helps Jim while sincerely judging he ought not, is <em>praiseworthy</em>, because his act responds to the moral reasons whatever his avowed principles say. Frankfurt's hierarchy locates responsibility in identification: an agent is responsible for the will she endorses at a higher order — hence the unwilling addict is his desire's victim while the willing addict owns it — though the regress question (what makes the higher order authoritative?) remains its standing tax. Watson's distinction organizes the field: <em>attributability</em> (the act expresses her ends, is hers to be judged by) is one thing, <em>accountability</em> (she may be sanctioned, called to answer) another — a wrongdoer with a brutalizing history may be fully attributable yet doubtfully accountable. McKenna's conversational model develops accountability's structure: blame is a move in a moral conversation, a demand for acknowledgment that the wrongdoer can answer, deflect, or repair.</p>
+<p>If blame is something we <em>do</em> to people, it has its own ethics. The hypocrite's blame misfires though its target is guilty; blame can be true but not the blamer's business; proportionality constrains it as it constrains punishment — standing is now a literature in itself. Beneath the practice lies the justificatory question: is blame's warrant <em>desert</em>, backward-looking and basic, or its forward-looking effects — protection, formation, repaired relationships? Pereboom's responsibility skepticism denies basic desert altogether and then, instructively, rebuilds: moral protest, quarantine-model prevention, love, and meaning survive, he argues, without retribution. Whether what survives is recognizably our practice, or a successor to it, is where the debate now stands.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Reactive Attitudes</span><span class="gloss"> — Strawson's program, its excuse-and-exemption structure, and the objective stance.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Quality of Will</span><span class="gloss"> — Arpaly's inadvertent virtue, Frankfurt's hierarchy and identification, deep-self views and their manipulation problem.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Faces of Responsibility</span><span class="gloss"> — attributability, answerability, and accountability; Watson's distinction and Shoemaker's tripartite development.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Ethics of Blame</span><span class="gloss"> — standing, hypocrisy, complicity, proportionality, and forgiveness as blame's release.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Desert and Its Rivals</span><span class="gloss"> — basic desert against consequentialist and contractualist justifications of holding responsible; skepticism's surviving practices.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Moral Luck</span><span class="gloss"> — Nagel and Williams on outcome, circumstantial, and constitutive luck against the control condition.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Responsibility and Ignorance</span><span class="gloss"> — culpable ignorance, tracing, and the regress toward akrasia (Rosen, Zimmerman, Smith).</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../metaphysics/free-will/" title="Free Will">metaphysics.free-will</a>: the home split's other half — whether determinism undermines these statuses is that node's question; Frankfurt cases and Pereboom's skepticism are shared property.</li>
+<li>To <a class="node" href="../../mind/action/" title="Action and Agency">mind.action</a>: intention, omission, negligence, and weakness of will supply the raw material every account of blameworthiness presupposes.</li>
+<li>To <a class="node" href="../../politics/" title="Political and Social Philosophy">politics</a>: criminal punishment is accountability institutionalized; desert's fate decides retributivism's.</li>
+<li>To <a class="node" href="../../metaphysics/personal-identity/" title="Personal Identity">metaphysics.personal-identity</a>: responsibility over time — for the deeds of one's earlier self — tests every criterion of identity.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/kant/">kant</a>, <a class="node" href="../../mind/action/">mind.action</a>, <a class="node" href="../../politics/law/">politics.law</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

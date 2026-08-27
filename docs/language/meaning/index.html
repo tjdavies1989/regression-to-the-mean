@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Theories of Meaning — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../language/">Philosophy of Language</a></div><h1>Theories of Meaning</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.4</div><article><p>Every competent speaker knows what "The cat is on the mat" means — and knows it for sentences never uttered before. A theory of meaning owes an account of what this knowledge is knowledge <em>of</em>. The constraints are demanding: it must explain how finite minds command an infinite language (meanings must compose — a sentence's meaning must be determined by its parts and their arrangement); it must connect meaning to communication, language being a public instrument; and it must connect meaning to truth, since what a sentence means fixes what would make it true. Each rival program takes one constraint as the master key.</p>
+<p>The truth-conditional program takes the link to truth as constitutive. Davidson's proposal is austere: a theory of meaning for a language is nothing more than a Tarski-style truth theory for it — a finite set of axioms entailing, for each of infinitely many sentences, a theorem like "'Schnee ist weiss' is true if and only if snow is white." A theory delivering all such theorems, confirmable by radical interpretation from behavior alone, says everything a meaning theory could. Montague, arriving from mathematical logic, showed the program could be executed in detail, treating English with the model-theoretic rigor of a formal calculus; his inheritance is formal semantics, the one branch of the field that became a cumulative science, now largely housed in linguistics. The program's strength is precision and an explanation of compositionality; its worry is that truth conditions seem too coarse — "equilateral" and "equiangular" apply to the same triangles — and silent about what grasping them consists in.</p>
+<p>Use theories take the public instrument as the key. The later Wittgenstein's slogan — meaning is use — becomes, in Sellars and systematically in Brandom, <em>inferentialism</em>: an expression's meaning is its role in the game of giving and asking for reasons — what its assertion commits one to, what entitles one to it. The strength is an answer where truth-conditional theories go quiet: understanding is practical mastery, not mute contemplation of a truth condition; the challenge is recovering compositionality and objective correctness from inferential role. Grice takes communication as basic and meaning as derived psychology: a speaker means that p by intending her audience to believe that p partly through recognizing that very intention; sentence meaning is built from regularities in such intentions. The strength is reductive ambition — semantics from mind, without semantic primitives. Verificationism, which identified meaning with the method of empirical verification, is the field's cautionary tale: a sharp proposal that condemned metaphysics as meaningless and then could not state its own criterion in a form that survived scrutiny.</p>
+<p>Across the programs runs the internalism–externalism dispute. Chomsky treats meaning as a property of I-language, the internal computational system, and doubts a shared external language is even a coherent object of theory; Putnam and Burge argue that "meanings just ain't in the head" — Twin Earth shows environment and linguistic community fixing content without the speaker's knowledge. And it remains unsettled whether the programs compete at all: Davidson describes the structure a meaning theory must have, Grice the psychology of communication, Brandom the practice sustaining both — rival answers to one question, or complementary answers to three.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Truth-Conditional Program</span><span class="gloss"> — Davidson's truth theories as meaning theories, radical interpretation, and the hyperintensionality objections.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Formal Semantics</span><span class="gloss"> — The Montague inheritance: model theory, possible worlds, and intensional machinery for natural language.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Use Theories and Inferentialism</span><span class="gloss"> — From Wittgenstein's slogan through Sellars to Brandom's normative pragmatics of commitment and entitlement.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Intention-Based Semantics</span><span class="gloss"> — Grice's reduction of sentence meaning to speaker meaning, and speaker meaning to nested intentions.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Verificationism</span><span class="gloss"> — The verifiability criterion, its role in logical positivism, and the objections that dismantled it.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Internalism and Externalism</span><span class="gloss"> — Twin Earth, social externalism, and Chomsky's I-language challenge to public-language semantics.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Compositionality</span><span class="gloss"> — Whether and why meanings compose, and what the principle constrains.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>language.rule-following</strong>: every theory here inherits Kripkenstein's challenge — whatever meaning is said to be, some fact must make it determinate, and the skeptic doubts any candidate suffices.</li>
+<li><strong>mind.intentionality</strong>: Grice derives language's aboutness from thought's; Davidson and Brandom run the dependence the other way; which is prior is the border dispute itself.</li>
+<li><strong>logic</strong>: Tarski's truth definitions and Montague's model theory are the truth-conditional program's engineering; formal semantics is joint property.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/dharmakirti/">dharmakirti</a>, <a class="node" href="../../figures/frege/">frege</a>, <a class="node" href="../../language/pragmatics/">language.pragmatics</a>, <a class="node" href="../../language/rule-following/">language.rule-following</a>, <a class="node" href="../../figures/lewis/">lewis</a>, <a class="node" href="../../logic/paradox/vagueness/">logic.paradox.vagueness</a>, <a class="node" href="../../meta/meta.disagreement/">meta.disagreement</a>, <a class="node" href="../../metaphysics/modality/worlds/">metaphysics.modality.worlds</a>, <a class="node" href="../../figures/plato/">plato</a>, <a class="node" href="../../figures/wittgenstein/">wittgenstein</a>, <a class="node" href="../../figures/zhuangzi/">zhuangzi</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

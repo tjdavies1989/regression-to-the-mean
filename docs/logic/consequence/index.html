@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Logical Consequence — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../logic/">Logic</a></div><h1>Logical Consequence</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-21.1</div><article><p>Everyone can recognize that "Moby is a mammal" follows from "all whales are mammals" and "Moby is a whale." The problem is to say what this <em>following from</em> consists in. The pretheoretic notion seems to weave together three strands: the conclusion cannot be false if the premises are true (necessity); one could know this without investigating whales (apriority); and the guarantee holds in virtue of the argument's shape, not its subject matter (formality). An analysis of consequence must either capture all three or explain which are dispensable — and the two great analyses on offer divide precisely over how to cash the modal strand without simply presupposing it.</p>
+<p>The dominant account is Tarski's, refined into modern model theory: a conclusion is a logical consequence of premises just in case every model — every reinterpretation of the argument's nonlogical vocabulary over every domain — that makes the premises true makes the conclusion true. The strength of the account is its mathematical tractability and its diagnosis of formality: validity is invariance under reinterpretation, so the valid arguments are exactly those that owe nothing to the meanings of their nonlogical parts. Its rival descends from Gentzen: consequence is a matter of proof, of what can be derived using the rules that constitute the meanings of the logical constants. Its strength is epistemic — a derivation is a surveyable, step-by-step object, and the account explains how we <em>know</em> that conclusions follow, something a totality of models seems ill-placed to do. Prawitz and Dummett built on this an entire theory of meaning; its standing problem, since Prior's connective "tonk," is to say which rules are meaning-conferring — the demand usually called harmony. For first-order logic the two analyses provably coincide (completeness), which each side reads as vindication; they come apart in second-order logic and beyond, where the disagreement turns substantive.</p>
+<p>Both accounts inherit the demarcation question: invariance under reinterpretation of the <em>nonlogical</em> vocabulary is empty until one says which expressions are logical. Tarski's own late proposal — logical notions are those invariant under all permutations of the domain — has been developed by Sher and others into a full theory of formality, and contested as counting too much (cardinality quantifiers) or resting on the wrong kind of criterion.</p>
+<p>The deepest challenge to the Tarskian analysis is Etchemendy's. The model-theoretic definition, he argues, is a materially disguised universal generalization: it declares an argument valid when no <em>actual</em> interpretation is a counterexample, and any extensional match with genuine — necessary, a priori — consequence is a lucky accident of the set-theoretic universe. Depending on the size of the world and the choice of logical constants, the account threatens to overgenerate (blessing merely true generalizations as logic) or undergenerate. Defenders respond that Etchemendy conflates interpretational with representational readings of models, or invoke Kreisel's squeezing argument, which traps the informal notion between proof and models and certifies the extension after all. Whether the argument certifies the <em>analysis</em>, or merely its extension, is the live question.</p>
+<p>Behind all of this stands logical form. Arguments in natural language must be regimented before either analysis grips them, and how much theory that regimentation smuggles in — whether the forms are discovered in the syntax, as linguists' LF suggests, or imposed by the logician's paraphrase, as Quinean regimentation has it — is where consequence borders the philosophy of language.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Model-Theoretic Account</span><span class="gloss"> — Tarski's analysis of consequence via truth in all models, the interpretational/representational distinction, Etchemendy's critique and its answers.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Proof-Theoretic Consequence</span><span class="gloss"> — Validity as derivability: Gentzen's legacy, proof-theoretic semantics, harmony, and the tonk problem.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Logical Form</span><span class="gloss"> — What regimentation reveals or imposes: form in the logician's sense versus LF in the linguist's, and how arguments in natural language get their formal skeletons.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Consequence Relations</span><span class="gloss"> — Consequence studied abstractly: Tarskian consequence operations, structural rules (reflexivity, transitivity, monotonicity), and multiple-conclusion frameworks.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Language</strong>: logical form is joint property — whether validity attaches to natural-language arguments directly or only to their regimentations is as much semantics as logic, and truth-in-a-model borders theories of truth and meaning.</li>
+<li><strong>Metaphysics</strong>: the necessity strand of consequence — what kind of modality "cannot be false" invokes, and whether models are surrogates for possible worlds — runs straight into the metaphysics of modality.</li>
+<li><strong>Epistemology</strong>: the apriority strand — how derivations confer knowledge of validity, and whether logical knowledge is a priori at all — ties the proof-theoretic account to the theory of justification.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/aristotle/">aristotle</a>, <a class="node" href="../../figures/frege/">frege</a>, <a class="node" href="../../figures/godel/">godel</a>, <a class="node" href="../../logic/paradox/curry/">logic.paradox.curry</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

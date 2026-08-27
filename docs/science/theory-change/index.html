@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Theory Change and Scientific Revolutions — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../science/">Philosophy of Science</a></div><h1>Theory Change and Scientific Revolutions</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.9</div><article><p>Science's authority rests on a picture of steady accumulation: each theory keeps its predecessor's truths and adds more. The history of science embarrasses the picture. Newtonian mechanics did not refine Aristotelian physics; it replaced its ontology, its questions, and its standards of what counted as an answer. If theory succession is rupture rather than growth, what makes the winning side's victory <em>rational</em> — and if nothing does, why trust the current winners?</p>
+<p>The modern debate begins with Kuhn's <em>Structure of Scientific Revolutions</em> (1962). A mature science works within a <strong>paradigm</strong> — in Kuhn's later, careful usage, both a disciplinary matrix of shared commitments and a set of exemplars, concrete problem-solutions that train practitioners' judgment. <strong>Normal science</strong> is puzzle-solving under those commitments, and its dogmatism is functional: only relentless articulation of a framework exposes the anomalies that eventually break it. Crisis and revolution follow, and the successor paradigm is <strong>incommensurable</strong> with the old — a claim with three distinguishable strands. <em>Semantic</em>: key terms ("mass," "planet") shift meaning across the divide, so the theories do not straightforwardly contradict each other. <em>Methodological</em>: paradigms carry their own standards of problem-importance and solution-adequacy, so there is no neutral scorecard. <em>Perceptual</em>: trained scientists in some sense see different worlds. What Kuhn did <em>not</em> claim is that theory choice is irrational. His considered view was that shared values — accuracy, consistency, scope, simplicity, fruitfulness — genuinely constrain choice but underdetermine it, functioning as values weighed in trained judgment rather than as an algorithm. He spent much of his later career protesting the "mob psychology" reading; incommensurability, he insisted, meant no common measure, not no comparison.</p>
+<p>The rationalist repair came from Lakatos: the unit of appraisal is not the theory but the <strong>research programme</strong> — a hard core of commitments protected by an adjustable belt of auxiliary hypotheses. A programme is progressive while it predicts novel facts and degenerating while it only accommodates; rationality lies in tracking the difference over time. The strength of the account is that it explains why clinging to a battered theory can be rational without licensing clinging forever — though Lakatos conceded that only hindsight says when persistence became unreasonable. Laudan's alternative measures progress by <strong>problem-solving effectiveness</strong>, letting a research tradition progress without its theories approaching truth — a rationalism decoupled from realism. Feyerabend pressed the provocation to its limit: every proposed methodological rule has been fruitfully violated at some pivotal episode (Galileo is his showcase), so the only universal principle is "anything goes" — best read as a <em>reductio</em> of rule-based rationalism, not a celebration of caprice.</p>
+<p>Reception history turned the debate sociological. The Strong Programme in the sociology of scientific knowledge took Kuhn further than he wished: explain true and false belief symmetrically, by social causes. The ensuing "science wars" of the 1990s generated more heat than argument, but left a real question — how much of theory choice is community dynamics — that social epistemology now treats soberly. Meanwhile the <strong>continuity thesis</strong> doubts the explanandum: mathematical structure and empirical content carry over across even the deepest ruptures (Fresnel's equations survived the ether), suggesting that "revolution" may be partly a historiographical artifact — an argument that feeds directly into structural realism.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Incommensurability</span><span class="gloss"> — the semantic, methodological, and perceptual versions, and whether any of them actually blocks rational theory comparison.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Rationality of Theory Choice</span><span class="gloss"> — shared values versus algorithms, underdetermination of choice, and judgment as a form of rationality.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Scientific Progress</span><span class="gloss"> — competing measures of what accumulates: truthlikeness, knowledge, problem-solving power, understanding.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Sociology of Scientific Knowledge</span><span class="gloss"> — the Strong Programme, the symmetry principle, and the science wars as reception history.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Continuity Thesis</span><span class="gloss"> — whether revolutions are real ruptures or artifacts of historiography, and what survives them.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <a class="node" href="../../science/realism/" title="Scientific Realism and Antirealism">science.realism</a>: the pessimistic induction is theory change weaponized; the continuity thesis is structural realism's historical evidence.</li>
+<li>To <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a>: theory choice under underdetermined values is an epistemology-of-disagreement problem, and SSK's challenge is now handled by social epistemology.</li>
+<li>To the registers: Kuhn, Lakatos, Popper, and Feyerabend among <a class="node" href="../../figures/" title="Figures">figures</a>; the Vienna Circle in <a class="node" href="../../traditions/" title="Traditions">traditions</a> as the received view the historicists overthrew.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../science/realism/">science.realism</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

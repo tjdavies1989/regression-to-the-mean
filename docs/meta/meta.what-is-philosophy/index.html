@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What Is Philosophy? — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../meta/">Metaphilosophy</a></div><h1>What Is Philosophy?</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.14</div><article><p>A chemist who cannot define chemistry has a public-relations problem; a philosopher who cannot say what philosophy is has a philosophical problem, and every available answer is itself a contested philosophical position. The question is not idle self-regard: each self-conception licenses some methods and delegitimizes others, so what hangs on the answer is nothing less than what counts as doing the work well.</p>
+<p>The rival conceptions divide roughly as follows. <strong>Quinean naturalism</strong> holds that philosophy is continuous with science — there is no first philosophy, no tribunal outside the web of belief; philosophy is the abstract, reflective end of the same inquiry. Its strength is economy: it needs no special faculty of a priori insight and explains why philosophy of physics or biology is done best by those who know the science. <strong>Conceptual analysis</strong>, given its most explicit modern defense by Frank Jackson, replies that even the naturalist needs an account of what her terms mean before empirical findings can bear on philosophical claims; analysis of our folk concepts is the unavoidable first step of "serious metaphysics," and it vindicates the armchair. <strong>Phenomenological description</strong> locates philosophy's subject matter in the structures of lived experience — a domain every science presupposes (someone observes, measures, judges) but none can describe from within its third-person stance. <strong>Wittgensteinian therapy</strong> denies that philosophy has a subject matter at all: its problems are bewitchments of language, and its proper product is not theory but dissolution; its strength is the track record of "deep problems" that evaporated under grammatical scrutiny. <strong>Sellars's synoptic conception</strong> — philosophy studies "how things in the broadest possible sense of the term hang together in the broadest possible sense of the term" — explains what remains for philosophy after the sciences have divided the world: the reconciliation of the manifest image of persons and reasons with the scientific image of particles and causes. Newest is <strong>conceptual engineering</strong> (Cappelen; Haslanger's ameliorative projects), which converts a threat into a program: if experimental philosophy shows our intuitions parochial and our concepts defective, the task is not to describe the concepts we have but to build the ones we need — as Haslanger asks not what <em>race</em> and <em>gender</em> mean but what they should mean.</p>
+<p>Two boundary disputes are themselves division-defining. First, philosophy's relation to <strong>its own history</strong>: whether reading Aristotle is philosophy or scholarship. One side treats past texts as quarries of arguments to be assessed in current terms; the other (Bernard Williams's "history of philosophy" against mere "history of ideas") holds that philosophy without history mistakes its own parochial present for the space of possibilities. Where a department stands on this predicts much of the analytic–continental divide. Second, <strong>demarcation</strong>: fields repeatedly mature out of philosophy — physics, psychology, formal logic, linguistics — which suggests either that philosophy is the incubator of sciences (its progress measured in successful secessions) or that it is what remains when the empirically tractable has left, a permanent residue of questions that outrun method. On the other border lie religion and wisdom literature: Hadot's argument that ancient philosophy was a way of life, not a doctrine, presses the question of whether the modern academic conception is the discovery of philosophy's essence or a contingent narrowing.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Metaphilosophical Naturalism</span><span class="gloss"> — the Quinean case that philosophy is continuous with science, and its critics.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Conceptual Analysis</span><span class="gloss"> — the method's classical form, Jackson's defense, and the paradox of analysis.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Conceptual Engineering</span><span class="gloss"> — assessing and revising concepts rather than describing them; ameliorative projects and the implementation problem.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Philosophy and Its History</span><span class="gloss"> — whether the history of philosophy is philosophy, and what each answer costs.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Philosophy&#x27;s Borders</span><span class="gloss"> — demarcation from science, religion, and wisdom literature; the spin-off phenomenon.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<p>The naturalism dispute bridges to <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a> (the a priori, intuitions as evidence) and to <a class="node" href="../../science/" title="Philosophy of Science">science</a> (what makes a question empirically tractable). Conceptual analysis and engineering bridge to <a class="node" href="../../language/" title="Philosophy of Language">language</a> (meaning, reference, semantic externalism, metalinguistic negotiation). The history question bridges to the <a class="node" href="../../traditions/" title="Traditions">traditions</a> register, whose entries are its evidence; the phenomenological self-conception bridges there too.</p></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../traditions/analytic/">analytic</a>, <a class="node" href="../../meta/meta.progress/">meta.progress</a>, <a class="node" href="../../figures/wittgenstein/">wittgenstein</a>, <a class="node" href="../../figures/zhuangzi/">zhuangzi</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Essence and Essentialism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../metaphysics/">Metaphysics</a> › <a href="../../../metaphysics/modality/">Modality</a></div><h1>Essence and Essentialism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-08-26.7</div><article><p>For a generation, essentialism was not a position but a diagnosis. Quine's mathematical cyclist made the case: mathematicians are necessarily rational and accidentally two-legged; cyclists necessarily two-legged and accidentally rational. What, then, of a cycling mathematician? If necessity attaches to objects only under a description, the question has no answer — and quantified modal logic, which asks it of objects <em>simpliciter</em>, presupposes an "invidious Aristotelian essentialism" that Quine offered as its reductio. The mid-century consensus took the lesson: de re modality was confusion, necessity at best a feature of how we talk.</p>
+<p>Kripke reversed the verdict by dissolving its premise. Names are rigid designators; once "Socrates" tracks one man across every possibility, asking what <em>he</em> could have been requires no privileged description. And with de re modality legitimate, Kripke argued for substantive essential truths. Origin: this table could not have come from a wholly different block of wood — a table so made would at best be a duplicate, since nothing would tie <em>it</em> to <em>this</em> one; a person could not have come from different gametes. Kind: the table could not have been ice, for an ice table would be a distinct object merely resembling it; if Socrates is human, he is necessarily so. Composition: a thing's original material constitution constrains what it could have been. Each is knowable only a posteriori — essence and the armchair came apart even as essence returned. The arguments have their own literature: Salmon showed the origin argument needs a sufficiency premise stronger than Kripke's text supplies, and Robertson's tolerance and recycling puzzles make the modest premises yield too little necessity or too much.</p>
+<p>Kripke's rehabilitation still defined essence modally: an essential property is one a thing has necessarily if it exists. Fine's 1994 counterexamples inverted the order. Socrates necessarily belongs to {Socrates}, is necessarily distinct from the Eiffel Tower, necessarily exists while 2+2=4 — yet none of this is part of what Socrates <em>is</em>. The modal account overgenerates, Fine argued, because essence is definitional, not modal: the real definition of a thing, what its being consists in, with a constitutive core and merely consequential penumbra. Necessity then flows from essence — metaphysical necessity as truth in virtue of the nature of all things — rather than defining it. The essence-first program built on this: Lowe's "serious essentialism," on which essences are not further entities but the very identity of things; Hale's essentialist grounding of necessary beings; Correia's refinements of the logic and varieties of essence. Ontological dependence is recast in the same idiom — x depends on y when y figures in x's essence — cutting finer than modal-existential accounts, on which Socrates and {Socrates} depend symmetrically.</p>
+<p>Against all this stand the deflations. Sidelle's conventionalism keeps Kripke's data while draining their metaphysics: the necessary a posteriori factors into an analytic frame ("whatever water's actual composition, it has it necessarily") plus empirical filling; essences are shadows of our conventions of individuation, not joints of the world. Thomasson's modal normativism goes further: metaphysical modal claims are not descriptions at all but object-language expressions of semantic rules — mandates in the material mode — which makes modal knowledge cheap (conceptual competence plus empirical fact) and modal metaphysics largely verbal. The live question is thus stark: is essence discovered or legislated? Deflationists must explain why essence seems to <em>explain</em> — why definitions look like findings; essentialists must explain how a faculty tuned to the actual detects natures at all, a bill presented at <span class="node unwritten" title="promised entry">modal-epistemology</span>.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Necessity of Origin</span><span class="gloss"> — Kripke's footnote 56 and its industry: Salmon's reconstruction, Forbes's defenses, Robertson's tolerance and recycling objections, four-worlds arguments.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Ontological Dependence</span><span class="gloss"> — rigid and generic dependence, modal-existential versus essentialist definitions, and substance as independence (Fine, Lowe, Correia, Tahko).</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Conventionalism and Modal Normativism</span><span class="gloss"> — the deflationary lineage from empiricist conventionalism through Sidelle to Thomasson, and the contingency objections to it.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Logic (<a class="node" href="../../../logic/modal/" title="Modal and Intensional Logic">logic.modal</a>)</strong>: Quine's indictment and its formal setting — quantifying in, rigid designation, the Barcan choices — are homed in quantified modal logic; this article carries the metaphysical verdict.</li>
+<li><strong>Language (<a class="node" href="../../../language/reference/" title="Reference">language.reference</a>)</strong>: rigid designation and natural-kind terms are the semantic engine of Kripkean essentialism; whether semantics can carry that metaphysical weight is contested from both sides.</li>
+<li><strong>Grounding (<a class="node" href="../../../metaphysics/grounding/" title="Grounding and Fundamentality">metaphysics.grounding</a>)</strong>: Fine's definitional essence helped ignite the grounding literature; whether ground reduces to essence, or either to the other, is an open front.</li>
+<li><strong>Material objects (<a class="node" href="../../../metaphysics/material-objects/" title="Material Objects and Composition">metaphysics.material-objects</a>)</strong>: coincident objects — statue and clay, differing in essence while sharing matter — are essentialism's favorite test case and deflationism's favorite target.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../figures/descartes/">descartes</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

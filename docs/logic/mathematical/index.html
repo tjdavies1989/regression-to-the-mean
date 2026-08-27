@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mathematical Logic — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../logic/">Logic</a></div><h1>Mathematical Logic</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-21.1</div><article><p>At the start of the twentieth century, logic stopped being only philosophy's instrument and became mathematics' subject matter: proofs, theories, and computations were themselves formalized and studied with mathematical rigor. The result is a four-limbed technical discipline — proof theory, model theory, set theory, computability theory — whose theorems keep turning out to be philosophically explosive. Strata treats the cluster here for its philosophical yield; the mathematics itself belongs to the textbooks.</p>
+<p><strong>Proof theory</strong> studies formal proofs as combinatorial objects. Its founding ambition was Hilbert's: prove, by elementary means, that mathematics can never derive a contradiction. Gödel's second incompleteness theorem broke the program in its original form — no consistent theory of the relevant strength can prove its own consistency — but Gentzen's 1936 consistency proof for arithmetic, using induction up to the ordinal ε₀, showed what survives: consistency can be established from principles <em>different</em> from, rather than weaker than, those of the theory itself. Ordinal analysis descends from this, calibrating the strength of theories on a single ordinal scale, and Gentzen's other legacy — natural deduction and the sequent calculus, with their cut-elimination theorem — supplies the inferentialist's best tools for saying what a logical constant is.</p>
+<p><strong>Model theory</strong> studies the relation between theories and the structures that satisfy them, and its philosophical dividend is a series of humbling discoveries about what axioms can and cannot pin down. The Löwenheim–Skolem theorems show that no first-order theory with an infinite model determines the size of its subject matter; compactness yields nonstandard models of arithmetic containing "infinite numbers" the axioms cannot exclude — a result Skolem read as relativism about mathematical notions and Putnam later sharpened into an argument against realist theories of reference. Categoricity results mark the other pole: second-order arithmetic pins down its structure uniquely, at the price of a logic whose own consequence relation is no longer effectively surveyable. Robinson's nonstandard analysis turned the pathology into a tool, rehabilitating infinitesimals.</p>
+<p><strong>Set theory</strong> provides mathematics' working foundation. ZFC is the de facto constitution, strong enough to encode virtually all classical mathematics — and provably unable to settle natural questions about it. Gödel and Cohen showed the continuum hypothesis independent of ZFC; the method of forcing has since generated a vast landscape of alternative set-theoretic universes. The technical response is the large cardinal hierarchy, a remarkably linear scale of strong axioms of infinity that measures the strength of independent statements and settles some of them. Whether independence shows such questions to lack determinate answers, and whether anything could justify new axioms, are questions housed under philosophy of mathematics; the machinery lives here.</p>
+<p><strong>Computability theory</strong> made "mechanically solvable" precise. Turing machines, recursive functions, and the lambda calculus, proposed independently, define exactly the same class of functions — the convergence that grounds the Church–Turing thesis, the claim (empirical? conceptual? mathematically provable?) that this class captures effective calculability as such. From it flow the undecidability results: no algorithm decides the halting problem, or first-order validity (Church), or the truths of arithmetic. Gödel's incompleteness theorems — every consistent, effectively axiomatized theory containing enough arithmetic leaves truths of its own language unprovable, its own consistency among them — sit at the junction of all four limbs. Their technical content belongs to this node; the philosophical wars over what they show — about Hilbert's program, mechanism, and the mind — are fought under philosophy of mathematics and philosophy of mind.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Proof Theory</span><span class="gloss"> — Proofs as mathematical objects: Hilbert's program, Gentzen's consistency proof, ordinal analysis, and structural proof theory.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Model Theory</span><span class="gloss"> — Theories and their structures: Löwenheim–Skolem, compactness, categoricity, definability, and nonstandard models.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Set Theory</span><span class="gloss"> — ZFC and its universe: the independence phenomenon, forcing, and the large cardinal hierarchy, on the technical side.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Computability</span><span class="gloss"> — Turing machines, the Church–Turing thesis, undecidability, and the degrees of unsolvability.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>Philosophy of mathematics</strong> (<a class="node" href="../../logic/mathematics/" title="Philosophy of Mathematics">logic.mathematics</a>): the heaviest bridge — incompleteness, independence, and the fate of foundational programs supply that node's central evidence; the theorems live here, their import there.</li>
+<li><strong>Mind</strong>: the Church–Turing thesis underwrites computational theories of mind, and Lucas–Penrose arguments claim incompleteness refutes mechanism.</li>
+<li><strong>Language</strong>: Löwenheim–Skolem and Putnam's model-theoretic argument press on realist theories of reference and the determinacy of meaning.</li>
+<li><strong>Classical logic</strong> (sibling): the celebrated metatheorems — completeness, compactness, undecidability — are stated there and proved with this node's tools.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../figures/godel/">godel</a>, <a class="node" href="../../logic/mathematics/formalism/">logic.mathematics.formalism</a>, <a class="node" href="../../logic/mathematics/foundations/">logic.mathematics.foundations</a>, <a class="node" href="../../logic/mathematics/intuitionism/">logic.mathematics.intuitionism</a>, <a class="node" href="../../logic/mathematics/logicism/">logic.mathematics.logicism</a>, <a class="node" href="../../logic/paradox/">logic.paradox</a>, <a class="node" href="../../logic/paradox/formal-truth/">logic.paradox.formal-truth</a></p><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

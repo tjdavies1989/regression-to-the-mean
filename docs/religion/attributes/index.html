@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Divine Attributes — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../religion/">Philosophy of Religion</a></div><h1>Divine Attributes</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-08-26.13</div><article><p>Before asking whether God exists, one needs to know what "God" is supposed to mean — and the classical answer is a stack of superlatives: all-powerful, all-knowing, perfectly good, eternal, without parts, beyond change. The divine attributes are the project of saying precisely what each superlative amounts to, and the repeated discovery that precision breeds paradox. The stakes are not decorative. If the attributes cannot be stated coherently, atheism wins before any evidence is heard; if they can be stated only by weakening them, the being that survives may not be worth the name.</p>
+<p>The engine of the whole enterprise is <strong>perfect-being methodology</strong>, Anselm's formula made into a research program (Morris): God is that than which nothing greater can be conceived, so God has the maximal consistent set of great-making properties. The method both generates the attributes and tests them — when an analysis collapses, revise the attribute rather than surrender the being. Its strength is discipline: theology becomes conceptual engineering with a criterion. Its weakness is that intuitions about "greatness" are trained on human excellences and may be parochial; the method risks building an idol of theory.</p>
+<p><strong>Omnipotence</strong> meets its stone: can God create a stone too heavy for God to lift? Either answer names something God cannot do. The quick repair — omnipotence ranges only over the possible, and "a stone its omnipotent maker cannot lift" describes nothing — handles the stone but not the harder cases: a necessarily perfect God cannot lie, sin, or despair, while any human can. The Flint–Freddoso analysis answers with maximal power over states of affairs, relativized to a world's history and consistent with the agent's own nature, so that necessary goodness restricts what God can do without diminishing power. Geach's dissent stands at the edge of the field: no analysis works, and faith needs only "almighty," not "omnipotent."</p>
+<p><strong>Omniscience</strong> collides with creaturely freedom. If God already believed yesterday what I will do tomorrow, and the past is fixed, my act seems fixed too. The responses map the field: the <strong>Boethian</strong> view takes God outside time — timeless knowledge is not <em>fore</em>knowledge and threatens nothing; <strong>Ockhamism</strong> counts God's past beliefs as soft facts over which we hold counterfactual power; <strong>Molinism</strong> gives God middle knowledge of what any free creature <em>would</em> do in any circumstance, buying meticulous providence without determinism at the price of the grounding objection — what makes such counterfactuals true?; <strong>open theism</strong> denies that future free acts are there to be known, keeping omniscience as knowledge of all that can be known and accepting a God who takes risks.</p>
+<p><strong>Eternity</strong> divides the timeless from the everlasting. The classical view (Boethius, Aquinas) makes God atemporal, defended by Stump and Kretzmann's ET-simultaneity, on which one eternal present can be co-present with every moment of time. The everlastingness view (Wolterstorff, Swinburne) objects that a timeless being could not respond, remember, or intervene — could not be the living God of any scripture. <strong>Simplicity</strong> is the austerest classical thesis: God has no parts, no distinction between essence and existence, attributes identical with God and one another (Augustine, Ibn Sīnā, Aquinas). Plantinga's critique — a simple God would be a property, and a property cannot create — set the analytic agenda; truthmaker-style defenses answer that simplicity misread as identity-of-abstracta was never the doctrine. <strong>Impassibility</strong>, the corollary that God cannot suffer or be acted upon, held for two millennia and cracked in the twentieth century, when passibilists argued that a God who cannot suffer cannot love a suffering world.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Omnipotence</span><span class="gloss"> — the stone paradox, the Flint–Freddoso analysis, and Geach's "almighty" retreat.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Foreknowledge and Freedom</span><span class="gloss"> — the fatalist argument and its response space: Boethius, Ockham, Molina, open theism.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Eternity</span><span class="gloss"> — timelessness versus everlastingness, and ET-simultaneity.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Divine Simplicity</span><span class="gloss"> — the classical identity theses and their analytic critics.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Impassibility and Divine Emotion</span><span class="gloss"> — whether a perfect being can suffer, and the passibilist turn.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Perfect-Being Theology</span><span class="gloss"> — Anselmian method as generator and test of the attributes, and its critics.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>metaphysics.free-will</strong>: the foreknowledge problem is theological fatalism, and Molinism's counterfactuals of freedom are disputed property there first.</li>
+<li><strong>Metaphysics</strong>: eternity presupposes a philosophy of time; simplicity is a thesis about properties and existence; omnipotence quantifies over possibility itself.</li>
+<li><strong>religion.existence-of-god</strong>: perfect-being method powers the ontological argument, and attribute coherence prices theism's probability in any cumulative case.</li>
+<li><strong>religion.evil</strong>: the argument from evil takes its premises from these analyses, and impassibility fixes what divine response to suffering could mean.</li>
+</ul></article><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>
