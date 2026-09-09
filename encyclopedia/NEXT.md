@@ -22,6 +22,9 @@ OLD QUEUE (superseded, kept for the record):
 5. First `article`-state promotions: candidates `metaphysics.modality.worlds`, `logic.paradox.curry`, `epistemology.knowledge` — the ladder's next rung has never been climbed.
 6. Deployment: DONE in substance — `tools/build_site.py` generates `docs/` (multi-page, relative links, Pages-ready) and the single-file reader; the reader is live at the artifact address. Remaining: the user picks the public home (GitHub Pages: Settings → Pages → deploy from branch → this branch, `/docs` folder — or merge to main first). Future refinement: audit as CI gate; per-entry citation/reading lists; search (Pagefind).
 
+**Constitutional amendments:**
+- Amendment 1 (2026-09-09, pass .21): the child≤parent invariant applies through survey; `article` and `deep` are earned per node and require only a parent at survey that acknowledges the promotion. Occasioned by the first article promotion (`metaphysics.modality`), which the old rule would have blocked until the division root itself became an article — inverting where depth belongs. Auditor updated in the same commit.
+
 **Standing observations:**
 - Title drift between parent stub lines and child files: add a warning to `tools/encyc.py`.
 - The `figures` roster correction is moving but far from done: no Africana, Latin American, or women philosophers written yet — `beauvoir`, `anscombe`, `arendt` are stubbed and queued; add `confucius` and `shankara` for the traditions now open.
