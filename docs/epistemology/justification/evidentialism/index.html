@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Evidentialism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../epistemology/">Epistemology</a> › <a href="../../../epistemology/justification/">Justification</a></div><h1>Evidentialism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-09-09.22</div><article><p>Conee and Feldman's thesis (1985) is a supervenience claim with a name: a doxastic attitude toward <em>p</em> — belief, disbelief, or suspension — is epistemically justified for a subject at a time if and only if having that attitude fits the evidence she has at that time. Nothing else bears on it: not the reliability of the producing process, not the stakes, not what she could have found out. The view's best argument is that it is already the standard we apply. The reproach "you had no reason to think that" is an evidential reproach; the demon victim is justified because her evidence is exactly yours; Norman the clairvoyant is not, because his conviction answers to nothing he has. Evidentialism is the theory that takes these verdicts at face value and stops.</p>
+<p>Everything then turns on <strong>what evidence is</strong>, and here the position splits. Conee and Feldman are psychologists about evidence: it consists of mental states — experiences, apparent memories, beliefs, and seemings — which is why justification supervenes on the mental and evidentialism is mentalism's flagship. Against this, Williamson argues that evidence must be propositional, since evidence is what hypotheses explain, what one conditionalizes on, and what can be inconsistent with a theory, and experiences do none of these. His <strong>E = K</strong>: one's evidence is all and only what one knows. Evidence becomes factive and external — the demon victim has less than you, not the same — and evidentialism, if it survives, becomes an externalism. The middle ground is held by phenomenal conservatism (Huemer): seemings are mental states, and the principle that a seeming that <em>p</em> confers prima facie justification for <em>p</em> supplies the evidentialist's basic evidence. Kelly's distinction between evidence as reliable indicator and evidence as a subject's reason marks where the parties are answering different questions.</p>
+<p>The thesis has two further debts. <strong>Fit</strong> is left primitive in the original statement; the natural gloss is probabilistic — the evidence raises or supports the probability of <em>p</em> — but that requires an evidential probability function that is neither the subject's credences nor objective chance, which is what Williamson's evidential probability was built to be. And fit yields only <em>propositional</em> justification: what the evidence licenses, whether or not the subject believes it for that reason. A belief is <strong>well-founded</strong> when it is propositionally justified and based on the justifying evidence, with no possessed evidence that defeats it. Well-foundedness imports the basing relation and its unsettled analyses.</p>
+<p><strong>Forgotten evidence</strong> is Goldman's sharpest case (1999). Sally read in a reliable source that broccoli is healthy, retains the belief, and has forgotten the source. She is justified, but has no evidence beyond the belief itself. Conee and Feldman answer that her current evidence includes the belief's felt familiarity, her sense of its confidence, and a standing belief in her own memory's reliability. Goldman's rejoinder is that the same states would be present had she read it in a tabloid, so the internalist verdict cannot distinguish the two, while the belief's etiology plainly does. The general form of the difficulty is the problem of stored beliefs: if evidence is occurrent, almost nothing one believes is justified at a given moment; if it is dispositional, the account must say which of the things one could call to mind count as had.</p>
+<p>Goldman's structural objection is that evidentialism is not yet a theory. It says justification is fit with evidence but not which mental states are evidence or what makes an experience support a proposition, and any non-stipulative answer will invoke reliability — experiences are evidence for what they reliably indicate. Comesaña's evidentialist reliabilism and Goldman's own two-component proposals make the hybrid explicit: fit is analyzed as reliable indication. Conee and Feldman reply that the generality problem shows reliability cannot be the analysis, and that fit — a relation whose whole point is truth — is the only truth connection anyone has.</p>
+<p><strong>Pragmatic encroachment</strong> attacks the "full stop." Fantl and McGrath and Stanley argue that a subject justified in believing <em>p</em> may act on <em>p</em>; that when the stakes are high enough she may not; so the same evidence justifies belief in a low-stakes case and not in a matched high-stakes case, and justification is not purely evidential. Evidentialists reply that what stakes shift is the standard for acting on a belief, not for holding it, or that the phenomena are better modeled by credence than by belief. The exchange has left evidentialism, once the default, with opponents on both flanks.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Nature of Evidence</span><span class="gloss"> — mental states, propositions, or known facts; E = K, phenomenal conservatism, and Kelly's indicator–reason distinction.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Basing Relation</span><span class="gloss"> — propositional against doxastic justification and the causal, doxastic, and counterfactual analyses of believing for a reason.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>epistemology.justification.internalism-externalism</strong> and <strong>reliabilism</strong>: evidentialism is mentalism's flagship; the generality problem is its chief weapon against the reliabilist analysis of fit.</li>
+<li><strong>epistemology.knowledge</strong>: E = K makes the theory knowledge-first; pragmatic encroachment is homed under contextualism there.</li>
+<li><strong>epistemology.formal</strong> and <strong>science.confirmation</strong>: evidential fit is the qualitative face of Carnap's total-evidence requirement and Bayesian probability-raising; old evidence is a shared wound.</li>
+<li><strong>religion.faith-reason</strong>: Clifford's evidentialism is the ethics-of-belief cousin, a deontic thesis rather than a theory of justification.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../epistemology/justification/internalism-externalism/">epistemology.justification.internalism-externalism</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

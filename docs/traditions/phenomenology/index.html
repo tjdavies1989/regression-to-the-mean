@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phenomenology — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../traditions/">Traditions</a></div><h1>Phenomenology</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-09-09.15</div><article><p>Phenomenology began as a method rather than a doctrine, and its history is largely the story of what happened when its inheritors decided the method entailed doctrines its founder had refused. Edmund Husserl took from his teacher Franz Brentano the thesis that consciousness is <strong>intentional</strong> — every act of awareness is awareness <em>of</em> something — and turned it from a psychological classification into a field of research: not the mind as a natural object, but the structures by which anything at all comes to be given to a mind. The slogan "back to the things themselves" (<em>zu den Sachen selbst</em>) was a refusal to explain experience by prior theory, whether the psychologist's associations or the metaphysician's substances, before experience had been described.</p>
+<p>The instrument of description is the <strong>epoché</strong>: the suspension — not the denial — of the "natural attitude" in which we simply take the world to exist. What remains after the bracketing is not a residue of private impressions but the whole world <em>as meant</em>, now examined for the acts and syntheses that constitute its sense. Husserl called the move a <strong>reduction</strong> (phenomenological, transcendental, eidetic), and the reductions are the site of his most contested claims: that the field so disclosed is <em>transcendental</em> consciousness, and that within it one can, by freely varying imagined examples, read off the essential structures (<em>eidos</em>) of perception, memory, time-consciousness, or embodiment. His earliest followers, the Munich and Göttingen circles, accepted eidetic description and rejected the transcendental turn of <em>Ideas I</em> (1913) as a relapse into idealism; that disagreement has never closed. Late in life Husserl added the <strong>life-world</strong> (<em>Lebenswelt</em>): the pre-scientific world of lived meaning that the mathematized sciences presuppose and forget — a theme that outlived most of the machinery attached to it.</p>
+<p>Martin Heidegger's <em>Being and Time</em> (1927) is dedicated to Husserl and reverses him. Phenomenology's proper theme is not consciousness but <strong>being</strong>, and the entity to interrogate is not a transcendental ego but <strong>Dasein</strong> — the being for whom its own being is at issue, always already "in the world," absorbed in practical dealings before it ever contemplates objects. The epoché drops out: there is no standpoint outside involvement from which pure givenness could be surveyed, and description becomes interpretation of what is mostly hidden — the <strong>hermeneutic turn</strong>, later carried into Gadamer's philosophy of understanding. Husserl read the book with mounting marginal dismay ("but that is anthropology"), and Heidegger's 1933 rectorship and Party membership broke the relation personally as well as philosophically. Whether <em>fundamental ontology</em> completes phenomenology or abandons it is a question the tradition's descendants still answer by choosing sides.</p>
+<p>France received both. Jean-Paul Sartre's <em>Being and Nothingness</em> (1943) fused Husserlian intentionality with Heideggerian existence into a phenomenology of freedom, bad faith, and the Look of the other. Maurice Merleau-Ponty's <em>Phenomenology of Perception</em> (1945) argued that the perceiving subject is neither a transcendental ego nor a physiological mechanism but a <strong>lived body</strong> — that perception is a motor grip on the world, prior to judgment and irreducible to it. Emmanuel Levinas turned the analysis of the other person against both masters: the face of the other is not a phenomenon among phenomena but a summons that precedes ontology, hence <strong>ethics as first philosophy</strong>. Paul Ricoeur grafted phenomenology onto hermeneutics — the interpretation of symbols, texts, and narratives — on the ground that there is no self-knowledge without the detour through what selves have made. The "theological turn" of the 1980s (Marion, Henry, Chrétien), in which givenness, life, or the call becomes phenomenology's ultimate theme, drew Dominique Janicaud's charge that the method had been quietly repurposed for an object it cannot bracket.</p>
+<p>A separate reception ran in English. Hubert Dreyfus read Heidegger and Merleau-Ponty as showing that skilled coping is not rule-following, and turned the argument against classical artificial intelligence. The tradition's detailed descriptions of time, embodiment, self-awareness, and intersubjectivity have since been drawn into cognitive science — Varela's "neurophenomenology," Gallagher and Zahavi's <em>The Phenomenological Mind</em>, the enactive and embodied programs — as a source of constraints on empirical theory rather than a rival to it. Whether that use honors the transcendental commitments or merely mines the descriptions is a live question in both camps.</p>
+<p>"Continental philosophy" is a poor name for any of this. It was coined from outside, by analytic philosophers naming what they were not; it lumps phenomenology with structuralism and critical theory, which reject its premises; and it geographizes a method born from Brentano's Aristotelianism, sharing with Frege the founding campaign against psychologism, and now practiced as intensively in Copenhagen and Memphis as in Freiburg. Phenomenology is better classified by what it does: describe the structures of givenness before explaining them.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Transcendental Phenomenology</span><span class="gloss"> — Husserl's mature program: the reductions, constitution, genetic analysis, and the idealism charge.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Realist Phenomenology</span><span class="gloss"> — the Munich and Göttingen circles (Reinach, Scheler, Stein, Ingarden): eidetic description without the transcendental turn.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Fundamental Ontology</span><span class="gloss"> — Heidegger's transformation: Dasein, being-in-the-world, temporality, and the later turn away from the project.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Hermeneutic Phenomenology</span><span class="gloss"> — Gadamer and Ricoeur: understanding, tradition, and interpretation as the mode of finite existence.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Existential Phenomenology</span><span class="gloss"> — Sartre, Beauvoir, and the French synthesis of Husserl and Heidegger; pointer to <span class="node unwritten" title="promised entry">existentialism</span> for the wider movement.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Embodiment</span><span class="gloss"> — the lived body from Husserl's <em>Ideas II</em> through Merleau-Ponty to the enactivists.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Intersubjectivity</span><span class="gloss"> — empathy, the constitution of the other, and the social world: Stein, Schutz, Levinas.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Time-Consciousness</span><span class="gloss"> — retention, protention, and the living present; the tradition's most technical and most exported analysis.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Theological Turn</span><span class="gloss"> — Marion, Henry, Chrétien and the Janicaud debate over what phenomenology may take as given.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Phenomenology and Cognitive Science</span><span class="gloss"> — Dreyfus, neurophenomenology, Gallagher and Zahavi: whether description can be naturalized.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Critical Phenomenology</span><span class="gloss"> — Fanon, Young, Ahmed, Guenther: lived experience as shaped by race, gender, and power.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<p>Into the problem tree the densest bridges run to <a class="node" href="../../mind/" title="Philosophy of Mind">mind</a>: <a class="node" href="../../mind/intentionality/" title="Intentionality and Mental Content">mind.intentionality</a> (the Brentano thesis is the tradition's founding premise), <a class="node" href="../../mind/perception/" title="Perception">mind.perception</a> and <a class="node" href="../../mind/cognitive-science/" title="Foundations of Cognitive Science">mind.cognitive-science</a> (embodiment, enaction, and the naturalization debate), and <a class="node" href="../../mind/consciousness/" title="Consciousness and the Hard Problem">mind.consciousness</a> and <a class="node" href="../../mind/self/" title="The Self and Self-Knowledge">mind.self</a> (pre-reflective self-awareness, time-consciousness). Levinas bridges <a class="node" href="../../ethics/" title="Ethics">ethics</a>; the theological turn bridges <a class="node" href="../../religion/" title="Philosophy of Religion">religion</a>; the life-world bridges <a class="node" href="../../science/" title="Philosophy of Science">science</a> on the relation of the sciences to lived experience. Within <span class="node unwritten" title="promised entry">figures/</span>, <span class="node unwritten" title="promised entry">husserl</span>, <span class="node unwritten" title="promised entry">heidegger</span>, <span class="node unwritten" title="promised entry">merleau-ponty</span>, and <span class="node unwritten" title="promised entry">sartre</span> are the load-bearing stubs; within this register the neighbors are <span class="node unwritten" title="promised entry">existentialism</span>, <span class="node unwritten" title="promised entry">critical-theory</span>, and <a class="node" href="../../traditions/analytic/" title="The Analytic Tradition">analytic</a>, whose mutual estrangement is the subject of <a class="node" href="../../meta/meta.what-is-philosophy/" title="What Is Philosophy?">meta.what-is-philosophy</a>.</p></article><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

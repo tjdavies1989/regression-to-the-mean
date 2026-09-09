@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Internalism and Externalism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../epistemology/">Epistemology</a> › <a href="../../../epistemology/justification/">Justification</a></div><h1>Internalism and Externalism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-09-09.22</div><article><p>The question is what justification <em>supervenes on</em>: fix everything internal to the believer, and have you fixed whether her belief is justified? Internalism says yes, but disagrees about what "internal" means. <strong>Access internalism</strong> (Chisholm, the early BonJour, Fumerton) requires that whatever justifies a belief be available to reflection alone — the believer must be able to tell, from the armchair, what her grounds are and that they are grounds. <strong>Mentalism</strong> (Conee and Feldman 2001) drops the access requirement and keeps only the supervenience claim: justification is fixed by the believer's mental states, accessible or not. Their argument is a battery of matched pairs: two thinkers alike in every mental respect are alike in justification, however their environments differ. Mentalism escapes the objection that dogs access internalism — that reflective access to one's grounds over-intellectualizes belief and launches a regress of higher-order awarenesses — at the cost that, if content externalism is true, mental states are not internal in the sense the view needs.</p>
+<p>Externalism denies supervenience on the inner: justification may consist in facts about reliability, causation, or proper function that the believer knows nothing of. The Gettier literature showed that internal justification does not turn true belief into knowledge, and every repair was external. Children and animals know without reflecting. Naturalists want an epistemology continuous with cognitive science, whose subject matter is processes, not perspectives. And the deepest motive is the <em>truth connection</em>: justification should make a belief likely to be true, and nothing internal can guarantee that — a demon-deceived mind is internally perfect.</p>
+<p>Two thought experiments have organized the field, one per side. The <strong>new evil demon</strong> (Cohen and Lehrer 1983): your duplicate, deceived by a demon so that her processes are unreliable, reasons exactly as you do; she seems as justified as you are. Reliabilism says she is not. Replies index reliability to normal worlds (Goldman 1986) or the actual world (Sosa), or split justification into strong and weak (Goldman 1988), the victim getting only the second — each conceding that something she has is worth tracking. The <strong>clairvoyance cases</strong> (BonJour 1980): Norman is a reliable clairvoyant who forms the spontaneous conviction that the President is in New York, with no evidence for or against his power. Reliabilism says he is justified; nearly everyone says his belief is, from his own perspective, a hunch. Externalist replies add a no-defeater clause (Norman ought to find his conviction anomalous), restrict reliabilism to inferential belief (Lyons), or bite the bullet. Neither wound has closed; each side treats the other's case as an intuition to be explained away.</p>
+<p>Internalism's traditional rationale is the <strong>deontological conception</strong>: to be justified is to have done one's epistemic duty, and duties can only be fulfilled with respect to what one can tell. Alston's 1988 critique cut the root. Belief is not under direct voluntary control, so duties to believe are idle; and if the conception retreats to <em>blamelessness</em>, it loses the truth connection — the isolated tribe reasoning impeccably from a wretched inheritance is blameless and badly off. His alternative, being based on an adequate ground the believer has, he called internalist externalism. Steup answers with indirect control over inquiry; Feldman with role-oughts that require no control, as a teacher ought to explain clearly whether or not she can.</p>
+<p><strong>Bergmann's dilemma</strong> (2006) argues that internalism cannot deliver what motivates it. The believer must be aware of her justifier. Either that awareness is <em>strong</em> — she conceives of the justifier as relevant to the truth of her belief — and then the awareness is a further belief-like state needing its own justifier, and regress or skepticism follows; or it is <em>weak</em>, and then from her own perspective it remains an accident that the belief is true, which is the subject's-perspective complaint internalism raised against Norman. Fumerton's acquaintance theory and Huemer's phenomenal conservatism are the main escapes: a non-doxastic awareness of the fit between thought and fact, or a seeming that justifies unconceived, is neither strong nor weak in Bergmann's sense.</p>
+<p>The standing suspicion is that the parties <strong>talk past one another</strong>. Alston concluded that "justified" names no single property but a cluster of epistemic desiderata; Goldman's strong and weak justification and Sosa's animal and reflective knowledge are such bifurcations. Williamson presses harder: no non-trivial condition is luminous — such that one is always in a position to know one is in it — so access internalism's base is empty, and E = K makes evidence itself external. Whether that ends the debate or renames it is the current question.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The New Evil Demon Problem</span><span class="gloss"> — the deceived duplicate, normal-worlds and indexical reliabilism, and the recent revival of the case as a test for every theory of justification.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Epistemic Deontology and Doxastic Voluntarism</span><span class="gloss"> — whether belief can be governed by duties, Alston's argument from involuntarism, and the replies.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>epistemology.justification.reliabilism</strong> and <strong>epistemology.justification.evidentialism</strong>: the flagship theories on either side; the generality problem and the nature of evidence are decided there, the supervenience question here.</li>
+<li><strong>epistemology.knowledge</strong>: knowledge-first epistemology makes evidence factive and justification external by fiat; anti-luminosity is its argument against access.</li>
+<li><strong>epistemology.virtue</strong>: Sosa's animal/reflective distinction is the most developed attempt to give both parties what they want.</li>
+<li><strong>mind.intentionality</strong>: content externalism threatens mentalism's claim that the mental is internal.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../epistemology/justification/evidentialism/">epistemology.justification.evidentialism</a>, <a class="node" href="../../../epistemology/justification/proper-function/">epistemology.justification.proper-function</a>, <a class="node" href="../../../epistemology/justification/reliabilism/">epistemology.justification.reliabilism</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

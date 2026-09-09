@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pyrrhonian Skepticism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../epistemology/">Epistemology</a> › <a href="../../../epistemology/skepticism/">Skepticism</a></div><h1>Pyrrhonian Skepticism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-09-09.17</div><article><p>Agrippa's Five Modes, as Sextus reports them, are questions for anyone who claims a ground. Philosophers <em>disagree</em> about it, with no agreed umpire. It appears so only <em>relative</em> to a perceiver and a condition. Her ground is another ground, and so on without end (<em>regress</em>), or simply posited (<em>hypothesis</em>), or supported by what it was meant to support (<em>reciprocity</em>). Barnes's <em>The Toils of Scepticism</em> (1990) showed that these are not five arguments but one net: disagreement and relativity summon the demand for a ground, and the last three modes close every exit. It catches reasoning as such, which is why none of the Cartesian responses treated by this node's siblings reaches it: safety, dogmatism, and shifting standards all <em>offer grounds</em>, and grounds are what the modes eat. What a ground could be is homed at <a class="node" href="../../../epistemology/justification/" title="Justification">epistemology.justification</a>; here the modes are a machine for producing <em>equipollence</em>, the condition in which opposed considerations weigh the same.</p>
+<p>Equipollence is where Sextus locates the practice. The skeptic does not deny that anything is known — that "negative dogmatism" he attributes to the Academy — but has an <em>ability</em> to set appearances and arguments against each other so that, weighing equal, they induce <em>epochē</em>, suspension. Tranquility follows as a shadow follows a body — as the painter Apelles got the foam on a horse's mouth by flinging his sponge at the picture in despair. The skeptic's phrases — "no more this than that," "everything is undetermined" — are not assertions but reports of how he is affected, and they apply to themselves: like purgatives, they expel themselves along with the humors. Whether sentences can consistently do this is the first modern question.</p>
+<p>The second is older, posed by the Stoics to the Academy: <em>apraxia</em>, inaction. Action requires assent; whoever suspends all assent will neither eat nor dodge a cart. Sextus replies that the skeptic follows the <em>appearances</em> without opinion, along four guides — nature, which makes him perceive and think; feeling, which makes him hungry; the laws and customs of his country; and instruction in crafts. The reply generates the quarrel of the last half-century, organized around Galen's distinction between <em>rustic</em> and <em>urbane</em> skeptics. Frede's "The Sceptic's Beliefs" (1979) holds that the Pyrrhonist has beliefs in a perfectly good sense — passive acquiescence in how things strike him — and withholds only <em>dogmata</em>, beliefs held on the authority of reason and theory. Burnyeat's "Can the Sceptic Live His Scepticism?" (1980) answers that appearances, for Sextus, are explicitly not assessed for truth, that belief is precisely such assessment, and that the insulation of appearance from truth which buys <em>ataraxia</em> is one no human being can maintain. Barnes's "The Beliefs of a Pyrrhonist" (1982) declined to choose: Sextus's scope varies with his target, rustic when disagreement runs against everyday judgments, urbane when the <em>Outlines</em> limit suspension to what is "unclear"; the text underdetermines the man. The three papers, collected in <em>The Original Sceptics</em> (1997), frame the debate.</p>
+<p>Fogelin's <em>Pyrrhonian Reflections on Knowledge and Justification</em> (1994) revived the position rather than the text. The claim is double: the Agrippan modes remain unanswered by foundationalism and coherentism alike, and theories of justification discredit themselves by trying; yet ordinary knowledge claims, judged by the standards in force when made, are mostly true. The neo-Pyrrhonist holds both and declines to theorize their reconciliation. Williams replies that the modes presuppose a "Prior Grounding" requirement — a belief is justified only if the believer has already grounded it — itself a smuggled foundationalism; Lammenranta counters that disagreement alone regenerates the problematic without it.</p>
+<p>Comparison with Indian and Buddhist thought is standard and hazardous. Pyrrho traveled with Alexander to India and, Diogenes Laertius says, met the gymnosophists. Beckwith's <em>Greek Buddha</em> (2015) and Kuzminski make the debt substantive, while Bett's <em>Pyrrho, His Antecedents, and His Successors</em> (2000) reads the Aristocles passage as attributing to Pyrrho a <em>metaphysical</em> claim that things are indeterminate — not Sextus's epistemic suspension, and not Buddhist either. Nāgārjuna's "I have no thesis" and Sextus's self-expelling phrases share a form, and Garfield has argued both are non-dogmatic in the same sense; but emptiness is a soteriological teaching within a tradition that keeps its four truths, whereas tranquility for Sextus is a byproduct one stops seeking. The closest structural kin is Jayarāśi's <em>Tattvopaplavasiṃha</em>, which dismantles every pramāṇa in turn — toward not <em>ataraxia</em> but the enjoyment of a life freed from doctrine. Zhuangzi's problem, as <span class="node unwritten" title="promised entry">figures.zhuangzi</span> argues, is the criterion rather than the regress. The traditions converge on suspension and diverge on what it is for; the register's rule is to let them.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Modes of Suspension</span><span class="gloss"> — the Ten Modes of Aenesidemus and the Five of Agrippa as argument-forms; Annas and Barnes, and the trilemma's interlock.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Skeptic&#x27;s Beliefs and the Apraxia Objection</span><span class="gloss"> — whether Pyrrhonism can be lived; Frede, Burnyeat, Barnes, and the rustic–urbane divide.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Neo-Pyrrhonism</span><span class="gloss"> — Fogelin, Williams's Prior Grounding critique, Lammenranta's problematic; Pyrrhonism as a live epistemological option.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Pyrrhonism and Its Asian Analogues</span><span class="gloss"> — Pyrrho in India, Nāgārjuna, Jayarāśi, Zhuangzi: the comparison and its limits.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>traditions.hellenistic</strong> and <strong>figures.sextus-empiricus</strong>: the school's history — Pyrrho, Aenesidemus, the Academic rivalry — is homed there; this node takes the arguments.</li>
+<li><strong>epistemology.justification</strong>: the trilemma's constructive face; foundationalism, coherentism, and infinitism are the three refusals of Agrippa's net.</li>
+<li><strong>figures.nagarjuna</strong> and <strong>figures.zhuangzi</strong>: the comparanda, each with its own argument against being assimilated.</li>
+<li><strong>figures.descartes</strong>, <strong>figures.hume</strong>, and <strong>traditions.early-modern</strong>: Montaigne's revival, Descartes's borrowing of the weapons to end skepticism, and Hume's mitigated skepticism as a modern's Pyrrhonism.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../figures/descartes/">descartes</a>, <a class="node" href="../../../epistemology/justification/structure/">epistemology.justification.structure</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

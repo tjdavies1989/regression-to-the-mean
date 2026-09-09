@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hellenistic Philosophy — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../traditions/">Traditions</a></div><h1>Hellenistic Philosophy</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-09-09.15</div><article><p>The Hellenistic period — conventionally from Alexander's death in 323 BCE to Actium in 31 BCE — is the age in which philosophy became, explicitly and institutionally, an art of living. The polis that had framed Plato's and Aristotle's questions was absorbed into kingdoms; the schools that succeeded the Academy and the Lyceum promised, above all, a happiness the individual could reach whatever the city did. That framing is the tradition's own and should be taken at face value: a Stoic treatise on logic is part of a therapy, and the modern habit of extracting these schools' "theoretical contributions" from their practical aim inverts their own ordering of priorities. Yet the theory was not decorative. Each school held that one cannot live well without knowing how the world is, and the arguments they built to say how it is were the most rigorous of antiquity.</p>
+<p><strong>Stoicism</strong>, founded by Zeno of Citium in the painted colonnade around 300 BCE and systematized by Chrysippus, its "second founder," divided philosophy into logic, physics, and ethics and insisted on their unity — the orchard whose fence is logic, whose trees are physics, whose fruit is ethics. The logic was a propositional calculus of striking sophistication, with indemonstrable argument-forms and a theory of the "sayable" (<em>lekton</em>) that anticipates the proposition. The physics was a thoroughgoing materialism in which a rational breath pervades and orders everything, so that nature, providence, and fate name one thing. The ethics begins from <em>oikeiōsis</em>, "appropriation": the newborn's first impulse is toward its own constitution, and reason's maturation extends that self-concern outward to others and finally to the cosmos, until virtue — living in agreement with nature — is seen as the only good and health, wealth, and reputation as merely "preferred indifferents." The sage is the person in whom this has become second nature; the passions are false judgments about value, to be extirpated rather than moderated. Fate raised the obvious objection: if everything is determined, why deliberate, why blame? Chrysippus answered with the cylinder. Pushed, it rolls; but that it rolls rather than slides is owed to its own shape. The push is the external, antecedent cause; the rolling's character is "up to us" because it flows from the agent's own nature. This is the first sustained compatibilism, and the debate at <a class="node" href="../../metaphysics/free-will/" title="Free Will">metaphysics.free-will</a> still runs on its rails.</p>
+<p><strong>Epicureanism</strong> paired a rival physics with a rival ethics. Epicurus revived Democritean atomism — atoms and void, everything else emergent — and added the swerve, an uncaused minimal deviation that both explains how atomic collisions began and, on the most common reading, breaks the chain of necessity in which the mind would otherwise be trapped. The ethics is hedonism of a chastened kind: the highest pleasure is not intensity but <em>ataraxia</em>, freedom from disturbance, with <em>aponia</em>, the body's freedom from pain; desires are sorted into the natural and necessary, the natural and unnecessary, and the empty. The chief disturbances are fear of the gods, who exist but do not care, and fear of death, which "is nothing to us," since where death is we are not. Friendship was prized as the greatest means to security, and the Garden outside Athens — admitting women and slaves — was the community in which the doctrine was lived.</p>
+<p><strong>Skepticism</strong> came in two lineages. The Academic, under Arcesilaus and later Carneades, turned Plato's school against the Stoic claim that some impressions carry their own guarantee of truth: for any "cognitive impression" an indistinguishable false one could be produced, so the wise would suspend assent — Carneades adding an account of the "persuasive" impression to answer the charge that suspension makes action impossible. The Pyrrhonian lineage, refounded by Aenesidemus in the first century BCE and preserved by Sextus Empiricus, made skepticism a way of life: the Ten Modes systematize the conflicts of appearance that induce suspension, and tranquility follows suspension "as a shadow follows a body." Whether either lineage held a position or only reported what happened to them is a question the sources leave open and <a class="node" href="../../epistemology/skepticism/" title="Skepticism">epistemology.skepticism</a> inherits.</p>
+<p>Outside the schools, the <strong>Cynics</strong> — Diogenes in his jar, Crates and Hipparchia — were the provocation to which Stoicism was partly a reply: virtue suffices for happiness, convention is nothing, and the point is made by living it in public rather than by argument.</p>
+<p>The Greek texts survive largely in fragments; Hellenistic philosophy reaches us chiefly through <strong>Rome</strong>. Cicero's dialogues report the debates with a lawyer's evenhandedness; Lucretius set Epicurus in hexameters; Seneca's letters, Epictetus's lectures, and Marcus Aurelius's private notebook made Stoicism a literature of self-address. Scholarship recovered the period's rigor from the mid-twentieth century (Long and Sedley's sourcebook is standard), while Pierre Hadot and Martha Nussbaum's <em>The Therapy of Desire</em> reinstated its self-understanding: philosophy as spiritual exercise, argument as medicine for the soul. That recovery has since spilled into popular "modern Stoicism," where the physics is quietly dropped — exactly the surgery the Stoics themselves held to be fatal.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Stoicism</span><span class="gloss"> — the unified system of logic, physics, and ethics, from Zeno and Chrysippus to the Roman Stoa.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Epicureanism</span><span class="gloss"> — atomism, the swerve, and the therapeutic hedonism of the Garden.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Academic Skepticism</span><span class="gloss"> — Arcesilaus and Carneades against the Stoic criterion of truth.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Pyrrhonism</span><span class="gloss"> — Aenesidemus's modes and Sextus's suspension of judgment as a way of life.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Cynicism</span><span class="gloss"> — Diogenes, Crates, and Hipparchia: virtue by shameless example.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Roman Transmission</span><span class="gloss"> — Cicero, Lucretius, Seneca, Epictetus, Marcus Aurelius: how the schools survived and changed.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Philosophy as a Way of Life</span><span class="gloss"> — Hadot, Nussbaum, and the modern recovery of the therapeutic conception.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<p>Chrysippus's cylinder bridges <a class="node" href="../../metaphysics/free-will/" title="Free Will">metaphysics.free-will</a>, where it remains the template for compatibilism; the two skeptical lineages bridge <a class="node" href="../../epistemology/skepticism/" title="Skepticism">epistemology.skepticism</a>, which inherits both the regress arguments and the question whether suspension is livable. The Stoic account of virtue as the sole good and the Epicurean sorting of desires both bridge <a class="node" href="../../ethics/virtue-ethics/" title="Virtue Ethics">ethics.virtue-ethics</a>. Within <span class="node unwritten" title="promised entry">figures/</span>, the tradition's load-bearing people — <span class="node unwritten" title="promised entry">epicurus</span>, <span class="node unwritten" title="promised entry">chrysippus</span>, <span class="node unwritten" title="promised entry">sextus-empiricus</span> — are stubs awaiting their edges.</p></article><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Expressivism — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../ethics/">Ethics</a> › <a href="../../../ethics/metaethics/">Metaethics</a></div><h1>Expressivism</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-09-09.18</div><article><p>Expressivism holds that a moral judgment expresses a conative state — disapproval, a prescription, acceptance of a norm, a plan — rather than a belief, and that the declarative grammar of moral sentences disguises this. The parent set the view against its rivals; this entry follows its internal history, which is the story of one debt paid in successive currencies and then a worry that it has been paid too well.</p>
+<p><strong>Emotivism and prescriptivism.</strong> Ayer's version was a corollary of verificationism: "stealing is wrong" adds nothing verifiable to "stealing," so its moral surplus is an expression of feeling. Stevenson gave the view a theory of disagreement: moral terms carry <em>emotive meaning</em>, a standing power to influence attitudes, so that two parties agreed on every fact may still <em>disagree in attitude</em> — which is why moral argument continues where factual argument ends. Hare replaced feeling with prescription. A moral judgment is a universalizable imperative: to call an act wrong is to prescribe against it and against anything relevantly like it, and universalizability supplies a discipline emotivism lacked. All three rest on the same master argument, motivational internalism plus the Humean theory of motivation: sincere moral judgment moves the judge, beliefs alone move no one, so moral judgments are not beliefs.</p>
+<p><strong>The Frege–Geach problem.</strong> Geach observed that expression happens only when a sentence is asserted. In "if stealing is wrong, then getting your brother to steal is wrong," the antecedent expresses no disapproval, yet "stealing is wrong" must mean the same there as when asserted, else the modus ponens through it equivocates. Either moral sentences have a meaning independent of the attitudes they express — which is cognitivism — or moral inference is fallacious. The problem generalizes to negation, disjunction, and attitude reports, and demands an account of validity and inconsistency that does not help itself to truth.</p>
+<p>Blackburn's <em>logic of attitudes</em> reads the conditional as a higher-order attitude — endorsement of the combination "disapproving of stealing while disapproving of getting others to steal" — so that one who disapproves of stealing but not of the abetting has a <em>fractured sensibility</em>. Critics (Schueler, Hale) reply that a fractured sensibility is a defect of character, not a contradiction: the wrong kind of wrongness. Gibbard's <em>norm-expressivism</em> builds a genuine semantics: a normative judgment expresses acceptance of a system of norms, and a sentence's content is the set of factual–normative worlds it rules out, so entailment and consistency fall out set-theoretically. His later <em>plan-expressivism</em> replaces norms with contingency plans: to judge that one ought to φ is to settle on φ-ing. Unwin's negation problem exposed the remaining gap: "stealing is not wrong," "not: stealing is wrong," and "not stealing is wrong" must express three different states, which a single attitude of disapproval cannot generate. Schroeder's <em>being-for</em> gives every moral state one shape — wrongness judgments are being for blaming — so that negation operates on content rather than attitude: to judge stealing not wrong is to be for <em>not</em> blaming for it. Schroeder's own audit: the construction works only if extended to all discourse, and grows implausible as it does.</p>
+<p><strong>Quasi-realism and creeping minimalism.</strong> Blackburn's program starts from projection and earns the realist idiom. Moral truth is available deflationarily; "cruelty would be wrong even if I approved of it" expresses a first-order attitude toward a counterfactual change in one's attitudes, not a metaphysical thesis; error and moral improvement become attitudes toward one's own sensibility. Dreier's <em>creeping minimalism</em> is the price of success: if deflationism about truth, facts, properties, and belief is right, the realist's talk of moral facts commits her to no more than the quasi-realist has earned, and the positions collapse into one. What could still separate them is disputed. Dreier and Simpson locate the difference in the order of explanation — the realist explains moral judgment by its representing moral facts, the expressivist by its psychological function without invoking such facts — while Gibbard takes it to be preserved in what the theorist says the state fundamentally <em>is</em>, and Köhler and Golub recast expressivism as a thesis in the psychology of judgment rather than in semantics.</p>
+<p><strong>Hybrid theories.</strong> Hybrids keep a belief for Frege–Geach and an attitude for internalism. Copp's <em>realist-expressivism</em> holds that moral assertions express beliefs while conventionally implicating attitudes; Ridge's <em>ecumenical expressivism</em> makes the belief's content depend on the attitude; Boisvert models the pairing on pejoratives, which describe and disparage at once. Schroeder's objection is that the belief does all the compositional work, leaving the attitude semantically idle, and that the pejorative model licenses only a narrow, cancellable hybrid.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Frege–Geach Problem</span><span class="gloss"> — the embedding problem in full: negation, validity, and the compositional programs meant to solve it.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Quasi-Realism</span><span class="gloss"> — Blackburn's project of earning realist talk, and the creeping-minimalism dispute over whether it collapses into realism.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Hybrid Expressivism</span><span class="gloss"> — views that pair belief and attitude in a single judgment, and the charge that one of the two goes idle.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>ethics.moral-psychology</strong>: motivational internalism and the Humean theory are expressivism's master premise; the amoralist and the psychopath are its test cases.</li>
+<li><strong>language.truth</strong>: creeping minimalism is deflationism about truth applied to metaethics; whether expressivism survives depends on how thin truth is.</li>
+<li><strong>language.meaning</strong>: the Frege–Geach problem is a compositionality problem, and Gibbard's factual–normative worlds are a semantics in the possible-worlds tradition.</li>
+</ul></article><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Regress Problem and the Structure of Justification — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../epistemology/">Epistemology</a> › <a href="../../../epistemology/justification/">Justification</a></div><h1>The Regress Problem and the Structure of Justification</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-09-09.22</div><article><p>If a belief is justified by inference from another, its credit is borrowed, and the question repeats. Agrippa's trilemma — regress, circle, or brute stop — is homed as a skeptical practice at <a class="node" href="../../../epistemology/skepticism/pyrrhonism/" title="Pyrrhonian Skepticism">epistemology.skepticism.pyrrhonism</a>; here it is the constraint every positive theory must satisfy. Each surviving position seizes one horn and argues that it is not a horn — that termination, circularity, or endlessness is what justification looks like once properly described.</p>
+<p><strong>Foundationalism</strong> accepts termination. Classical foundationalism — Descartes's, and the sense-datum empiricists' after him — required basic beliefs to be infallible or incorrigible and the rest to follow by deduction. Its collapse was arithmetic: a base of <em>cogito</em>-truths and reports of present experience is too thin to reach the physical world. Modest foundationalism, now the default, keeps the structure and loosens both constraints: basic beliefs are non-inferentially but defeasibly justified — perceptual, memorial, introspective — and support the rest by induction and explanation. Its best argument is the regress sharpened: rivals must explain how justification could <em>arise</em> among beliefs none of which has any on its own; foundationalism alone lets credit enter the system rather than merely circulate.</p>
+<p>The challenge to any base is Sellars's "Empiricism and the Philosophy of Mind" (1956) and its "myth of the given," cleanest as a dilemma: whatever is given in experience is either propositional, hence in the space of reasons and itself askable for grounds — no stopping point — or non-propositional, a mere sensing, standing in no logical relation to belief and justifying nothing. BonJour's <em>The Structure of Empirical Knowledge</em> (1985) made this the canonical anti-foundationalist argument: for a basic belief to be justified, its holder needs reason to think beliefs of that kind are likely true, and that reason is another belief. On the strong reading (Rorty, Davidson: only a belief can be a reason for a belief) experience is causally but never rationally relevant. On the weak reading, Sellars refuted only the epistemic <em>independence</em> of the given; non-doxastic experience may still justify if the relation is not inference. McDowell's <em>Mind and World</em> (1994) keeps Sellars and the given together by making experience conceptual all the way out. Which reading holds is adjudicated at <a class="node" href="../../../mind/perception/" title="Perception">mind.perception</a>.</p>
+<p><strong>Coherentism</strong> accepts the circle and denies it is vicious. Justification is holistic — a property of a system whose members support one another — so no belief rests on a chain that returns to it. BonJour's 1985 version added an observation requirement to secure input from the world and a metajustification: sustained coherence is best explained by truth. Lehrer's <em>Theory of Knowledge</em> (1990) located coherence in an acceptance system able to answer every objection, corrected by an ultrasystem purged of error. The objections are two. Isolation: coherence relates beliefs to beliefs, so a system may float free of the world, perfectly coherent and false. Alternative systems: any coherent system has indefinitely many equally coherent rivals, so coherence cannot select truth. The observation requirement answered the first, and BonJour's judgment that it could not be met without making some beliefs basic drove his conversion in <em>Epistemology</em> (2002) to a foundationalism of direct acquaintance with one's own experience. Olsson's <em>Against Coherence</em> (2005) and Bovens and Hartmann then proved impossibility results: no coherence measure is truth-conducive without the independence and prior-reliability assumptions coherentism was meant to do without.</p>
+<p><strong>Infinitism</strong> was finally taken by Klein ("Human Knowledge and the Infinite Regress of Reasons," 1999). A belief is justified only if an infinite, non-repeating series of reasons is <em>available</em> to the believer; the chain is never traversed, and doxastic justification grows as one advances along it. Klein argues by elimination: foundationalism violates the principle of avoiding arbitrariness, coherentism the principle of avoiding circularity; only the infinite chain honors both. The finite-mind objection — no one has infinitely many beliefs — is met by availability: reasons are held dispositionally, not occurrently. The deeper objection is that a chain of reasons each hostage to the next never yields justification at all. Turri answers that justification is generated in giving reasons, not possessing them; Aikin's <em>Epistemology and the Regress Problem</em> (2011) admits non-doxastic input into an impure infinitism; and Peijnenburg and Atkinson's proof that probabilistic support converges along an infinite chain is now the position's best evidence.</p>
+<p><strong>Foundherentism</strong>, Haack's <em>Evidence and Inquiry</em> (1993), refuses the exclusive choice. Justification is a crossword: entries answer to their clues (experiential input, one-directional) and to intersecting entries (mutual support, pervasive). It is more cited than adopted, largely because modest foundationalists reply that they already allow the mutual support.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Foundationalism</span><span class="gloss"> — classical and modest versions, basic beliefs, Audi and Alston, phenomenal conservatism as the current front.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Myth of the Given</span><span class="gloss"> — Sellars's argument and its readings; BonJour's dilemma, Davidson, McDowell, and the acquaintance defense.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Coherentism</span><span class="gloss"> — BonJour and Lehrer; isolation and alternative systems; the probabilistic impossibility results.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Infinitism</span><span class="gloss"> — Klein, Turri, Aikin; the finite-mind objection and probabilistic convergence.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>epistemology.skepticism.pyrrhonism</strong>: Agrippa's modes are homed there as a skeptical practice; this node takes the three refusals of the net.</li>
+<li><strong>mind.perception</strong>: whether experience can justify without being believed — the given's fate — is decided by the theory of perceptual content.</li>
+<li><strong>epistemology.formal</strong>: the truth-conduciveness of coherence and the convergence of infinite chains are Bayesian results.</li>
+<li><strong>figures.descartes</strong>: classical foundationalism's origin and the model every modest version measures itself against.</li>
+</ul></article><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

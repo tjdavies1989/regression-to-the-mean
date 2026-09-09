@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Normativity and Reasons — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../ethics/">Ethics</a> › <a href="../../../ethics/metaethics/">Metaethics</a></div><h1>Normativity and Reasons</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-09-09.18</div><article><p>The parent article named the question: what could give any "ought" its grip on an agent? This entry maps the answers by what they take as the fundamental normative notion and what they think grounds it. The shared idiom is the <em>normative reason</em> — a consideration that counts in favor of an act or attitude — and the shared assumption is that "ought," "good," "rational," and "reason" form a family with a head.</p>
+<p><strong>Reasons-first views.</strong> Scanlon's <em>What We Owe to Each Other</em> opened with the claim that the reason relation is primitive: "counts in favor of" cannot be analyzed in other terms, and every other normative notion is built from it. Parfit's <em>On What Matters</em> gives the position its metaphysics — reasons are object-given, irreducibly normative, and no more in need of a natural ground than truths of arithmetic — and its polemic: deriving reasons from desires or from the agent's constitution replaces normativity with something that merely resembles it. The view's chief strength is its fit with deliberation, which presents considerations as bearing on what to do whether or not one cares about them. Its chief cost is the ontological bill, which the error theorist presents below.</p>
+<p><strong>Desire-based accounts.</strong> Williams's "Internal and External Reasons" set the opposing constraint: a reason for an agent must be reachable by sound deliberation from her existing motivational set, because a reason must be capable of explaining her action, and nothing that could not move her could explain her. Claims about external reasons — holding independently of anything the agent cares about — are false or disguised recommendations. Schroeder's <em>Slaves of the Passions</em> makes Humeanism systematic: a consideration is a reason for an agent when it explains why acting would promote something she desires; it denies that a reason's <em>weight</em> tracks the strength of its grounding desire, and holds that reasons everyone shares are not desire-independent, only universally grounded. Its strength is naturalistic economy; its recurring embarrassment is the "too many reasons" charge — a weak reason wherever there is a whim.</p>
+<p><strong>Buck-passing.</strong> Scanlon's account of value, developed at <a class="node" href="../../../ethics/value/" title="Value Theory">ethics.value</a>, belongs to the theory of reasons: to be good is not to possess a property that itself gives reasons but for one's other properties to give reasons for pro-attitudes. Its bearing here is structural: reasons, not value, become the one primitive, and the wrong-kind-of-reasons problem tests whether they can carry the load.</p>
+<p><strong>The source of normativity.</strong> Korsgaard rejects realism's brute facts and Humeanism's contingent desires alike. Reflective consciousness sets a distance between an agent and her impulses; she must therefore endorse before she acts, and endorsement requires a law she gives herself under a practical identity — ultimately her identity as a rational agent, valuing which is the condition of valuing anything. Normativity's source is the agent's own reflective structure. The objections are Enoch's shmagency challenge (why be an agent, if the aim is escapable?) and the Cohen–Nagel complaint that self-legislation yields only what a self happens to legislate.</p>
+<p><strong>Rationality and reasons.</strong> Broome distinguishes reasons from requirements of rationality: rationality demands coherence among one's attitudes — that one intend what one believes necessary to an end one intends — and its requirements take wide scope, satisfiable by dropping the end as well as by taking the means. Kolodny asks why coherence should be <em>normative</em> at all: if the requirement is wide-scope, it forbids no particular attitude and gives no guidance; if narrow-scope, it demands that one act on beliefs that may be false. His conclusion — rationality is only apparently normative, its authority absorbed into the demand to respond to reasons — is the debate's boldest, and the replies (Way, Lord, Kiesewetter) attempt to reduce rationality to correct response to available reasons without losing coherence requirements.</p>
+<p><strong>Reasons as evidence.</strong> Kearns and Star propose that a reason to φ is simply evidence that one ought to φ, unifying practical and epistemic reasons under one concept and explaining reason-weight by evidential strength. Broome and Brunero object that evidence of an obligation and a consideration favoring the act come apart: a seer's prediction is evidence of what one ought to do yet favors nothing.</p>
+<p><strong>Queerness returns.</strong> Olson's <em>Moral Error Theory</em> relocates Mackie's argument: what is queer is not moral properties in particular but irreducibly normative reasons of any kind — facts that favor, independently of standards or desires. The reasons-first theorist believes in exactly these. The argument is thus the field's ontological audit, and the companions-in-guilt reply — that epistemic reasons are equally queer, so the error theorist argues from premises he cannot reasonably hold — is the reasons-first theorist's counter.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Reasons Internalism and Externalism</span><span class="gloss"> — Williams's constraint, its descendants, and the externalist replies.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Rationality and Reasons</span><span class="gloss"> — structural requirements, scope, and whether rationality has authority of its own.</span><span class="tag">promised · anchor</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Constitutivism</span><span class="gloss"> — normativity derived from what is constitutive of agency, and the shmagency objection.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Weight of Reasons</span><span class="gloss"> — how reasons combine and compete; pro tanto against overall ought.</span><span class="tag">promised · satellite</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li><strong>ethics.value</strong>: buck-passing is decided by whether the wrong-kind-of-reasons problem can be solved; the fitting-attitudes literature is its testing ground.</li>
+<li><strong>ethics.moral-psychology</strong>: the Humean theory of motivation is Williams's premise; the internalism debate is the same quarrel stated normatively.</li>
+<li><strong>mind.action</strong>: Williams's explanatory constraint assumes a causal account of acting for reasons; Davidson's reasons are the ones internalism admits.</li>
+<li><strong>epistemology.justification</strong>: the theory of epistemic reasons is the practical theory's constant companion — in Kearns and Star's reduction and in the companions-in-guilt reply.</li>
+</ul></article><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

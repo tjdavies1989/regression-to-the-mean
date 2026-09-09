@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Early Modern Philosophy — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../">Strata</a></div></header><div class="crumbs"><a href="../../traditions/">Traditions</a></div><h1>Early Modern Philosophy</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; anchor &nbsp;·&nbsp; layer 1 &nbsp;·&nbsp; pass 2026-09-09.15</div><article><p>The period runs from the late sixteenth century to the 1780s: from Montaigne's <em>Essais</em>, Bacon's program for a reformed natural philosophy, and Galileo's mathematized physics to the threshold at which Kant's first <em>Critique</em> both completes the period's project and closes it. What made it a period was a shared predicament. The Aristotelian synthesis that had organized the universities for four centuries — substantial forms, final causes, a cosmos of qualitatively distinct natures — was being dismantled by a science that explained through matter, motion, and mathematics. Every philosopher of the era was answering one question: what must knowledge, mind, God, and the human being be, if the world is the world the mechanists describe?</p>
+<p>The textbook story sorts the answers into two camps. The <strong>rationalists</strong> (Descartes, Spinoza, Leibniz) held that reason can reach substantive truths about reality independently of the senses; the <strong>empiricists</strong> (Locke, Berkeley, Hume) held that all ideas derive from experience and that knowledge is bounded accordingly. The labels are real but retrospective. They were fixed by Kant and his nineteenth-century historians to make the critical philosophy look like the synthesis of two exhausted one-sidednesses, and they distort what they organize. Locke accepted intuitive and demonstrative knowledge as certain; Descartes grounded his physics in experiment as much as in the cogito; Leibniz's deepest arguments concern the intelligibility of nature, not innate ideas; Hume, the supposed empiricist terminus, was primarily a naturalist about human nature; Berkeley's immaterialism is as a priori in its argument-forms as anything in Spinoza. Geography compounds the caricature — "Continental" against "British," as if Hobbes, Gassendi, and Bayle had not existed. The labels are useful exactly as far as they mark a genuine disagreement over the <em>sources</em> of knowledge and the reach of a priori metaphysics, and no further.</p>
+<p>The better frame is <strong>mechanism</strong> and the new science. Galileo's declaration that the book of nature is written in mathematics, Bacon's inductive method and institutional program, and the corpuscular matter-theory of Gassendi, Boyle, and Descartes produced a picture — extended matter, mathematically describable motion, no forms or purposes — that every philosopher had to accommodate. The distinction between primary qualities (shape, size, motion) and secondary qualities (color, taste, warmth) is its epistemological signature: if only the first belong to bodies, what are the second, and where are they? Descartes's answer, that they are modes of a thinking substance wholly distinct from extended substance, generated the mind–body problem in its modern form. Hobbes denied there was any second substance; Spinoza made thought and extension attributes of one; Leibniz dissolved matter into perceiving monads; Berkeley kept the minds and dispensed with the matter; Locke confessed the union inexplicable and moved on. The canonical spine — Descartes, Hobbes, Spinoza, Locke, Leibniz, Berkeley, Hume — reads better as seven responses to one problem than as two teams.</p>
+<p>That spine was, for two centuries, written as if no one else had been in the room. The recovery of the period's women philosophers has altered the record's content, not merely its length. Elisabeth of Bohemia's correspondence with Descartes pressed the interaction problem — how can an unextended thing move an extended one? — with a force he never answered; her objection is the origin of the modern mind–body literature, not an annotation to it. Margaret Cavendish worked out a vitalist materialism in which all matter is self-moving and perceiving, a rival to mechanism argued from within it. Anne Conway's <em>Principles</em> rejected Cartesian dualism for a monism of spirit–body continuity that Leibniz read and borrowed from. Mary Astell turned Cartesian method against the subordination of women and against Locke's political theory alike, asking why absolute sovereignty was illegitimate in the state but natural in the household. Damaris Masham, Locke's interlocutor, defended a this-worldly rationalist ethics against Malebranche and Norris. Émilie du Châtelet's <em>Institutions de physique</em> attempted the synthesis of Leibnizian metaphysics with Newtonian physics that the mainstream would not manage until Kant, and her <em>Principia</em> remains the French translation. These are participants in the spine's debates, and in several cases they set its terms.</p>
+<p>Three further developments define the period's legacy. The <strong>epistemological turn</strong> — from "what is there?" to "what can I know, and how?" as philosophy's first question — is Descartes's doing, and it made skepticism, certainty, and the theory of ideas the field's central preoccupations through Hume. The <strong>social contract</strong> (Hobbes, Locke, Rousseau) reconceived political legitimacy as grounded in the consent of individuals presumed free and equal, dismantling divine right and inaugurating the vocabulary of rights, sovereignty, and the state of nature that political philosophy still speaks; <strong>toleration</strong> (Spinoza's <em>Tractatus</em>, Bayle, Locke's <em>Letter</em>) argued that coercion of conscience is both impious and impolitic, laying the ground for liberal secularism. And the <strong>Enlightenment's self-image</strong>, articulated by the encyclopedists and given definitive statement in Kant's "What is Enlightenment?", cast the era as humanity's emergence from self-imposed tutelage. That self-image is now itself studied — written by the winners, silent about slavery and empire, indebted to sources it claimed to have superseded. What is not disputed is the period's reach: the vocabulary of substance, idea, cause, consent, and critique in which the modern problem-tree is largely written was forged here.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Skeptical Crisis</span><span class="gloss"> — Montaigne, Charron, Bayle: the Pyrrhonian revival as the problem the period opened with and never fully closed.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Mechanism and the New Science</span><span class="gloss"> — Galileo, Bacon, Gassendi, Boyle, Newton: the corpuscular picture and the primary–secondary quality distinction as the shared frame.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Cartesianism and Its Critics</span><span class="gloss"> — the <em>Objections and Replies</em>, Elisabeth, Arnauld, Malebranche and occasionalism: the mind–body problem in its first generation.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Rationalism</span><span class="gloss"> — Descartes, Spinoza, Leibniz, Malebranche: substance, the principle of sufficient reason, and the reach of a priori metaphysics, with the label's distortions kept in view.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Empiricism</span><span class="gloss"> — Locke, Berkeley, Hume: the theory of ideas, the limits of experience, and the drift toward naturalism.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Women Philosophers of the Early Modern Period</span><span class="gloss"> — Elisabeth, Cavendish, Conway, Astell, Masham, du Châtelet: the recovery literature and its questions about how the canon was made.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Contract and Toleration</span><span class="gloss"> — Hobbes, Locke, Spinoza, Bayle, Rousseau: the period's political philosophy; problem-home at <a class="node" href="../../politics/legitimacy/" title="Legitimacy and Political Authority">politics.legitimacy</a>.</span><span class="tag">promised · standard</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Enlightenment</span><span class="gloss"> — philosophes, the Scottish Enlightenment, the Aufklärung: the self-image of the age and its critics.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<p>The load-bearing figures are <a class="node" href="../../figures/descartes/" title="René Descartes">descartes</a>, <span class="node unwritten" title="promised entry">spinoza</span>, <span class="node unwritten" title="promised entry">locke</span>, <span class="node unwritten" title="promised entry">leibniz</span>, <a class="node" href="../../figures/hume/" title="David Hume">hume</a>, and <a class="node" href="../../figures/kant/" title="Immanuel Kant">kant</a> — the last as threshold, read fully at <span class="node unwritten" title="promised entry">german-idealism</span>. Into the problem tree the densest bridges run to <a class="node" href="../../epistemology/" title="Epistemology">epistemology</a> (skepticism, the theory of ideas, the sources of knowledge) and <a class="node" href="../../metaphysics/" title="Metaphysics">metaphysics</a> (substance, causation, the mind–body problem), with <a class="node" href="../../politics/legitimacy/" title="Legitimacy and Political Authority">politics.legitimacy</a> as the home of the contract tradition this period founded. Within this register, <span class="node unwritten" title="promised entry">renaissance</span> and <a class="node" href="../../traditions/medieval-latin/" title="Medieval Latin Philosophy">medieval-latin</a> supply the inheritance the period claimed to reject, and <span class="node unwritten" title="promised entry">german-idealism</span> is where its questions are answered.</p></article><nav class="footnav"><a href="../../">Home</a><a href="../../map/">Map</a><a href="../../method/">Constitution</a><a href="../../queue/">Queue</a></nav></div></body></html>

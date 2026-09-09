@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Consequence Relations — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../logic/">Logic</a> › <a href="../../../logic/consequence/">Logical Consequence</a></div><h1>Consequence Relations</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; satellite &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-09-09.19</div><article><p>Before Tarski asked what consequence <em>is</em>, he asked what any consequence relation must <em>look like</em>. His 1930 papers define a consequence operation Cn on sets of sentences by three postulates: every set is contained in its closure (reflexivity), closing twice adds nothing (idempotence, the operator form of transitivity), and larger sets have larger closures (monotonicity), with a fourth, finitariness, requiring that whatever follows from a set follows from some finite subset. Nothing here mentions connectives, models, or proofs; a consequence operation is simply a closure operator on sentences. Łoś and Suszko (1958) added structurality — closure under uniform substitution — which is formality reduced to an algebraic condition, and Scott (1974) recast the operator as a relation Γ ⊢ A satisfying identity, weakening, and cut. The abstraction is the point: the model-theoretic and proof-theoretic accounts are two ways of <em>generating</em> relations that meet these conditions, and the conditions themselves can be studied, and questioned, independently of either.</p>
+<p>Each postulate now has a literature devoted to its absence. Drop monotonicity and one obtains the nonmonotonic consequence relations of default and defeasible reasoning, where "Tweety flies" follows from "Tweety is a bird" but not from that together with "Tweety is a penguin"; Kraus, Lehmann, and Magidor's cumulative and preferential systems, and Makinson's bridges from classical to nonmonotonic consequence, replace monotonicity with weaker principles such as cautious monotony; which weakening is principled rather than convenient remains disputed. Drop transitivity and consequence ceases to chain: Ripley's strict–tolerant logic validates every classically valid inference and the naive truth rules while failing cut, so that the derivation of triviality in Curry's paradox breaks at the step that composes two valid pieces. The cost, pressed by critics, is that a relation that does not compose seems to lose the very feature that makes it <em>consequence</em> rather than a list of licensed transitions. Drop reflexivity and the tolerant–strict dual and Malinowski's q-consequence appear, relations in which a premise need not follow from itself; they have few adherents but sharpen the question of which postulates are constitutive.</p>
+<p>The substructural rules come into view only when Tarski's premise sets are replaced by Gentzen's sequences or multisets. Sets already build in <strong>contraction</strong> (a premise used twice counts once) and <strong>exchange</strong> (order is irrelevant); making them explicit rules that can be refused yields the substructural map. Refusing weakening gives relevance logic, whose consequence relation forbids idle premises; refusing contraction gives Girard's linear and affine logics, in which premises are resources consumed by use, and the noncontractive theories of truth (Zardini) that block Curry without touching the conditional; refusing exchange gives Lambek's calculus, where premises have grammatical order. Restall (2000) and Paoli (2002) organize the terrain; its lesson is that the nonclassical logics differ at least as much in their structural assumptions as in their treatment of connectives — a fact invisible so long as consequence was assumed Tarskian.</p>
+<p><strong>Multiple conclusions.</strong> Shoesmith and Smiley (1978) developed a relation Γ ⊢ Δ read as "if all of Γ, then some of Δ," generalizing Gentzen's sequents. Its strongest argument is Carnap's 1943 categoricity problem: the single-conclusion rules of classical logic admit non-normal interpretations — valuations under which negation misbehaves, or every sentence is true — so that single-conclusion consequence does not fix classical meanings, whereas multiple-conclusion consequence does. Scott's completeness theorem generalizes this: any relation satisfying identity, weakening, and cut in multiple-conclusion form is exactly the relation of truth-preservation over some class of bivalent valuations. The objection, Dummett's and Steinberger's, that no speech act corresponds to asserting "one of Δ," meets Restall's reply that Γ ⊢ Δ records the incoherence of asserting all of Γ while denying all of Δ — a reading that ties multiple-conclusion consequence to bilateralism.</p>
+<p>The newest dispute concerns whether inferences alone individuate a logic. Since strict–tolerant logic agrees with classical logic on every inference and disagrees on metainferences (cut itself), Dicher and Paoli argue it <em>is</em> classical logic under a nonstandard notion of consequence, while Barrio, Pailos, and Da Ré construct hierarchies of logics that agree ever higher up before diverging, suggesting that a logic is its entire tower of metainferential commitments. <strong>Abstract algebraic logic</strong> (Blok and Pigozzi 1989; Font 2016) is the mathematical descendant of Tarski's abstraction: it classifies consequence relations by how well they can be given an algebraic semantics, and its Leibniz hierarchy — protoalgebraic, equivalential, algebraizable — is the most developed answer to which structural features of a relation determine what kind of semantics it can have.</p>
+<h2>Children</h2>
+<p>Thin node — no natural children yet.</p>
+<h2>Bridges</h2>
+<ul>
+<li><strong>logic.nonclassical</strong>: the substructural logics are homed there as systems; here they appear as the coordinates of the map, each defined by which structural rule it refuses.</li>
+<li><strong>logic.paradox.curry</strong>: noncontractive and nontransitive consequence earn their keep against Curry; the choice of which postulate to drop is decided by that paradox above all.</li>
+<li><strong>logic.consequence.proof-theoretic</strong>: Belnap's point that connectives are defined only against a background consequence relation, and the multiple-conclusion defense of classical harmony, both presuppose the structural analysis given here.</li>
+<li><strong>logic.philosophy-of-logic</strong>: whether a logic is identified by its inferences or its metainferences bears directly on what monism and pluralism are disagreeing about.</li>
+</ul></article><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>

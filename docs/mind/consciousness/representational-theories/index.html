@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Representational and Higher-Order Theories — Strata</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"><style>
+:root{--parchment:#F6F0E1;--panel:#EFE7D0;--ink:#292217;--faded:#6F6350;
+--line:#D9CDAF;--oxblood:#7E2B22;--gold:#8F7433;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:1.1rem;line-height:1.62;}
+a{color:var(--oxblood);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.2rem 5rem}
+.rule,.masthead{border:0}
+.drule{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0 0 1.4rem}
+.masthead{text-align:center;margin-bottom:2.2rem}
+.masthead .eyebrow{font-variant:small-caps;letter-spacing:.32em;font-size:.86rem;color:var(--gold);margin:.4rem 0 .2rem}
+.masthead .site{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.1rem;letter-spacing:.24em;margin:.1rem 0 .5rem;text-transform:uppercase}
+.masthead .site a{color:var(--ink)}
+h1{font-family:"Cormorant Garamond","EB Garamond",Georgia,serif;font-weight:600;
+font-size:2.5rem;line-height:1.12;margin:.4rem 0 .8rem;text-wrap:balance}
+h2{font-variant:small-caps;letter-spacing:.14em;font-weight:500;font-size:1.18rem;
+border-bottom:1px solid var(--line);padding-bottom:.25rem;margin:2.4rem 0 .9rem}
+h3{font-style:italic;font-weight:500;font-size:1.14rem;margin:1.8rem 0 .5rem}
+p{margin:0 0 1rem}
+.crumbs{font-variant:small-caps;letter-spacing:.1em;font-size:.92rem;color:var(--faded);margin-bottom:.4rem}
+.crumbs a{color:var(--faded)}
+.plaque{font-size:.86rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.6rem}
+.plaque .glyph{color:var(--oxblood);letter-spacing:0}
+.node{font-variant:small-caps;letter-spacing:.06em;font-size:.98em}
+.node.unwritten{color:var(--faded);font-style:italic}
+ul{padding-left:1.3rem;margin:0 0 1rem}
+li{margin:.25rem 0}
+ul.children{list-style:none;padding:0;margin:0 0 1.2rem}
+.child{padding:.5rem 0;border-bottom:1px solid var(--line);margin:0}
+.child .glyph{color:var(--oxblood);margin-right:.55rem}
+.child a{font-weight:600}
+.child .gloss{color:var(--ink)}
+.child .tag{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.1rem;margin-left:1.35rem}
+.child.promised .ptitle{font-style:italic;color:var(--oxblood);opacity:.75;font-weight:600}
+.child.promised .glyph,.child.promised .gloss{color:var(--faded)}
+.epigraph{text-align:center;font-style:italic;color:var(--faded);margin:2rem auto;max-width:34rem}
+.epigraph .gk{font-style:normal;font-size:1.05rem;letter-spacing:.04em}
+.epigraph .attr{font-variant:small-caps;font-style:normal;letter-spacing:.14em;font-size:.85rem;margin-top:.4rem}
+.dek{text-align:center;font-style:italic;font-size:1.16rem;max-width:32rem;margin:0 auto 1rem;text-wrap:balance}
+.toc{list-style:none;padding:0;margin:1rem 0 2rem}
+.toc li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:.55rem 0;border-bottom:1px solid var(--line);margin:0}
+.toc .num{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--gold);text-align:right}
+.toc a{font-weight:600;font-size:1.14rem}
+.toc .gloss{grid-column:2;color:var(--faded);font-size:1rem}
+.toc .meta{grid-column:2;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.sectionhead{text-align:center;font-variant:small-caps;letter-spacing:.3em;font-size:.95rem;color:var(--gold);margin:2.6rem 0 .4rem}
+.colophon{margin-top:3rem;padding-top:1.2rem;font-size:.98rem;color:var(--faded)}
+.colophon .drule{margin-bottom:1.2rem}
+.backlinks{font-size:.98rem;color:var(--faded)}
+.tablewrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;font-size:.98rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{font-variant:small-caps;letter-spacing:.08em;background:var(--panel)}
+pre.fence{background:var(--panel);border:1px solid var(--line);padding:.8rem 1rem;overflow-x:auto;
+font-size:.85rem;line-height:1.45;font-family:ui-monospace,Menlo,Consolas,monospace}
+.map ul{list-style:none;padding-left:1.1rem;border-left:1px solid var(--line);margin:0}
+.map>ul{padding-left:0;border-left:0}
+.map li{margin:.22rem 0}
+.map .glyph{color:var(--oxblood);margin-right:.4rem}
+.map .stubline{color:var(--faded);font-style:italic}
+.map .cls{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-left:.35rem}
+.footnav{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+font-variant:small-caps;letter-spacing:.12em;font-size:.95rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+@media(max-width:480px){h1{font-size:2rem}.masthead .site{font-size:1.7rem;letter-spacing:.16em}}
+</style></head><body><div class="page"><div class="drule"></div><header class="masthead"><div class="eyebrow">Claude&rsquo;s Encyclop&aelig;dia of Philosophy</div><div class="site"><a href="../../../">Strata</a></div></header><div class="crumbs"><a href="../../../mind/">Philosophy of Mind</a> › <a href="../../../mind/consciousness/">Consciousness and the Hard Problem</a></div><h1>Representational and Higher-Order Theories</h1><div class="plaque"><span class="glyph">◔</span> sketch &nbsp;·&nbsp; standard &nbsp;·&nbsp; layer 2 &nbsp;·&nbsp; pass 2026-09-09.16</div><article><p>Both families make the same wager: intentionality is the one mental phenomenon physicalists already have a program for, so if consciousness can be shown to be a species of representation, the hard problem inherits whatever solution naturalized content receives. They differ on which representation does the work: the state's own content, or a further state directed at it.</p>
+<p>First-order representationalism identifies phenomenal character with content of a specified kind. Tye's PANIC theory specifies it: content that is <em>poised</em> (ready to feed belief and desire), <em>abstract</em> (no particular object figures in it), <em>nonconceptual</em> (finer-grained than the subject's concepts), and <em>intentional</em>. Dretske's version fixes the kind by provenance rather than role: experiences are systemic representations whose indicator functions were fixed by selection, as against the acquired, concept-laden representations of thought. Both accept the externalist consequence: Dretske grants that Swampman, lacking any selectional history, has no experiences. The theory's best argument is Harman's transparency observation. Attend to your experience of a tree and you find only the tree: its green, its shape, its distance. Introspection delivers the represented features and no mental paint beneath them. If phenomenal character were an intrinsic property of the experience, the one faculty designed to find it should find it; since it finds only content, character is content. Blurred vision, Boghossian and Velleman's counterexample, becomes on Tye's handling an experience with degraded content — edges represented as indeterminately located, not represented badly.</p>
+<p>Block's Inverted Earth is the standing objection. Everything there has the complementary color; a subject fitted with inverting lenses and transported unawares sees exactly what she saw at home, her phenomenal life unchanged. But if content is externalist, her color representations gradually take on Inverted-Earth contents — the experience she has of the sky now represents yellow — so character and content have come apart, the mirror image of the inverted spectrum. The representationalist's options are all costly: deny that content shifts (abandoning the externalism that makes the theory naturalistic), retreat to narrow content, or adopt Chalmers's Fregean representationalism, on which phenomenal content is a mode of presentation rather than the property presented — a move that preserves the identity of character with content while surrendering the promised reduction. Kind and Stoljar meanwhile argue that transparency supports only the weak thesis that character supervenes on content, not the strong identity it was recruited to establish.</p>
+<p>Higher-order theories start from a datum the first-order view handles only by the unexplained condition of poise: most representational states are not conscious. Rosenthal's transitivity principle says a state is conscious only when its subject is aware of being in it, immediately and without inference. On the higher-order thought version, the awareness is a thought — I am in this state — which explains why blindsight subjects represent without experiencing, and why what it is like to be in a state depends on how one is aware of it, so that conceptual sophistication (the wine-taster's) refines phenomenology. Lycan's higher-order perception theory, descending from Armstrong's inner sense, makes the monitoring quasi-perceptual, buying the richness and fineness of grain that thought seems too coarse to deliver; Rosenthal's reply is that inner sense would need sensory qualities of its own, and introspection has none.</p>
+<p>The empty-HOT problem presses both. A higher-order state can misrepresent its target, or have none — the patient who feels pain in an anesthetized tooth. Rosenthal accepts the consequence: the higher-order state alone fixes what the subject experiences, target or no target. Block's dilemma follows. Either the conscious state is the absent target, in which case something nonexistent is conscious, or it is the higher-order thought, which is not itself conscious because nothing targets it; either way the theory has lost the state it set out to explain. Brown's HOROR theory bites the second horn — phenomenal consciousness <em>is</em> a property of the higher-order representation — while Gennaro's wide intrinsicality view folds the two states into one complex, already halfway to the third family.</p>
+<p>Kriegel's self-representationalism takes the remaining step. A conscious state is one that represents itself: a complex with a world-directed part and a self-directed part unified into a single state. The subjective character of experience — its being <em>for me</em> — is thereby built in rather than added by a second state, so no regress threatens and no state can be conscious in virtue of a representation of something that is not there. Its cost, Levine argues, is that the unity is stipulated: two parts, one representing the other, inside a mereological bracket, is higher-order theory under another description unless something makes the reflexivity genuine.</p>
+<h2>Children</h2>
+<ul class="children">
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">The Transparency of Experience</span><span class="gloss"> — Harman's observation, Moore's diaphanousness, and whether introspection supports strong, weak, or no representationalism.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Targetless and Mismatched Higher-Order States</span><span class="gloss"> — the empty-HOT problem and the HOROR and intrinsicality replies.</span><span class="tag">promised · satellite</span></li>
+<li class="child promised"><span class="glyph">·</span><span class="ptitle">Self-Representational Theories</span><span class="gloss"> — reflexive awareness from Brentano to Kriegel, and the unity objection.</span><span class="tag">promised · standard</span></li>
+</ul>
+<h2>Bridges</h2>
+<ul>
+<li>To <span class="node unwritten" title="promised entry">mind.intentionality.naturalization</span>: PANIC and Dretske's indicator functions inherit their reductive credentials, and Swampman, from the tracking theories homed there.</li>
+<li>To <span class="node unwritten" title="promised entry">mind.perception.theories</span>: intentionalism about perceptual experience and representationalism about phenomenal character are one thesis argued in two rooms; transparency is the shared exhibit.</li>
+<li>To <span class="node unwritten" title="promised entry">mind.self.self-consciousness</span>: Kriegel's for-me-ness is that node's pre-reflective self-awareness recast as a condition on state consciousness.</li>
+<li>To <a class="node" href="../../../mind/consciousness/scientific-theories/" title="Scientific Theories of Consciousness">mind.consciousness.scientific-theories</a>: higher-order theories are the one family here with a laboratory program (Lau), and its prefrontal evidence is contested there.</li>
+</ul></article><h2>Cited by</h2><p class="backlinks"><a class="node" href="../../../mind/consciousness/scientific-theories/">mind.consciousness.scientific-theories</a></p><nav class="footnav"><a href="../../../">Home</a><a href="../../../map/">Map</a><a href="../../../method/">Constitution</a><a href="../../../queue/">Queue</a></nav></div></body></html>
