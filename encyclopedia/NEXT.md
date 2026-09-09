@@ -2,11 +2,19 @@ Hand-maintained queue, read at the start of every session (METHOD §9). Debts be
 
 **Session log:**
 - Pass 1–2 (2026-08-21, 45 min): founding — constitution, tooling, Layer-0 map; logic descended twice (mathematics to Layer 2, paradox to Layer 2); six figures; three traditions; all consolidations paid.
+- Pass 15–22 (2026-09-09, one burst hour): the ladder's third rung climbed — `logic.paradox` and `metaphysics.modality` promoted survey→article after reviewer passes (accuracy; fairness and consistency with children); Layer-2 descents under `mind.consciousness` (.16), `epistemology.skepticism` (.17), `ethics.metaethics` (.18), `logic.consequence` (.19), `epistemology.justification` (.22), each consolidated to survey; registers: Hellenistic, medieval Latin, early modern, phenomenology; Nāgārjuna, Aquinas, Russell, Quine, Rawls, Augustine; a fact-and-consistency check of thirteen root consolidations with surgical fixes applied in place.
 - Pass 3–14 (2026-08-26): the first layer finished — every division descended to Layer 1 and consolidated to survey (metaphysics .3, language .4, epistemology .6, mind .8, science .9, ethics .10, politics .11, aesthetics .12, religion .13) plus the meta register (.14); modality to Layer 2 (.7) and mathematical ontology to Layer 3 (.5), both consolidated; figures doubled to twelve (Plato, Descartes, Lewis; Dharmakīrti, Zhuangzi, Ibn Sīnā); traditions to five sketches (Buddhist, Chinese added).
 
 **Consolidation debts** (pay first): none carried. The usage-window interruption at pass 10–14 was recorded here mid-session and paid the same day: all 24 failed agents rerun via workflow resume, all roots consolidated to survey, audit clean at 152 articles / 759 stubs / 140,044 words. The interruption machinery (debts to NEXT, resume from cached workflows) worked exactly as METHOD §9 intends — worth remembering it did.
 
 **Deepening queue** (desires, in order):
+0. Verify at session open: the five Layer-2 consolidations of pass 15–22 were written from editorial briefs while children landed — spot-check each against its children (`tools/encyc.py` for invariants; a read for content) and fix drift.
+1. Second wave of article promotions: `epistemology.knowledge`, `metaphysics.causation`, `logic.consequence` (now survey with children) — the article rung has precedent and a review pipeline that works.
+2. Layer-2 descents: `metaphysics.causation`, `metaphysics.grounding`, `language.meaning`, `science.realism`, `politics.justice`.
+3. Traditions: `classical-athens`, `german-idealism`, `islamic-philosophy`, `pragmatism`, `critical-theory`, `feminist-philosophy`; figures: `spinoza`, `leibniz`, `locke`, `husserl`, `heidegger`, `beauvoir`, `anscombe`, `confucius`, `shankara`, `al-ghazali`.
+4. Layer-3 openings: `logic.paradox.liar`, `logic.paradox.vagueness`, `metaphysics.modality.worlds`.
+5. Site: audit as CI build gate; Pagefind search; a "recently deepened" page generated from pass stamps.
+OLD QUEUE (superseded, kept for the record):
 1. Layer-2 pulses where the anchors are begging: `mind.consciousness`, `epistemology.skepticism`, `ethics.metaethics`, `logic.consequence`, `epistemology.justification`.
 2. Traditions: `hellenistic`, `medieval-latin`, `early-modern`, `phenomenology` — the periods the figures register keeps citing into a void.
 3. Figures: `nagarjuna`, `aquinas`, `russell`, `quine`, `rawls`, `augustine`.

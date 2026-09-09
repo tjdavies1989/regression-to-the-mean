@@ -2,26 +2,28 @@
 node: epistemology.justification
 title: Justification
 layer: 1
-state: sketch
+state: survey
 class: anchor
 parent: epistemology
-bridges: [epistemology.knowledge, epistemology.skepticism, epistemology.virtue, mind]
-pass: 2026-08-26.6
+bridges: [epistemology.knowledge, epistemology.skepticism, epistemology.virtue, epistemology.formal, mind.perception]
+pass: 2026-09-09.22
 ---
 
 # Justification
 
-A true belief can be an accident — a lucky guess, a paranoid hunch that happens to pan out. Justification is whatever separates believing *well* from believing *luckily*: the standing a belief has when the believer holds it as she ought. The founding structure of the topic is the regress the division's root already names. Ask what justifies a belief, and the answer cites another belief; ask again, and the chain must terminate, circle, or continue forever. Every theory of justification's structure is a way of finding one horn of that trilemma survivable.
+A true belief can be an accident — a lucky guess, a paranoid hunch that happens to pan out. Justification is whatever separates believing *well* from believing *luckily*: the standing a belief has when the believer holds it as she ought. The topic's founding structure is a regress: ask what justifies a belief, and the answer cites another belief; ask again, and the chain must terminate, circle, or continue forever. Since its descent this node divides the field among six studies — the regress and its three survivors, the internalism–externalism divide that cuts across them, the two flagship theories on either side of that divide, the warrant tradition, and the theory of how justification is lost.
 
-Foundationalism takes termination: some beliefs are justified without owing their justification to other beliefs. The classical version, Descartes's, demanded that these regress-stoppers be infallible — indubitable reports of present consciousness — and collapsed under the poverty of so thin a base. Modest foundationalism asks only that basic beliefs carry defeasible, non-inferential credibility, typically from perceptual experience. Its standing challenge is the Sellarsian dilemma: if experience has propositional content it seems to need justification itself; if it does not, it is hard to see how it can confer any.
+**The structure of justification** (`structure`) is the regress problem's home. Foundationalism takes termination: classical (Descartes's infallible base, which collapsed under its own thinness) or modest (defeasible, non-inferential credibility, typically from perception) — and meets the Sellarsian dilemma, whether the given can justify without itself needing justification. Coherentism takes the circle: a belief is justified by its place in a mutually reinforcing system — honest about practice, wounded by isolation and the alternative-systems objection; BonJour's 1985 defense and his later defection to the given remain the debate's most famous conversion. Infinitism, the option nobody wanted, was finally taken by Klein and developed by Turri and Aikin: an infinite chain of available reasons is not vicious but exactly what justification requires, against the finite-mind objection. Haack's foundherentism is the compromise.
 
-Coherentism takes the circle, denying that support is linear at all: a belief is justified by its place in a mutually reinforcing system, as each stone in an arch holds the others. Its strongest card is honesty about practice — we do test beliefs against everything else we hold. Its wounds are isolation (a coherent fantasy, sealed off from the world, comes out justified) and the input problem: how does experience get a vote? BonJour's *The Structure of Empirical Knowledge* (1985) gave coherentism its most rigorous defense and lost by its author's own lights — his later defection to a foundationalism of the given is the debate's most famous conversion.
+**Internalism and externalism** (`internalism-externalism`) is the division's deepest fault line, cutting across the structural debate: whether justification must be internal to the believer — reflectively accessible (access internalism) or a matter of her mental states (mentalism, Conee and Feldman) — or may consist in facts she knows nothing about. The two thought experiments that organize everything live here: the new evil demon (a systematically deceived duplicate seems exactly as justified as you) against externalism, and Norman the reliable clairvoyant (spontaneous convictions, reliably true, no better than hunches from inside) against reliabilism. The deontological conception and Alston's critique, Bergmann's dilemma for internalism, and the suspicion that the parties score different games are the child's terrain.
 
-Infinitism, the option nobody wanted, was finally taken by Peter Klein: an infinite, non-repeating chain of available reasons is not vicious but is precisely what justification requires. Its strength is that it alone denies nothing about the regress; its cost is explaining how finite minds can have infinitely many reasons available.
+**Reliabilism** (`reliabilism`) is the flagship externalism: a belief is justified when produced by a process that reliably yields truth (Goldman 1979). Its wounds are precise: the generality problem (which process type? — Conee and Feldman), the new evil demon and the normal-worlds fix, bootstrapping and easy knowledge (Vogel, Cohen), and the choice between process and indicator versions; its most successful descendant is the virtue reliabilism homed at `epistemology.virtue`. **Evidentialism** (`evidentialism`) is the mentalist counter-flag: justification is fit with one's evidence, full stop — which immediately raises what evidence is (mental states, or propositions; Williamson's E = K), what fit is, how well-foundedness differs from propositional justification, and whether forgotten evidence and pragmatic encroachment break the view.
 
-Cutting across the structural debate is the internalism–externalism divide. Internalists hold that justification depends only on what the believer can access by reflection (access internalism) or on her mental states (mentalism); the guiding image is of justification as something one can be responsible for. Externalists deny this. Reliabilism, the flagship externalism, says a belief is justified when produced by a process that reliably yields truth — whether or not the believer can certify the reliability. It carries two standing wounds, both inflicted by thought experiment: the new evil demon (a systematically deceived duplicate of you seems exactly as justified as you, though her processes are wholly unreliable) and BonJour's Norman, the reliable clairvoyant whose spontaneous convictions are reliably true yet seem, from inside, no better than hunches. Evidentialism (Conee and Feldman) is the mentalist counter-flag: justification is fit with one's evidence, full stop. Plantinga's proper functionalism relocates the whole question: what converts true belief into knowledge is warrant — production by faculties functioning properly, in a congenial environment, according to a design plan aimed at truth.
+**Proper functionalism** (`proper-function`), at satellite depth, relocates the question to warrant: Plantinga's account of what converts true belief into knowledge — production by faculties functioning properly, in a congenial environment, according to a design plan aimed at truth — with its Gettier-immunity claims, the swampman objection, Bergmann's naturalized version, and the religious-epistemology application it was built to serve.
 
-A sobering diagnosis, pressed by Alston, is that "justified" may not mark one property at all. The deontologist tracks blamelessness, the evaluative theorist a good epistemic position, the reliabilist truth-conduciveness — and the classic clashes may be parties scoring different games while insisting there is only one.
+**Defeaters** (`defeat`) hold the theory of how justification, once had, is undermined: Pollock's rebutting and undercutting defeaters, defeater-defeaters, propositional against doxastic defeat, and the current front — higher-order defeat, epistemic akrasia, and Lasonen-Aarnio's argument that within knowledge-first frameworks defeat is unreasonable, with the replies.
+
+A sobering diagnosis, pressed by Alston, runs under all six: "justified" may not mark one property at all. The deontologist tracks blamelessness, the evaluative theorist a good epistemic position, the reliabilist truth-conduciveness — and the classic clashes may be parties scoring different games while insisting there is only one.
 
 ## Children
 
@@ -34,7 +36,7 @@ A sobering diagnosis, pressed by Alston, is that "justified" may not mark one pr
 
 ## Bridges
 
-- To `epistemology.knowledge`: every post-Gettier repair is a thesis about what justification must add to reach knowledge — or, with Williamson, about why it cannot.
-- To `epistemology.skepticism`: externalism is the main modern answer to the skeptic, and the new evil demon is the internalist's revenge.
-- To `epistemology.virtue`: virtue theories reread Norman-style cases as failures of intellectual character rather than of process reliability.
-- To `mind`: whether perceptual experience can justify belief directly turns on what experience is — content, phenomenology, and the theory of perception homed there.
+- **epistemology.knowledge**: knowledge-first epistemology reverses this node's order of explanation; warrant is what the analysis of knowledge sought.
+- **epistemology.skepticism**: the Agrippan trilemma is this regress in its skeptical face.
+- **epistemology.virtue**: virtue reliabilism is reliabilism's successor; **epistemology.formal**: evidential fit meets Bayesian confirmation.
+- **mind.perception**: modest foundationalism's basic beliefs rest on the theory of perceptual experience; dogmatism is adjudicated there.

@@ -2,28 +2,30 @@
 node: ethics.metaethics
 title: Metaethics
 layer: 1
-state: sketch
+state: survey
 class: anchor
 parent: ethics
-bridges: [language, metaphysics, ethics.moral-epistemology]
-pass: 2026-08-26.10
+bridges: [ethics.moral-epistemology, ethics.value, language.meaning, metaphysics.ontology, epistemology.disagreement]
+pass: 2026-09-09.18
 ---
 
 # Metaethics
 
-Normative theories argue about which acts are right. Metaethics steps back and asks what that arguing *is*. When someone says "torture is wrong," is she reporting a fact — and if so, what kind, discoverable how — or doing something else under the grammatical disguise of description? The question has teeth because moral discourse behaves like fact-stating talk — we reason with it, disagree over it, claim to be mistaken in it — yet nothing in the scientific inventory of the world obviously answers to it.
+Normative theories argue about which acts are right. Metaethics steps back and asks what that arguing *is*. When someone says "torture is wrong," is she reporting a fact — and if so, what kind, discoverable how — or doing something else under the grammatical disguise of description? The question has teeth because moral discourse behaves like fact-stating talk — we reason with it, disagree over it, claim to be mistaken in it — yet nothing in the scientific inventory of the world obviously answers to it. Since its descent this node maps the field among seven studies: the realisms, the error theory, expressivism, constructivism, the theory of normativity that underlies them all, the semantics they compete over, and relativism at the edge.
 
-The realist map begins with Moore's open question argument: for any natural property N, "this is N, but is it good?" remains intelligible, so goodness cannot be identical to N. Moore concluded that goodness is a simple, non-natural property, and non-naturalism has proved durable: Parfit argued that normative truths are irreducibly normative without ontological inflation; Scanlon defends a quietist realism on which reasons-claims answer only to standards internal to the normative domain. The position's strength is fidelity to the phenomena — normative thought resists paraphrase into anything else. Its cost is explaining how such truths relate to the natural world and how we could be reliable about them.
+**Moral realism** (`realism`) holds that moral claims report attitude-independent facts, and divides over what kind. Non-naturalism runs from Moore's open question argument — for any natural property N, "this is N, but is it good?" stays intelligible — through Enoch's robust realism, Parfit's non-metaphysical version, and Scanlon's reasons fundamentalism; its strength is fidelity to the phenomena, its costs the supervenience challenge (Blackburn: why should the non-natural track the natural so exactly?) and the question of epistemic access. Naturalist realism keeps the facts and drops the queerness — Cornell realism's higher-order natural kinds (Boyd, Sturgeon, Brink), Railton's reductive account, Jackson's analytic functionalism — and meets Horgan and Timmons's Moral Twin Earth, on which communities sharing all natural facts still seem to disagree morally, so the moral was never the natural.
 
-Naturalist realists keep the facts and drop the queerness. Cornell realists (Boyd, Sturgeon, Brink) treat moral properties as higher-order natural kinds, knowable a posteriori and irreducible the way biological properties are; Railton reduces a person's good to what her idealized self would want her actual self to want; Jackson argues that moral properties, supervening on descriptive ones, just are descriptive properties under long disjunctive descriptions. The naturalist's strength is a clean metaphysics and epistemology; the recurring objection — sharpened by Horgan and Timmons's Moral Twin Earth — is that any naturalistic identification leaves the distinctively normative force behind.
+**Error theory** (`error-theory`) takes moral discourse at face value and convicts it: Mackie's arguments from queerness (metaphysical and epistemological) and from relativity, Joyce's evolutionary route, Olson's version built on the queerness of irreducible normativity. The companions-in-guilt reply (Cuneo) argues that epistemic normativity is exactly as queer, so error theory generalizes to self-refutation. The child's live front is the aftermath: abolish the discourse, keep it as fiction (Joyce), conserve it (conservationism), or substitute something less committal (Lutz).
 
-Mackie accepted that moral talk aims at objective prescriptivity and concluded it systematically fails: the error theory, driven by his argument from queerness — such properties would be metaphysically unlike anything else, known by a faculty unlike any other. The literature now presses the aftermath: having convicted morality of error, do we abolish the talk, conserve it as useful fiction (Joyce, Kalderon), or revise it?
+**Expressivism** (`expressivism`) dissolves the error by reinterpreting the talk: Ayer's and Stevenson's emotivism, Hare's prescriptivism, Blackburn's quasi-realism — showing how creatures projecting attitudes could earn the right to realist-sounding talk of moral truth — and Gibbard's norm- and later plan-expressivism. The Frege–Geach problem is its fifty-year tax: "stealing is wrong" embeds in conditionals and negations where nothing is expressed, yet inferences through those embeddings must stay valid; the logic-of-attitudes and being-for (Schroeder) solutions, Dreier's creeping minimalism (if quasi-realism earns all realist talk, what distinguishes it from realism?), and the hybrid theories that split the difference are the child's terrain.
 
-Expressivists dissolve the error by reinterpreting the talk. Ayer's emotivism made moral utterance mere venting; Blackburn's quasi-realism shows how creatures projecting attitudes could earn the right to realist-sounding talk of moral truth and mistake; Gibbard analyzes normative judgment as the acceptance of norms, later as planning states. The arc's long shadow is the Frege–Geach problem: "stealing is wrong" embeds in conditionals and negations where nothing is being expressed, yet inferences through those embeddings must remain valid. Every expressivist refinement since 1965 is in part an answer to it.
+**Constructivism** (`constructivism`) locates objectivity in the standpoint of practical reason: Kantian versions (Rawls's lectures, Korsgaard's practical identity) hold that valuing anything commits an agent to valuing humanity; Street's Humean constructivism keeps the procedure and relativizes its output to each agent's evaluative starting points. Enoch's shmagency objection — why must I be an agent rather than a shmagent, who acts without the constitutive aim? — and the question whether constructivism is a metaethics or a normative theory in disguise are the child's cruxes.
 
-Constructivists locate objectivity in the standpoint of practical reason itself: Korsgaard argues that valuing anything commits an agent, on pain of practical incoherence, to valuing humanity; Street's Humean constructivism keeps the procedure but relativizes its output to each agent's evaluative starting points. Street's evolutionary debunking argument supplies the field's sharpest recent battle: selection shaped our evaluative tendencies with no regard for mind-independent moral truth, so realists must either deny the influence implausibly or concede our judgments would track the truth only by luck. Realist replies (third-factor explanations, Enoch, Wielenberg) are adjudicated jointly with moral-epistemology, where the argument lives as an epistemic challenge.
+**Normativity and reasons** (`normativity`) is the question beneath all of them: what could give morality's commands their authority? Reasons-first views (Scanlon, Parfit) take reasons as primitive; desire-based views (Williams's internalism, Schroeder's Humeanism) ground them in the agent's motivations; Korsgaard seeks their source in reflective agency; Broome and Kolodny dispute whether rationality's demands are themselves reasons; Kearns and Star propose that reasons are evidence about what one ought to do; and Olson's queerness argument returns here as the charge that irreducible normativity is the strangest thing anyone believes in.
 
-Under all of it sits one question: what could give morality's commands their authority — the world, our nature, our attitudes, or our agreements?
+**Moral semantics** (`moral-semantics`) is where the positions compete for the meaning of moral terms — descriptivist, expressivist (and the compositional programs meant to pay the Frege–Geach tax), hybrid (Ridge, Copp), relativist and contextualist (Harman) — with Moral Twin Earth doing double duty as a semantic datum. **Relativism** (`relativism`), at satellite depth, distinguishes descriptive, metaethical, and normative versions, weighs the argument from disagreement, and meets the self-refutation and tolerance objections.
+
+Street's evolutionary debunking argument — selection shaped our evaluative tendencies with no regard for mind-independent moral truth — cuts across realism, constructivism, and expressivism alike and is adjudicated at `ethics.moral-epistemology`, where it lives as an epistemic challenge; the realist replies (third-factor explanations, Enoch, Wielenberg) are the field's sharpest recent battle.
 
 ## Children
 
@@ -37,6 +39,8 @@ Under all of it sits one question: what could give morality's commands their aut
 
 ## Bridges
 
-- To `language`: expressivism and moral semantics are semantic theses; Frege–Geach is an application of the theory of meaning.
-- To `metaphysics`: supervenience, non-natural properties, and reduction are argued with metaphysics' tools.
-- To `ethics.moral-epistemology`: Street's debunking argument and the reliability challenge to realism are adjudicated jointly there.
+- **ethics.moral-epistemology**: debunking arguments and moral knowledge are adjudicated there; every realism here owes that node an epistemology.
+- **ethics.value**: the fitting-attitudes analysis and buck-passing tie value theory to the theory of reasons homed under `normativity`.
+- **language.meaning**: moral semantics is philosophy of language under maximal pressure; the Frege–Geach problem is a compositionality problem.
+- **metaphysics.ontology**: moral realism is an existence claim; queerness is an ontological complaint.
+- **epistemology.disagreement**: the argument from disagreement and relativism's evidence.
