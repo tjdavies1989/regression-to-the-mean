@@ -30,5 +30,5 @@ OLD QUEUE (superseded, kept for the record):
 - Title drift between parent stub lines and child files: add a warning to `tools/encyc.py`.
 - The `figures` roster correction is moving but far from done: no Africana, Latin American, or women philosophers written yet — `beauvoir`, `anscombe`, `arendt` are stubbed and queued; add `confucius` and `shankara` for the traditions now open.
 - Aesthetics proposed 12 children (the most of any division); watch whether its art-form nodes (music, depiction, literature, film) stay genuinely articulated or should merge.
-- Pass convention: date.pulse with a global pulse counter; next pulse is .15.
+- Pass convention: date.pulse with a global pulse counter; next pulse is .23.
 - Session protocol addition: before the final commit of any session, run `python3 encyclopedia/tools/build_site.py --onefile <scratch>/strata-reader.html`, commit the regenerated `docs/`, and republish the reader to the artifact address — the site must never lag the corpus.
