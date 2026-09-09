@@ -65,7 +65,7 @@ Growth proceeds in **pulses**, not sweeps. A pulse:
 
 Rule: **descent creates a debt, and the debt is upward.** A node whose children have grown since its last revision is *in debt*, and audit flags it. No new pulse may begin in a region that carries unpaid consolidation debt.
 
-Invariant: a child's state never exceeds its parent's state. Depth is earned top-down.
+Invariant: a child's state never exceeds its parent's state — up to `survey`. Depth is earned top-down through the map states. **Amendment 1 (2026-09-09):** the rungs above survey — `article` and `deep` — are earned per node, not inherited from the map: a node may be promoted to article while its parent remains at survey, provided the parent is at least a survey and is revised to acknowledge the promotion. Division roots are maps; the article rung belongs to the problems, not to the map of them.
 
 Asymmetry is not merely permitted but expected: the tree should **branch monstrously wherever the field genuinely articulates**, and nowhere else. A division at layer 5 next to a division at layer 1 is a finding, not a failure.
 

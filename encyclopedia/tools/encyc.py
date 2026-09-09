@@ -80,7 +80,9 @@ def main():
         if not p:
             errors.append(f"{v['path']}: parent '{parent}' has no file")
             continue
-        if STATES.index(fm["state"]) > STATES.index(p["fm"]["state"]):
+        cs, ps = STATES.index(fm["state"]), STATES.index(p["fm"]["state"])
+        # Amendment 1: article/deep are earned per node; they only require a parent at survey or better
+        if cs > ps and not (cs >= STATES.index("article") and ps >= STATES.index("survey")):
             errors.append(f"{v['path']}: state '{fm['state']}' exceeds parent '{parent}' state '{p['fm']['state']}'")
 
     # ---- report ----
