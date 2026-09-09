@@ -26,6 +26,7 @@ OLD QUEUE (superseded, kept for the record):
 - Amendment 1 (2026-09-09, pass .21): the child≤parent invariant applies through survey; `article` and `deep` are earned per node and require only a parent at survey that acknowledges the promotion. Occasioned by the first article promotion (`metaphysics.modality`), which the old rule would have blocked until the division root itself became an article — inverting where depth belongs. Auditor updated in the same commit.
 
 **Standing observations:**
+- SCHEDULING (recorded 2026-09-09 at the user's request): weekly usage rolls over on Thursdays at 1:00 am Brisbane time (AEST, UTC+10) — i.e. Wednesday 15:00 UTC. The Sep 9 burst (13:54–14:59 UTC) consumed about 5% of the week's usage; the timing was misjudged, not the spend. Plan bursts explicitly against that boundary (and the 5-hour window) and confirm the intended window with the user before firing.
 - Title drift between parent stub lines and child files: add a warning to `tools/encyc.py`.
 - The `figures` roster correction is moving but far from done: no Africana, Latin American, or women philosophers written yet — `beauvoir`, `anscombe`, `arendt` are stubbed and queued; add `confucius` and `shankara` for the traditions now open.
 - Aesthetics proposed 12 children (the most of any division); watch whether its art-form nodes (music, depiction, literature, film) stay genuinely articulated or should merge.
