@@ -34,5 +34,5 @@ All four children, asked to propose a further layer, correctly declared thin nod
 
 - **metaphysics.ontology**: the general theory of existence and commitment, deployed here at maximum intensity; quantifier variance and easy ontology would deflate this whole debate, and both sides know it.
 - **epistemology**: Benacerraf's dilemma is an epistemological challenge wearing mathematical dress; reliability, apriority, and intuition are its vocabulary.
-- **science.confirmation**: confirmational holism is indispensability's second premise; contrastive theories of testing are Sober's weapon against it.
+- **science.confirmation**: confirmational holism is one of indispensability's premises; contrastive theories of testing are Sober's weapon against it.
 - **Within the tree**: `logic.mathematics` holds the wider field; `logic.mathematics.structuralism` and `logic.mathematics.logicism` are the escape routes that shrink the access debt without incurring applicability's.
