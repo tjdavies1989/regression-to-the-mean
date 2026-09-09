@@ -21,7 +21,7 @@ States coerce. They take property on pain of prison, conscript, punish, and excl
 
 **Global justice** tests whether any of it stops at borders: cosmopolitanism against statism on the scope of egalitarian duty, the ethics of immigration from Carens's open-borders argument to its communitarian critics, duties to the global poor, territorial rights, and climate justice as the intersection where this division meets `ethics.future-people`. And the **critical approaches** — ideology critique from Marx to the present, power's three faces and Foucault's dispersal of it, the Frankfurt inheritance, feminist political philosophy from Okin's critique of Rawls to the politics of care, recognition against redistribution, Mills's racial contract — are housed not as an appendix but as the division's standing opposition party: the tradition that reads the rest of the table of contents as itself a political artifact.
 
-The figures register carries the division's spine — `hobbes`, `rousseau`, `marx`, `mill`, `rawls`, `arendt` (the last three still stubs, queued) — and its densest outward border is `ethics`, from which it took its rebirth and to which it returns every question about what individuals owe.
+The figures register carries the division's spine — `hobbes`, `rousseau`, `marx`, `mill`, `rawls`, `arendt` (all six still stubs, queued) — and its densest outward border is `ethics`, from which it took its rebirth and to which it returns every question about what individuals owe.
 
 ## Children
 
